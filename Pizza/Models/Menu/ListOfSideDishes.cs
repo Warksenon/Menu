@@ -5,7 +5,7 @@ namespace Pizza
     public class LoadListOfSideDishes
     {
         private readonly List<string> sideDishes = new List<string>();
-        readonly Name name = new Name();
+        
 
         public List<string> LoadSidePizza()
         {
@@ -25,7 +25,7 @@ namespace Pizza
         {
             foreach(var k in key)
             {
-                string sidedish = name.GetNameConfig(k);
+                string sidedish = Name.GetNameConfig(k);
                 sideDishes.Add(sidedish);
             }
         }

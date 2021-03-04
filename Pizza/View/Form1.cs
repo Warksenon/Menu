@@ -8,7 +8,8 @@ using System.Windows.Forms;
 namespace Pizza
 {
 
-    public partial class Form1 : Form , IForm1ListViewDishesAndCheckedListBoxSideDish, IForm1Order
+   // public partial class Form1 : Form , IListViewDishes, IForm1Order
+        public partial class Form1 : Form
     {
         public Form1 form1;
 
@@ -23,8 +24,8 @@ namespace Pizza
         private Form1LoadDishesPresenters loadPresenters;
         private void Form1_Load_1(object sender, EventArgs e)
         {
-            orderPresenters = new Form1OrderPresenters(this, this);
-            loadPresenters = new Form1LoadDishesPresenters(this);
+           // orderPresenters = new Form1OrderPresenters(this, this);
+          //  loadPresenters = new Form1LoadDishesPresenters(this);
             Start(ButtonMenu.Pizza);
             loadPresenters.LoadPizza();
             loadPresenters.LoadSidesDishPizza();
@@ -32,8 +33,8 @@ namespace Pizza
             SetVisibleButtonRemove();
             form1 = this;
 
-            SqlLite.CreateTabeles createTabeles = new SqlLite.CreateTabeles();
-            createTabeles.CreateSQLiteTables();        
+           // SqlLite.CreateTabeles createTabeles = new SqlLite.CreateTabeles();
+           // createTabeles.CreateSQLiteTables();        
         }
       
         public ListView ListViewDishes { get => listViewDish; set => listViewDish = value; }
@@ -219,7 +220,7 @@ namespace Pizza
         private void BackgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
         {        
             SelectColorbOrder();
-            orderPresenters.SendEmailAndSaveOrder();          
+           // orderPresenters.SendEmailAndSaveOrder();          
         }
 
         private void BackgroundWorker2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

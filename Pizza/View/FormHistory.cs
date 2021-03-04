@@ -5,10 +5,11 @@ using System.Windows.Forms;
 
 namespace Pizza
 {
-    public partial class FormHistory : Form , IFormHistory
+    //public partial class FormHistory : Form , IFormHistory
+         public partial class FormHistory : Form
     {
 
-        FormHistoryPresenters presenters;
+        //FormHistoryPresenters presenters;
         public FormHistory()
         {
             InitializeComponent();         
@@ -16,11 +17,11 @@ namespace Pizza
    
         public ListView ListViewPrice { get => LVprice; set => LVprice = value; }
         public ListView ListViewDishes { get => LVdishes; set => LVdishes = value; }
-       
+
         private void FormHistory_Load(object sender, EventArgs e)
         {
-            presenters = new FormHistoryPresenters(this);
-            presenters.LoadHistoryFromSQL();
+          //  presenters = new FormHistoryPresenters(this);
+          //  presenters.LoadHistoryFromSQL();
             ButtonColorChange(Button.HistSQL);
         }
 
@@ -32,18 +33,18 @@ namespace Pizza
             TxtToSql
         }
 
-        private void ButtonColorChange (Button p)
+        private void ButtonColorChange(Button p)
         {
             AllButtonSetSystemColorsControl();
 
             switch (p)
             {
-                case Button.HistSQL:  bSql.BackColor = Color.LawnGreen;             break;
-                case Button.HistTXT:  bText.BackColor = Color.LawnGreen;            break;
-                case Button.SqlToTxt: buttonSQLToTxt.BackColor = Color.Firebrick;   break;
-                case Button.TxtToSql: bTxtToSQL.BackColor = Color.Firebrick;        break;
+                case Button.HistSQL: bSql.BackColor = Color.LawnGreen; break;
+                case Button.HistTXT: bText.BackColor = Color.LawnGreen; break;
+                case Button.SqlToTxt: buttonSQLToTxt.BackColor = Color.Firebrick; break;
+                case Button.TxtToSql: bTxtToSQL.BackColor = Color.Firebrick; break;
             }
-       
+
         }
 
         private void AllButtonSetSystemColorsControl()
@@ -55,30 +56,30 @@ namespace Pizza
         }
 
         private void ButtonTextList_Click(object sender, EventArgs e)
-        {           
-            presenters.LoadHistroyFromTxt();
+        {
+           // presenters.LoadHistroyFromTxt();
             ButtonColorChange(Button.HistTXT);
         }
 
         private void ButtonSqlList_Click(object sender, EventArgs e)
-        {            
-            presenters.LoadHistoryFromSQL();
+        {
+          //  presenters.LoadHistoryFromSQL();
             ButtonColorChange(Button.HistSQL);
         }
-  
+
         private void ButtonTxtToSql(object sender, EventArgs e)
-        {           
-            presenters.CopyData(LoadOrder.ChoiceLoadOrder.Txt);
+        {
+            //  presenters.CopyData(LoadOrder.ChoiceLoadOrder.Txt);
             ButtonColorChange(Button.TxtToSql);
-            presenters.LoadHistroyFromTxt();
+           // presenters.LoadHistroyFromTxt();
             ButtonColorChange(Button.HistTXT);
         }
 
         private void ButtonSQLToTxt_Click(object sender, EventArgs e)
-        {            
-            presenters.CopyData(LoadOrder.ChoiceLoadOrder.Sql);
+        {
+            //  presenters.CopyData(LoadOrder.ChoiceLoadOrder.Sql);
             ButtonColorChange(Button.SqlToTxt);
-            presenters.LoadHistoryFromSQL();
+          //  presenters.LoadHistoryFromSQL();
             ButtonColorChange(Button.HistSQL);
         }
 
@@ -89,7 +90,7 @@ namespace Pizza
 
         private void LVprice_SelectedIndexChanged(object sender, EventArgs e)
         {
-            presenters.LoadLVDishes();
+          //  presenters.LoadLVDishes();
         }
     }
 

@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace Pizza
 {
     public class PriceAll
-    {
-        private readonly HelpFinding help = new HelpFinding();
+    {        
         string date;
         string comments;       
         string price;
@@ -21,18 +20,18 @@ namespace Pizza
         }
         public string Price
         {
-            get {return price = help.CheckIsNotNull(price); }
-            set { price = help.CheckIsNotNull(value); }
+            get {return price = HelpFinding.CheckIsNotNull(price); }
+            set { price = HelpFinding.CheckIsNotNull(value); }
         }
         public string Date
         {
-            get { return help.CheckIsNotNull(date); }
-            set { date = help.CheckIsNotNull(value); }
+            get { return HelpFinding.CheckIsNotNull(date); }
+            set { date = HelpFinding.CheckIsNotNull(value); }
         }
         public string Comments
         {
-            get { return help.CheckIsNotNull(comments); }
-            set { comments = help.CheckIsNotNull(value);  }
+            get { return HelpFinding.CheckIsNotNull(comments); }
+            set { comments = HelpFinding.CheckIsNotNull(value);  }
         }
         
     }

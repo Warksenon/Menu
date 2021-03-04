@@ -6,7 +6,7 @@ using System.Windows.Forms;
 namespace Test
 {
     [TestClass]
-    public class TestLoadDishesPresenters : IForm1ListViewDishesAndCheckedListBoxSideDish
+    public class TestLoadDishesPresenters : IListViewDishes
     {
         ListView lv = new ListView();
         CheckedListBox ch = new CheckedListBox();

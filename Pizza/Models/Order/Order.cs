@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using Pizza.Models.Order;
+using System.Collections.Generic;
 
 namespace Pizza
 {
 
     public class Order 
-    {    
+    {
+        
+        
         private List<Dish> listDisch;
         private PriceAll priceAll;
 
@@ -30,6 +33,7 @@ namespace Pizza
         {
             listDisch.Add(d);
         }
+        
 
     }
 }

@@ -9,7 +9,7 @@ using Pizza.Presenters;
 namespace Test
 {
     [TestClass]
-    public class TestOrderPresenters : IForm1ListViewDishesAndCheckedListBoxSideDish , IForm1Order
+    public class TestOrderPresenters : IListViewDishes , IForm1Order
     {
 
         ListView lvDish = new ListView();

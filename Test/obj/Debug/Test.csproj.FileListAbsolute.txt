@@ -103,3 +103,7 @@ C:\Users\Artur\Desktop\2020-10-14\Test\obj\Debug\Test.csprojAssemblyReference.ca
 C:\Users\Artur\Desktop\2020-10-14\Test\obj\Debug\Test.csproj.CopyComplete
 C:\Users\Artur\Desktop\2020-10-14\Test\obj\Debug\Test.dll
 C:\Users\Artur\Desktop\2020-10-14\Test\obj\Debug\Test.pdb
+C:\Users\user\Desktop\projekty\visual studio\Pizza\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\Users\user\Desktop\projekty\visual studio\Pizza\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\projekty\visual studio\Pizza\Test\obj\Debug\Test.dll
+C:\Users\user\Desktop\projekty\visual studio\Pizza\Test\obj\Debug\Test.pdb

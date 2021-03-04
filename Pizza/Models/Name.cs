@@ -2,20 +2,20 @@
 
 namespace Pizza
 {
-    public class Name
+    public static class Name
     {
-        public string GetNameConfig(string key)
+        public static string GetNameConfig(string key)
         {
             string name = ConfigurationManager.AppSettings[key];
-            HelpFinding help = new HelpFinding();
-            if (help.CheckStringIsNotEmpty(name))
+           
+            if (HelpFinding.CheckStringIsNotEmpty(name))
             {
                 return name;
             }
             else return _ = "name retrieval error: " + key;
         }
 
-        public string LMenuInfoPizza
+        public static string LMenuInfoPizza
         {
             get
             {
@@ -23,7 +23,7 @@ namespace Pizza
             }
         }
 
-        public string LMenuInfoMainDish
+        public static string LMenuInfoMainDish
         {
             get
             {
@@ -31,7 +31,7 @@ namespace Pizza
             }
         }
 
-        public string LMenuInfoSoups
+        public static string LMenuInfoSoups
         {
             get
             {
@@ -39,7 +39,7 @@ namespace Pizza
             }
         }
 
-        public string LMenuInfoDrinks
+        public static string LMenuInfoDrinks
         {
             get
             {
@@ -47,7 +47,7 @@ namespace Pizza
             }
         }
 
-        public string PriceAll
+        public static string PriceAll
         {
             get
             {
@@ -55,7 +55,7 @@ namespace Pizza
             }
         }
 
-        public string Dishes
+        public static string Dishes
         {
             get
             {
@@ -63,7 +63,7 @@ namespace Pizza
             }
         }
 
-        public string IdPrice
+        public static string IdPrice
         {
             get
             {
@@ -71,7 +71,7 @@ namespace Pizza
             }
         }
 
-        public string Comments
+        public static string Comments
         {
             get
             {
@@ -79,7 +79,7 @@ namespace Pizza
             }
         }
 
-        public string Id
+        public static string Id
         {
             get
             {
@@ -87,7 +87,7 @@ namespace Pizza
             }
         }
 
-        public string SidesDishes
+        public static string SidesDishes
         {
             get
             {
@@ -95,7 +95,7 @@ namespace Pizza
             }
         }
 
-        public string Date
+        public static string Date
         {
             get
             {
@@ -103,7 +103,7 @@ namespace Pizza
             }
         }
 
-        public string Price
+        public static string Price
         {
             get
             {
@@ -111,7 +111,7 @@ namespace Pizza
             }
         }
 
-        public string Dish
+        public static string Dish
         {
             get
             {
@@ -119,7 +119,7 @@ namespace Pizza
             }
         }
 
-        public string PriceForDish
+        public static string PriceForDish
         {
             get
             {
@@ -127,7 +127,7 @@ namespace Pizza
             }
         }
 
-        public string HashSigns51
+        public static string HashSigns51
         {
             get
             {
@@ -135,7 +135,7 @@ namespace Pizza
             }
         }
 
-        public string CommentsMessag
+        public static string CommentsMessag
         {
             get
             {
@@ -143,14 +143,14 @@ namespace Pizza
             }
         }
 
-        public string BeginningOfOrderCode
+        public static string BeginningOfOrderCode
         {
             get
             {
                 return GetNameConfig("beginningOfOrderCode");
             }
         }
-        public string EndOfOrderCode
+        public static string EndOfOrderCode
         {
             get
             {
@@ -158,7 +158,7 @@ namespace Pizza
             }
         }
 
-        public string PriceAllBeginning
+        public static string PriceAllBeginning
         {
             get
             {
@@ -166,7 +166,7 @@ namespace Pizza
             }
         }
 
-        public string PriceAllEnd
+        public static string PriceAllEnd
         {
             get
             {
@@ -174,7 +174,7 @@ namespace Pizza
             }
         }
 
-        public string DishBeginning
+        public static string DishBeginning
         {
             get
             {
@@ -182,7 +182,7 @@ namespace Pizza
             }
         }
 
-        public string DishEnd
+        public static string DishEnd
         {
             get
             {
@@ -190,7 +190,7 @@ namespace Pizza
             }
         }
 
-        public string NPrice
+        public static string NPrice
         {
             get
             {
@@ -198,7 +198,7 @@ namespace Pizza
             }
         }
 
-        public string Pizza
+        public static string Pizza
         {
             get
             {
@@ -206,7 +206,7 @@ namespace Pizza
             }
         }
 
-        public string Denmark
+        public static string Denmark
         {
             get
             {
@@ -214,7 +214,7 @@ namespace Pizza
             }
         }
 
-        public string Soups
+        public static string Soups
         {
             get
             {
@@ -222,7 +222,7 @@ namespace Pizza
             }
         }
 
-        public string Drinks
+        public static string Drinks
         {
             get
             {
@@ -230,7 +230,7 @@ namespace Pizza
             }
         }
 
-        public string Margh
+        public static string Margh
         {
             get
             {
@@ -238,7 +238,7 @@ namespace Pizza
             }
         }
 
-        public string Veget
+        public static string Veget
         {
             get
             {
@@ -246,7 +246,7 @@ namespace Pizza
             }
         }
 
-        public string Tosca
+        public static string Tosca
         {
             get
             {
@@ -254,7 +254,7 @@ namespace Pizza
             }
         }
 
-        public string Venec
+        public static string Venec
         {
             get
             {
@@ -262,7 +262,7 @@ namespace Pizza
             }
         }
 
-        public string MarghPrice
+        public static string MarghPrice
         {
             get
             {
@@ -270,7 +270,7 @@ namespace Pizza
             }
         }
 
-        public string VegetPrice
+        public static string VegetPrice
         {
             get
             {
@@ -278,7 +278,7 @@ namespace Pizza
             }
         }
 
-        public string ToscaPrice
+        public static string ToscaPrice
         {
             get
             {
@@ -286,7 +286,7 @@ namespace Pizza
             }
         }
 
-        public string VenecPrice
+        public static string VenecPrice
         {
             get
             {
@@ -294,7 +294,7 @@ namespace Pizza
             }
         }
 
-        public string DoubelCheese
+        public static string DoubelCheese
         {
             get
             {
@@ -302,7 +302,7 @@ namespace Pizza
             }
         }
 
-        public string Salami
+        public static string Salami
         {
             get
             {
@@ -310,15 +310,15 @@ namespace Pizza
             }
         }
 
-        public string Ham
+        public static string Ham
         {
             get
             {
                 return GetNameConfig("ham");
             }
         }
-     
-        public string Mushrooms
+
+        public static string Mushrooms
         {
             get
             {
@@ -326,7 +326,7 @@ namespace Pizza
             }
         }
 
-        public string DoubelCheesePrice
+        public static string DoubelCheesePrice
         {
             get
             {
@@ -334,7 +334,7 @@ namespace Pizza
             }
         }
 
-        public string SalamiPrice
+        public static string SalamiPrice
         {
             get
             {
@@ -342,7 +342,7 @@ namespace Pizza
             }
         }
 
-        public string HamPrice
+        public static string HamPrice
         {
             get
             {
@@ -350,7 +350,7 @@ namespace Pizza
             }
         }
 
-        public string MushroomsPrice
+        public static string MushroomsPrice
         {
             get
             {
@@ -358,7 +358,7 @@ namespace Pizza
             }
         }
 
-        public string Schnitzel
+        public static string Schnitzel
         {
             get
             {
@@ -366,7 +366,7 @@ namespace Pizza
             }
         }
 
-        public string Fish
+        public static string Fish
         {
             get
             {
@@ -374,7 +374,7 @@ namespace Pizza
             }
         }
 
-        public string Potato
+        public static string Potato
         {
             get
             {
@@ -382,7 +382,7 @@ namespace Pizza
             }
         }
 
-        public string SchnitzelPrice
+        public static string SchnitzelPrice
         {
             get
             {
@@ -390,7 +390,7 @@ namespace Pizza
             }
         }
 
-        public string FishPrice
+        public static string FishPrice
         {
             get
             {
@@ -398,7 +398,7 @@ namespace Pizza
             }
         }
 
-        public string PotatoPrice
+        public static string PotatoPrice
         {
             get
             {
@@ -406,7 +406,7 @@ namespace Pizza
             }
         }
 
-        public string Bar
+        public static string Bar
         {
             get
             {
@@ -414,7 +414,7 @@ namespace Pizza
             }
         }
 
-        public string SetOfSauces
+        public static string SetOfSauces
         {
             get
             {
@@ -422,7 +422,7 @@ namespace Pizza
             }
         }
 
-        public string BarPrice
+        public static string BarPrice
         {
             get
             {
@@ -430,7 +430,7 @@ namespace Pizza
             }
         }
 
-        public string SetOfSaucesPrice
+        public static string SetOfSaucesPrice
         {
             get
             {
@@ -438,7 +438,7 @@ namespace Pizza
             }
         }
 
-        public string Tomato
+        public static string Tomato
         {
             get
             {
@@ -446,7 +446,7 @@ namespace Pizza
             }
         }
 
-        public string ChickenSoup
+        public static string ChickenSoup
         {
             get
             {
@@ -454,7 +454,7 @@ namespace Pizza
             }
         }
 
-        public string TomatoPrice
+        public static string TomatoPrice
         {
             get
             {
@@ -462,7 +462,7 @@ namespace Pizza
             }
         }
 
-        public string ChickenSoupPrice
+        public static string ChickenSoupPrice
         {
             get
             {
@@ -470,7 +470,7 @@ namespace Pizza
             }
         }
 
-        public string Coffee
+        public static string Coffee
         {
             get
             {
@@ -478,7 +478,7 @@ namespace Pizza
             }
         }
 
-        public string Tea
+        public static string Tea
         {
             get
             {
@@ -486,7 +486,7 @@ namespace Pizza
             }
         }
 
-        public string Cola
+        public static string Cola
         {
             get
             {
@@ -494,7 +494,7 @@ namespace Pizza
             }
         }
 
-        public string CoffeePrice
+        public static string CoffeePrice
         {
             get
             {
@@ -502,7 +502,7 @@ namespace Pizza
             }
         }
 
-        public string TeaPrice
+        public static string TeaPrice
         {
             get
             {
@@ -510,7 +510,7 @@ namespace Pizza
             }
         }
 
-        public string ColaPrice
+        public static string ColaPrice
         {
             get
             {
@@ -518,7 +518,7 @@ namespace Pizza
             }
         }
 
-        public string Sender
+        public static string Sender
         {
             get
             {
@@ -526,7 +526,7 @@ namespace Pizza
             }
         }
 
-        public string Password
+        public static string Password
         {
             get
             {
@@ -534,7 +534,7 @@ namespace Pizza
             }
         }
 
-        public string Smtp
+        public static string Smtp
         {
             get
             {
@@ -542,7 +542,7 @@ namespace Pizza
             }
         }
 
-        public string Port
+        public static string Port
         {
             get
             {
@@ -550,7 +550,7 @@ namespace Pizza
             }
         }
 
-        public string Recipient
+        public static string Recipient
         {
             get
             {

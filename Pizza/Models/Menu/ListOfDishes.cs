@@ -6,7 +6,7 @@ namespace Pizza
     {
         List<Dish> listDisches; 
         Dish disch = new Dish();
-        readonly Name name = new Name();
+       
 
         public List<Dish> LoadListPizza()
         {            
@@ -46,7 +46,7 @@ namespace Pizza
             foreach (var k in key)
             {
                 disch = new Dish();
-                string dishAndPrice = name.GetNameConfig(k);
+                string dishAndPrice = Name.GetNameConfig(k);
                 disch.Name = FindNameDish(dishAndPrice);
                 disch.Price = FindPrice(dishAndPrice);
                 listDisches.Add(disch);

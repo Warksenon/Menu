@@ -108,10 +108,10 @@ namespace Pizza.Presenters
         private int FindsPrice(string priceSide)
         {
             int start = priceSide.IndexOf("-");
-            if (start > 0) { priceSide = priceSide.Substring(start); }           
+            if (start > 0) { priceSide = priceSide.Substring(start); }
             priceSide = priceSide.Replace("-", "");
-            priceSide = priceSide.Replace("zł", "");            
-            priceSide = priceSide.Trim();           
+            priceSide = priceSide.Replace("zł", "");
+            priceSide = priceSide.Trim();
             return Convert.ToInt16(priceSide);
         }
 
@@ -141,7 +141,7 @@ namespace Pizza.Presenters
             return priceOrder;
         }
 
-        static readonly Order order   = new Order();
+        static readonly Order order = new Order();
 
         void AddPriceAllToOrder(double price)
         {
@@ -152,7 +152,7 @@ namespace Pizza.Presenters
 
         public void SetListDishes(ListView ListView)
         {
-            
+
             var list = new List<Dish>();
             if (!(ListView.Items == null))
             {
@@ -189,8 +189,8 @@ namespace Pizza.Presenters
             {
                 SetCommentsAndDate(form1Order.TextBoxComments.Text);
                 SetListDishes(form1Order.ListViewOrder);
-                EmailMessage messeg = new EmailMessage(GetOrder());
-                sendMesseg = messeg.WriteBill();
+                //EmailMessage messeg = new EmailMessage(GetOrder());
+             //   sendMesseg = messeg.WriteBill();
                 if (form1Order.BackgroundWorker.IsBusy != true)
                 {
                     form1Order.BackgroundWorker.RunWorkerAsync();
@@ -212,25 +212,25 @@ namespace Pizza.Presenters
             else return false;
         }
 
-        private bool SendEmail(string message)
-        {
-            Email email = new Email();
-            return email.SendEmail(message);
-        }
+        //private bool SendEmail(string message)
+        //{
+        //   // Email email = new Email();
+        //    return email.SendEmail(message);
+        //}
 
-        public void SendEmailAndSaveOrder ()
-        {
-            Save save = new Save();
-              if (SendEmail(sendMesseg))
-            {              
-                save.SaveOrder(Save.ChoiceSaveOrder.Txt, GetOrder());
-                save.SaveOrder(Save.ChoiceSaveOrder.Sql, GetOrder());               
-            }
-            else
-            {
-                MessageBox.Show("Wysłanie wiadomości nie powiodło się. Problem z adres e-mail lub z połaczeniem internetowym");
-            }
-        }
+        //public void SendEmailAndSaveOrder()
+        //{
+        //    Save save = new Save();
+        //    if (SendEmail(sendMesseg))
+        //    {
+        //        save.SaveOrder(Save.ChoiceSaveOrder.Txt, GetOrder());
+        //        save.SaveOrder(Save.ChoiceSaveOrder.Sql, GetOrder());
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Wysłanie wiadomości nie powiodło się. Problem z adres e-mail lub z połaczeniem internetowym");
+        //    }
+        //}
 
     }
 }

@@ -30,10 +30,10 @@ namespace Pizza
         private void ButtonSave_Click(object sender, EventArgs e)
         {
             
-            if (presenters.SaveDataEmial())
-            {
-                this.Close();
-            }            
+            //if (presenters.SaveDataEmial())
+            //{
+            //    this.Close();
+            //}            
         }
 
         private void ButtonClose_Click(object sender, EventArgs e)

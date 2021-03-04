@@ -10,9 +10,9 @@ namespace Pizza.Presenters
     class TForm1LoadDishesPresenters
     {
        private ListOfDishes listOfDishes = new ListOfDishes();
-       private IForm1ListViewDishesAndCheckedListBoxSideDish form1;
+       private IListViewDishes form1;
 
-       public TForm1LoadDishesPresenters(IForm1ListViewDishesAndCheckedListBoxSideDish view)
+       public TForm1LoadDishesPresenters(IListViewDishes view)
         {
             form1 = view;
         }

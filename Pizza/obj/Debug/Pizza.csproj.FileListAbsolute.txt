@@ -386,3 +386,12 @@ C:\Users\Artur\Desktop\2020-10-14\Pizza\obj\Debug\Pizza.csproj.GenerateResource.
 C:\Users\Artur\Desktop\2020-10-14\Pizza\obj\Debug\Pizza.csproj.CopyComplete
 C:\Users\Artur\Desktop\2020-10-14\Pizza\obj\Debug\Pizza.exe
 C:\Users\Artur\Desktop\2020-10-14\Pizza\obj\Debug\Pizza.pdb
+C:\Users\user\Desktop\projekty\visual studio\Pizza\Pizza\obj\Debug\Pizza.csprojAssemblyReference.cache
+C:\Users\user\Desktop\projekty\visual studio\Pizza\Pizza\obj\Debug\Pizza.Form1.resources
+C:\Users\user\Desktop\projekty\visual studio\Pizza\Pizza\obj\Debug\Pizza.FormHistory.resources
+C:\Users\user\Desktop\projekty\visual studio\Pizza\Pizza\obj\Debug\Pizza.FormMail.resources
+C:\Users\user\Desktop\projekty\visual studio\Pizza\Pizza\obj\Debug\Pizza.Properties.Resources.resources
+C:\Users\user\Desktop\projekty\visual studio\Pizza\Pizza\obj\Debug\Pizza.csproj.GenerateResource.cache
+C:\Users\user\Desktop\projekty\visual studio\Pizza\Pizza\obj\Debug\Pizza.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\projekty\visual studio\Pizza\Pizza\obj\Debug\Pizza.exe
+C:\Users\user\Desktop\projekty\visual studio\Pizza\Pizza\obj\Debug\Pizza.pdb

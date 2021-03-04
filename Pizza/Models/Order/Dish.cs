@@ -1,34 +1,40 @@
-﻿using System;
+﻿using Pizza.Models.Order;
+using System.Collections.Generic;
 
 namespace Pizza
 {
     public class Dish
-    {
-        private readonly HelpFinding help = new HelpFinding();
-        private Int64 idPrice;
+    {        
         private string name;
-        private string sidesDishes;
         private string price;
+        private List<Side> listSides;
 
-        public Int64 IdPrice
+        public Dish()
         {
-            get { return idPrice; }
-            set{ idPrice = value ;}
+            listSides = new List<Side>();
         }
-        public string Price
-        {
-            get { return help.CheckIsNotNull(price); }
-            set { price = help.CheckIsNotNull(value);}
-        }
+
         public string Name
         {
-            get { return help.CheckIsNotNull(name); }
-            set { name = help.CheckIsNotNull(value); }
+            get { return HelpFinding.CheckIsNotNull(name); }
+            set { name = HelpFinding.CheckIsNotNull(value); }
         }
-        public string SidesDishes
+
+        public string Price
         {
-            get { return help.CheckIsNotNull(sidesDishes);}
-            set { sidesDishes= help.CheckIsNotNull(value);}
+            get { return price; }
+            set { price = value; }
+        }
+
+        public List<Side> ListSides
+        {
+            get { return listSides; }
+            set { listSides = value; }
+        }
+
+        public void AddSideToList(Side s)
+        {
+            listSides.Add(s);
         }
 
     }

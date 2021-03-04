@@ -8,10 +8,10 @@ namespace Pizza.Presenters
     class TForm1OrderPresenters
     {
 
-        private IForm1ListViewDishesAndCheckedListBoxSideDish loadDishesAndSides;
+        private IListViewDishes loadDishesAndSides;
         private IForm1Order form1Order;
 
-        public TForm1OrderPresenters(IForm1ListViewDishesAndCheckedListBoxSideDish listDishes, IForm1Order order)
+        public TForm1OrderPresenters(IListViewDishes listDishes, IForm1Order order)
         {
             loadDishesAndSides = listDishes;
             form1Order = order;

@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Pizza.Models.Menu;
+using Pizza.Models.Menu.Sides;
+using Pizza.Models.Order;
+using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -6,7 +10,7 @@ namespace Pizza.Presenters
 {
     class Form1LoadDishesPresenters
     {
-       private readonly ListOfDishes listOfDishes = new ListOfDishes();
+
        private readonly IForm1ListViewDishesAndCheckedListBoxSideDish form1;
 
        public Form1LoadDishesPresenters(IForm1ListViewDishesAndCheckedListBoxSideDish view)
@@ -16,28 +20,31 @@ namespace Pizza.Presenters
 
         public void LoadPizza()
         {
-           AddDishesToListView(listOfDishes.LoadListPizza());
+            AddDishesToListView(new ListPizza());
+            LoadCheckListBoxSideDishe(new ListSidesPizza());
         }
 
         public void LoadMainDish()
         {
-           AddDishesToListView(listOfDishes.LoadListMainDish());
+           AddDishesToListView(new ListMainDishes());
+           LoadCheckListBoxSideDishe(new ListSidesMainDishes());
         }
 
         public void LoadSoups()
         {
-           AddDishesToListView(listOfDishes.LoadListSoups());
+           AddDishesToListView(new ListSoups());
            ClearCheckedListBox();
         }
 
         public void LoadDrinks()
         {
-           AddDishesToListView(listOfDishes.LoadListDrinks());
+           AddDishesToListView(new ListDrinks());
            ClearCheckedListBox();
         }
 
-        private void AddDishesToListView (List<Dish> listDisch)
+        private void AddDishesToListView(IForm1Dishes loadList)
         {
+            List<Dish> listDisch= loadList.GetDishes();
             form1.ListViewDishes.Items.Clear();
             foreach (var disch in listDisch)
             {
@@ -47,26 +54,14 @@ namespace Pizza.Presenters
             }
         }
 
-       
-
-        public void LoadSidesDishPizza()
-        {
-            LoadListOfSideDishes loadListOfSideDishes = new LoadListOfSideDishes();
-            LoadCheckListBoxSideDishe(loadListOfSideDishes.LoadSidePizza());
-        }
-
-        public void LoadSidesDishMainDish()
-        {
-            LoadListOfSideDishes loadListOfSideDishes = new LoadListOfSideDishes();
-            LoadCheckListBoxSideDishe(loadListOfSideDishes.LoadSideMainDish());
-        }
-
-        private  void  LoadCheckListBoxSideDishe(List<string> sideDishes)
+        private  void  LoadCheckListBoxSideDishe(IForm1Sides listSides)
         {
             ClearCheckedListBox();
-            foreach (var st in sideDishes)
+            List<Side> list = listSides.GetSides();
+            foreach (var side in list)
             {
-                form1.CheckedListBoxSideDish.Items.Add(st);
+                string add = side.Name +" - "+ side.Price;
+                form1.CheckedListBoxSideDish.Items.Add(add);
             }          
         }
 
@@ -74,7 +69,5 @@ namespace Pizza.Presenters
         {
             form1.CheckedListBoxSideDish.Items.Clear();
         }
-
-      
     }
 }

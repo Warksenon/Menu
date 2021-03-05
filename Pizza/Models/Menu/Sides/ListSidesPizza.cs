@@ -5,11 +5,19 @@ using System.Collections.Generic;
 
 namespace Pizza.Models.Menu.Sides
 {
-    class ListSidesPizza : IForm1Sides
+    public class ListSidesPizza : ListSides, IForm1Sides
     {
-        public List<Side> Sides()
+
+        public List<Side> LoadSidePizza()
         {
-            throw new NotImplementedException();
+            List<string> key = new List<string> { "doubelCheesePrice", "salamiPrice", "hamPrice", "mushroomsPrice" };
+            AddTolist(key);
+            return sides;
+        }
+
+        public List<Side> GetSides()
+        {
+            return LoadSidePizza();
         }
     }
 }

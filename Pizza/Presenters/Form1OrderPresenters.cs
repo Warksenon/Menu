@@ -162,7 +162,7 @@ namespace Pizza.Presenters
                     list.Add(new Dish()
                     {
                         Name = ListView.Items[i].SubItems[0].Text,
-                        SidesDishes = ListView.Items[i].SubItems[1].Text,
+                     //   SidesDishes = ListView.Items[i].SubItems[1].Text,
                         Price = ListView.Items[i].SubItems[2].Text
                     });
                     i++;

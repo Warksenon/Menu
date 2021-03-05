@@ -1,14 +1,22 @@
-﻿using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
+﻿using Pizza.Models.Menu.Dishes;
+using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
 using System;
 using System.Collections.Generic;
 
 namespace Pizza.Models.Menu
 {
-    class ListSoups : IForm1Dishes
+    public class ListSoups : ListDishes, IForm1Dishes
     {
-        public List<Dish> Dishes()
+        private List<Dish> LoadListSoups()
         {
-            throw new NotImplementedException();
+            List<string> key = new List<string> { "tomatoPrice", "chickenSoupPrice" };
+            AddDishesToList(key);
+            return listDisches;
+        } 
+
+        public List<Dish> GetDishes()
+        {
+            return LoadListSoups();
         }
     }
 }

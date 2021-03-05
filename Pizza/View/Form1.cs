@@ -1,4 +1,5 @@
 ﻿using Pizza.Presenters;
+using Pizza.Presenters.PresenterForm1.VisableElements.Button;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -8,8 +9,8 @@ using System.Windows.Forms;
 namespace Pizza
 {
 
-   // public partial class Form1 : Form , IListViewDishes, IForm1Order
-        public partial class Form1 : Form
+    
+        public partial class Form1 : Form , IForm1ListViewDishesAndCheckedListBoxSideDish, IForm1Order
     {
         public Form1 form1;
 
@@ -20,15 +21,14 @@ namespace Pizza
             backgroundWorker1.WorkerSupportsCancellation = true;            
         }
 
-        Form1OrderPresenters orderPresenters ;
-        private Form1LoadDishesPresenters loadPresenters;
+        private Form1OrderPresenters orderPresenters ;
+        private Form1LoadDishesPresenters loadDishesAndSides;
         private void Form1_Load_1(object sender, EventArgs e)
         {
-           // orderPresenters = new Form1OrderPresenters(this, this);
-          //  loadPresenters = new Form1LoadDishesPresenters(this);
-            Start(ButtonMenu.Pizza);
-            loadPresenters.LoadPizza();
-            loadPresenters.LoadSidesDishPizza();
+            orderPresenters = new Form1OrderPresenters(this, this);
+            loadDishesAndSides = new Form1LoadDishesPresenters(this);
+            PizzaButtonSettings();
+            loadDishesAndSides.LoadPizza();          
             SetVisibleButtonRemoveAll();
             SetVisibleButtonRemove();
             form1 = this;
@@ -45,63 +45,7 @@ namespace Pizza
         public Label LabelPrice { get => lPrice; set => lPrice = value; }
         public BackgroundWorker BackgroundWorker { get => backgroundWorker1; set => backgroundWorker1 = value; }
         public TextBox TextBoxComments { get => tComments; set => tComments = value; }
-
-        public enum ButtonMenu
-        {
-            Pizza,
-            MainDish,
-            Soups,
-            Drinks
-        }
-
-        private void Start(ButtonMenu en)
-        {
-            ClearColorButton();
-            switch (en)
-            {
-                case ButtonMenu.Pizza: PizzaButtonSettings(en);
-                    break;
-                case ButtonMenu.MainDish: MainDishButtonSettings(en);
-                    break;
-                case ButtonMenu.Soups: SoupsButtonSettings(en);
-                    break;
-                case ButtonMenu.Drinks: DrinkseButtonSettings(en);
-                    break;
-            }
-        }
-
-        private void PizzaButtonSettings(ButtonMenu en)
-        {
-            bPizza.BackColor = Color.LawnGreen;        
-            ChengeNameLabelMenuInfo(en);
-            SetVisibleButtonDishesOK(false);
-            SetVisibleTextViewDishesQuantity(false);
-        }
-
-        private void MainDishButtonSettings(ButtonMenu en)
-        {
-            bMainDish.BackColor = Color.LawnGreen;         
-            ChengeNameLabelMenuInfo(en);
-            SetVisibleButtonDishesOK(false);
-            SetVisibleTextViewDishesQuantity(false);
-        }
-
-        private void SoupsButtonSettings(ButtonMenu en)
-        {
-            bSoups.BackColor = Color.LawnGreen;         
-            ChengeNameLabelMenuInfo(en);
-            SetVisibleButtonDishesOK(false);
-            SetVisibleTextViewDishesQuantity(false);
-        }
-
-        private void DrinkseButtonSettings(ButtonMenu en)
-        {
-            bDrinks.BackColor = Color.LawnGreen;         
-            ChengeNameLabelMenuInfo(en);
-            SetVisibleButtonDishesOK(false);
-            SetVisibleTextViewDishesQuantity(false);
-        }
-
+    
         private void ClearColorButton()
         {
             bPizza.BackColor = SystemColors.Control;
@@ -110,47 +54,68 @@ namespace Pizza
             bDrinks.BackColor = SystemColors.Control;
         }
 
-        private void ChengeNameLabelMenuInfo(ButtonMenu en)
-        {
-            switch (en)
-            {
-                case ButtonMenu.Pizza: lMenuInfo.Text = "Pizza"; 
-                    break;
-                case ButtonMenu.MainDish: lMenuInfo.Text = "Dania główne"; 
-                    break;
-                case ButtonMenu.Soups: lMenuInfo.Text = "Zupy"; 
-                    break;
-                case ButtonMenu.Drinks: lMenuInfo.Text = "Napoje"; 
-                    break;
-            }
-        }
+    
 
         private void ButtonPizza_Click(object sender, EventArgs e)
         {
-            Start(ButtonMenu.Pizza);
-            loadPresenters.LoadPizza();
-            loadPresenters.LoadSidesDishPizza();           
+            PizzaButtonSettings();
+            loadDishesAndSides.LoadPizza();  
+        }
+
+        private void PizzaButtonSettings()
+        {
+            bPizza.BackColor = Color.LawnGreen;
+            ChengeNameLabelMenuInfo("Pizza");
+            SetVisibleButtonDishesOK(false);
+            SetVisibleTextViewDishesQuantity(false);
+        }
+
+        private void ChengeNameLabelMenuInfo(string infoMenu)
+        {
+            lMenuInfo.Text = infoMenu;
         }
 
         private void ButtonMainDish_Click(object sender, EventArgs e)
         {
-           Start(ButtonMenu.MainDish);
-           loadPresenters.LoadMainDish();
-           loadPresenters.LoadSidesDishMainDish();          
+            MainDishButtonSettings();
+            loadDishesAndSides.LoadMainDish();         
+        }
+
+        private void MainDishButtonSettings()
+        {
+            bMainDish.BackColor = Color.LawnGreen;
+            ChengeNameLabelMenuInfo("Dania główne");
+            SetVisibleButtonDishesOK(false);
+            SetVisibleTextViewDishesQuantity(false);
         }
 
         private void ButtonDrinks_Click(object sender, EventArgs e)
         {
-           Start(ButtonMenu.Drinks);
-            loadPresenters.LoadDrinks();          
+            DrinkseButtonSettings();
+            loadDishesAndSides.LoadDrinks();          
+        }
+
+        private void DrinkseButtonSettings()
+        {
+            bDrinks.BackColor = Color.LawnGreen;
+            ChengeNameLabelMenuInfo("Napoje");
+            SetVisibleButtonDishesOK(false);
+            SetVisibleTextViewDishesQuantity(false);
         }
 
         private void ButtonSoup_Click(object sender, EventArgs e)
         {
-            Start(ButtonMenu.Soups);
-            loadPresenters.LoadSoups();            
+            SoupsButtonSettings();
+            loadDishesAndSides.LoadSoups();            
         }
 
+        private void SoupsButtonSettings()
+        {
+            bSoups.BackColor = Color.LawnGreen;
+            ChengeNameLabelMenuInfo("Zupy");
+            SetVisibleButtonDishesOK(false);
+            SetVisibleTextViewDishesQuantity(false);
+        }
 
 
         private void ButtonOrder_Click(object sender, EventArgs e)

@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1
 {
-    interface IForm1Dishes
+    public interface IForm1Dishes
     {
-        List<Dish> Dishes();
+        List<Dish> GetDishes();
     }
 }

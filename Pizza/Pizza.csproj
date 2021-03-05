@@ -81,20 +81,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Menu\Dishes\ListDishes.cs" />
     <Compile Include="Models\Menu\Dishes\ListDrinks.cs" />
     <Compile Include="Models\Menu\Dishes\ListMainDishes.cs" />
     <Compile Include="Models\Menu\Dishes\ListPizza.cs" />
     <Compile Include="Models\Menu\Dishes\ListSoups.cs" />
-    <Compile Include="Models\Menu\Sides\ListSidesMinDishes.cs" />
+    <Compile Include="Models\Menu\Sides\ListSides.cs" />
+    <Compile Include="Models\Menu\Sides\ListSidesMainDishes.cs" />
     <Compile Include="Models\Menu\Sides\ListSidesPizza.cs" />
     <Compile Include="Models\Order\Side.cs" />
     <Compile Include="Presenters\PresenterForm1\LoadDishesAndSideDishForm1\IForm1Dishes.cs" />
     <Compile Include="Presenters\PresenterForm1\LoadDishesAndSideDishForm1\IForm1ListViewDishesAndCheckedListBoxSideDish.cs" />
-    <Compile Include="IForm1Order.cs" />
-    <Compile Include="IFormHistory.cs" />
-    <Compile Include="IFormMail.cs" />
-    <Compile Include="ILoadHistoryOrders.cs" />
-    <Compile Include="ISaveHistory.cs" />
+    <Compile Include="interfejs\IForm1Order.cs" />
+    <Compile Include="interfejs\IFormHistory.cs" />
+    <Compile Include="interfejs\IFormMail.cs" />
+    <Compile Include="interfejs\ILoadHistoryOrders.cs" />
+    <Compile Include="interfejs\ISaveHistory.cs" />
     <Compile Include="Presenters\Email\Email.cs" />
     <Compile Include="Presenters\Email\EmailMessage.cs" />
     <Compile Include="Presenters\PresenterForm1\LoadDishesAndSideDishForm1\Form1LoadDishesPresenters.cs" />
@@ -105,14 +107,19 @@
     <Compile Include="Models\Order\PriceAll.cs" />
     <Compile Include="Models\Order\Dish.cs" />
     <Compile Include="Presenters\HelpFinding.cs" />
-    <Compile Include="Models\Menu\ListOfDishes.cs" />
-    <Compile Include="Models\Menu\ListOfSideDishes.cs" />
     <Compile Include="Models\Name.cs" />
     <Compile Include="Models\Order\Order.cs" />
     <Compile Include="Models\Registry.cs" />
     <Compile Include="Models\FilesTXT\SaveFiles.cs" />
     <Compile Include="Models\FilesTXT\LoadingFilesTxt.cs" />
     <Compile Include="Presenters\PresenterForm1\LoadDishesAndSideDishForm1\IForm1Sides.cs" />
+    <Compile Include="Presenters\PresenterForm1\VisableElements\Button\Button.cs" />
+    <Compile Include="Presenters\PresenterForm1\VisableElements\Button\ButtonDrinks.cs" />
+    <Compile Include="Presenters\PresenterForm1\VisableElements\Button\ButtonMainDishes.cs" />
+    <Compile Include="Presenters\PresenterForm1\VisableElements\Button\ButtonPizza.cs" />
+    <Compile Include="Presenters\PresenterForm1\VisableElements\Button\ButtonSoups.cs" />
+    <Compile Include="Presenters\PresenterForm1\VisableElements\Button\IMenuButton.cs" />
+    <Compile Include="View\IVisible.cs" />
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

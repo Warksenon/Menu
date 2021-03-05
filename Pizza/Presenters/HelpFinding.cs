@@ -55,6 +55,32 @@
             else return false;
         }
 
-      
+        public static string FindPrice(string nameAndPrice)
+        {
+            int index = nameAndPrice.IndexOf("-") + 1;
+            if (index == -1)
+            {
+                return "";
+            }
+            else
+            {
+                string price = nameAndPrice.Substring(index);
+                return price;
+            }
+        }
+
+        public static string FindName(string nameAndPrice)
+        {
+            int index = nameAndPrice.IndexOf("-") - 1;
+            if (index == -1)
+            {
+                return "";
+            }
+            else
+            {
+                string sdish = nameAndPrice.Substring(0, index);
+                return sdish;
+            }
+        }
     }
 }

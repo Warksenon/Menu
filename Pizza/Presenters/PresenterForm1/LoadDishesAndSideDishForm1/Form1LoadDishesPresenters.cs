@@ -11,11 +11,14 @@ namespace Pizza.Presenters
     class Form1LoadDishesPresenters
     {
 
-       private readonly IForm1ListViewDishesAndCheckedListBoxSideDish form1;
+        private readonly IForm1ListViewDishes loadDishes;
+        private readonly IForm1ChecedListBoxSides loadSides;
+        
 
-       public Form1LoadDishesPresenters(IForm1ListViewDishesAndCheckedListBoxSideDish view)
+        public Form1LoadDishesPresenters(Form1 form1)
         {
-            form1 = view;
+            loadDishes = form1;
+            loadSides = form1;
         }
 
         public void LoadPizza()
@@ -45,12 +48,12 @@ namespace Pizza.Presenters
         private void AddDishesToListView(IForm1Dishes loadList)
         {
             List<Dish> listDisch= loadList.GetDishes();
-            form1.ListViewDishes.Items.Clear();
+            loadDishes.ListViewDishes.Items.Clear();
             foreach (var disch in listDisch)
             {
                 ListViewItem lvi = new ListViewItem(Convert.ToString(disch.Name));
                 lvi.SubItems.Add(disch.Price);
-                form1.ListViewDishes.Items.Add(lvi);
+                loadDishes.ListViewDishes.Items.Add(lvi);
             }
         }
 
@@ -61,13 +64,13 @@ namespace Pizza.Presenters
             foreach (var side in list)
             {
                 string add = side.Name +" - "+ side.Price;
-                form1.CheckedListBoxSideDish.Items.Add(add);
+                loadSides.CheckedListBoxSide.Items.Add(add);
             }          
         }
 
         private void ClearCheckedListBox()
         {
-            form1.CheckedListBoxSideDish.Items.Clear();
+            loadSides.CheckedListBoxSide.Items.Clear();
         }
     }
 }

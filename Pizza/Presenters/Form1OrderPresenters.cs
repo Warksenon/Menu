@@ -7,13 +7,16 @@ namespace Pizza.Presenters
     class Form1OrderPresenters
     {
 
-        private readonly IForm1ListViewDishesAndCheckedListBoxSideDish loadDishesAndSides;
+        private readonly IForm1ListViewDishes loadDishes;
+        private readonly IForm1ChecedListBoxSides loadSides;
         private readonly IForm1Order form1Order;
 
-        public Form1OrderPresenters(IForm1ListViewDishesAndCheckedListBoxSideDish listDishes, IForm1Order order)
+        public Form1OrderPresenters(Form1 form1)
         {
-            loadDishesAndSides = listDishes;
-            form1Order = order;
+            loadDishes = form1;
+            loadSides = form1;
+            form1Order = form1;
+            
         }
 
         public void AddDishesToListViewOrder()
@@ -23,8 +26,8 @@ namespace Pizza.Presenters
                 int x = CheckListDishesSelectedItem();
                 Dish dish = new Dish
                 {
-                    Name = loadDishesAndSides.ListViewDishes.Items[x].SubItems[0].Text,
-                    Price = loadDishesAndSides.ListViewDishes.Items[x].SubItems[1].Text
+                    Name = loadDishes.ListViewDishes.Items[x].SubItems[0].Text,
+                    Price = loadDishes.ListViewDishes.Items[x].SubItems[1].Text
                 };
 
                 for (int i = 0; i < CheckNumberTextViewDishes(); i++)
@@ -49,13 +52,13 @@ namespace Pizza.Presenters
 
         private int CheckListDishesSelectedItem()
         {
-            return loadDishesAndSides.ListViewDishes.FocusedItem.Index;
+            return loadDishes.ListViewDishes.FocusedItem.Index;
         }
 
         private string CheckSelecktSideDishes()
         {
             string side = "";
-            foreach (object item in loadDishesAndSides.CheckedListBoxSideDish.CheckedItems)
+            foreach (object item in loadSides.CheckedListBoxSide.CheckedItems)
             {
                 if (side.Equals(""))
                 {
@@ -97,7 +100,7 @@ namespace Pizza.Presenters
             string priceSide;
             int priceAll = FindsPrice(priceDish);
 
-            foreach (object item in loadDishesAndSides.CheckedListBoxSideDish.CheckedItems)
+            foreach (object item in loadSides.CheckedListBoxSide.CheckedItems)
             {
                 priceSide = item.ToString();
                 priceAll += FindsPrice(priceSide);
@@ -182,7 +185,7 @@ namespace Pizza.Presenters
             return order;
         }
 
-        static string sendMesseg;
+        //static string sendMesseg;
         public void SubmitOrder()
         {
             if (ChceckListViewOrderIsNotEpmty())

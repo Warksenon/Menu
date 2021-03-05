@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace Pizza
 {
-    public interface IForm1Order
+     interface IForm1Order 
     {
         TextBox TextBoxQuantityDishes { get; set; }
 

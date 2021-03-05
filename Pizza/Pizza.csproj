@@ -91,7 +91,7 @@
     <Compile Include="Models\Menu\Sides\ListSidesPizza.cs" />
     <Compile Include="Models\Order\Side.cs" />
     <Compile Include="Presenters\PresenterForm1\LoadDishesAndSideDishForm1\IForm1Dishes.cs" />
-    <Compile Include="Presenters\PresenterForm1\LoadDishesAndSideDishForm1\IForm1ListViewDishesAndCheckedListBoxSideDish.cs" />
+    <Compile Include="Presenters\PresenterForm1\LoadDishesAndSideDishForm1\IForm1ListViewDishes.cs" />
     <Compile Include="interfejs\IForm1Order.cs" />
     <Compile Include="interfejs\IFormHistory.cs" />
     <Compile Include="interfejs\IFormMail.cs" />
@@ -113,17 +113,22 @@
     <Compile Include="Models\FilesTXT\SaveFiles.cs" />
     <Compile Include="Models\FilesTXT\LoadingFilesTxt.cs" />
     <Compile Include="Presenters\PresenterForm1\LoadDishesAndSideDishForm1\IForm1Sides.cs" />
-    <Compile Include="Presenters\PresenterForm1\VisableElements\Button\Button.cs" />
-    <Compile Include="Presenters\PresenterForm1\VisableElements\Button\ButtonDrinks.cs" />
-    <Compile Include="Presenters\PresenterForm1\VisableElements\Button\ButtonMainDishes.cs" />
-    <Compile Include="Presenters\PresenterForm1\VisableElements\Button\ButtonPizza.cs" />
-    <Compile Include="Presenters\PresenterForm1\VisableElements\Button\ButtonSoups.cs" />
-    <Compile Include="Presenters\PresenterForm1\VisableElements\Button\IMenuButton.cs" />
+    <Compile Include="Presenters\PresenterForm1\LoadDishesAndSideDishForm1\IForm1ChecedListBoxSides.cs" />
+    <Compile Include="View\Form1\IForm1AddButton.cs" />
+    <Compile Include="View\Form1\IForm1QuantityTextBox.cs" />
+    <Compile Include="View\Form1\IFrom1InfoLabel.cs" />
+    <Compile Include="View\Form1\VisableElements\Button\ButtonMenu.cs" />
+    <Compile Include="View\Form1\VisableElements\Button\ButtonDrinksSettings.cs" />
+    <Compile Include="View\Form1\VisableElements\Button\ButtonMainDishes.cs" />
+    <Compile Include="View\Form1\VisableElements\Button\ButtonPizza.cs" />
+    <Compile Include="View\Form1\VisableElements\Button\ButtonSoups.cs" />
+    <Compile Include="View\Form1\VisableElements\Button\IForm1ButtonMenu.cs" />
+    <Compile Include="View\Form1\VisableElements\Button\IMenuButton.cs" />
     <Compile Include="View\IVisible.cs" />
-    <Compile Include="View\Form1.cs">
+    <Compile Include="View\Form1\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form1.Designer.cs">
+    <Compile Include="View\Form1\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormHistory.cs">
@@ -145,7 +150,7 @@
     <Compile Include="Models\SqlLite\CreateConnection.cs" />
     <Compile Include="Models\SqlLite\CreateTabeles.cs" />
     <Compile Include="Models\SqlLite\InsertAndQuestionSQL.cs" />
-    <EmbeddedResource Include="View\Form1.resx">
+    <EmbeddedResource Include="View\Form1\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormHistory.resx">

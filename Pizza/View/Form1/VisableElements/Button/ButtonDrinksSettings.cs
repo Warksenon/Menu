@@ -1,33 +1,22 @@
-﻿using Pizza.View;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Drawing;
 
 namespace Pizza
 {
     class ButtonDrinksSettings : ButtonMenu,  IMenuButton
     {
+        public ButtonDrinksSettings(Form1 form1) : base(form1) { }
+
         public void SetButtonSetting()
         {
             ClearColorButton();
             DrinkseButtonSettings();
         }
 
-        public ButtonDrinksSettings(Form1 form1):base(form1)
-        {            
-            
-        }
-
         private void DrinkseButtonSettings()
         {
-            bMenu.DrinksButton.BackColor = Color.LawnGreen;
             ChengeNameLabelMenuInfo("Napoje");
-            SetVisibleButtonDishesOK(false);
-            SetVisibleTextViewDishesQuantity(false);
+            ButtonSeting();
+            bMenu.DrinksButton.BackColor = Color.LawnGreen;
         }
     }
 }

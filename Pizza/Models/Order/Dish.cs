@@ -4,10 +4,11 @@ using System.Collections.Generic;
 namespace Pizza
 {
     public class Dish
-    {        
+    {
         private string name;
         private string price;
         private List<Side> listSides;
+        private int id;
 
         public Dish()
         {
@@ -30,6 +31,12 @@ namespace Pizza
         {
             get { return listSides; }
             set { listSides = value; }
+        }
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
         }
 
         public void AddSideToList(Side s)

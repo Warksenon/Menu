@@ -4,81 +4,81 @@ using System.IO;
 
 namespace Pizza.SqlLite
 {
-    //class CreateTabeles: CreateConnection
-    //{
-    //    public void CreateSQLiteTables()
-    //    {          
-    //        CreateSQLiteDatabaseFile();
-    //        CreateSQLitePriceAll(CreateSQLiteConnection());
-    //        CreateSQLiteDishes(CreateSQLiteConnection());           
-    //    }
+    class CreateTabeles : CreateConnection
+    {
+        public void CreateSQLiteTables()
+        {
+            CreateSQLiteDatabaseFile();
+            CreateSQLitePriceAll(CreateSQLiteConnection());
+            CreateSQLiteDishes(CreateSQLiteConnection());
+        }
 
-    //    private void CreateSQLiteDatabaseFile()
-    //    {
-    //        DirectoryInfo di = new DirectoryInfo(folderDatabase);
-    //        if (!di.Exists)
-    //        {
-    //            try
-    //            {
-    //                di.Create();
-    //            }
-    //            catch (Exception ex)
-    //            {                    
-    //                RecordOfExceptions.Save(Convert.ToString(ex), "CreateSQLiteDatabaseFile");
-    //            }
-    //        }
+        private void CreateSQLiteDatabaseFile()
+        {
+            DirectoryInfo di = new DirectoryInfo(folderDatabase);
+            if (!di.Exists)
+            {
+                try
+                {
+                    di.Create();
+                }
+                catch (Exception ex)
+                {
+                    RecordOfExceptions.Save(Convert.ToString(ex), "CreateSQLiteDatabaseFile");
+                }
+            }
 
-    //        FileInfo fi = new FileInfo(folderDatabase + databaseFile);
+            FileInfo fi = new FileInfo(folderDatabase + databaseFile);
 
-    //        if (!fi.Exists)
-    //        {
-    //            SQLiteConnection.CreateFile(folderDatabase + databaseFile);
-               
-    //        }
-    //        else
-    //        {
-               
-    //        }
-    //    }
+            if (!fi.Exists)
+            {
+                SQLiteConnection.CreateFile(folderDatabase + databaseFile);
 
-    //    private void CreateSQLitePriceAll(SQLiteConnection cn)
-    //    {
-    //        using (cn)
-    //        {
-    //            string sql = "CREATE TABLE '" + name.PriceAll + "'('id' INTEGER PRIMARY KEY , '" + name.Price + "' TEXT, '" + name.Date + "' TEXT, '" + name.Comments + "' TEXT);";
-    //            try
-    //            {
-    //                cn.Open();
-    //                SQLiteCommand cmd = new SQLiteCommand(sql, cn);
-    //                cmd.ExecuteNonQuery();
-    //                cmd.Cancel();
-    //            }
-    //            catch (Exception ex)
-    //            {
-    //                RecordOfExceptions.Save(Convert.ToString(ex), "CreateSQLitePriceAll");
-    //            }
-    //            cn.Close();
-    //        }
-    //    }
+            }
+            else
+            {
 
-    //    private void CreateSQLiteDishes(SQLiteConnection cn)
-    //    {
-    //        using (cn)
-    //        {
-    //            string sql2 = "CREATE TABLE '" + name.Dishes + "'('id' INTEGER PRIMARY KEY,'" + name.IdPrice + "' int, '" + name.Dish + "' TEXT ,'" + name.Price + "' TEXT,'" + name.SidesDishes + "' );";
-    //            try
-    //            {
-    //                cn.Open();
-    //                SQLiteCommand cmd = new SQLiteCommand(sql2, cn);
-    //                cmd.ExecuteNonQuery();
-                   
-    //            }
-    //            catch (Exception ex)
-    //            {
-    //                RecordOfExceptions.Save(Convert.ToString(ex), "CreateSQLiteDishes");
-    //            }
-    //            cn.Close();
-    //        }
-    //    }
-    //}
+            }
+        }
+
+        private void CreateSQLitePriceAll(SQLiteConnection cn)
+        {
+            using (cn)
+            {
+                string sql = "CREATE TABLE '" + Name.PriceAll + "'('id' INTEGER PRIMARY KEY , '" + Name.Price + "' TEXT, '" + Name.Date + "' TEXT, '" + Name.Comments + "' TEXT);";
+                try
+                {
+                    cn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand(sql, cn);
+                    cmd.ExecuteNonQuery();
+                    cmd.Cancel();
+                }
+                catch (Exception ex)
+                {
+                    RecordOfExceptions.Save(Convert.ToString(ex), "CreateSQLitePriceAll");
+                }
+                cn.Close();
+            }
+        }
+
+        private void CreateSQLiteDishes(SQLiteConnection cn)
+        {
+            using (cn)
+            {
+                string sql2 = "CREATE TABLE '" + Name.Dishes + "'('id' INTEGER PRIMARY KEY,'" + Name.IdPrice + "' int, '" + Name.Dish + "' TEXT ,'" + Name.Price + "' TEXT,'" + Name.SidesDishes + "' );";
+                try
+                {
+                    cn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand(sql2, cn);
+                    cmd.ExecuteNonQuery();
+
+                }
+                catch (Exception ex)
+                {
+                    RecordOfExceptions.Save(Convert.ToString(ex), "CreateSQLiteDishes");
+                }
+                cn.Close();
+            }
+        }
+    }
 }

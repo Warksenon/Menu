@@ -12,7 +12,7 @@ namespace Pizza
 
         public partial class Form1 : Form , IForm1ListViewDishes, IForm1Order, IForm1ButtonMenu, 
                                      IForm1ChecedListBoxSides, IForm1AddButton, IForm1QuantityTextBox, IFrom1InfoLabel
-    {
+        {
         public Form1 form1;
 
         public Form1()
@@ -26,13 +26,14 @@ namespace Pizza
         private Form1LoadDishesPresenters loadDishesAndSides;
         private void Form1_Load_1(object sender, EventArgs e)
         {
+            form1 = this;
             orderPresenters = new Form1OrderPresenters(this);
             loadDishesAndSides = new Form1LoadDishesPresenters(this);
-            PizzaButtonSettings();
+            ButtonSettings(new ButtonPizzaSetting(form1));
             loadDishesAndSides.LoadPizza();          
             SetVisibleButtonRemoveAll();
             SetVisibleButtonRemove();
-            form1 = this;
+           
 
            // SqlLite.CreateTabeles createTabeles = new SqlLite.CreateTabeles();
            // createTabeles.CreateSQLiteTables();        
@@ -52,82 +53,34 @@ namespace Pizza
         public TextBox QTextbox { get => textBoxQuantityDishes; set => textBoxQuantityDishes = value; }
         public Label LabelMenu { get => lMenuInfo; set =>  lMenuInfo = value; }
 
-        private void ClearColorButton()
-        {
-            bPizza.BackColor = SystemColors.Control;
-            bMainDish.BackColor = SystemColors.Control;
-            bSoups.BackColor = SystemColors.Control;
-            bDrinks.BackColor = SystemColors.Control;
-        }
-
-    
            void ButtonSettings(IMenuButton button)
         {
             button.SetButtonSetting();
         }
+
         private void ButtonPizza_Click(object sender, EventArgs e)
         {
-            PizzaButtonSettings();
+            ButtonSettings(new ButtonPizzaSetting(form1));
             loadDishesAndSides.LoadPizza();  
-        }
-
-        private void PizzaButtonSettings()
-        {
-            bPizza.BackColor = Color.LawnGreen;
-            ChengeNameLabelMenuInfo("Pizza");
-            SetVisibleButtonDishesOK(false);
-            SetVisibleTextViewDishesQuantity(false);
-        }
-
-        private void ChengeNameLabelMenuInfo(string infoMenu)
-        {
-            lMenuInfo.Text = infoMenu;
         }
 
         private void ButtonMainDish_Click(object sender, EventArgs e)
         {
-            MainDishButtonSettings();
+            ButtonSettings(new ButtonMainDishesSetting(form1));
             loadDishesAndSides.LoadMainDish();         
-        }
-
-        private void MainDishButtonSettings()
-        {
-            bMainDish.BackColor = Color.LawnGreen;
-            ChengeNameLabelMenuInfo("Dania główne");
-            SetVisibleButtonDishesOK(false);
-            SetVisibleTextViewDishesQuantity(false);
         }
 
         private void ButtonDrinks_Click(object sender, EventArgs e)
         {
-            DrinkseButtonSettings();
+            ButtonSettings(new ButtonDrinksSettings(form1));
             loadDishesAndSides.LoadDrinks();          
         }
-
-        private void DrinkseButtonSettings()
-        {
-            ButtonSettings(new ButtonDrinksSettings(form1));
-
-            //bDrinks.BackColor = Color.LawnGreen;
-            //ChengeNameLabelMenuInfo("Napoje");
-            //SetVisibleButtonDishesOK(false);
-            //SetVisibleTextViewDishesQuantity(false);
-        }
-
+      
         private void ButtonSoup_Click(object sender, EventArgs e)
         {
-            SoupsButtonSettings();
+            ButtonSettings(new ButtonSoupsSetting(form1));
             loadDishesAndSides.LoadSoups();            
         }
-
-        private void SoupsButtonSettings()
-        {
-            bSoups.BackColor = Color.LawnGreen;
-            ChengeNameLabelMenuInfo("Zupy");
-            SetVisibleButtonDishesOK(false);
-            SetVisibleTextViewDishesQuantity(false);
-        }
-
 
         private void ButtonOrder_Click(object sender, EventArgs e)
         {

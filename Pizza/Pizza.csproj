@@ -119,9 +119,9 @@
     <Compile Include="View\Form1\IFrom1InfoLabel.cs" />
     <Compile Include="View\Form1\VisableElements\Button\ButtonMenu.cs" />
     <Compile Include="View\Form1\VisableElements\Button\ButtonDrinksSettings.cs" />
-    <Compile Include="View\Form1\VisableElements\Button\ButtonMainDishes.cs" />
-    <Compile Include="View\Form1\VisableElements\Button\ButtonPizza.cs" />
-    <Compile Include="View\Form1\VisableElements\Button\ButtonSoups.cs" />
+    <Compile Include="View\Form1\VisableElements\Button\ButtonMainDishesSetting.cs" />
+    <Compile Include="View\Form1\VisableElements\Button\ButtonPizzaSetting.cs" />
+    <Compile Include="View\Form1\VisableElements\Button\ButtonSoupsSetting.cs" />
     <Compile Include="View\Form1\VisableElements\Button\IForm1ButtonMenu.cs" />
     <Compile Include="View\Form1\VisableElements\Button\IMenuButton.cs" />
     <Compile Include="View\IVisible.cs" />

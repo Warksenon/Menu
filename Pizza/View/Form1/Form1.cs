@@ -1,4 +1,5 @@
 ﻿using Pizza.Presenters;
+using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
 using Pizza.Presenters.PresenterForm1.VisableElements.Button;
 using Pizza.View.Form1;
 using System;
@@ -23,14 +24,19 @@ namespace Pizza
         }
 
         private Form1OrderPresenters orderPresenters ;
-        private Form1LoadDishesPresenters loadDishesAndSides;
+        private Form1LoadDishesPresenters loadDishesToListView;
+        private Form1LoadSidesPresenter loadSidesToCheckedListBox;
+        private readonly SettingButtonMenu buttonMenu = new SettingButtonMenu();
         private void Form1_Load_1(object sender, EventArgs e)
         {
             form1 = this;
             orderPresenters = new Form1OrderPresenters(this);
-            loadDishesAndSides = new Form1LoadDishesPresenters(this);
-            ButtonSettings(new ButtonPizzaSetting(form1));
-            loadDishesAndSides.LoadPizza();          
+            loadDishesToListView = new Form1LoadDishesPresenters(this);
+            loadDishesToListView.LoadPizza();
+            buttonMenu.ButtonSettings(new ButtonPizzaSetting(form1));
+            loadSidesToCheckedListBox = new Form1LoadSidesPresenter(this);
+            loadSidesToCheckedListBox.LoadSidesPizza();
+                      
             SetVisibleButtonRemoveAll();
             SetVisibleButtonRemove();
            
@@ -53,33 +59,34 @@ namespace Pizza
         public TextBox QTextbox { get => textBoxQuantityDishes; set => textBoxQuantityDishes = value; }
         public Label LabelMenu { get => lMenuInfo; set =>  lMenuInfo = value; }
 
-           void ButtonSettings(IMenuButton button)
-        {
-            button.SetButtonSetting();
-        }
+       
 
         private void ButtonPizza_Click(object sender, EventArgs e)
         {
-            ButtonSettings(new ButtonPizzaSetting(form1));
-            loadDishesAndSides.LoadPizza();  
+            buttonMenu.ButtonSettings(new ButtonPizzaSetting(form1));
+            loadSidesToCheckedListBox.LoadSidesPizza();
+            loadDishesToListView.LoadPizza();  
         }
 
         private void ButtonMainDish_Click(object sender, EventArgs e)
         {
-            ButtonSettings(new ButtonMainDishesSetting(form1));
-            loadDishesAndSides.LoadMainDish();         
+            buttonMenu.ButtonSettings(new ButtonMainDishesSetting(form1));
+            loadSidesToCheckedListBox.LoadSidesMainDishes();
+            loadDishesToListView.LoadMainDish();         
         }
 
         private void ButtonDrinks_Click(object sender, EventArgs e)
         {
-            ButtonSettings(new ButtonDrinksSettings(form1));
-            loadDishesAndSides.LoadDrinks();          
+            buttonMenu.ButtonSettings(new ButtonDrinksSettings(form1));
+            loadSidesToCheckedListBox.ClearCheckedListBox();
+            loadDishesToListView.LoadDrinks();          
         }
       
         private void ButtonSoup_Click(object sender, EventArgs e)
         {
-            ButtonSettings(new ButtonSoupsSetting(form1));
-            loadDishesAndSides.LoadSoups();            
+            buttonMenu.ButtonSettings(new ButtonSoupsSetting(form1));
+            loadSidesToCheckedListBox.ClearCheckedListBox();
+            loadDishesToListView.LoadSoups();            
         }
 
         private void ButtonOrder_Click(object sender, EventArgs e)
@@ -129,6 +136,7 @@ namespace Pizza
         {
             FormMail fm = new FormMail();
             fm.ShowDialog();
+            fm.Close();
         }
 
         private void HistoryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -138,6 +146,7 @@ namespace Pizza
             {
                 FormHistory fm = new FormHistory();
                 fm.ShowDialog();
+                fm.Close();
             }
             else
             {
@@ -192,34 +201,8 @@ namespace Pizza
 
         private void ListViewDish_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SetVisibleButtonDishesOK(true);
-            SetVisibleTextViewDishesQuantity(true);     
+            ListViewDishes lv = new ListViewDishes(form1);
+            lv.SettingVisable();
         }
-
-        private void SetVisibleButtonDishesOK(bool visable)
-        {
-            if (visable) bAddDish.Visible = true;
-            else
-            {
-                CleaningTextViewDishesQuantity();
-                bAddDish.Visible = false;
-            }         
-        }
-
-        private void SetVisibleTextViewDishesQuantity(bool visalbe)
-        {
-            if (visalbe) textBoxQuantityDishes.Visible = true;            
-            else
-            {
-                CleaningTextViewDishesQuantity();
-                textBoxQuantityDishes.Visible = false;
-            }
-        }
-
-        private void CleaningTextViewDishesQuantity()
-        {
-            textBoxQuantityDishes.Text = "1";
-        }
-
     }
 }

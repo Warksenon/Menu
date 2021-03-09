@@ -74,26 +74,9 @@ namespace Pizza.Presenters
             else return side + ".";
         }
 
-        private int CheckNumberTextViewDishes()
-        {
-            int number = CheckTextIsNumber(form1Order.TextBoxQuantityDishes.Text);
-            if (number > 0) return number;
-            else return number;
-        }
+       
 
-        private int CheckTextIsNumber(string textNumber)
-        {
-            int number = 0;
-            try
-            {
-                number = Convert.ToUInt16(textNumber);
-            }
-            catch
-            {
-                MessageBox.Show("Podana ilość produktów nie jest prawidłowa");
-            }
-            return number;
-        }
+      
 
         private string PriceDisheAndSide(string priceDish)
         {

@@ -10,44 +10,37 @@ namespace Pizza.Presenters
 {
     class Form1LoadDishesPresenters
     {
-
         private readonly IForm1ListViewDishes loadDishes;
-        private readonly IForm1ChecedListBoxSides loadSides;
-        
-
+ 
         public Form1LoadDishesPresenters(Form1 form1)
         {
             loadDishes = form1;
-            loadSides = form1;
+            
         }
 
         public void LoadPizza()
         {
-            AddDishesToListView(new ListPizza());
-            LoadCheckListBoxSideDishe(new ListSidesPizza());
+            AddDishesToListView(new ListPizza());          
         }
 
         public void LoadMainDish()
         {
-           AddDishesToListView(new ListMainDishes());
-           LoadCheckListBoxSideDishe(new ListSidesMainDishes());
+           AddDishesToListView(new ListMainDishes());          
         }
 
         public void LoadSoups()
         {
-           AddDishesToListView(new ListSoups());
-           ClearCheckedListBox();
+           AddDishesToListView(new ListSoups());         
         }
 
         public void LoadDrinks()
         {
-           AddDishesToListView(new ListDrinks());
-           ClearCheckedListBox();
+           AddDishesToListView(new ListDrinks());         
         }
 
         private void AddDishesToListView(IForm1Dishes loadList)
         {
-            List<Dish> listDisch= loadList.GetDishes();
+            List<Dish> listDisch = loadList.GetDishes();
             loadDishes.ListViewDishes.Items.Clear();
             foreach (var disch in listDisch)
             {
@@ -57,20 +50,5 @@ namespace Pizza.Presenters
             }
         }
 
-        private  void  LoadCheckListBoxSideDishe(IForm1Sides listSides)
-        {
-            ClearCheckedListBox();
-            List<Side> list = listSides.GetSides();
-            foreach (var side in list)
-            {
-                string add = side.Name +" - "+ side.Price;
-                loadSides.CheckedListBoxSide.Items.Add(add);
-            }          
-        }
-
-        private void ClearCheckedListBox()
-        {
-            loadSides.CheckedListBoxSide.Items.Clear();
-        }
     }
 }

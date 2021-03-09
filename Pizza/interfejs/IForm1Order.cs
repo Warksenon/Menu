@@ -3,16 +3,16 @@ using System.Windows.Forms;
 
 namespace Pizza
 {
-     interface IForm1Order 
+     interface IForm1ListViewOrder
     {
-        TextBox TextBoxQuantityDishes { get; set; }
+        //TextBox TextBoxQuantityDishes { get; set; }
 
         ListView ListViewOrder { get; set; }
 
-        Label LabelPrice { get; set; }
+        //Label LabelPrice { get; set; }
 
-        BackgroundWorker BackgroundWorker { get; set;}
+        //BackgroundWorker BackgroundWorker { get; set;}
 
-        TextBox TextBoxComments { get; set; }
+        //TextBox TextBoxComments { get; set; }
     }
 }

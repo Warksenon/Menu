@@ -10,9 +10,9 @@ namespace Pizza.Models.Menu.Sides
 
         public List<Side> LoadSidePizza()
         {
-            List<string> key = new List<string> { "doubelCheesePrice", "salamiPrice", "hamPrice", "mushroomsPrice" };
-            AddTolist(key);
-            return sides;
+            List<string> listKey = new List<string> { "doubelCheesePrice", "salamiPrice", "hamPrice", "mushroomsPrice" };
+            AddTolist(listKey);
+            return listSides;
         }
 
         public List<Side> GetSides()

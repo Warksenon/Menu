@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Pizza.View.Form1
 {
-    interface IForm1QuantityTextBox
+    public interface IForm1QuantityTextBox
     {
         TextBox QTextbox { get; set; }
     }

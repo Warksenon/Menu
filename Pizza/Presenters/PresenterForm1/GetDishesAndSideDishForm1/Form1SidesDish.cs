@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pizza.Models.Order;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1
 {
-    class Form1SidesDish : Form1Quantity
+    public class Form1SidesDish : Form1Quantity
     {
         private readonly IForm1ChecedListBoxSides loadSides;
 
@@ -15,20 +16,20 @@ namespace Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1
             loadSides = form1;
         }
 
-        public void AddDishesToListViewOrder()
+        public List<Side> GetListSides()
         {
+            List<Side> list = new List<Side>();
             foreach (object item in loadSides.CheckedListBoxSide.CheckedItems)
             {
-                if (side.Equals(""))
-                {
-                    side += item.ToString();
-                }
-                else
-                {
-                    side += ", ";
-                    side += item.ToString();
-                }
+                Side side = new Side();
+                string textItem = item.ToString();
+                string name = HelpFinding.FindName(textItem);
+                string price = HelpFinding.FindPrice(textItem);
+                side.Name = name;
+                side.Price = price;                
+                list.Add(side);
             }
+            return list;
         }
     }
 }

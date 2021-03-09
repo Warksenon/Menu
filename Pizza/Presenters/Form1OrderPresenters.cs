@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Pizza.Models.Order;
+using Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -6,21 +8,21 @@ namespace Pizza.Presenters
 {
     class Form1OrderPresenters
     {
-
-        private readonly IForm1ListViewDishes loadDishes;
-        private readonly IForm1ChecedListBoxSides loadSides;
-        private readonly IForm1Order form1Order;
+        Form1ListDishes lvDishes;
+        Form1SidesDish chblSides;
 
         public Form1OrderPresenters(Form1 form1)
-        {
-            loadDishes = form1;
-            loadSides = form1;
-            form1Order = form1;
-            
+        {                     
+            lvDishes = new Form1ListDishes(form1);
+            chblSides = new Form1SidesDish(form1);
         }
 
-        public void AddDishesToListViewOrder()
+        public void AddOrderToListView()
         {
+
+            List<Dish> listDishes = lvDishes.GetListDishes();
+            List<Side> listSides = chblSides.GetListSides();
+
             if (CheckNumberTextViewDishes() > 0)
             {
                 int x = CheckListDishesSelectedItem();
@@ -30,48 +32,44 @@ namespace Pizza.Presenters
                     Price = loadDishes.ListViewDishes.Items[x].SubItems[1].Text
                 };
 
-                for (int i = 0; i < CheckNumberTextViewDishes(); i++)
+                string allSidesToGether = AddAllSides(listSides);
+                for (int i = 0; i <  i++)
                 {
                     ListViewItem lvi;
-                    if (CheckSelecktSideDishes().Equals(""))
-                    {
-                        lvi = new ListViewItem(dish.Name);
-                        lvi.SubItems.Add(CheckSelecktSideDishes());
-                        lvi.SubItems.Add(dish.Price);
-                    }
-                    else
-                    {
-                        lvi = new ListViewItem(dish.Name + " -" + dish.Price);
-                        lvi.SubItems.Add(CheckSelecktSideDishes());
-                        lvi.SubItems.Add(PriceDisheAndSide(dish.Price));
-                    }
+                    
+                    lvi = new ListViewItem(dish.Name);
+                    lvi.SubItems.Add();
+                    lvi.SubItems.Add(dish.Price);                                       
+                    lvi = new ListViewItem(dish.Name + " -" + dish.Price);
+                    lvi.SubItems.Add(AddAllSides());
+                    lvi.SubItems.Add(PriceDisheAndSide(dish.Price));
+                    
                     form1Order.ListViewOrder.Items.Add(lvi);
                 }
             }
         }
 
-        private int CheckListDishesSelectedItem()
-        {
-            return loadDishes.ListViewDishes.FocusedItem.Index;
-        }
+       
 
-        private string CheckSelecktSideDishes()
+        private string AddAllSides(List<Side> listSides)
         {
-            string side = "";
-            foreach (object item in loadSides.CheckedListBoxSide.CheckedItems)
+            string allSidesToGether = "";
+            for(int i = 0; i<listSides.Count; i++ )
             {
-                if (side.Equals(""))
+                string name = listSides[i].Name;
+                string price = listSides[i].Price;
+                allSidesToGether += name + " " + price;
+                if(i== listSides.Count)
                 {
-                    side += item.ToString();
+                    allSidesToGether += ".";
                 }
                 else
                 {
-                    side += ", ";
-                    side += item.ToString();
+                    allSidesToGether += ",";
                 }
             }
-            if (side.Equals("")) return side;
-            else return side + ".";
+           
+            return allSidesToGether;
         }
 
        

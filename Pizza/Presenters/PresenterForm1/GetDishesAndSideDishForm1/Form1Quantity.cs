@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1
 {
-    abstract class Form1Quantity
+    public abstract class Form1Quantity
     {
         protected IForm1QuantityTextBox qTextBox;
 

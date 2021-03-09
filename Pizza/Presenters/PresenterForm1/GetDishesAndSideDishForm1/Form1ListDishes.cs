@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1
 {
-    class Form1ListDishes : Form1Quantity
+    public class Form1ListDishes : Form1Quantity
     {
         private readonly IForm1ListViewDishes loadDishes;
 
@@ -16,7 +16,7 @@ namespace Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1
             loadDishes = form1;
         }
 
-        public List<Dish> GetDishes()
+        public List<Dish> GetListDishes()
         {
             List<Dish> list = new List<Dish>();
             int numbersRepetitions = CheckNumberTextViewDishes();
@@ -36,24 +36,6 @@ namespace Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1
 
 
             return list;
-        }
-
-        public void AddDishesToListViewOrder()
-        {
-            if (CheckNumberTextViewDishes() > 0)
-            {
-                int x = CheckListDishesSelectedItem();
-                Dish dish = new Dish
-                {
-                    Name = loadDishes.ListViewDishes.Items[x].SubItems[0].Text,
-                    Price = loadDishes.ListViewDishes.Items[x].SubItems[1].Text
-                };
-
-                for (int i = 0; i < CheckNumberTextViewDishes(); i++)
-                {
-                    
-                }
-            }
         }
 
         private int CheckListDishesSelectedItem()

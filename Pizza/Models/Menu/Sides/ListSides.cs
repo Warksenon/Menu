@@ -6,11 +6,11 @@ namespace Pizza.Models.Menu.Sides
 {
     public abstract class ListSides
     {
-        protected  List<Side> sides = new List<Side>();
+        protected  List<Side> listSides = new List<Side>();
 
-        protected void AddTolist(List<string> key)
+        protected void AddTolist(List<string> listKey)
         {
-            foreach (var k in key)
+            foreach (var k in listKey)
             {
                 Side side = new Side();
                 string sideAndPrice= Name.GetNameConfig(k);
@@ -18,7 +18,7 @@ namespace Pizza.Models.Menu.Sides
                 string price = HelpFinding.FindPrice(sideAndPrice);
                 side.Name = name;
                 side.Price = price;
-                sides.Add(side);
+                listSides.Add(side);
             }
         }
     }

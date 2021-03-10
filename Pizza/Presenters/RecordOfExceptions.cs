@@ -19,7 +19,7 @@ namespace Pizza
             }
             catch 
             {
-                Console.WriteLine("Eroor save RecordOfExceptions ");
+               
             }
         }
     }

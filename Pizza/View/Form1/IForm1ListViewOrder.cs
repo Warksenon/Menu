@@ -1,15 +1,12 @@
-﻿using System.ComponentModel;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Pizza
 {
-     interface IForm1ListViewOrder
+    interface IForm1ListViewOrder
     {
         //TextBox TextBoxQuantityDishes { get; set; }
 
         ListView ListViewOrder { get; set; }
-
-        //Label LabelPrice { get; set; }
 
         //BackgroundWorker BackgroundWorker { get; set;}
 

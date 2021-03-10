@@ -1,4 +1,5 @@
 ﻿using Pizza.Presenters;
+using Pizza.Presenters.PresenterForm1;
 using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
 using Pizza.Presenters.PresenterForm1.VisableElements.Button;
 using Pizza.View.Form1;
@@ -6,13 +7,14 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-
+using Label = System.Windows.Forms.Label;
 
 namespace Pizza
 {
 
-        public partial class Form1 : Form , IForm1ListViewDishes, IForm1Order, IForm1ButtonMenu, 
-                                     IForm1ChecedListBoxSides, IForm1AddButton, IForm1QuantityTextBox, IFrom1InfoLabel
+    public partial class Form1 : Form , IForm1ListViewDishes, IForm1ListViewOrder, IForm1ButtonMenu, 
+                                     IForm1ChecedListBoxSides, IForm1AddButton, IForm1QuantityTextBox, IFrom1InfoLabel,
+                                     IForm1LabelPrice
         {
         public Form1 form1;
 
@@ -27,6 +29,8 @@ namespace Pizza
         private Form1LoadDishesPresenters loadDishesToListView;
         private Form1LoadSidesPresenter loadSidesToCheckedListBox;
         private readonly SettingButtonMenu buttonMenu = new SettingButtonMenu();
+        private Form1LabelPricePresenter labelPricePresenter;
+
         private void Form1_Load_1(object sender, EventArgs e)
         {
             form1 = this;
@@ -36,7 +40,9 @@ namespace Pizza
             buttonMenu.ButtonSettings(new ButtonPizzaSetting(form1));
             loadSidesToCheckedListBox = new Form1LoadSidesPresenter(this);
             loadSidesToCheckedListBox.LoadSidesPizza();
-                      
+            labelPricePresenter = new Form1LabelPricePresenter(this);
+
+
             SetVisibleButtonRemoveAll();
             SetVisibleButtonRemove();
            
@@ -48,7 +54,7 @@ namespace Pizza
         public CheckedListBox CheckedListBoxSide { get => chListBoxSideDishes; set => chListBoxSideDishes = value; }
         public TextBox TextBoxQuantityDishes { get => textBoxQuantityDishes; set => textBoxQuantityDishes = value; }
         public ListView ListViewOrder { get => listViewOrder; set => listViewOrder = value; }
-        public Label LabelPrice { get => lPrice; set => lPrice = value; }
+      //  public Label LabelPrice { get => lPrice; set => lPrice = value; }
         public BackgroundWorker BackgroundWorker { get => backgroundWorker1; set => backgroundWorker1 = value; }
         public TextBox TextBoxComments { get => tComments; set => tComments = value; }
         public System.Windows.Forms.Button PizzzaButton { get => bPizza; set => bPizza = value; }
@@ -57,9 +63,8 @@ namespace Pizza
         public System.Windows.Forms.Button DrinksButton { get => bDrinks; set => bDrinks = value; }
         public Button AddButton { get => bAddDish; set => bAddDish = value; }
         public TextBox QTextbox { get => textBoxQuantityDishes; set => textBoxQuantityDishes = value; }
-        public Label LabelMenu { get => lMenuInfo; set =>  lMenuInfo = value; }
-
-       
+        public Label LabelMenu { get => lMenuInfo; set =>  lMenuInfo = value; }       
+        public Label LabelPrice { get => lPrice; set => lPrice = value; }
 
         private void ButtonPizza_Click(object sender, EventArgs e)
         {
@@ -91,14 +96,14 @@ namespace Pizza
 
         private void ButtonOrder_Click(object sender, EventArgs e)
         {
-            orderPresenters.SubmitOrder();            
+           // orderPresenters.SubmitOrder();            
         }
 
         private void ButtonOk_Click(object sender, EventArgs e)
         {
-            orderPresenters.AddDishesToListViewOrder();
+            orderPresenters.AddOrderToListView();
             SetVisibleButtonRemoveAll();
-            orderPresenters.LabelPrice();
+            labelPricePresenter.SetTextLabelPrice();
             SelectColorbOrder();
         }
 
@@ -114,9 +119,10 @@ namespace Pizza
 
         private void ButtonRemoveListBox_Click(object sender, EventArgs e)
         {
+
             if (listViewOrder.SelectedItems.Count == 0) return;
-            listViewOrder.SelectedItems[0].Remove();
-            orderPresenters.LabelPrice();           
+            listViewOrder.SelectedItems[0].Remove();           
+            labelPricePresenter.SetTextLabelPrice();
             SetVisibleButtonRemoveAll();
             SetVisibleButtonRemove();
             bRemoveListBox.Visible = false;
@@ -125,8 +131,8 @@ namespace Pizza
 
         private void ButtonRemoveAllListBox_Click(object sender, EventArgs e)
         {
-            listViewOrder.Items.Clear();
-            orderPresenters.LabelPrice();
+            listViewOrder.Items.Clear();            
+            labelPricePresenter.SetTextLabelPrice();
             SelectColorbOrder();
             SetVisibleButtonRemoveAll();
             SetVisibleButtonRemove();

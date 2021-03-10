@@ -2488,3 +2488,139 @@ table 'Dishes' already exists
    w Pizza.SqlLite.CreateTabeles.CreateSQLiteDishes(SQLiteConnection cn) w C:\Users\user\source\repos\Warksenon\menu\Pizza\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 73
 
 
+Data : 2021-03-10 18:23:58
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Pizza.Presenters.Form1OrderPresenters.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Form1OrderPresenters.cs:wiersz 88
+
+
+Data : 2021-03-10 18:23:59
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Pizza.Presenters.Form1OrderPresenters.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Form1OrderPresenters.cs:wiersz 88
+
+
+Data : 2021-03-10 18:24:13
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Pizza.Presenters.Form1OrderPresenters.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Form1OrderPresenters.cs:wiersz 88
+
+
+Data : 2021-03-10 18:24:13
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Pizza.Presenters.Form1OrderPresenters.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Form1OrderPresenters.cs:wiersz 88
+
+
+Data : 2021-03-10 18:24:13
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Pizza.Presenters.Form1OrderPresenters.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Form1OrderPresenters.cs:wiersz 88
+
+
+Data : 2021-03-10 18:28:32
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Pizza.Presenters.Form1OrderPresenters.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Form1OrderPresenters.cs:wiersz 88
+
+
+Data : 2021-03-10 18:28:52
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Pizza.Presenters.Form1OrderPresenters.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Form1OrderPresenters.cs:wiersz 88
+
+
+Data : 2021-03-10 18:30:22
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Pizza.Presenters.Form1OrderPresenters.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Form1OrderPresenters.cs:wiersz 89
+
+
+Data : 2021-03-10 18:30:38
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Pizza.Presenters.Form1OrderPresenters.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Form1OrderPresenters.cs:wiersz 89
+
+
+Data : 2021-03-10 18:32:56
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Pizza.Presenters.Form1OrderPresenters.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Form1OrderPresenters.cs:wiersz 90
+
+
+Data : 2021-03-10 18:35:55
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Pizza.Presenters.Form1OrderPresenters.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Form1OrderPresenters.cs:wiersz 90
+
+
+Data : 2021-03-10 18:35:56
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Pizza.Presenters.Form1OrderPresenters.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Form1OrderPresenters.cs:wiersz 90
+
+
+Data : 2021-03-10 18:35:56
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Pizza.Presenters.Form1OrderPresenters.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Form1OrderPresenters.cs:wiersz 90
+
+
+Data : 2021-03-10 18:36:27
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Pizza.Presenters.Form1OrderPresenters.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Form1OrderPresenters.cs:wiersz 90
+
+
+Data : 2021-03-10 18:36:27
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Pizza.Presenters.Form1OrderPresenters.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Form1OrderPresenters.cs:wiersz 90
+
+
+Data : 2021-03-10 18:36:27
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Pizza.Presenters.Form1OrderPresenters.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Form1OrderPresenters.cs:wiersz 90
+
+
+Data : 2021-03-10 18:39:17
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Pizza.Presenters.Form1OrderPresenters.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Form1OrderPresenters.cs:wiersz 90
+
+

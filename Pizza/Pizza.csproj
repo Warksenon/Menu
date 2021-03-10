@@ -90,13 +90,16 @@
     <Compile Include="Models\Menu\Sides\ListSidesMainDishes.cs" />
     <Compile Include="Models\Menu\Sides\ListSidesPizza.cs" />
     <Compile Include="Models\Order\Side.cs" />
+    <Compile Include="Presenters\PresenterForm1\Form1LabelPricePresenter.cs" />
     <Compile Include="Presenters\PresenterForm1\GetDishesAndSideDishForm1\Form1ListDishes.cs" />
     <Compile Include="Presenters\PresenterForm1\GetDishesAndSideDishForm1\Form1Quantity.cs" />
     <Compile Include="Presenters\PresenterForm1\GetDishesAndSideDishForm1\Form1SidesDish.cs" />
     <Compile Include="Presenters\PresenterForm1\LoadDishesAndSideDishForm1\Form1LoadSidesPresenter.cs" />
     <Compile Include="Presenters\PresenterForm1\LoadDishesAndSideDishForm1\IForm1Dishes.cs" />
     <Compile Include="Presenters\PresenterForm1\LoadDishesAndSideDishForm1\IForm1ListViewDishes.cs" />
-    <Compile Include="interfejs\IForm1Order.cs" />
+    <Compile Include="Presenters\PresenterForm1\Order\IPriceAll.cs" />
+    <Compile Include="View\Form1\IForm1LabelPrice.cs" />
+    <Compile Include="View\Form1\IForm1ListViewOrder.cs" />
     <Compile Include="interfejs\IFormHistory.cs" />
     <Compile Include="interfejs\IFormMail.cs" />
     <Compile Include="interfejs\ILoadHistoryOrders.cs" />
@@ -104,7 +107,7 @@
     <Compile Include="Presenters\Email\Email.cs" />
     <Compile Include="Presenters\Email\EmailMessage.cs" />
     <Compile Include="Presenters\PresenterForm1\LoadDishesAndSideDishForm1\Form1LoadDishesPresenters.cs" />
-    <Compile Include="Presenters\Form1OrderPresenters.cs" />
+    <Compile Include="Presenters\PresenterForm1\Order\Form1OrderPresenters.cs" />
     <Compile Include="Presenters\FormHistoryPresenters.cs" />
     <Compile Include="Presenters\FormMailPresenters.cs" />
     <Compile Include="Presenters\LoadOrder.cs" />

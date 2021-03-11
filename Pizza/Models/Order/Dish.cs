@@ -24,7 +24,7 @@
             set { price = value; }
         }
 
-        public string ListSides
+        public string Sides
         {
             get { return sides; }
             set { sides = value; }

@@ -14,8 +14,8 @@ namespace Pizza
 
     public partial class Form1 : Form , IForm1ListViewDishes, IForm1ListViewOrder, IForm1ButtonMenu, 
                                      IForm1ChecedListBoxSides, IForm1AddButton, IForm1QuantityTextBox, IFrom1InfoLabel,
-                                     IForm1LabelPrice
-        {
+                                     IForm1LabelPrice, IButtonRemove, IButtonSend, ITextBoxComments
+    {
         public Form1 form1;
 
         public Form1()
@@ -30,6 +30,8 @@ namespace Pizza
         private Form1LoadSidesPresenter loadSidesToCheckedListBox;
         private readonly SettingButtonMenu buttonMenu = new SettingButtonMenu();
         private Form1LabelPricePresenter labelPricePresenter;
+        private ButtonRemove buttonRemove;
+        private RemoveOrder removeOrder;
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
@@ -37,34 +39,37 @@ namespace Pizza
             orderPresenters = new Form1AddOrderListViewPresenters(this);
             loadDishesToListView = new Form1LoadDishesPresenters(this);
             loadDishesToListView.LoadPizza();
-            buttonMenu.ButtonSettings(new ButtonPizzaSetting(form1));
+            buttonMenu.ButtonSettings(new ButtonPizzaSetting(this));
             loadSidesToCheckedListBox = new Form1LoadSidesPresenter(this);
             loadSidesToCheckedListBox.LoadSidesPizza();
             labelPricePresenter = new Form1LabelPricePresenter(this);
+            buttonRemove = new ButtonRemove(this);
+            buttonRemove.RemoveAll();
+            removeOrder = new RemoveOrder(this);
 
-
-            SetVisibleButtonRemoveAll();
-            SetVisibleButtonRemove();
-           
 
            // SqlLite.CreateTabeles createTabeles = new SqlLite.CreateTabeles();
            // createTabeles.CreateSQLiteTables();        
-        }     
+        } 
+        
         public ListView ListViewDishes { get => listViewDish; set => listViewDish = value; }
         public CheckedListBox CheckedListBoxSide { get => chListBoxSideDishes; set => chListBoxSideDishes = value; }
         public TextBox TextBoxQuantityDishes { get => textBoxQuantityDishes; set => textBoxQuantityDishes = value; }
         public ListView ListViewOrder { get => listViewOrder; set => listViewOrder = value; }
-      //  public Label LabelPrice { get => lPrice; set => lPrice = value; }
         public BackgroundWorker BackgroundWorker { get => backgroundWorker1; set => backgroundWorker1 = value; }
         public TextBox TextBoxComments { get => tComments; set => tComments = value; }
-        public System.Windows.Forms.Button PizzzaButton { get => bPizza; set => bPizza = value; }
-        public System.Windows.Forms.Button MainButton { get => bMainDish; set => bMainDish = value; }
-        public System.Windows.Forms.Button SoupButton { get => bSoups; set => bSoups = value; }
-        public System.Windows.Forms.Button DrinksButton { get => bDrinks; set => bDrinks = value; }
+        public Button PizzzaButton { get => bPizza; set => bPizza = value; }
+        public Button MainButton { get => bMainDish; set => bMainDish = value; }
+        public Button SoupButton { get => bSoups; set => bSoups = value; }
+        public Button DrinksButton { get => bDrinks; set => bDrinks = value; }
         public Button AddButton { get => bAddDish; set => bAddDish = value; }
         public TextBox QTextbox { get => textBoxQuantityDishes; set => textBoxQuantityDishes = value; }
         public Label LabelMenu { get => lMenuInfo; set =>  lMenuInfo = value; }       
         public Label LabelPrice { get => lPrice; set => lPrice = value; }
+        public Button ButtonRemoveOne { get => bRemoveListBox; set => bRemoveListBox = value; }
+        public Button ButtonRemoveAll { get => bRemoveAllListBox; set => bRemoveAllListBox = value; }
+        public Button ButtonSendMassage { get => bOrder; set => bOrder = value; }
+        
 
         private void ButtonPizza_Click(object sender, EventArgs e)
         {
@@ -96,47 +101,45 @@ namespace Pizza
 
         private void ButtonOrder_Click(object sender, EventArgs e)
         {
+            Form1CreatingOrder creatingOrder = new Form1CreatingOrder(form1);
+            Order order = creatingOrder.GetOrderFromListView();
            // orderPresenters.SubmitOrder();            
         }
 
         private void ButtonOk_Click(object sender, EventArgs e)
         {
             orderPresenters.AddOrderToListView();
-            SetVisibleButtonRemoveAll();
-            labelPricePresenter.SetTextLabelPrice();
-            SelectColorbOrder();
+            buttonRemove.SchowButtonRemoveAll();
+            labelPricePresenter.SetTextLabelPrice();           
         }
 
-        private void SelectColorbOrder()
+        private void ListViewDish_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if((listViewOrder.Items.Count > 0)|| (backgroundWorker1.IsBusy == true))
-            {
-                if (listViewOrder.Items.Count > 0) bOrder.BackColor = Color.LawnGreen;
-                if (backgroundWorker1.IsBusy == true) bOrder.BackColor = Color.Firebrick;
-            }          
-            else bOrder.BackColor = SystemColors.Control;
+            ListViewDishes lv = new ListViewDishes(form1);
+            lv.SettingVisable();
         }
+
+        private void listViewOrder_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            buttonRemove.SchowButtonRemoveOne();
+        }
+
 
         private void ButtonRemoveListBox_Click(object sender, EventArgs e)
-        {
-
-            if (listViewOrder.SelectedItems.Count == 0) return;
-            listViewOrder.SelectedItems[0].Remove();           
+        {                      
             labelPricePresenter.SetTextLabelPrice();
-            SetVisibleButtonRemoveAll();
-            SetVisibleButtonRemove();
-            bRemoveListBox.Visible = false;
-            SelectColorbOrder();
+            removeOrder.RemoveOne();
+            buttonRemove.RemoveOne();                     
         }
 
         private void ButtonRemoveAllListBox_Click(object sender, EventArgs e)
         {
-            listViewOrder.Items.Clear();            
-            labelPricePresenter.SetTextLabelPrice();
-            SelectColorbOrder();
-            SetVisibleButtonRemoveAll();
-            SetVisibleButtonRemove();
+            removeOrder.RemoveAll();
+            buttonRemove.RemoveAll();                      
+            labelPricePresenter.SetTextLabelPrice();                   
         }
+
+       
 
         private void AddressEmailToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -146,8 +149,7 @@ namespace Pizza
         }
 
         private void HistoryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-          
+        {          
             if (backgroundWorker1.IsBusy != true)
             {
                 FormHistory fm = new FormHistory();
@@ -157,58 +159,22 @@ namespace Pizza
             else
             {
                 MessageBox.Show("Historia jeszcze nie gotowa", "Przetwarzanie danych");
-            }
-           
+            }         
         }
       
         private void BackgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
-        {        
-            SelectColorbOrder();
-           // orderPresenters.SendEmailAndSaveOrder();          
+        {
+            bOrder.BackColor = Color.Firebrick;
+            // orderPresenters.SendEmailAndSaveOrder();          
         }
 
         private void BackgroundWorker2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            SelectColorbOrder();
+            bOrder.BackColor = SystemColors.Control;
         }
 
         private void BackgroundWorker2_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-        }
-
-        private void ListViDania_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           SetVisibleButtonRemove();
-        }
-
-        private void SetVisibleButtonRemove()
-        {
-            if (CheckingListOrderIfEmpty())
-            {
-                bRemoveListBox.Visible = true;
-            }
-            else bRemoveListBox.Visible = false;
-        }
-
-        private void SetVisibleButtonRemoveAll()
-        {
-            if (CheckingListOrderIfEmpty())
-            {
-                bRemoveAllListBox.Visible = true;
-            }
-            else bRemoveAllListBox.Visible = false;
-        }
-
-        private bool CheckingListOrderIfEmpty()
-        {
-            if (listViewOrder.Items.Count > 0) return true;
-            else return false;
-        }
-
-        private void ListViewDish_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ListViewDishes lv = new ListViewDishes(form1);
-            lv.SettingVisable();
-        }
+        }  
     }
 }

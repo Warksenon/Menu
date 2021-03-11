@@ -59,6 +59,7 @@
     <Compile Include="Menu\Sides\TestSidesMainDishes.cs" />
     <Compile Include="Menu\Sides\TestSidesPizza.cs" />
     <Compile Include="old\TestDish.cs" />
+    <Compile Include="presenterForm1\TestForm1ListDishes.cs" />
     <Compile Include="TModels\TFilesTxt\TSaveFiles.cs" />
     <Compile Include="TModels\TFilesTxt\TLoadingFilesTxt.cs" />
     <Compile Include="TModels\TRegistry.cs" />

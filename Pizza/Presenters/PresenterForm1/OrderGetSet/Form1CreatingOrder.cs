@@ -1,74 +1,57 @@
-﻿using Pizza.Models.Menu.Sides;
-using Pizza.Presenters.PresenterForm1.Order;
-using System;
+﻿using Pizza.Presenters.PresenterForm1.Order;
+using Pizza.View.Form1;
 using System.Collections.Generic;
 
 namespace Pizza
 {
     class Form1CreatingOrder : Form1ListViewOrder
     {
+        private static Order order = new Order();
+        ITextBoxComments comments;
 
         public Form1CreatingOrder(Form1 form1) : base(form1)
         {
-            
+            comments = form1;
         }
 
-        private static  Order order = new Order();
+        public Order  GetOrderFromListView()
+        {            
+            GetListDishesFromListViewOrder();
+            AddPriceAllToOrder();
+            GetComments();
+            return order;
+        }
 
-        void AddPriceAllToOrder()
+        private void AddPriceAllToOrder()
         {
-            string price = Convert.ToString(GetPricaAll());
+            double price = GetPricaAll();          
             order.PriceAll.Price = price + " zł";
         }
 
-
-        public void SetListDishes()
+        private void GetComments()
         {
+            order.PriceAll.Comments = comments.TextBoxComments.Text;
+        }
 
+        private void GetListDishesFromListViewOrder()
+        {
             var list = new List<Dish>();
-            if (!(lvOrder.ListViewOrder.Items == null))
+            int counter = lvOrder.ListViewOrder.Items.Count;
+
+            for (int i = 0; i < counter; i++)
             {
-                int i = 0;
-                foreach (var item in lvOrder.ListViewOrder.Items)
+                list.Add(new Dish()
                 {
-                    list.Add(new Dish()
-                    {
-                        Name = lvOrder.ListViewOrder.Items[i].SubItems[0].Text,
-                        //   SidesDishes = ListView.Items[i].SubItems[1].Text,
-                        Price = lvOrder.ListViewOrder.Items[i].SubItems[2].Text
-                    });
-                    i++;
-                }
+                    Name = lvOrder.ListViewOrder.Items[i].SubItems[0].Text,
+                    Sides = lvOrder.ListViewOrder.Items[i].SubItems[1].Text,
+                    Price = lvOrder.ListViewOrder.Items[i].SubItems[2].Text
+                });
             }
+
             order.ListDishes = list;
         }
 
-        List<string> GetSides (string textSide)
-        {
-            List<string> listSides = new List<string>();
-            int indexEnd = textSide.IndexOf(".");
-            while (indexEnd > 0)
-            {
-                IListSides addSide = new ListSidesPizza();             
-                string sideWithPrice;
-                int index = textSide.IndexOf(",");
-
-                if (index > 0)
-                {
-                    sideWithPrice = textSide.Substring(0, index - 1);
-
-                    addSide.AddSideToList(listSides, sideWithPrice);
-                }
-                else
-                {
-                    sideWithPrice = textSide.Replace(".", "");
-                    addSide.AddSideToList(listSides, sideWithPrice);
-                    indexEnd = -1;
-                }
-            }
-
-            return listSides;
-        }
+        
 
         //public void SetCommentsAndDate(string comments)
         //{

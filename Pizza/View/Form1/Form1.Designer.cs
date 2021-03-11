@@ -109,11 +109,11 @@ namespace Pizza
             this.bSoups.UseVisualStyleBackColor = true;
             this.bSoups.Click += new System.EventHandler(this.ButtonSoup_Click);
             // 
-            // textViewDishes
+            // textBoxQuantityDishes
             // 
             this.textBoxQuantityDishes.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxQuantityDishes.Location = new System.Drawing.Point(14, 201);
-            this.textBoxQuantityDishes.Name = "textViewDishes";
+            this.textBoxQuantityDishes.Name = "textBoxQuantityDishes";
             this.textBoxQuantityDishes.Size = new System.Drawing.Size(75, 20);
             this.textBoxQuantityDishes.TabIndex = 17;
             // 
@@ -202,7 +202,7 @@ namespace Pizza
             this.panel3.Size = new System.Drawing.Size(603, 282);
             this.panel3.TabIndex = 40;
             // 
-            // ListViewOrder
+            // listViewOrder
             // 
             this.listViewOrder.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Danie,
@@ -211,12 +211,12 @@ namespace Pizza
             this.listViewOrder.FullRowSelect = true;
             this.listViewOrder.HideSelection = false;
             this.listViewOrder.Location = new System.Drawing.Point(17, 28);
-            this.listViewOrder.Name = "ListViewOrder";
+            this.listViewOrder.Name = "listViewOrder";
             this.listViewOrder.Size = new System.Drawing.Size(567, 184);
             this.listViewOrder.TabIndex = 40;
             this.listViewOrder.UseCompatibleStateImageBehavior = false;
             this.listViewOrder.View = System.Windows.Forms.View.Details;
-            this.listViewOrder.SelectedIndexChanged += new System.EventHandler(this.ListViDania_SelectedIndexChanged);
+            this.listViewOrder.SelectedIndexChanged += new System.EventHandler(this.listViewOrder_SelectedIndexChanged);
             // 
             // Danie
             // 
@@ -348,7 +348,7 @@ namespace Pizza
             // contextMenuStrip2
             // 
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(181, 26);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
             // Form1
             // 

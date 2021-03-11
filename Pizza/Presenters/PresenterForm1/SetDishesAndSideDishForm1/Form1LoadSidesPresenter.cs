@@ -1,5 +1,4 @@
 ﻿using Pizza.Models.Menu.Sides;
-using Pizza.Models.Order;
 using System.Collections.Generic;
 
 namespace Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1
@@ -27,11 +26,10 @@ namespace Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1
         private void LoadCheckListBoxSideDishe(IForm1Sides listSides)
         {
             ClearCheckedListBox();
-            List<Side> list = listSides.GetSides();
+            List<string> list = listSides.GetSides();
             foreach (var side in list)
-            {
-                string add = side.Name + " - " + side.Price;
-                loadSides.CheckedListBoxSide.Items.Add(add);
+            {              
+                loadSides.CheckedListBoxSide.Items.Add(side);
             }
         }
 

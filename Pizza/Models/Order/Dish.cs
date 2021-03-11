@@ -1,18 +1,15 @@
-﻿using Pizza.Models.Order;
-using System.Collections.Generic;
-
-namespace Pizza
+﻿namespace Pizza
 {
     public class Dish
     {
         private string name;
         private string price;
-        private List<Side> listSides;
+        private string sides;
         private int id;
 
         public Dish()
         {
-            listSides = new List<Side>();
+            
         }
 
         public string Name
@@ -27,10 +24,10 @@ namespace Pizza
             set { price = value; }
         }
 
-        public List<Side> ListSides
+        public string ListSides
         {
-            get { return listSides; }
-            set { listSides = value; }
+            get { return sides; }
+            set { sides = value; }
         }
 
         public int Id
@@ -38,12 +35,6 @@ namespace Pizza
             get { return id; }
             set { id = value; }
         }
-
-        public void AddSideToList(Side s)
-        {
-            listSides.Add(s);
-        }
-
     }
 }
 

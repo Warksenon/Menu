@@ -1,5 +1,4 @@
-﻿using Pizza.Models.Order;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Pizza
 {
@@ -32,8 +31,6 @@ namespace Pizza
         public void AddDishToListDisch(Dish d)
         {
             listDisch.Add(d);
-        }
-        
-
+        }        
     }
 }

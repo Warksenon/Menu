@@ -1,25 +1,29 @@
-﻿using Pizza.Models.Order;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Pizza.Models.Menu.Sides
 {
-    public abstract class ListSides
+    public abstract class ListSides: IListSides
     {
-        protected  List<Side> listSides = new List<Side>();
+        protected List<string> listSides = new List<string>();
+       
 
         protected void AddTolist(List<string> listKey)
         {
             foreach (var k in listKey)
             {
-                Side side = new Side();
-                string sideAndPrice= Name.GetNameConfig(k);
-                string name = HelpFinding.FindName(sideAndPrice);
-                string price = HelpFinding.FindPrice(sideAndPrice);
-                side.Name = name;
-                side.Price = price;
+                string side = Name.GetNameConfig(k);
                 listSides.Add(side);
             }
+        }
+
+        public void AddSideToList(List<String> listSides, string sideText)
+        {            
+            string name = HelpFinding.FindName(sideText);
+            string price = HelpFinding.FindPrice(sideText);
+            //side.Name = name;
+            //side.Price = price;
+            //listSides.Add(side);
         }
     }
 }

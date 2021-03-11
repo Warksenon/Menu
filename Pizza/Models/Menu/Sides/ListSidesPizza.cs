@@ -1,6 +1,4 @@
-﻿using Pizza.Models.Order;
-using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
-using System;
+﻿using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
 using System.Collections.Generic;
 
 namespace Pizza.Models.Menu.Sides
@@ -8,14 +6,15 @@ namespace Pizza.Models.Menu.Sides
     public class ListSidesPizza : ListSides, IForm1Sides
     {
 
-        public List<Side> LoadSidePizza()
+        public List<string> LoadSidePizza()
         {
             List<string> listKey = new List<string> { "doubelCheesePrice", "salamiPrice", "hamPrice", "mushroomsPrice" };
             AddTolist(listKey);
+
             return listSides;
         }
 
-        public List<Side> GetSides()
+        public List<string> GetSides()
         {
             return LoadSidePizza();
         }

@@ -25,7 +25,7 @@ namespace Pizza
             backgroundWorker1.WorkerSupportsCancellation = true;            
         }
 
-        private Form1OrderPresenters orderPresenters ;
+        private Form1AddOrderListViewPresenters orderPresenters ;
         private Form1LoadDishesPresenters loadDishesToListView;
         private Form1LoadSidesPresenter loadSidesToCheckedListBox;
         private readonly SettingButtonMenu buttonMenu = new SettingButtonMenu();
@@ -34,7 +34,7 @@ namespace Pizza
         private void Form1_Load_1(object sender, EventArgs e)
         {
             form1 = this;
-            orderPresenters = new Form1OrderPresenters(this);
+            orderPresenters = new Form1AddOrderListViewPresenters(this);
             loadDishesToListView = new Form1LoadDishesPresenters(this);
             loadDishesToListView.LoadPizza();
             buttonMenu.ButtonSettings(new ButtonPizzaSetting(form1));

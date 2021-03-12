@@ -2,9 +2,9 @@
 {
     class SettingButtonMenu
     {
-        public void ButtonSettings(IMenuButton button)
+        public void ButtonSettings(IView view)
         {
-            button.SetButtonSetting();
+            view.ViewSetting();
         }
     }
 }

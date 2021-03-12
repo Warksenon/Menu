@@ -1,6 +1,7 @@
 ﻿using Pizza.Presenters;
 using Pizza.Presenters.PresenterForm1;
 using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
+using Pizza.Presenters.PresenterForm1.Logic;
 using Pizza.Presenters.PresenterForm1.VisableElements.Button;
 using Pizza.View.Form1;
 using System;
@@ -16,8 +17,6 @@ namespace Pizza
                                      IForm1ChecedListBoxSides, IForm1AddButton, IForm1QuantityTextBox, IFrom1InfoLabel,
                                      IForm1LabelPrice, IButtonRemove, IButtonSend, ITextBoxComments
     {
-        public Form1 form1;
-
         public Form1()
         { 
             InitializeComponent();
@@ -25,23 +24,17 @@ namespace Pizza
             backgroundWorker1.WorkerSupportsCancellation = true;            
         }
 
-        private Form1AddOrderListViewPresenters orderPresenters ;
-        private Form1LoadDishesPresenters loadDishesToListView;
-        private Form1LoadSidesPresenter loadSidesToCheckedListBox;
-        private readonly SettingButtonMenu buttonMenu = new SettingButtonMenu();
+        private Form1AddOrderListViewPresenters orderPresenters ;   
         private Form1LabelPricePresenter labelPricePresenter;
         private ButtonRemove buttonRemove;
         private RemoveOrder removeOrder;
+        private IEvent eevent = new Event();
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-            form1 = this;
             orderPresenters = new Form1AddOrderListViewPresenters(this);
-            loadDishesToListView = new Form1LoadDishesPresenters(this);
-            loadDishesToListView.LoadPizza();
-            buttonMenu.ButtonSettings(new ButtonPizzaSetting(this));
-            loadSidesToCheckedListBox = new Form1LoadSidesPresenter(this);
-            loadSidesToCheckedListBox.LoadSidesPizza();
+            eevent.SetLogic(new ButtonPizzaLogic(this));
+            eevent.SetView(new ButtonPizzaSetting(this));
             labelPricePresenter = new Form1LabelPricePresenter(this);
             buttonRemove = new ButtonRemove(this);
             buttonRemove.RemoveAll();
@@ -73,35 +66,33 @@ namespace Pizza
 
         private void ButtonPizza_Click(object sender, EventArgs e)
         {
-            buttonMenu.ButtonSettings(new ButtonPizzaSetting(form1));
-            loadSidesToCheckedListBox.LoadSidesPizza();
-            loadDishesToListView.LoadPizza();  
+            eevent.SetLogic(new ButtonPizzaLogic(this));
+            eevent.SetView(new ButtonPizzaSetting(this));
+
         }
 
         private void ButtonMainDish_Click(object sender, EventArgs e)
         {
-            buttonMenu.ButtonSettings(new ButtonMainDishesSetting(form1));
-            loadSidesToCheckedListBox.LoadSidesMainDishes();
-            loadDishesToListView.LoadMainDish();         
+            eevent.SetLogic( new ButtonMainDishesLogic(this));
+            eevent.SetView(new ButtonMainDishesSetting(this));
+
         }
 
         private void ButtonDrinks_Click(object sender, EventArgs e)
         {
-            buttonMenu.ButtonSettings(new ButtonDrinksSettings(form1));
-            loadSidesToCheckedListBox.ClearCheckedListBox();
-            loadDishesToListView.LoadDrinks();          
+            eevent.SetView(new ButtonDrinksSettings(this));
+            eevent.SetLogic(new ButtonDriksLogic(this));
         }
       
         private void ButtonSoup_Click(object sender, EventArgs e)
         {
-            buttonMenu.ButtonSettings(new ButtonSoupsSetting(form1));
-            loadSidesToCheckedListBox.ClearCheckedListBox();
-            loadDishesToListView.LoadSoups();            
+            eevent.SetView(new ButtonSoupsSetting(this));
+            eevent.SetLogic(new ButtonSoupsLogic(this));
         }
 
         private void ButtonOrder_Click(object sender, EventArgs e)
         {
-            Form1CreatingOrder creatingOrder = new Form1CreatingOrder(form1);
+            Form1CreatingOrder creatingOrder = new Form1CreatingOrder(this);
             Order order = creatingOrder.GetOrderFromListView();
            // orderPresenters.SubmitOrder();            
         }
@@ -115,7 +106,7 @@ namespace Pizza
 
         private void ListViewDish_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ListViewDishes lv = new ListViewDishes(form1);
+            ListViewDishes lv = new ListViewDishes(this);
             lv.SettingVisable();
         }
 

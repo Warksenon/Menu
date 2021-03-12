@@ -90,10 +90,18 @@
     <Compile Include="Models\Menu\Sides\ListSides.cs" />
     <Compile Include="Models\Menu\Sides\ListSidesMainDishes.cs" />
     <Compile Include="Models\Menu\Sides\ListSidesPizza.cs" />
+    <Compile Include="Presenters\Event.cs" />
+    <Compile Include="Presenters\IEvent.cs" />
+    <Compile Include="Presenters\ILogiccs.cs" />
     <Compile Include="Presenters\PresenterForm1\Form1LabelPricePresenter.cs" />
     <Compile Include="Presenters\PresenterForm1\GetListDishesAndSides\Form1ListDishes.cs" />
     <Compile Include="Presenters\PresenterForm1\GetListDishesAndSides\Form1Quantity.cs" />
     <Compile Include="Presenters\PresenterForm1\GetListDishesAndSides\Form1SidesDish.cs" />
+    <Compile Include="Presenters\PresenterForm1\Logic\ButtonMenu\ButtonDriks.cs" />
+    <Compile Include="Presenters\PresenterForm1\Logic\ButtonMenu\ButtonMainDishes.cs" />
+    <Compile Include="Presenters\PresenterForm1\Logic\ButtonMenu\ButtonPizza.cs" />
+    <Compile Include="Presenters\PresenterForm1\Logic\ButtonMenu\ButtonSoupsLogic.cs" />
+    <Compile Include="Presenters\PresenterForm1\Logic\ButtonMenu\MenuButton.cs" />
     <Compile Include="Presenters\PresenterForm1\OrderGetSet\Form1CreatingOrder.cs" />
     <Compile Include="Presenters\PresenterForm1\OrderGetSet\Form1ListViewOrder.cs" />
     <Compile Include="Presenters\PresenterForm1\RemoveOrder.cs" />
@@ -137,7 +145,6 @@
     <Compile Include="View\Form1\ViewSettings\ButtonMenu\ButtonPizzaSetting.cs" />
     <Compile Include="View\Form1\ViewSettings\ButtonMenu\ButtonSoupsSetting.cs" />
     <Compile Include="View\Form1\ViewSettings\ButtonMenu\IForm1ButtonMenu.cs" />
-    <Compile Include="View\Form1\ViewSettings\ButtonMenu\IMenuButton.cs" />
     <Compile Include="View\Form1\ViewSettings\ButtonMenu\SettingButtonMenu.cs" />
     <Compile Include="View\Form1\Form1.cs">
       <SubType>Form</SubType>
@@ -166,6 +173,7 @@
     <Compile Include="Models\SqlLite\CreateConnection.cs" />
     <Compile Include="Models\SqlLite\CreateTabeles.cs" />
     <Compile Include="Models\SqlLite\InsertAndQuestionSQL.cs" />
+    <Compile Include="View\IView.cs" />
     <EmbeddedResource Include="View\Form1\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

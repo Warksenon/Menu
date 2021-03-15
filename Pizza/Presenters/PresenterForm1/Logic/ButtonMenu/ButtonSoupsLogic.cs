@@ -9,7 +9,7 @@ namespace Pizza.Presenters.PresenterForm1.Logic
     {
         public ButtonSoupsLogic(Form1 form1) : base(form1) { }
 
-        public new void LogicSettings()
+            public override void LogicSettings()
         {
             loadSidesToCheckedListBox.ClearCheckedListBox();
             loadDishesToListView.LoadSoups();

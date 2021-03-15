@@ -2,11 +2,11 @@
 
 namespace Pizza
 {
-    class ButtonDrinksSettings : ButtonMenu,  IView
+    class ButtonDrinksSettings : ButtonMenu
     {
         public ButtonDrinksSettings(Form1 form1) : base(form1) { }
 
-        public void ViewSetting()
+        public override void ViewSetting()
         {
             ClearColorButton();
             DrinkseButtonSettings();

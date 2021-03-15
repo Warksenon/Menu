@@ -2,11 +2,11 @@
 
 namespace Pizza.Presenters.PresenterForm1.VisableElements.Button
 {
-    class ButtonSoupsSetting :ButtonMenu, IView
+    class ButtonSoupsSetting :ButtonMenu
     {
         public ButtonSoupsSetting(Form1 form1) : base(form1) { }
 
-        public void ViewSetting()
+        public override void ViewSetting()
         {
             ClearColorButton();
             SoupsButtonSettings();

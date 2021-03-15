@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace Pizza
 {
-    class ButtonRemove
+    class ButtonRemove: IView
     {
         IButtonRemove remove;
         IForm1ListViewOrder lvOrder;
@@ -58,6 +58,11 @@ namespace Pizza
                 remove.ButtonRemoveAll.Visible = false;
             }
                 
+        }
+
+        public void ViewSetting()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

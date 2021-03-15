@@ -106,8 +106,7 @@ namespace Pizza
 
         private void ListViewDish_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ListViewDishes lv = new ListViewDishes(this);
-            lv.SettingVisable();
+            eevent.SetView(new ListViewDishes(this));
         }
 
         private void listViewOrder_SelectedIndexChanged(object sender, EventArgs e)

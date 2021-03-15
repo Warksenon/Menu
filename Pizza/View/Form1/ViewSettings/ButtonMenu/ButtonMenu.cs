@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace Pizza
 {
-    abstract class ButtonMenu 
+    abstract class ButtonMenu : IView
     {
         protected IForm1ButtonMenu bMenu;
         protected IForm1AddButton bAdd;
@@ -53,5 +53,8 @@ namespace Pizza
         {
             label.LabelMenu.Text = infoMenu;
         }
+
+        public abstract void ViewSetting();
+        
     }
 }

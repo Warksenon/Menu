@@ -102,6 +102,7 @@
     <Compile Include="Presenters\PresenterForm1\Logic\ButtonMenu\ButtonPizza.cs" />
     <Compile Include="Presenters\PresenterForm1\Logic\ButtonMenu\ButtonSoupsLogic.cs" />
     <Compile Include="Presenters\PresenterForm1\Logic\ButtonMenu\MenuButton.cs" />
+    <Compile Include="Presenters\PresenterForm1\Logic\LogicListViewOrderForm1.cs" />
     <Compile Include="Presenters\PresenterForm1\OrderGetSet\Form1CreatingOrder.cs" />
     <Compile Include="Presenters\PresenterForm1\OrderGetSet\Form1ListViewOrder.cs" />
     <Compile Include="Presenters\PresenterForm1\RemoveOrder.cs" />

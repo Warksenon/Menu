@@ -13,9 +13,6 @@ namespace Pizza.Presenters.PresenterForm1.Logic.ButtonMenu
             loadDishesToListView = new Form1LoadDishesPresenters(form1);
         }
 
-        public void LogicSettings()
-        {
-            
-        }
+        public abstract void LogicSettings();
     }
 }

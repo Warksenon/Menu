@@ -11,13 +11,16 @@ namespace Pizza
         string date;
         string comments;       
         string price;
-        Int64 id;
-        
-        public Int64 ID
-        {
-            get {return id;}
-            set{id = value;}
+        int id;
+
+        public PriceAll() { }
+
+        public int ID 
+        { 
+            get { return id; }
+            set { id = value; }
         }
+        
         public string Price
         {
             get {return price = HelpFinding.CheckIsNotNull(price); }

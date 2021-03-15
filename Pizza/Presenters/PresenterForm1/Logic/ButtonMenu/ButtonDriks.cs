@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
-using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
-using Pizza.Presenters.PresenterForm1.Logic.ButtonMenu;
-using Pizza.Presenters.PresenterForm1.VisableElements.Button;
-using Pizza.View.Form1;
+﻿using Pizza.Presenters.PresenterForm1.Logic.ButtonMenu;
 
 namespace Pizza.Presenters.PresenterForm1.Logic
 {
@@ -13,7 +6,7 @@ namespace Pizza.Presenters.PresenterForm1.Logic
     {        
         public ButtonDriksLogic(Form1 form1):base(form1){}
 
-        public void LogicSettings()
+        public override void LogicSettings()
         {
             loadDishesToListView.LoadPizza();
             loadSidesToCheckedListBox.ClearCheckedListBox();

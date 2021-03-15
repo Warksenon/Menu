@@ -112,7 +112,7 @@ namespace Pizza.SqlLite
                                 //Did not close the connection, in the case of an epty table
                                 try
                                 {
-                                    cena.ID = Convert.ToInt64(dr[0]);
+                                    cena.ID = Convert.ToInt32(dr[0]);
 
                                 }
                                 catch
@@ -276,9 +276,9 @@ namespace Pizza.SqlLite
                 try
                 {
                     Order order = new Order();
-                    PriceAll price = new PriceAll
-                    {
-                        ID = Convert.ToInt64(dr[0]),
+                    PriceAll price = new PriceAll()
+                    {   
+                        ID = Convert.ToInt32(dr[0]),
                         Price = Convert.ToString(dr[1]),
                         Date = Convert.ToString(dr[2]),
                         Comments = Convert.ToString(dr[3])

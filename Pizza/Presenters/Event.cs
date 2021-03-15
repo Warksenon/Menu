@@ -9,7 +9,7 @@ namespace Pizza.Presenters
 {
     class Event : IEvent
     {
-        public Event(){}
+        public Event() { }
 
 
         public void SetLogic(ILogic logic)
@@ -19,7 +19,7 @@ namespace Pizza.Presenters
 
         public void SetView(IView view)
         {
-           // view.ViewSetting(from1);
+            view.ViewSetting();
         }
     }
 }

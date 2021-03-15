@@ -4,7 +4,7 @@ using System.Drawing;
 
 namespace Pizza
 {
-    public class ListViewDishes
+    public class ListViewDishes: IView
     {
         private readonly IForm1AddButton bAdd;
         private readonly IForm1QuantityTextBox qTextBox;
@@ -15,7 +15,7 @@ namespace Pizza
             qTextBox = form1;            
         }
 
-        public void SettingVisable()
+        public void ViewSetting()
         {
             SetVisibleButtonDishesOK();
             SetVisibleTextViewDishesQuantity();

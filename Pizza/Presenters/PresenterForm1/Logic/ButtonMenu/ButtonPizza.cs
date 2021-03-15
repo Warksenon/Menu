@@ -13,7 +13,7 @@ namespace Pizza.Presenters.PresenterForm1.Logic
     {
         public ButtonPizzaLogic(Form1 form1) : base(form1) { }
 
-        public void LogicSettings()
+        public override void LogicSettings()
         {
             loadSidesToCheckedListBox.LoadSidesPizza();
             loadDishesToListView.LoadPizza();

@@ -7,9 +7,11 @@
         private string sides;
         private int id;
 
-        public Dish()
+        public Dish(){}
+
+        public Dish(int id)
         {
-            
+            this.id = id;
         }
 
         public string Name
@@ -32,8 +34,7 @@
 
         public int Id
         {
-            get { return id; }
-            set { id = value; }
+            get { return id; }          
         }
     }
 }

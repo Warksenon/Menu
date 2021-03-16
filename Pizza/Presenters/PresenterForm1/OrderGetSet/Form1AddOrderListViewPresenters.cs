@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Pizza.Presenters
 {
-    class Form1AddOrderListViewPresenters : Form1ListViewOrder 
+    class Form1AddOrderListViewPresenters : Form1ListViewOrder, ILogic
     {
         Form1ListDishes lvDishes;
         Form1SidesDish chblSides;
@@ -16,7 +16,13 @@ namespace Pizza.Presenters
             chblSides = new Form1SidesDish(form1);           
         }
 
-        public void AddOrderToListView()
+
+        public void LogicSettings()
+        {
+            AddOrderToListView();
+        }
+
+        private void AddOrderToListView()
         {
             List<Dish> listDishes = lvDishes.GetListDishes();
             List<string> listSides = chblSides.GetListSides();
@@ -42,6 +48,8 @@ namespace Pizza.Presenters
                 lvOrder.ListViewOrder.Items.Add(lvi);
             }
         }
+
+      
 
         private string AddAllSides(List<string> listSides)
         {
@@ -78,9 +86,6 @@ namespace Pizza.Presenters
             double priceAll = priceDish + priceSides;
             return priceAll + " zł";
         }
-
-        
-
 
     }
 }

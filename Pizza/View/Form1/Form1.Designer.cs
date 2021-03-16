@@ -129,9 +129,9 @@ namespace Pizza
             // 
             // bRemoveAllListBox
             // 
-            this.bRemoveAllListBox.Location = new System.Drawing.Point(17, 232);
+            this.bRemoveAllListBox.Location = new System.Drawing.Point(304, 232);
             this.bRemoveAllListBox.Name = "bRemoveAllListBox";
-            this.bRemoveAllListBox.Size = new System.Drawing.Size(151, 28);
+            this.bRemoveAllListBox.Size = new System.Drawing.Size(280, 28);
             this.bRemoveAllListBox.TabIndex = 34;
             this.bRemoveAllListBox.Text = "Usuń wszystko";
             this.bRemoveAllListBox.UseVisualStyleBackColor = true;
@@ -183,9 +183,9 @@ namespace Pizza
             // 
             // bRemoveListBox
             // 
-            this.bRemoveListBox.Location = new System.Drawing.Point(387, 232);
+            this.bRemoveListBox.Location = new System.Drawing.Point(17, 232);
             this.bRemoveListBox.Name = "bRemoveListBox";
-            this.bRemoveListBox.Size = new System.Drawing.Size(161, 28);
+            this.bRemoveListBox.Size = new System.Drawing.Size(280, 28);
             this.bRemoveListBox.TabIndex = 38;
             this.bRemoveListBox.Text = "Usuń";
             this.bRemoveListBox.UseVisualStyleBackColor = true;
@@ -337,7 +337,7 @@ namespace Pizza
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 26);            
             // 
             // backgroundWorker1
             // 

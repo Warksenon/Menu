@@ -24,20 +24,14 @@ namespace Pizza
             backgroundWorker1.WorkerSupportsCancellation = true;            
         }
 
-        private Form1AddOrderListViewPresenters orderPresenters ;   
-        private Form1LabelPricePresenter labelPricePresenter;
-        private ButtonRemove buttonRemove;
         private RemoveOrder removeOrder;
         private IEvent eevent = new Event();
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-            orderPresenters = new Form1AddOrderListViewPresenters(this);
             eevent.SetLogic(new ButtonPizzaLogic(this));
-            eevent.SetView(new ButtonPizzaSetting(this));
-            labelPricePresenter = new Form1LabelPricePresenter(this);
-            buttonRemove = new ButtonRemove(this);
-            buttonRemove.RemoveAll();
+            eevent.SetView(new ButtonPizzaSetting(this));         
+            eevent.SetView(new ButtonRemoveAll(this));
             removeOrder = new RemoveOrder(this);
 
 
@@ -68,14 +62,12 @@ namespace Pizza
         {
             eevent.SetLogic(new ButtonPizzaLogic(this));
             eevent.SetView(new ButtonPizzaSetting(this));
-
         }
 
         private void ButtonMainDish_Click(object sender, EventArgs e)
         {
             eevent.SetLogic( new ButtonMainDishesLogic(this));
             eevent.SetView(new ButtonMainDishesSetting(this));
-
         }
 
         private void ButtonDrinks_Click(object sender, EventArgs e)
@@ -99,9 +91,9 @@ namespace Pizza
 
         private void ButtonOk_Click(object sender, EventArgs e)
         {
-            orderPresenters.AddOrderToListView();
-            buttonRemove.SchowButtonRemoveAll();
-            labelPricePresenter.SetTextLabelPrice();           
+            eevent.SetLogic(new Form1AddOrderListViewPresenters(this));
+            eevent.SetView(new ButtonRemoveAll(this));
+            eevent.SetView(new Form1LabelPricePresenter(this));
         }
 
         private void ListViewDish_SelectedIndexChanged(object sender, EventArgs e)
@@ -111,22 +103,22 @@ namespace Pizza
 
         private void listViewOrder_SelectedIndexChanged(object sender, EventArgs e)
         {
-            buttonRemove.SchowButtonRemoveOne();
+            bRemoveListBox.Visible = true;
         }
 
 
         private void ButtonRemoveListBox_Click(object sender, EventArgs e)
-        {                      
-            labelPricePresenter.SetTextLabelPrice();
+        {                    
             removeOrder.RemoveOne();
-            buttonRemove.RemoveOne();                     
+            eevent.SetView(new ButtonRemoveOne(this));
+            eevent.SetView(new Form1LabelPricePresenter(this));
         }
 
         private void ButtonRemoveAllListBox_Click(object sender, EventArgs e)
         {
             removeOrder.RemoveAll();
-            buttonRemove.RemoveAll();                      
-            labelPricePresenter.SetTextLabelPrice();                   
+            eevent.SetView(new ButtonRemoveOne(this));
+            eevent.SetView(new Form1LabelPricePresenter(this));
         }
 
        
@@ -165,6 +157,6 @@ namespace Pizza
 
         private void BackgroundWorker2_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-        }  
+        }
     }
 }

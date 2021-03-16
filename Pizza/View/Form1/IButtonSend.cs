@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Pizza.View.Form1
 {
-    interface IButtonSend
+    public interface IButtonSend
     {
         Button ButtonSendMassage { get; set; }
     }

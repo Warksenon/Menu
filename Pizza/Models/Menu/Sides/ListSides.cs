@@ -21,9 +21,6 @@ namespace Pizza.Models.Menu.Sides
         {            
             string name = HelpFinding.FindName(sideText);
             string price = HelpFinding.FindPrice(sideText);
-            //side.Name = name;
-            //side.Price = price;
-            //listSides.Add(side);
         }
     }
 }

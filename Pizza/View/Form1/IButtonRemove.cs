@@ -2,7 +2,7 @@
 
 namespace Pizza.View.Form1
 {
-    interface IButtonRemove
+    public interface IButtonRemove
     {
         Button ButtonRemoveOne { get; set; }
 

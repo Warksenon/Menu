@@ -3,7 +3,7 @@ using Pizza.View.Form1;
 
 namespace Pizza.Presenters.PresenterForm1
 {
-    class Form1LabelPricePresenter
+    class Form1LabelPricePresenter : IView
     {
         IPriceAll price;
         IForm1LabelPrice label;
@@ -17,6 +17,11 @@ namespace Pizza.Presenters.PresenterForm1
         public void SetTextLabelPrice()
         {
             label.LabelPrice.Text = "Cena: "+ price.GetPricaAll() + " zł";
+        }
+
+        public void ViewSetting()
+        {
+            SetTextLabelPrice();
         }
     }
 }

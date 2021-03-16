@@ -105,7 +105,9 @@
     <Compile Include="Presenters\PresenterForm1\Logic\LogicListViewOrderForm1.cs" />
     <Compile Include="Presenters\PresenterForm1\OrderGetSet\Form1CreatingOrder.cs" />
     <Compile Include="Presenters\PresenterForm1\OrderGetSet\Form1ListViewOrder.cs" />
-    <Compile Include="Presenters\PresenterForm1\RemoveOrder.cs" />
+    <Compile Include="Presenters\PresenterForm1\Remove\RemoveOrder.cs" />
+    <Compile Include="Presenters\PresenterForm1\Remove\RemoveOrderAll.cs" />
+    <Compile Include="Presenters\PresenterForm1\Remove\RemoveOrderOne.cs" />
     <Compile Include="Presenters\PresenterForm1\SendEmailPresenter.cs" />
     <Compile Include="Presenters\PresenterForm1\SetDishesAndSideDishForm1\Form1LoadSidesPresenter.cs" />
     <Compile Include="Presenters\PresenterForm1\SetDishesAndSideDishForm1\IForm1Dishes.cs" />
@@ -153,7 +155,9 @@
     <Compile Include="View\Form1\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Form1\ViewSettings\ButtonRemove.cs" />
+    <Compile Include="View\Form1\ViewSettings\ButtonRemove\ButtonRemove.cs" />
+    <Compile Include="View\Form1\ViewSettings\ButtonRemove\ButtonRemoveAll.cs" />
+    <Compile Include="View\Form1\ViewSettings\ButtonRemove\ButtonRemoveOne.cs" />
     <Compile Include="View\Form1\ViewSettings\ListViewDishes.cs" />
     <Compile Include="View\FormHistory.cs">
       <SubType>Form</SubType>

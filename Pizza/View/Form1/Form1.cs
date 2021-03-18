@@ -1,7 +1,7 @@
 ﻿using Pizza.Presenters;
 using Pizza.Presenters.PresenterForm1;
-using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
 using Pizza.Presenters.PresenterForm1.Logic;
+using Pizza.Presenters.PresenterForm1.Remove;
 using Pizza.Presenters.PresenterForm1.VisableElements.Button;
 using Pizza.View.Form1;
 using System;
@@ -24,7 +24,6 @@ namespace Pizza
             backgroundWorker1.WorkerSupportsCancellation = true;            
         }
 
-        private RemoveOrder removeOrder;
         private IEvent eevent = new Event();
 
         private void Form1_Load_1(object sender, EventArgs e)
@@ -32,8 +31,6 @@ namespace Pizza
             eevent.SetLogic(new ButtonPizzaLogic(this));
             eevent.SetView(new ButtonPizzaSetting(this));         
             eevent.SetView(new ButtonRemoveAll(this));
-            removeOrder = new RemoveOrder(this);
-
 
            // SqlLite.CreateTabeles createTabeles = new SqlLite.CreateTabeles();
            // createTabeles.CreateSQLiteTables();        
@@ -109,16 +106,16 @@ namespace Pizza
 
         private void ButtonRemoveListBox_Click(object sender, EventArgs e)
         {                    
-            removeOrder.RemoveOne();
             eevent.SetView(new ButtonRemoveOne(this));
+            eevent.SetLogic(new RemoveOrderOne(this));
             eevent.SetView(new Form1LabelPricePresenter(this));
         }
 
         private void ButtonRemoveAllListBox_Click(object sender, EventArgs e)
-        {
-            removeOrder.RemoveAll();
-            eevent.SetView(new ButtonRemoveOne(this));
-            eevent.SetView(new Form1LabelPricePresenter(this));
+        {         
+            eevent.SetView(new ButtonRemoveAll(this));
+            eevent.SetLogic(new RemoveOrderAll(this));
+            eevent.SetView(new Form1LabelPricePresenter(this));         
         }
 
        

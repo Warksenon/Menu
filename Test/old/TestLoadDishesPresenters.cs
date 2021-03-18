@@ -103,7 +103,7 @@ namespace Test
     //        presenters.LoadSidesDishMainDish();
 
     //        Assert.AreEqual(name.BarPrice, ch.Items[0]);
-    //        Assert.AreEqual(name.SetOfSaucesPrice, ch.Items[1]);         
+    //        Assert.AreEqual(name.SetOfSaucesPrice, ch.Items[1]);
     //    }
 
 

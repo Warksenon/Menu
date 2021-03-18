@@ -39,7 +39,7 @@ namespace Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1
         }
 
         private int CheckListDishesSelectedItem()
-        {
+        {            
             return loadDishes.ListViewDishes.FocusedItem.Index;
         }
 

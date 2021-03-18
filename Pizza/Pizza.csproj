@@ -111,7 +111,7 @@
     <Compile Include="Presenters\PresenterForm1\SendEmailPresenter.cs" />
     <Compile Include="Presenters\PresenterForm1\SetDishesAndSideDishForm1\Form1LoadSidesPresenter.cs" />
     <Compile Include="Presenters\PresenterForm1\SetDishesAndSideDishForm1\IForm1Dishes.cs" />
-    <Compile Include="Presenters\PresenterForm1\SetDishesAndSideDishForm1\IForm1ListViewDishes.cs" />
+    <Compile Include="View\Form1\IForm1ListViewDishes.cs" />
     <Compile Include="Presenters\PresenterForm1\OrderGetSet\IPriceAll.cs" />
     <Compile Include="View\Form1\IButtonRemove.cs" />
     <Compile Include="View\Form1\IButtonSend.cs" />
@@ -137,7 +137,7 @@
     <Compile Include="Models\FilesTXT\SaveFiles.cs" />
     <Compile Include="Models\FilesTXT\LoadingFilesTxt.cs" />
     <Compile Include="Presenters\PresenterForm1\SetDishesAndSideDishForm1\IForm1Sides.cs" />
-    <Compile Include="Presenters\PresenterForm1\SetDishesAndSideDishForm1\IForm1ChecedListBoxSides.cs" />
+    <Compile Include="View\Form1\IForm1ChecedListBoxSides.cs" />
     <Compile Include="View\Form1\IForm1AddButton.cs" />
     <Compile Include="View\Form1\IForm1QuantityTextBox.cs" />
     <Compile Include="View\Form1\IFrom1InfoLabel.cs" />

@@ -24,19 +24,6 @@ namespace Test
             backgroundWorker1.WorkerSupportsCancellation = true;            
         }
 
-        //private RemoveOrder removeOrder;
-        //private IEvent eevent = new Event();
-
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-            //eevent.SetLogic(new ButtonPizzaLogic(this));
-            //eevent.SetView(new ButtonPizzaSetting(this));         
-            //eevent.SetView(new ButtonRemoveAll(this));
-
-           // SqlLite.CreateTabeles createTabeles = new SqlLite.CreateTabeles();
-           // createTabeles.CreateSQLiteTables();        
-        } 
-        
         public ListView ListViewDishes { get => listViewDish; set => listViewDish = value; }
         public CheckedListBox CheckedListBoxSide { get => chListBoxSideDishes; set => chListBoxSideDishes = value; }
         public TextBox TextBoxQuantityDishes { get => textBoxQuantityDishes; set => textBoxQuantityDishes = value; }
@@ -59,107 +46,5 @@ namespace Test
         {
 
         }
-
-
-        //private void ButtonPizza_Click(object sender, EventArgs e)
-        //{
-        //    eevent.SetLogic(new ButtonPizzaLogic(this));
-        //    eevent.SetView(new ButtonPizzaSetting(this));
-        //}
-
-        //private void ButtonMainDish_Click(object sender, EventArgs e)
-        //{
-        //    eevent.SetLogic( new ButtonMainDishesLogic(this));
-        //    eevent.SetView(new ButtonMainDishesSetting(this));
-        //}
-
-        //private void ButtonDrinks_Click(object sender, EventArgs e)
-        //{
-        //    eevent.SetView(new ButtonDrinksSettings(this));
-        //    eevent.SetLogic(new ButtonDriksLogic(this));
-        //}
-
-        //private void ButtonSoup_Click(object sender, EventArgs e)
-        //{
-        //    eevent.SetView(new ButtonSoupsSetting(this));
-        //    eevent.SetLogic(new ButtonSoupsLogic(this));
-        //}
-
-        //private void ButtonOrder_Click(object sender, EventArgs e)
-        //{
-        //    Form1CreatingOrder creatingOrder = new Form1CreatingOrder(this);
-        //    Order order = creatingOrder.GetOrderFromListView();
-        //   // orderPresenters.SubmitOrder();            
-        //}
-
-        //private void ButtonOk_Click(object sender, EventArgs e)
-        //{
-        //    eevent.SetLogic(new Form1AddOrderListViewPresenters(this));
-        //    eevent.SetView(new ButtonRemoveAll(this));
-        //    eevent.SetView(new Form1LabelPricePresenter(this));
-        //}
-
-        //private void ListViewDish_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    eevent.SetView(new ListViewDishes(this));
-        //}
-
-        //private void listViewOrder_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    bRemoveListBox.Visible = true;
-        //}
-
-
-        //private void ButtonRemoveListBox_Click(object sender, EventArgs e)
-        //{                    
-        //    eevent.SetView(new ButtonRemoveOne(this));
-        //    eevent.SetLogic(new RemoveOrderOne(this));
-        //    eevent.SetView(new Form1LabelPricePresenter(this));
-        //}
-
-        //private void ButtonRemoveAllListBox_Click(object sender, EventArgs e)
-        //{         
-        //    eevent.SetView(new ButtonRemoveAll(this));
-        //    eevent.SetLogic(new RemoveOrderAll(this));
-        //    eevent.SetView(new Form1LabelPricePresenter(this));         
-        //}
-
-
-
-        //private void AddressEmailToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    FormMail fm = new FormMail();
-        //    fm.ShowDialog();
-        //    fm.Close();
-        //}
-
-        //private void HistoryToolStripMenuItem_Click(object sender, EventArgs e)
-        //{          
-        //    if (backgroundWorker1.IsBusy != true)
-        //    {
-        //        FormHistory fm = new FormHistory();
-        //        fm.ShowDialog();
-        //        fm.Close();
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Historia jeszcze nie gotowa", "Przetwarzanie danych");
-        //    }         
-        //}
-
-        //private void BackgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
-        //{
-        //    bOrder.BackColor = Color.Firebrick;
-        //    // orderPresenters.SendEmailAndSaveOrder();          
-        //}
-
-        //private void BackgroundWorker2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        //{
-        //    bOrder.BackColor = SystemColors.Control;
-        //}
-
-        //private void BackgroundWorker2_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        //{
-        //}
     }
 }

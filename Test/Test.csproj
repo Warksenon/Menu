@@ -56,6 +56,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Test\Form1\ViewSettings\TestButtonMenu.cs" />
     <Compile Include="TModels\FilesTXT\LoadingFilesTxt.cs" />
     <Compile Include="TModels\FilesTXT\SaveFiles.cs" />
     <Compile Include="TModels\Menu\Dishes\ListDishes.cs" />

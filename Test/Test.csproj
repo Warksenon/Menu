@@ -56,7 +56,10 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnumMenu.cs" />
+    <Compile Include="Test\Form1\From1TestEvent.cs" />
     <Compile Include="Test\Form1\ViewSettings\TestButtonMenu.cs" />
+    <Compile Include="Test\Form1\ViewSettings\TestButtonRemove.cs" />
     <Compile Include="TModels\FilesTXT\LoadingFilesTxt.cs" />
     <Compile Include="TModels\FilesTXT\SaveFiles.cs" />
     <Compile Include="TModels\Menu\Dishes\ListDishes.cs" />
@@ -155,13 +158,13 @@
     <Compile Include="TView\Form1\IForm1QuantityTextBox.cs" />
     <Compile Include="TView\Form1\IFrom1InfoLabel.cs" />
     <Compile Include="TView\Form1\ITextBoxComments.cs" />
-    <Compile Include="TView\Form1\ViewSettings\ButtonMenu\ButtonDrinksSettings.cs" />
-    <Compile Include="TView\Form1\ViewSettings\ButtonMenu\ButtonMainDishesSetting.cs" />
+    <Compile Include="TView\Form1\ViewSettings\ButtonMenu\ButtonDrinksView.cs" />
+    <Compile Include="TView\Form1\ViewSettings\ButtonMenu\ButtonMainDishesView.cs" />
     <Compile Include="TView\Form1\ViewSettings\ButtonMenu\ButtonMenu.cs" />
-    <Compile Include="TView\Form1\ViewSettings\ButtonMenu\ButtonPizzaSetting.cs" />
-    <Compile Include="TView\Form1\ViewSettings\ButtonMenu\ButtonSoupsSetting.cs" />
+    <Compile Include="TView\Form1\ViewSettings\ButtonMenu\ButtonPizzaView.cs" />
+    <Compile Include="TView\Form1\ViewSettings\ButtonMenu\ButtonSoupsView.cs" />
     <Compile Include="TView\Form1\ViewSettings\ButtonMenu\IForm1ButtonMenu.cs" />
-    <Compile Include="TView\Form1\ViewSettings\ButtonMenu\SettingButtonMenu.cs" />
+    <Compile Include="TView\Form1\ViewSettings\ButtonMenu\ViewSettingButtonMenu.cs" />
     <Compile Include="TView\Form1\ViewSettings\ButtonRemove\ButtonRemove.cs" />
     <Compile Include="TView\Form1\ViewSettings\ButtonRemove\ButtonRemoveAll.cs" />
     <Compile Include="TView\Form1\ViewSettings\ButtonRemove\ButtonRemoveOne.cs" />

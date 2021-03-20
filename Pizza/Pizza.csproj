@@ -143,12 +143,12 @@
     <Compile Include="View\Form1\IFrom1InfoLabel.cs" />
     <Compile Include="View\Form1\ITextBoxComments.cs" />
     <Compile Include="View\Form1\ViewSettings\ButtonMenu\ButtonMenu.cs" />
-    <Compile Include="View\Form1\ViewSettings\ButtonMenu\ButtonDrinksSettings.cs" />
+    <Compile Include="View\Form1\ViewSettings\ButtonMenu\ButtonDrinksView.cs" />
     <Compile Include="View\Form1\ViewSettings\ButtonMenu\ButtonMainDishesSetting.cs" />
-    <Compile Include="View\Form1\ViewSettings\ButtonMenu\ButtonPizzaSetting.cs" />
-    <Compile Include="View\Form1\ViewSettings\ButtonMenu\ButtonSoupsSetting.cs" />
+    <Compile Include="View\Form1\ViewSettings\ButtonMenu\ButtonPizzaView.cs" />
+    <Compile Include="View\Form1\ViewSettings\ButtonMenu\ButtonSoupsView.cs" />
     <Compile Include="View\Form1\ViewSettings\ButtonMenu\IForm1ButtonMenu.cs" />
-    <Compile Include="View\Form1\ViewSettings\ButtonMenu\SettingButtonMenu.cs" />
+    <Compile Include="View\Form1\ViewSettings\ButtonMenu\ViewSettingButtonMenu.cs" />
     <Compile Include="View\Form1\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -7,7 +7,7 @@ using Pizza.View;
 
 namespace Test
 {
-    class Event : IEvent
+    public class Event : IEvent
     {
         public Event() { }
 

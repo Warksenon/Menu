@@ -2,9 +2,9 @@
 
 namespace Test
 {
-    class ButtonMainDishesSetting :ButtonMenu
+    class ButtonMainDishesView :ButtonMenu
     {
-        public ButtonMainDishesSetting(Form1Test form1) : base(form1) { }
+        public ButtonMainDishesView(Form1Test form1) : base(form1) { }
 
         public override void ViewSetting()
         {

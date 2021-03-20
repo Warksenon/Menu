@@ -1,8 +1,8 @@
 ﻿namespace Pizza.View.Form1
 {
-    class SettingButtonMenu
+    class ViewSettingButtonMenu
     {
-        public void ButtonSettings(IView view)
+        public void ButtonSettingsView(IView view)
         {
             view.ViewSetting();
         }

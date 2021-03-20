@@ -19,19 +19,8 @@ namespace Test
 
         protected int CheckNumberTextViewDishes()
         {
-            int number = CheckTextIsNumber(qTextBox.QTextbox.Text);           
-            return number;
-        }
-
-
-        protected int CheckTextIsNumber(string textNumber)
-        {
-            int number = 0;
-            try
-            {
-                number = Convert.ToUInt16(textNumber);
-            }
-            catch
+            int number = HelpFinding.ConvertTextToInt(qTextBox.QTextbox.Text);
+            if (number < 1)
             {
                 MessageBox.Show("Podana ilość produktów nie jest prawidłowa");
             }

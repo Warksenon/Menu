@@ -29,7 +29,7 @@ namespace Pizza
         private void Form1_Load_1(object sender, EventArgs e)
         {
             eevent.SetLogic(new ButtonPizzaLogic(this));
-            eevent.SetView(new ButtonPizzaSetting(this));         
+            eevent.SetView(new ButtonPizzaView(this));         
             eevent.SetView(new ButtonRemoveAll(this));
 
            // SqlLite.CreateTabeles createTabeles = new SqlLite.CreateTabeles();
@@ -58,24 +58,24 @@ namespace Pizza
         private void ButtonPizza_Click(object sender, EventArgs e)
         {
             eevent.SetLogic(new ButtonPizzaLogic(this));
-            eevent.SetView(new ButtonPizzaSetting(this));
+            eevent.SetView(new ButtonPizzaView(this));
         }
 
         private void ButtonMainDish_Click(object sender, EventArgs e)
         {
             eevent.SetLogic( new ButtonMainDishesLogic(this));
-            eevent.SetView(new ButtonMainDishesSetting(this));
+            eevent.SetView(new ButtonMainDishesView(this));
         }
 
         private void ButtonDrinks_Click(object sender, EventArgs e)
         {
-            eevent.SetView(new ButtonDrinksSettings(this));
+            eevent.SetView(new ButtonDrinksView(this));
             eevent.SetLogic(new ButtonDriksLogic(this));
         }
       
         private void ButtonSoup_Click(object sender, EventArgs e)
         {
-            eevent.SetView(new ButtonSoupsSetting(this));
+            eevent.SetView(new ButtonSoupsView(this));
             eevent.SetLogic(new ButtonSoupsLogic(this));
         }
 

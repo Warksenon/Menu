@@ -2,9 +2,9 @@
 
 namespace Test
 {
-    class ButtonSoupsSetting :ButtonMenu
+    class ButtonSoupsView :ButtonMenu
     {
-        public ButtonSoupsSetting(Form1Test form1) : base(form1) { }
+        public ButtonSoupsView(Form1Test form1) : base(form1) { }
 
         public override void ViewSetting()
         {

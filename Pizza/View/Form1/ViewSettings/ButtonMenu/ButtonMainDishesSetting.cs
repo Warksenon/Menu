@@ -2,9 +2,9 @@
 
 namespace Pizza.Presenters.PresenterForm1.VisableElements.Button
 {
-    class ButtonMainDishesSetting :ButtonMenu
+    class ButtonMainDishesView :ButtonMenu
     {
-        public ButtonMainDishesSetting(Form1 form1) : base(form1) { }
+        public ButtonMainDishesView(Form1 form1) : base(form1) { }
 
         public override void ViewSetting()
         {

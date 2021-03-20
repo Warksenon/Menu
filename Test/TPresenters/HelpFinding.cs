@@ -82,5 +82,19 @@
                 return sdish;
             }
         }
+
+        public static int ConvertTextToInt(string textNumber)
+        {
+            int number;
+            try
+            {
+                number = Convert.ToUInt16(textNumber);
+            }
+            catch
+            {
+                number = -1;
+            }
+            return number;
+        }
     }
 }

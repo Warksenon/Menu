@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test
 {
-    interface ILogic
+    public interface ILogic
     {
         void LogicSettings();
     }

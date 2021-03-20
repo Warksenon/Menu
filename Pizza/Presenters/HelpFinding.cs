@@ -1,4 +1,6 @@
-﻿namespace Pizza
+﻿using System;
+
+namespace Pizza
 {
     public static class HelpFinding
     {
@@ -81,6 +83,20 @@
                 string sdish = nameAndPrice.Substring(0, index);
                 return sdish;
             }
+        }
+
+        public static int ConvertTextToInt(string textNumber)
+        {
+            int number;
+            try
+            {
+                number = Convert.ToUInt16(textNumber);
+            }
+            catch
+            {
+                number = -1;
+            }
+            return number;
         }
     }
 }

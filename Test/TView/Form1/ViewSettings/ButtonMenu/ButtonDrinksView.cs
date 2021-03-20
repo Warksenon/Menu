@@ -1,10 +1,10 @@
 ﻿using System.Drawing;
 
-namespace Pizza
+namespace Test
 {
-    class ButtonDrinksSettings : ButtonMenu
+    class ButtonDrinksView : ButtonMenu
     {
-        public ButtonDrinksSettings(Form1 form1) : base(form1) { }
+        public ButtonDrinksView(Form1Test form1) : base(form1) { }
 
         public override void ViewSetting()
         {

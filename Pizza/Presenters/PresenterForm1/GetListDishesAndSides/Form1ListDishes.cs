@@ -11,7 +11,7 @@ namespace Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1
     {
         private readonly IForm1ListViewDishes loadDishes;
 
-        public Form1ListDishes(Form1 form1):base(form1)
+        public Form1ListDishes(FormMenu form1):base(form1)
         {
             loadDishes = form1;
         }

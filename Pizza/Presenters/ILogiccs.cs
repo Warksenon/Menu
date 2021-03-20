@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pizza.Presenters
+namespace Pizza
 {
-    interface ILogic
+    public interface ILogic
     {
         void LogicSettings();
     }

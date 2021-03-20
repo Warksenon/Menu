@@ -9,7 +9,7 @@ namespace Pizza
         private static Order order = new Order();
         ITextBoxComments comments;
 
-        public Form1CreatingOrder(Form1 form1) : base(form1)
+        public Form1CreatingOrder(FormMenu form1) : base(form1)
         {
             comments = form1;
         }

@@ -111,12 +111,12 @@
     <Compile Include="Presenters\PresenterForm1\SendEmailPresenter.cs" />
     <Compile Include="Presenters\PresenterForm1\SetDishesAndSideDishForm1\Form1LoadSidesPresenter.cs" />
     <Compile Include="Presenters\PresenterForm1\SetDishesAndSideDishForm1\IForm1Dishes.cs" />
-    <Compile Include="View\Form1\IForm1ListViewDishes.cs" />
+    <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1ListViewDishes.cs" />
     <Compile Include="Presenters\PresenterForm1\OrderGetSet\IPriceAll.cs" />
-    <Compile Include="View\Form1\IButtonRemove.cs" />
-    <Compile Include="View\Form1\IButtonSend.cs" />
-    <Compile Include="View\Form1\IForm1LabelPrice.cs" />
-    <Compile Include="View\Form1\IForm1ListViewOrder.cs" />
+    <Compile Include="View\FormMenuView\InterfaceFormMenu\IButtonRemove.cs" />
+    <Compile Include="View\FormMenuView\InterfaceFormMenu\IButtonSend.cs" />
+    <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1LabelPrice.cs" />
+    <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1ListViewOrder.cs" />
     <Compile Include="interfejs\IFormHistory.cs" />
     <Compile Include="interfejs\IFormMail.cs" />
     <Compile Include="interfejs\ILoadHistoryOrders.cs" />
@@ -137,28 +137,30 @@
     <Compile Include="Models\FilesTXT\SaveFiles.cs" />
     <Compile Include="Models\FilesTXT\LoadingFilesTxt.cs" />
     <Compile Include="Presenters\PresenterForm1\SetDishesAndSideDishForm1\IForm1Sides.cs" />
-    <Compile Include="View\Form1\IForm1ChecedListBoxSides.cs" />
-    <Compile Include="View\Form1\IForm1AddButton.cs" />
-    <Compile Include="View\Form1\IForm1QuantityTextBox.cs" />
-    <Compile Include="View\Form1\IFrom1InfoLabel.cs" />
-    <Compile Include="View\Form1\ITextBoxComments.cs" />
-    <Compile Include="View\Form1\ViewSettings\ButtonMenu\ButtonMenu.cs" />
-    <Compile Include="View\Form1\ViewSettings\ButtonMenu\ButtonDrinksView.cs" />
-    <Compile Include="View\Form1\ViewSettings\ButtonMenu\ButtonMainDishesSetting.cs" />
-    <Compile Include="View\Form1\ViewSettings\ButtonMenu\ButtonPizzaView.cs" />
-    <Compile Include="View\Form1\ViewSettings\ButtonMenu\ButtonSoupsView.cs" />
-    <Compile Include="View\Form1\ViewSettings\ButtonMenu\IForm1ButtonMenu.cs" />
-    <Compile Include="View\Form1\ViewSettings\ButtonMenu\ViewSettingButtonMenu.cs" />
-    <Compile Include="View\Form1\Form1.cs">
+    <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1ChecedListBoxSides.cs" />
+    <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1AddButton.cs" />
+    <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1QuantityTextBox.cs" />
+    <Compile Include="View\FormMenuView\InterfaceFormMenu\IFrom1InfoLabel.cs" />
+    <Compile Include="View\FormMenuView\InterfaceFormMenu\ITextBoxComments.cs" />
+    <Compile Include="View\FormMenuView\InterfaceFormMenu\ViewFormMenu.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonMenu.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonDrinksView.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonMainDishesSetting.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonPizzaView.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonSoupsView.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\IForm1ButtonMenu.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ViewSettingButtonMenu.cs" />
+    <Compile Include="View\FormMenuView\FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form1\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="View\FormMenuView\FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Form1\ViewSettings\ButtonRemove\ButtonRemove.cs" />
-    <Compile Include="View\Form1\ViewSettings\ButtonRemove\ButtonRemoveAll.cs" />
-    <Compile Include="View\Form1\ViewSettings\ButtonRemove\ButtonRemoveOne.cs" />
-    <Compile Include="View\Form1\ViewSettings\ListViewDishes.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonOkView.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonRemove\ButtonRemove.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonRemove\ButtonRemoveAll.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonRemove\ButtonRemoveOne.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ListViewDishes.cs" />
     <Compile Include="View\FormHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,8 +181,8 @@
     <Compile Include="Models\SqlLite\CreateTabeles.cs" />
     <Compile Include="Models\SqlLite\InsertAndQuestionSQL.cs" />
     <Compile Include="View\IView.cs" />
-    <EmbeddedResource Include="View\Form1\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormMenuView\FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormHistory.resx">
       <DependentUpon>FormHistory.cs</DependentUpon>

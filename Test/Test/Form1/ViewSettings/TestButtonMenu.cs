@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Pizza;
+using Pizza.Presenters.PresenterForm1.VisableElements.Button;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Test.Test.Form1.ViewSettings
+namespace Test
 {
     [TestClass]
-    public class TestButtonMenu : From1TestEvent
+    public class TestButtonMenu : Form1Test
     {
         Button buttonPizza = new Button();
         Button buttonMain = new Button();
@@ -15,8 +16,6 @@ namespace Test.Test.Form1.ViewSettings
         Button buttonAdd = new Button();
         TextBox textBox = new TextBox();
         Label labelMenu = new Label();
-        
-
 
         void SetColorButton (EnumMenu onClick)
         {           
@@ -42,17 +41,18 @@ namespace Test.Test.Form1.ViewSettings
 
         [TestMethod]
         public void TestViewOnClickButtonMenuPizza()
-        {  
+        {
+           
             labelMenu.Text = "Pizza";
             SetColorButton(EnumMenu.Pizza);
             SetSettingsButtonAddaAndTextBox();
 
             eevent.SetView(new ButtonPizzaView(form));
 
-            Assert.AreEqual(buttonPizza.BackColor, form.bPizza.BackColor);
-            Assert.AreEqual(buttonMain.BackColor, form.bMainDish.BackColor);
-            Assert.AreEqual(buttonSoups.BackColor, form.bSoups.BackColor);
-            Assert.AreEqual(buttonDrinks.BackColor, form.bDrinks.BackColor);
+            Assert.AreEqual(buttonPizza.BackColor, form.PizzzaButton.BackColor);
+            Assert.AreEqual(buttonMain.BackColor, form.MainButton.BackColor);
+            Assert.AreEqual(buttonSoups.BackColor, form.SoupButton.BackColor);
+            Assert.AreEqual(buttonDrinks.BackColor, form.DrinksButton.BackColor);
             Assert.AreEqual(textBox.Text, form.QTextbox.Text);
             Assert.AreEqual(labelMenu.Text, form.LabelMenu.Text);
             Assert.AreEqual(buttonAdd.Visible, form.AddButton.Visible);
@@ -67,10 +67,10 @@ namespace Test.Test.Form1.ViewSettings
 
             eevent.SetView(new ButtonMainDishesView(form));
 
-            Assert.AreEqual(buttonPizza.BackColor, form.bPizza.BackColor);
-            Assert.AreEqual(buttonMain.BackColor, form.bMainDish.BackColor);
-            Assert.AreEqual(buttonSoups.BackColor, form.bSoups.BackColor);
-            Assert.AreEqual(buttonDrinks.BackColor, form.bDrinks.BackColor);
+            Assert.AreEqual(buttonPizza.BackColor, form.PizzzaButton.BackColor);
+            Assert.AreEqual(buttonMain.BackColor, form.MainButton.BackColor);
+            Assert.AreEqual(buttonSoups.BackColor, form.SoupButton.BackColor);
+            Assert.AreEqual(buttonDrinks.BackColor, form.DrinksButton.BackColor);
             Assert.AreEqual(textBox.Text, form.QTextbox.Text);
             Assert.AreEqual(labelMenu.Text, form.LabelMenu.Text);
             Assert.AreEqual(buttonAdd.Visible, form.AddButton.Visible);
@@ -78,17 +78,17 @@ namespace Test.Test.Form1.ViewSettings
 
         [TestMethod]
         public void TestViewOnClickButtonMenuSoups()
-        {          
+        {
             labelMenu.Text = "Zupy";
             SetColorButton(EnumMenu.Soups);
             SetSettingsButtonAddaAndTextBox();
 
             eevent.SetView(new ButtonSoupsView(form));
 
-            Assert.AreEqual(buttonPizza.BackColor, form.bPizza.BackColor);
-            Assert.AreEqual(buttonMain.BackColor, form.bMainDish.BackColor);
-            Assert.AreEqual(buttonSoups.BackColor, form.bSoups.BackColor);
-            Assert.AreEqual(buttonDrinks.BackColor, form.bDrinks.BackColor);
+            Assert.AreEqual(buttonPizza.BackColor, form.PizzzaButton.BackColor);
+            Assert.AreEqual(buttonMain.BackColor, form.MainButton.BackColor);
+            Assert.AreEqual(buttonSoups.BackColor, form.SoupButton.BackColor);
+            Assert.AreEqual(buttonDrinks.BackColor, form.DrinksButton.BackColor);
             Assert.AreEqual(textBox.Text, form.QTextbox.Text);
             Assert.AreEqual(labelMenu.Text, form.LabelMenu.Text);
             Assert.AreEqual(buttonAdd.Visible, form.AddButton.Visible);
@@ -103,10 +103,10 @@ namespace Test.Test.Form1.ViewSettings
 
             eevent.SetView(new ButtonDrinksView(form));
 
-            Assert.AreEqual(buttonPizza.BackColor, form.bPizza.BackColor);
-            Assert.AreEqual(buttonMain.BackColor, form.bMainDish.BackColor);
-            Assert.AreEqual(buttonSoups.BackColor, form.bSoups.BackColor);
-            Assert.AreEqual(buttonDrinks.BackColor, form.bDrinks.BackColor);
+            Assert.AreEqual(buttonPizza.BackColor, form.PizzzaButton.BackColor);
+            Assert.AreEqual(buttonMain.BackColor, form.MainButton.BackColor);
+            Assert.AreEqual(buttonSoups.BackColor, form.SoupButton.BackColor);
+            Assert.AreEqual(buttonDrinks.BackColor, form.DrinksButton.BackColor);
             Assert.AreEqual(textBox.Text, form.QTextbox.Text);
             Assert.AreEqual(labelMenu.Text, form.LabelMenu.Text);
             Assert.AreEqual(buttonAdd.Visible, form.AddButton.Visible);

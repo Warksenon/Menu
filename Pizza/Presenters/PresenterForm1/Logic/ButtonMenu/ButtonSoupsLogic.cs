@@ -7,7 +7,7 @@ namespace Pizza.Presenters.PresenterForm1.Logic
 {
     class ButtonSoupsLogic : MenuButton
     {
-        public ButtonSoupsLogic(Form1 form1) : base(form1) { }
+        public ButtonSoupsLogic(FormMenu form1) : base(form1) { }
 
             public override void LogicSettings()
         {

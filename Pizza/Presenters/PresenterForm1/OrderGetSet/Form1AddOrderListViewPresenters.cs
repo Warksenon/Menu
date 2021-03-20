@@ -10,7 +10,7 @@ namespace Pizza.Presenters
         Form1ListDishes lvDishes;
         Form1SidesDish chblSides;
         
-        public Form1AddOrderListViewPresenters(Form1 form1):base(form1)
+        public Form1AddOrderListViewPresenters(FormMenu form1):base(form1)
         {                     
             lvDishes = new Form1ListDishes(form1);
             chblSides = new Form1SidesDish(form1);           

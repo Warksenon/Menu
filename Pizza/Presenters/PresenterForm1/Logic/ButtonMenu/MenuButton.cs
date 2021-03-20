@@ -7,7 +7,7 @@ namespace Pizza.Presenters.PresenterForm1.Logic.ButtonMenu
         protected Form1LoadSidesPresenter loadSidesToCheckedListBox;
         protected Form1LoadDishesPresenters loadDishesToListView; 
 
-        protected MenuButton (Form1 form1)
+        protected MenuButton (FormMenu form1)
         {
             loadSidesToCheckedListBox = new Form1LoadSidesPresenter(form1);
             loadDishesToListView = new Form1LoadDishesPresenters(form1);

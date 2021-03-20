@@ -7,7 +7,7 @@ using Pizza.View;
 
 namespace Pizza.Presenters
 {
-    class Event : IEvent
+    public class Event : IEvent
     {
         public Event() { }
 

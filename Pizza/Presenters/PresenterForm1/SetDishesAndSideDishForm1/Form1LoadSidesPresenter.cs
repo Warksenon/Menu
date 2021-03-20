@@ -7,7 +7,7 @@ namespace Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1
     {
         private readonly IForm1ChecedListBoxSides loadSides;
 
-        public Form1LoadSidesPresenter(Form1 form1)
+        public Form1LoadSidesPresenter(FormMenu form1)
         {
             loadSides = form1;
         }

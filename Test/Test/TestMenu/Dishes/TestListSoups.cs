@@ -4,7 +4,8 @@ using Pizza.Models.Menu;
 using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
 using System.Collections.Generic;
 
-namespace Test.Menu.Dishes
+
+namespace Test
 {
     [TestClass]
     public class TestListSoups

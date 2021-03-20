@@ -12,7 +12,7 @@ namespace Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1
     {
         protected IForm1QuantityTextBox qTextBox;
 
-        protected Form1Quantity(Form1 form1)
+        protected Form1Quantity(FormMenu form1)
         {
             qTextBox = form1;
         }

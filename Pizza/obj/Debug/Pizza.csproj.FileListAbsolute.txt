@@ -396,7 +396,6 @@ C:\Users\user\Desktop\projekty\visual studio\Pizza\Pizza\obj\Debug\Pizza.csproj.
 C:\Users\user\Desktop\projekty\visual studio\Pizza\Pizza\obj\Debug\Pizza.exe
 C:\Users\user\Desktop\projekty\visual studio\Pizza\Pizza\obj\Debug\Pizza.pdb
 A:\pendrive\repozytoria git\Pizza Git\Pizza\obj\Debug\Pizza.csprojAssemblyReference.cache
-A:\pendrive\repozytoria git\Pizza Git\Pizza\obj\Debug\Pizza.Form1.resources
 A:\pendrive\repozytoria git\Pizza Git\Pizza\obj\Debug\Pizza.FormHistory.resources
 A:\pendrive\repozytoria git\Pizza Git\Pizza\obj\Debug\Pizza.FormMail.resources
 A:\pendrive\repozytoria git\Pizza Git\Pizza\obj\Debug\Pizza.Properties.Resources.resources
@@ -460,3 +459,4 @@ C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\System.Me
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.csproj.CopyComplete
+A:\pendrive\repozytoria git\Pizza Git\Pizza\obj\Debug\Pizza.FormMenu.resources

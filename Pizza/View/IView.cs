@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Pizza
 {
-    interface IView
+    public interface IView
     {
         void ViewSetting();
     }

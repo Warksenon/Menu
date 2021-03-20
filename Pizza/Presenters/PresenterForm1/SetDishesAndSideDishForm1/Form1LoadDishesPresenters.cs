@@ -10,7 +10,7 @@ namespace Pizza.Presenters
     {
         private readonly IForm1ListViewDishes loadDishes;
  
-        public Form1LoadDishesPresenters(Form1 form1)
+        public Form1LoadDishesPresenters(FormMenu form1)
         {
             loadDishes = form1;
             

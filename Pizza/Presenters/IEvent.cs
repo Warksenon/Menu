@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pizza.Presenters
+namespace Pizza
 {
-    interface IEvent
+    public interface IEvent
     {
         void SetView(IView view);
 

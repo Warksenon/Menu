@@ -164,7 +164,3 @@ C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Pizza.Form
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Pizza.FormMail.resources
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Test.csproj.GenerateResource.cache
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Test.Form1Test.resources
-A:\pendrive\repozytoria git\Pizza Git\Test\obj\Debug\Test.Form1Test.resources
-A:\pendrive\repozytoria git\Pizza Git\Test\obj\Debug\Pizza.FormHistory.resources
-A:\pendrive\repozytoria git\Pizza Git\Test\obj\Debug\Pizza.FormMail.resources
-A:\pendrive\repozytoria git\Pizza Git\Test\obj\Debug\Test.csproj.GenerateResource.cache

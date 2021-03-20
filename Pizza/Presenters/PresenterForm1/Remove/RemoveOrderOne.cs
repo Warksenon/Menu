@@ -8,7 +8,7 @@ namespace Pizza.Presenters.PresenterForm1.Remove
 {
     class RemoveOrderOne : RemoveOrder
     {
-        public RemoveOrderOne(Form1 form1) : base(form1) { }
+        public RemoveOrderOne(FormMenu form1) : base(form1) { }
 
         public override void LogicSettings()
         {

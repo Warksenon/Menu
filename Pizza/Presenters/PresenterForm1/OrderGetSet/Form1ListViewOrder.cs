@@ -10,7 +10,7 @@ namespace Pizza.Presenters.PresenterForm1.Order
     {
         protected IForm1ListViewOrder lvOrder;
 
-        protected Form1ListViewOrder(Form1 form1)
+        protected Form1ListViewOrder(FormMenu form1)
         {
             lvOrder = form1;
         }

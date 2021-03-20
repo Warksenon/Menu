@@ -12,7 +12,7 @@ namespace Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1
     {
         private readonly IForm1ChecedListBoxSides loadSides;
 
-        public Form1SidesDish(Form1 form1) : base(form1)
+        public Form1SidesDish(FormMenu form1) : base(form1)
         {
             loadSides = form1;
         }

@@ -57,75 +57,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnumMenu.cs" />
-    <Compile Include="Test\Form1\From1TestEvent.cs" />
+    <Compile Include="Test\Form1\Form1Test.cs" />
     <Compile Include="Test\Form1\ViewSettings\TestButtonMenu.cs" />
     <Compile Include="Test\Form1\ViewSettings\TestButtonRemove.cs" />
-    <Compile Include="TModels\FilesTXT\LoadingFilesTxt.cs" />
-    <Compile Include="TModels\FilesTXT\SaveFiles.cs" />
-    <Compile Include="TModels\Menu\Dishes\ListDishes.cs" />
-    <Compile Include="TModels\Menu\Dishes\ListDrinks.cs" />
-    <Compile Include="TModels\Menu\Dishes\ListMainDishes.cs" />
-    <Compile Include="TModels\Menu\Dishes\ListPizza.cs" />
-    <Compile Include="TModels\Menu\Dishes\ListSoups.cs" />
-    <Compile Include="TModels\Menu\Sides\IListSides.cs" />
-    <Compile Include="TModels\Menu\Sides\ListSides.cs" />
-    <Compile Include="TModels\Menu\Sides\ListSidesMainDishes.cs" />
-    <Compile Include="TModels\Menu\Sides\ListSidesPizza.cs" />
-    <Compile Include="TModels\Name.cs" />
-    <Compile Include="TModels\Order\Dish.cs" />
-    <Compile Include="TModels\Order\Order.cs" />
-    <Compile Include="TModels\Order\PriceAll.cs" />
-    <Compile Include="TModels\Registry.cs" />
-    <Compile Include="TModels\SqlLite\CreateConnection.cs" />
-    <Compile Include="TModels\SqlLite\CreateTabeles.cs" />
-    <Compile Include="TModels\SqlLite\InsertAndQuestionSQL.cs" />
+    <Compile Include="Test\Form1\ViewSettings\TestButtonOk.cs" />
     <Compile Include="Test\TestMenu\Dishes\TestListDrinks.cs" />
     <Compile Include="Test\TestMenu\Dishes\TestListSoups.cs" />
     <Compile Include="Test\TestMenu\Sides\TestSidesMainDishes.cs" />
     <Compile Include="Test\TestMenu\Sides\TestSidesPizza.cs" />
     <Compile Include="old\TestDish.cs" />
-    <Compile Include="presenterForm1\TestForm1ListDishes.cs" />
     <Compile Include="old\TModelsOld\TFilesTxt\TSaveFiles.cs" />
     <Compile Include="old\TModelsOld\TFilesTxt\TLoadingFilesTxt.cs" />
     <Compile Include="old\TModelsOld\TRegistry.cs" />
     <Compile Include="old\TModelsOld\TSQLite\TCreateConnection.cs" />
     <Compile Include="old\TModelsOld\TSQLite\TCreateTabeles.cs" />
     <Compile Include="old\TModelsOld\TSQLite\TInsertAndQuestionSQL.cs" />
-    <Compile Include="TPresenters\Email\Email.cs" />
-    <Compile Include="TPresenters\Email\EmailMessage.cs" />
-    <Compile Include="TPresenters\Event.cs" />
-    <Compile Include="TPresenters\FormHistoryPresenters.cs" />
-    <Compile Include="TPresenters\FormMailPresenters.cs" />
-    <Compile Include="TPresenters\HelpFinding.cs" />
-    <Compile Include="TPresenters\IEvent.cs" />
-    <Compile Include="TPresenters\ILogiccs.cs" />
-    <Compile Include="TPresenters\LoadOrder.cs" />
-    <Compile Include="TPresenters\PresenterForm1\Form1LabelPricePresenter.cs" />
-    <Compile Include="TPresenters\PresenterForm1\GetListDishesAndSides\Form1ListDishes.cs" />
-    <Compile Include="TPresenters\PresenterForm1\GetListDishesAndSides\Form1Quantity.cs" />
-    <Compile Include="TPresenters\PresenterForm1\GetListDishesAndSides\Form1SidesDish.cs" />
-    <Compile Include="TPresenters\PresenterForm1\Logic\ButtonMenu\ButtonDriks.cs" />
-    <Compile Include="TPresenters\PresenterForm1\Logic\ButtonMenu\ButtonMainDishes.cs" />
-    <Compile Include="TPresenters\PresenterForm1\Logic\ButtonMenu\ButtonPizza.cs" />
-    <Compile Include="TPresenters\PresenterForm1\Logic\ButtonMenu\ButtonSoupsLogic.cs" />
-    <Compile Include="TPresenters\PresenterForm1\Logic\ButtonMenu\MenuButton.cs" />
-    <Compile Include="TPresenters\PresenterForm1\Logic\LogicListViewOrderForm1.cs" />
-    <Compile Include="TPresenters\PresenterForm1\OrderGetSet\Form1AddOrderListViewPresenters.cs" />
-    <Compile Include="TPresenters\PresenterForm1\OrderGetSet\Form1CreatingOrder.cs" />
-    <Compile Include="TPresenters\PresenterForm1\OrderGetSet\Form1ListViewOrder.cs" />
-    <Compile Include="TPresenters\PresenterForm1\OrderGetSet\IPriceAll.cs" />
-    <Compile Include="TPresenters\PresenterForm1\Remove\RemoveOrder.cs" />
-    <Compile Include="TPresenters\PresenterForm1\Remove\RemoveOrderAll.cs" />
-    <Compile Include="TPresenters\PresenterForm1\Remove\RemoveOrderOne.cs" />
-    <Compile Include="TPresenters\PresenterForm1\SendEmailPresenter.cs" />
-    <Compile Include="TPresenters\PresenterForm1\SetDishesAndSideDishForm1\Form1LoadDishesPresenters.cs" />
-    <Compile Include="TPresenters\PresenterForm1\SetDishesAndSideDishForm1\Form1LoadSidesPresenter.cs" />
-    <Compile Include="TView\Form1\IForm1ChecedListBoxSides.cs" />
-    <Compile Include="TPresenters\PresenterForm1\SetDishesAndSideDishForm1\IForm1Dishes.cs" />
-    <Compile Include="TView\Form1\IForm1ListViewDishes.cs" />
-    <Compile Include="TPresenters\PresenterForm1\SetDishesAndSideDishForm1\IForm1Sides.cs" />
-    <Compile Include="TPresenters\RecordOfExceptions.cs" />
-    <Compile Include="TPresenters\Save.cs" />
     <Compile Include="old\TPresenters\TFormMailPresenters.cs" />
     <Compile Include="old\TPresenters\TFormHistoryPresenters.cs" />
     <Compile Include="old\TPresenters\TLoadOrder.cs" />
@@ -144,44 +90,6 @@
     <Compile Include="old\TestFormMailPresenters.cs" />
     <Compile Include="Test\TestMenu\Dishes\TestListPizza.cs" />
     <Compile Include="Test\TestMenu\Dishes\TestListMainDishes.cs" />
-    <Compile Include="TView\Form1\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TView\Form1\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TView\Form1\IButtonRemove.cs" />
-    <Compile Include="TView\Form1\IButtonSend.cs" />
-    <Compile Include="TView\Form1\IForm1AddButton.cs" />
-    <Compile Include="TView\Form1\IForm1LabelPrice.cs" />
-    <Compile Include="TView\Form1\IForm1ListViewOrder.cs" />
-    <Compile Include="TView\Form1\IForm1QuantityTextBox.cs" />
-    <Compile Include="TView\Form1\IFrom1InfoLabel.cs" />
-    <Compile Include="TView\Form1\ITextBoxComments.cs" />
-    <Compile Include="TView\Form1\ViewSettings\ButtonMenu\ButtonDrinksView.cs" />
-    <Compile Include="TView\Form1\ViewSettings\ButtonMenu\ButtonMainDishesView.cs" />
-    <Compile Include="TView\Form1\ViewSettings\ButtonMenu\ButtonMenu.cs" />
-    <Compile Include="TView\Form1\ViewSettings\ButtonMenu\ButtonPizzaView.cs" />
-    <Compile Include="TView\Form1\ViewSettings\ButtonMenu\ButtonSoupsView.cs" />
-    <Compile Include="TView\Form1\ViewSettings\ButtonMenu\IForm1ButtonMenu.cs" />
-    <Compile Include="TView\Form1\ViewSettings\ButtonMenu\ViewSettingButtonMenu.cs" />
-    <Compile Include="TView\Form1\ViewSettings\ButtonRemove\ButtonRemove.cs" />
-    <Compile Include="TView\Form1\ViewSettings\ButtonRemove\ButtonRemoveAll.cs" />
-    <Compile Include="TView\Form1\ViewSettings\ButtonRemove\ButtonRemoveOne.cs" />
-    <Compile Include="TView\Form1\ViewSettings\ListViewDishes.cs" />
-    <Compile Include="TView\FormHistory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TView\FormHistory.Designer.cs">
-      <DependentUpon>FormHistory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TView\FormMail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TView\FormMail.Designer.cs">
-      <DependentUpon>FormMail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TView\IView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -192,17 +100,6 @@
       <Project>{65b9a7a5-72a9-4ef2-8912-2c806f7de611}</Project>
       <Name>Pizza</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="TView\Form1\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TView\FormHistory.resx">
-      <DependentUpon>FormHistory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TView\FormMail.resx">
-      <DependentUpon>FormMail.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

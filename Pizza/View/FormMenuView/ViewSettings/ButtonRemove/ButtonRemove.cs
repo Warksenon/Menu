@@ -16,7 +16,9 @@ namespace Pizza
         {
             form.ButtonSendMassage.BackColor = SystemColors.Control;
             form.ButtonRemoveAll.Visible = false;
+            ButtonRemoveAll = false;
             form.ButtonRemoveOne.Visible = false;
+            ButtonRemoveOne = false;
         }
     }
 }

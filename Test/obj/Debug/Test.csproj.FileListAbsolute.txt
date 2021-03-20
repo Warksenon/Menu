@@ -160,7 +160,3 @@ C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Test.cspro
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Test.csproj.CopyComplete
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Test.dll
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Test.pdb
-C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Pizza.FormHistory.resources
-C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Pizza.FormMail.resources
-C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Test.csproj.GenerateResource.cache
-C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Test.Form1Test.resources

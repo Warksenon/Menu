@@ -6,6 +6,7 @@ namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
 {
     public abstract class ButtonMenu : ViewFormMenu, IView
     {
+
         public ButtonMenu(FormMenu form1) : base(form1) { }
 
         protected void ButtonSeting() 
@@ -27,11 +28,13 @@ namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
         protected void HidenButtonDishesOK()
         {
             form.AddButton.Visible = false;
+            AddButton = false;
         }
 
         protected void HidingTextBoxDishesQuantity()
         {
-            form.QTextbox.Visible = false;          
+            form.QTextbox.Visible = false;
+            QTextbox = false;
         }
 
         protected void CleaningTextBoxDishesQuantity()

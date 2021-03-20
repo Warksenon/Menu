@@ -180,6 +180,7 @@
     <Compile Include="Models\SqlLite\CreateConnection.cs" />
     <Compile Include="Models\SqlLite\CreateTabeles.cs" />
     <Compile Include="Models\SqlLite\InsertAndQuestionSQL.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\TestVisibleElements.cs" />
     <Compile Include="View\IView.cs" />
     <EmbeddedResource Include="View\FormMenuView\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>

@@ -17,12 +17,14 @@ namespace Pizza
 
         private void SetVisibleButtonDishesOK()
         {
-            form.AddButton.Visible = true;            
+            form.AddButton.Visible = true;
+            AddButton = true;
         }
 
         private void SetVisibleTextViewDishesQuantity()
         {
             form.QTextbox.Visible = true;
+            QTextbox = true;
         }
     }
 }

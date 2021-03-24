@@ -31,20 +31,7 @@ namespace Pizza
     //        save.SaveHistoryOrders(orders);
     //    }
 
-    //    public void SaveOrder(ChoiceSaveOrder en, Order order)
-    //    { 
-
-    //        switch (en)
-    //        {
-    //            case ChoiceSaveOrder.Sql:
-    //                save = new InsertAndQuestionSQL(); break;
-    //            case ChoiceSaveOrder.Txt:
-    //                save = new SaveFiles(); break;
-    //            default:
-    //                save = new InsertAndQuestionSQL(); break;
-    //        }
-    //        save.AddOrder(order);
-    //    }
+  
 
     //}
 }

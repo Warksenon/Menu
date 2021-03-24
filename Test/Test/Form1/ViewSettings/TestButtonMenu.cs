@@ -12,7 +12,8 @@ namespace Test
         Button buttonPizza = new Button();
         Button buttonMain = new Button();
         Button buttonSoups = new Button();
-        Button buttonDrinks = new Button();     
+        Button buttonDrinks = new Button();
+        Button buttonAdd = new Button();
         TextBox textBox = new TextBox();
         Label labelMenu = new Label();
 
@@ -34,6 +35,7 @@ namespace Test
 
         void SetSettingsButtonAddaAndTextBox()
         {         
+            buttonAdd.Visible = false;
             textBox.Text = "1";
         }
 
@@ -44,7 +46,7 @@ namespace Test
             labelMenu.Text = "Pizza";
             SetColorButton(EnumMenu.Pizza);
             SetSettingsButtonAddaAndTextBox();
-            
+
             eevent.SetView(new ButtonPizzaView(form));
 
             Assert.AreEqual(buttonPizza.BackColor, form.PizzzaButton.BackColor);
@@ -53,6 +55,7 @@ namespace Test
             Assert.AreEqual(buttonDrinks.BackColor, form.DrinksButton.BackColor);
             Assert.AreEqual(textBox.Text, form.QTextbox.Text);
             Assert.AreEqual(labelMenu.Text, form.LabelMenu.Text);
+            Assert.AreEqual(buttonAdd.Visible, form.AddButton.Visible);
         }
 
         [TestMethod]
@@ -70,7 +73,7 @@ namespace Test
             Assert.AreEqual(buttonDrinks.BackColor, form.DrinksButton.BackColor);
             Assert.AreEqual(textBox.Text, form.QTextbox.Text);
             Assert.AreEqual(labelMenu.Text, form.LabelMenu.Text);
-          
+            Assert.AreEqual(buttonAdd.Visible, form.AddButton.Visible);
         }
 
         [TestMethod]
@@ -88,6 +91,7 @@ namespace Test
             Assert.AreEqual(buttonDrinks.BackColor, form.DrinksButton.BackColor);
             Assert.AreEqual(textBox.Text, form.QTextbox.Text);
             Assert.AreEqual(labelMenu.Text, form.LabelMenu.Text);
+            Assert.AreEqual(buttonAdd.Visible, form.AddButton.Visible);
         }
 
         [TestMethod]
@@ -105,6 +109,7 @@ namespace Test
             Assert.AreEqual(buttonDrinks.BackColor, form.DrinksButton.BackColor);
             Assert.AreEqual(textBox.Text, form.QTextbox.Text);
             Assert.AreEqual(labelMenu.Text, form.LabelMenu.Text);
+            Assert.AreEqual(buttonAdd.Visible, form.AddButton.Visible);
         }
     }
 }

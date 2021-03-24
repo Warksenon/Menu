@@ -7,13 +7,9 @@ namespace Pizza
     class Form1CreatingOrder : Form1ListViewOrder
     {
         private static Order order = new Order();
-        ITextBoxComments comments;
 
-        public Form1CreatingOrder(FormMenu form1) : base(form1)
-        {
-            comments = form1;
-        }
-
+        public Form1CreatingOrder(FormMenu form1) : base(form1) { }
+ 
         public Order  GetOrderFromListView()
         {            
             GetListDishesFromListViewOrder();
@@ -30,28 +26,26 @@ namespace Pizza
 
         private void GetComments()
         {
-            order.PriceAll.Comments = comments.TextBoxComments.Text;
+            order.PriceAll.Comments = form.TextBoxComments.Text;
         }
 
         private void GetListDishesFromListViewOrder()
         {
             var list = new List<Dish>();
-            int counter = lvOrder.ListViewOrder.Items.Count;
+            int counter = form.ListViewOrder.Items.Count;
 
             for (int i = 0; i < counter; i++)
             {
                 list.Add(new Dish()
                 {
-                    Name = lvOrder.ListViewOrder.Items[i].SubItems[0].Text,
-                    Sides = lvOrder.ListViewOrder.Items[i].SubItems[1].Text,
-                    Price = lvOrder.ListViewOrder.Items[i].SubItems[2].Text
+                    Name = form.ListViewOrder.Items[i].SubItems[0].Text,
+                    Sides = form.ListViewOrder.Items[i].SubItems[1].Text,
+                    Price = form.ListViewOrder.Items[i].SubItems[2].Text
                 });
             }
 
             order.ListDishes = list;
         }
-
-        
 
         //public void SetCommentsAndDate(string comments)
         //{

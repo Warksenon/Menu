@@ -82,7 +82,7 @@ namespace Pizza
 
         private void ButtonOrder_Click(object sender, EventArgs e)
         {
-            Form1CreatingOrder creatingOrder = new Form1CreatingOrder(this);
+            FormMenuCreatingOrder creatingOrder = new FormMenuCreatingOrder(this);
             Order order = creatingOrder.GetOrderFromListView();
            // orderPresenters.SubmitOrder();            
         }
@@ -90,7 +90,7 @@ namespace Pizza
         private void ButtonOk_Click(object sender, EventArgs e)
         {
             eevent.SetView(new ButtonOkView(this));
-            eevent.SetLogic(new Form1AddOrderListViewPresenters(this));          
+            eevent.SetLogic(new FormMenuAddOrderListViewPresenters(this));          
             eevent.SetView(new Form1LabelPricePresenter(this));
         }
 

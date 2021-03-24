@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pizza.View.Form1View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,15 +7,10 @@ using System.Threading.Tasks;
 
 namespace Pizza.Presenters.PresenterForm1.Order
 {
-    abstract class Form1ListViewOrder: IPriceAll
+    abstract class Form1ListViewOrder: ViewFormMenu, IPriceAll
     {
-        protected IForm1ListViewOrder lvOrder;
-
-        protected Form1ListViewOrder(FormMenu form1)
-        {
-            lvOrder = form1;
-        }
-
+        protected Form1ListViewOrder(FormMenu form): base(form) { }
+ 
         public double GetPricaAll()
         {
             double priceAll = 0;
@@ -22,9 +18,9 @@ namespace Pizza.Presenters.PresenterForm1.Order
             string textPrice;
             try
             {
-                for (int i = 0; i < lvOrder.ListViewOrder.Items.Count; i++)
+                for (int i = 0; i < form.ListViewOrder.Items.Count; i++)
                 {
-                    textPrice = lvOrder.ListViewOrder.Items[i].SubItems[2].Text;
+                    textPrice = form.ListViewOrder.Items[i].SubItems[2].Text;
                     price = FindPrice(textPrice);
                     priceAll += price;
                 }

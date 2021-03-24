@@ -1,6 +1,6 @@
 ﻿namespace Pizza
 {
-    class ButtonRemoveOne : ButtonRemove
+    public class ButtonRemoveOne : ButtonRemove
     {
         public ButtonRemoveOne(FormMenu form) : base(form) { }
 

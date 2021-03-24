@@ -33,11 +33,6 @@ namespace Pizza.SqlLite
             if (!fi.Exists)
             {
                 SQLiteConnection.CreateFile(folderDatabase + databaseFile);
-
-            }
-            else
-            {
-
             }
         }
 

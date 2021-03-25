@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
@@ -6,85 +7,55 @@ using System.Windows.Forms;
 namespace Pizza
 {
 
-    //public class SaveFiles : ISaveHistory
-    //{
-    //    const string folderDatabase = @"c:\SQL\Konsola\sqlite\Historia zamówień.txt";
-    //    readonly Name name = new Name();
-    //    private void SaveListOrder(List<Order> listOrder)
-    //    {
-    //        try
-    //        {
-    //            using (StreamWriter streamW = new StreamWriter((folderDatabase), false))
-    //            {
-    //                streamW.WriteLine("");
-    //                streamW.Flush();
-    //            }
-    //        }
-    //        catch (Exception ex)
-    //        {
-    //            MessageBox.Show("Zapisanie do pilku txt nie powiodło się ", "Błąd przy zapisie", MessageBoxButtons.OK, MessageBoxIcon.Error);
-    //            RecordOfExceptions.Save(Convert.ToString(ex), "SaveFiles");
-    //        }
+    public class SaveFiles : ISaveHistory
+    {
+        const string _path = @"c:\SQL\Konsola\sqlite\Historia zamówień.txt";
 
-    //        foreach (var order in listOrder)
-    //        {
-    //            Save(order);
-    //        }
-    //    }
+        private void SaveListOrder(List<Order> listOrder)
+        {
 
-    //    private void Save(Order order)
-    //    {
-    //        try
-    //        {
-    //            using (StreamWriter streamW = new StreamWriter((folderDatabase), true))
-    //            {
-    //                string s="";
-    //                s = name.BeginningOfOrderCode + "\n" + AddPriceAll(order.PriceAll) + AddDishes(order)+ name.EndOfOrderCode;
-    //                streamW.WriteLine(s);
-    //                streamW.Flush();
-    //            }
-    //        }
-    //        catch (Exception ex)
-    //        {
-    //            MessageBox.Show("Zapisanie do pilku txt nie powiodło się ", "Błąd przy zapisie", MessageBoxButtons.OK, MessageBoxIcon.Error);
-    //            RecordOfExceptions.Save(Convert.ToString(ex), "Save");
-    //        }
-    //    }
+            try
+            {
+                var customer = listOrder;
+                var jsonToWrite = JsonConvert.SerializeObject(customer, Formatting.Indented);
 
-    //    private string AddPriceAll (PriceAll priceAll)
-    //    {
-    //        string stPriceAll = name.PriceAllBeginning + "\n";
-    //        stPriceAll += name.PriceAll+ priceAll.Price +"\n";
-    //        stPriceAll += name.Date + priceAll.Date + "\n";
-    //        stPriceAll += name.Comments + priceAll.Comments + "\n";
-    //        stPriceAll += name.PriceAllEnd + "\n";
-    //        return stPriceAll;
-    //    }
+                using (var writer = new StreamWriter(_path, false))
+                {
+                    writer.Write(jsonToWrite);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Zapisanie do pilku txt nie powiodło się ", "Błąd przy zapisie", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                RecordOfExceptions.Save(Convert.ToString(ex), "SaveFiles");
+            }
+        }
 
-    //    private string AddDishes(Order order)
-    //    {
-    //        string stDish=""; 
-    //        foreach (var dish in order.ListDishes)
-    //        {
-    //            stDish += name.DishBeginning + "\n";
-    //            stDish += name.Dish + dish.Name + "\n";
-    //            stDish += name.Price + dish.Price + "\n";
-    //            stDish += name.SidesDishes + dish.SidesDishes + "\n";
-    //            stDish += name.DishEnd + "\n";
-    //        }
-             
-    //        return stDish;
-    //    }
+        private void Save(Order order)
+        {
+            try
+            {
+                var customer = order;
+                var jsonToWrite = JsonConvert.SerializeObject(customer, Formatting.Indented);
 
-    //    public void SaveHistoryOrders(List<Order> listOrder)
-    //    {
-    //        SaveListOrder(listOrder);
-    //    }
+                using (StreamWriter streamW = new StreamWriter((_path), true))
+                {
+                    
+                    streamW.WriteLine(jsonToWrite);
+                    streamW.Flush();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Zapisanie do pilku txt nie powiodło się ", "Błąd przy zapisie", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                RecordOfExceptions.Save(Convert.ToString(ex), "Save");
+            }
+        }
 
-    //    public void AddOrder(Order order)
-    //    {
-    //        Save(order);
-    //    }
-    //}
+        public void SaveHistoryOrders(List<Order> listOrder)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
 

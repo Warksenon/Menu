@@ -1,37 +1,17 @@
-﻿using Pizza.SqlLite;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Pizza.Presenters;
 
 namespace Pizza
 {
-    //class Save
-    //{
-    //    ISaveHistory save;
-    //    public enum ChoiceSaveOrder
-    //    {
-    //        Sql,
-    //        Txt
-    //    }
+    class Save
+    {
+        public void SaveOrderList(ISaveHistory save)
+        {
+            save.SaveHistoryOrders();
+        }
 
-    //    public void  SaveOrderList (ChoiceSaveOrder en, List<Order> orders)
-    //    {
-            
-    //        switch (en)
-    //        {
-    //            case ChoiceSaveOrder.Sql:
-    //                save = new InsertAndQuestionSQL(); break;
-    //            case ChoiceSaveOrder.Txt:
-    //                save = new SaveFiles(); break;
-    //            default:
-    //                save = new InsertAndQuestionSQL(); break;
-    //        }
-    //        save.SaveHistoryOrders(orders);
-    //    }
-
-  
-
-    //}
+        public void AddOrderToHistory(IAddOrder save)
+        {
+            save.AddOrder();
+        }
+    }
 }

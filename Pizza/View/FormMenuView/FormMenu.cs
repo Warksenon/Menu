@@ -3,8 +3,12 @@ using Pizza.Presenters.PresenterForm1;
 using Pizza.Presenters.PresenterForm1.Logic;
 using Pizza.Presenters.PresenterForm1.Remove;
 using Pizza.Presenters.PresenterForm1.VisableElements.Button;
+using Pizza.Presenters.PresenterFormMenu;
+using Pizza.SqlLite;
 using Pizza.View.Form1;
 using Pizza.View.Form1View.ViewSettings;
+using Pizza.View.FormMenuView.InterfaceFormMenu;
+using Pizza.View.FormMenuView.ViewSettings;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -16,7 +20,7 @@ namespace Pizza
 
     public partial class FormMenu : Form , IForm1ListViewDishes, IForm1ListViewOrder, IForm1ButtonMenu, 
                                      IForm1ChecedListBoxSides, IForm1AddButton, IForm1QuantityTextBox, IFrom1InfoLabel,
-                                     IForm1LabelPrice, IButtonRemove, IButtonSend, ITextBoxComments
+                                     IForm1LabelPrice, IButtonRemove, IButtonSend, ITextBoxComments, IFormMenuBackgroundWorker
     {
         public FormMenu()
         { 
@@ -29,12 +33,8 @@ namespace Pizza
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-            eevent.SetLogic(new ButtonPizzaLogic(this));
-            eevent.SetView(new ButtonPizzaView(this));         
-            eevent.SetView(new ButtonRemoveAll(this));
-
-           // SqlLite.CreateTabeles createTabeles = new SqlLite.CreateTabeles();
-           // createTabeles.CreateSQLiteTables();        
+            eevent.SetLogic(new FormMenuLogic(this));
+            eevent.SetView(new FormMenuView(this));  
         } 
         
         public ListView ListViewDishes { get => listViewDish; set => listViewDish = value; }
@@ -82,9 +82,7 @@ namespace Pizza
 
         private void ButtonOrder_Click(object sender, EventArgs e)
         {
-            FormMenuCreatingOrder creatingOrder = new FormMenuCreatingOrder(this);
-            Order order = creatingOrder.GetOrderFromListView();
-           // orderPresenters.SubmitOrder();            
+            eevent.SetLogic(new ButtonPlaceOrderLogic(this));          
         }
 
         private void ButtonOk_Click(object sender, EventArgs e)
@@ -106,16 +104,15 @@ namespace Pizza
 
 
         private void ButtonRemoveListBox_Click(object sender, EventArgs e)
-        {                    
+        {
+            eevent.SetLogic(new RemoveOrderOneLogic(this));
             eevent.SetView(new ButtonRemoveOne(this));
-            eevent.SetLogic(new RemoveOrderOne(this));
-            eevent.SetView(new Form1LabelPricePresenter(this));
         }
 
         private void ButtonRemoveAllListBox_Click(object sender, EventArgs e)
         {         
             eevent.SetView(new ButtonRemoveAll(this));
-            eevent.SetLogic(new RemoveOrderAll(this));
+            eevent.SetLogic(new RemoveOrderAllLogic(this));
             eevent.SetView(new Form1LabelPricePresenter(this));         
         }
 
@@ -145,7 +142,7 @@ namespace Pizza
         private void BackgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
         {
             bOrder.BackColor = Color.Firebrick;
-            // orderPresenters.SendEmailAndSaveOrder();          
+            eevent.SetLogic(new BackgroundWorkerLogic(this));          
         }
 
         private void BackgroundWorker2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

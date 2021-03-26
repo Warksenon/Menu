@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Pizza.Presenters;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,13 +8,25 @@ using System.Windows.Forms;
 namespace Pizza
 {
 
-    public class SaveFiles : ISaveHistory
+    public class SaveFiles : ISaveHistory, IAddOrder
     {
         const string _path = @"c:\SQL\Konsola\sqlite\Historia zamówień.txt";
+        Order order;
+        List<Order> listOrder;
 
-        private void SaveListOrder(List<Order> listOrder)
+        public SaveFiles(Order order)
         {
+            this.order = order;
+        }
 
+        public SaveFiles(List<Order> listOrder)
+        {
+            this.listOrder = listOrder;
+        }
+
+
+        private void SaveListOrder()
+        {
             try
             {
                 var customer = listOrder;
@@ -31,7 +44,7 @@ namespace Pizza
             }
         }
 
-        private void Save(Order order)
+        private void Save()
         {
             try
             {
@@ -52,9 +65,14 @@ namespace Pizza
             }
         }
 
-        public void SaveHistoryOrders(List<Order> listOrder)
+        public void SaveHistoryOrders()
         {
-            throw new NotImplementedException();
+            SaveListOrder();
+        }
+
+        public void AddOrder()
+        {
+            Save();
         }
     }
 }

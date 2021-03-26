@@ -1,15 +1,12 @@
-﻿using Pizza.View.FormMenuView.ViewSettings;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Pizza.Presenters;
+using Pizza.View.FormMenuView.ViewSettings;
 
 namespace Pizza.View.Form1View
 {
     public abstract class ViewFormMenu : TestVisibleElements
     {
         protected FormMenu form;
+        protected IEvent eevent = new Event();
 
         protected ViewFormMenu(FormMenu form)
         {

@@ -7,7 +7,7 @@ namespace Pizza.Presenters.PresenterForm1
     {
         IPriceAll price;
         IForm1LabelPrice label;
-
+        //TODO zmienić na logike
         public Form1LabelPricePresenter(FormMenu form1)
         {
             price = new FormMenuAddOrderListViewPresenters(form1);

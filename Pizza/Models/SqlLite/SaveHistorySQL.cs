@@ -6,12 +6,19 @@ namespace Pizza.Models.SqlLite
 {
     class SaveHistorySQL : OrderSQL, ISaveHistory
     {
-        public void SaveHistoryOrders(List<Order> listOrder)
+        List<Order> listOrder;
+
+        public SaveHistorySQL(List<Order> listOrder)
         {
-            UpdateAllTabele(listOrder);
+            this.listOrder = listOrder;
+        } 
+
+        public void SaveHistoryOrders()
+        {
+            UpdateAllTabele();
         }
 
-        private void UpdateAllTabele(List<Order> listOrder)
+        private void UpdateAllTabele()
         {
             RemoveAllTask();
 

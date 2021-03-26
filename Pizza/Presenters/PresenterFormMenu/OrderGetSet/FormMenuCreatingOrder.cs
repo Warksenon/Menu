@@ -6,9 +6,9 @@ namespace Pizza
 {
     class FormMenuCreatingOrder : Form1ListViewOrder
     {
-        private static Order order = new Order();
+        private Order order = new Order();
 
-        public FormMenuCreatingOrder(FormMenu form1) : base(form1) { }
+        public FormMenuCreatingOrder(FormMenu form) : base(form) { }
  
         public Order  GetOrderFromListView()
         {            

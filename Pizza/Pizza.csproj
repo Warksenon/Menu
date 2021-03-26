@@ -97,11 +97,15 @@
     <Compile Include="Models\SqlLite\LoadHistorySQL.cs" />
     <Compile Include="Models\SqlLite\OrderSQL.cs" />
     <Compile Include="Models\SqlLite\SaveHistorySQL.cs" />
+    <Compile Include="Presenters\Email\EmailSend.cs" />
     <Compile Include="Presenters\Event.cs" />
     <Compile Include="Presenters\IAddOrder.cs" />
     <Compile Include="Presenters\IEvent.cs" />
     <Compile Include="Presenters\ILogiccs.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\BackgroundWorkerLogic.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\ButtonPlaceOrderLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\Form1LabelPricePresenter.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\FormMenuLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\Form1ListDishes.cs" />
     <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\Form1Quantity.cs" />
     <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\Form1SidesDish.cs" />
@@ -113,9 +117,9 @@
     <Compile Include="Presenters\PresenterFormMenu\Logic\LogicListViewOrderForm1.cs" />
     <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\FormMenuCreatingOrder.cs" />
     <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\Form1ListViewOrder.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\Remove\RemoveOrder.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\Remove\RemoveOrderAll.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\Remove\RemoveOrderOne.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\Remove\RemoveOrderLogic.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\Remove\RemoveOrderAllLogic.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\Remove\RemoveOrderOneLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\SendEmailPresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\Form1LoadSidesPresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\IForm1Dishes.cs" />
@@ -130,7 +134,6 @@
     <Compile Include="interfejs\IFormMail.cs" />
     <Compile Include="interfejs\ILoadHistoryOrders.cs" />
     <Compile Include="interfejs\ISaveHistory.cs" />
-    <Compile Include="Presenters\Email\Email.cs" />
     <Compile Include="Presenters\Email\EmailMessage.cs" />
     <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\Form1LoadDishesPresenters.cs" />
     <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\FormMenuAddOrderListViewPresenters.cs" />
@@ -150,6 +153,7 @@
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1AddButton.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1QuantityTextBox.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IFrom1InfoLabel.cs" />
+    <Compile Include="View\FormMenuView\InterfaceFormMenu\IFormMenuBackgroundWorker.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\ITextBoxComments.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\ViewFormMenu.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonMenu.cs" />
@@ -169,6 +173,7 @@
     <Compile Include="View\FormMenuView\ViewSettings\ButtonRemove\ButtonRemove.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonRemove\ButtonRemoveAll.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonRemove\ButtonRemoveOne.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\FormMenuView.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ListViewDishes.cs" />
     <Compile Include="View\FormHistory.cs">
       <SubType>Form</SubType>

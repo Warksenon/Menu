@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Pizza.Presenters.PresenterForm1
 {
-    abstract class RemoveOrder : ILogic
+    abstract class RemoveOrderLogic : ILogic
     {
         protected IForm1ListViewOrder lvOrder;
-        public RemoveOrder(FormMenu form1)
+        public RemoveOrderLogic(FormMenu form1)
         {
             lvOrder = form1;
         }

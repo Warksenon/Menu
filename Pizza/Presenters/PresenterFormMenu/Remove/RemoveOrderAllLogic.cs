@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Pizza.Presenters.PresenterForm1.Remove
 {
-    class RemoveOrderAll  : RemoveOrder
+    class RemoveOrderAllLogic  : RemoveOrderLogic
     {
-        public RemoveOrderAll (FormMenu form1) : base(form1) { }
+        public RemoveOrderAllLogic (FormMenu form1) : base(form1) { }
 
         public override void LogicSettings()
         {

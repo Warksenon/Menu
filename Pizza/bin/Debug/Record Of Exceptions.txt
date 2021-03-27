@@ -2786,3 +2786,613 @@ table 'Dishes' already exists
    w Pizza.SqlLite.CreateSQLiteTables.CreateSQLiteDishes(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 68
 
 
+Data : 2021-03-27 00:05:04
+CreateSQLitePriceAll
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'PriceAll' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLitePriceAll(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 48
+
+
+Data : 2021-03-27 00:05:04
+CreateSQLiteDishes
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'Dishes' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLiteDishes(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 68
+
+
+Data : 2021-03-27 00:09:50
+CreateSQLitePriceAll
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'PriceAll' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLitePriceAll(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 48
+
+
+Data : 2021-03-27 00:09:52
+CreateSQLiteDishes
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'Dishes' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLiteDishes(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 68
+
+
+Data : 2021-03-27 00:10:54
+CreateSQLitePriceAll
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'PriceAll' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLitePriceAll(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 48
+
+
+Data : 2021-03-27 00:10:55
+CreateSQLiteDishes
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'Dishes' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLiteDishes(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 68
+
+
+Data : 2021-03-27 00:17:06
+CreateSQLitePriceAll
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'PriceAll' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLitePriceAll(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 48
+
+
+Data : 2021-03-27 00:17:06
+CreateSQLiteDishes
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'Dishes' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLiteDishes(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 68
+
+
+Data : 2021-03-27 00:17:19
+SendEmail
+System.Net.Mail.SmtpException: Wysyłanie poczty nie powiodło się. ---> System.Net.WebException: Nie można rozpoznać nazwy zdalnej: 'smtp.gmail.com'
+   w System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   w System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   w System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   w System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   w System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpClient.GetConnection()
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Koniec śladu stosu wyjątków wewnętrznych ---
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   w Pizza.Presenters.Email.EmailSend.SendEmail(String message) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Email\EmailSend.cs:wiersz 37
+
+
+Data : 2021-03-27 00:22:26
+CreateSQLitePriceAll
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'PriceAll' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLitePriceAll(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 48
+
+
+Data : 2021-03-27 00:22:26
+CreateSQLiteDishes
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'Dishes' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLiteDishes(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 68
+
+
+Data : 2021-03-27 00:22:38
+SendEmail
+System.Net.Mail.SmtpException: Wysyłanie poczty nie powiodło się. ---> System.Net.WebException: Nie można rozpoznać nazwy zdalnej: 'smtp.gmail.com'
+   w System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   w System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   w System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   w System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   w System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpClient.GetConnection()
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Koniec śladu stosu wyjątków wewnętrznych ---
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   w Pizza.Presenters.Email.EmailSend.SendEmail(String message) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Email\EmailSend.cs:wiersz 37
+
+
+Data : 2021-03-27 00:24:18
+CreateSQLitePriceAll
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'PriceAll' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLitePriceAll(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 48
+
+
+Data : 2021-03-27 00:24:19
+CreateSQLiteDishes
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'Dishes' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLiteDishes(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 68
+
+
+Data : 2021-03-27 00:24:44
+SendEmail
+System.Net.Mail.SmtpException: Wysyłanie poczty nie powiodło się. ---> System.Net.WebException: Nie można rozpoznać nazwy zdalnej: 'smtp.gmail.com'
+   w System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   w System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   w System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   w System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   w System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpClient.GetConnection()
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Koniec śladu stosu wyjątków wewnętrznych ---
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   w Pizza.Presenters.Email.EmailSend.SendEmail(String message) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Email\EmailSend.cs:wiersz 37
+
+
+Data : 2021-03-27 00:25:07
+SendEmail
+System.Net.Mail.SmtpException: Wysyłanie poczty nie powiodło się. ---> System.Net.WebException: Nie można rozpoznać nazwy zdalnej: 'smtp.gmail.com'
+   w System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   w System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   w System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   w System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   w System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpClient.GetConnection()
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Koniec śladu stosu wyjątków wewnętrznych ---
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   w Pizza.Presenters.Email.EmailSend.SendEmail(String message) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Email\EmailSend.cs:wiersz 37
+
+
+Data : 2021-03-27 00:30:17
+CreateSQLitePriceAll
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'PriceAll' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLitePriceAll(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 48
+
+
+Data : 2021-03-27 00:30:17
+CreateSQLiteDishes
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'Dishes' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLiteDishes(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 68
+
+
+Data : 2021-03-27 00:32:43
+CreateSQLitePriceAll
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'PriceAll' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLitePriceAll(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 48
+
+
+Data : 2021-03-27 00:32:43
+CreateSQLiteDishes
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'Dishes' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLiteDishes(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 68
+
+
+Data : 2021-03-27 00:32:50
+SendEmail
+System.Net.Mail.SmtpException: Wysyłanie poczty nie powiodło się. ---> System.Net.WebException: Nie można rozpoznać nazwy zdalnej: 'smtp.gmail.com'
+   w System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   w System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   w System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   w System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   w System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpClient.GetConnection()
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Koniec śladu stosu wyjątków wewnętrznych ---
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   w Pizza.Presenters.Email.EmailSend.SendEmail(String message) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Email\EmailSend.cs:wiersz 37
+
+
+Data : 2021-03-27 00:33:06
+SendEmail
+System.Net.Mail.SmtpException: Wysyłanie poczty nie powiodło się. ---> System.Net.WebException: Nie można rozpoznać nazwy zdalnej: 'smtp.gmail.com'
+   w System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   w System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   w System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   w System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   w System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpClient.GetConnection()
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Koniec śladu stosu wyjątków wewnętrznych ---
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   w Pizza.Presenters.Email.EmailSend.SendEmail(String message) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Email\EmailSend.cs:wiersz 37
+
+
+Data : 2021-03-27 00:33:29
+CreateSQLitePriceAll
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'PriceAll' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLitePriceAll(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 48
+
+
+Data : 2021-03-27 00:33:29
+CreateSQLiteDishes
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'Dishes' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLiteDishes(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 68
+
+
+Data : 2021-03-27 01:01:49
+CreateSQLitePriceAll
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'PriceAll' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLitePriceAll(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 48
+
+
+Data : 2021-03-27 01:01:49
+CreateSQLiteDishes
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'Dishes' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLiteDishes(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 68
+
+
+Data : 2021-03-27 01:04:39
+CreateSQLitePriceAll
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'PriceAll' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLitePriceAll(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 48
+
+
+Data : 2021-03-27 01:04:39
+CreateSQLiteDishes
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'Dishes' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLiteDishes(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 68
+
+
+Data : 2021-03-27 01:13:42
+CreateSQLitePriceAll
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'PriceAll' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLitePriceAll(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 48
+
+
+Data : 2021-03-27 01:13:42
+CreateSQLiteDishes
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'Dishes' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLiteDishes(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 68
+
+
+Data : 2021-03-27 01:15:05
+CreateSQLitePriceAll
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'PriceAll' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLitePriceAll(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 48
+
+
+Data : 2021-03-27 01:15:06
+CreateSQLiteDishes
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'Dishes' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLiteDishes(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 68
+
+
+Data : 2021-03-27 01:28:43
+CreateSQLitePriceAll
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'PriceAll' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLitePriceAll(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 48
+
+
+Data : 2021-03-27 01:28:43
+CreateSQLiteDishes
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'Dishes' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLiteDishes(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 68
+
+
+Data : 2021-03-27 01:28:50
+SendEmail
+System.Net.Mail.SmtpException: Wysyłanie poczty nie powiodło się. ---> System.Net.WebException: Nie można rozpoznać nazwy zdalnej: 'smtp.gmail.com'
+   w System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   w System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   w System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   w System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   w System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpClient.GetConnection()
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Koniec śladu stosu wyjątków wewnętrznych ---
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   w Pizza.Presenters.Email.EmailSend.SendEmail(String message) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Email\EmailSend.cs:wiersz 37
+
+
+Data : 2021-03-27 01:29:14
+SendEmail
+System.Net.Mail.SmtpException: Wysyłanie poczty nie powiodło się. ---> System.Net.WebException: Nie można rozpoznać nazwy zdalnej: 'smtp.gmail.com'
+   w System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   w System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   w System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   w System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   w System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpClient.GetConnection()
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Koniec śladu stosu wyjątków wewnętrznych ---
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   w Pizza.Presenters.Email.EmailSend.SendEmail(String message) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Email\EmailSend.cs:wiersz 37
+
+
+Data : 2021-03-27 01:31:43
+CreateSQLitePriceAll
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'PriceAll' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLitePriceAll(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 48
+
+
+Data : 2021-03-27 01:31:44
+CreateSQLiteDishes
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+table 'Dishes' already exists
+   w System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   w System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   w System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   w System.Data.SQLite.SQLiteDataReader.NextResult()
+   w System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   w System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   w System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   w Pizza.SqlLite.CreateSQLiteTables.CreateSQLiteDishes(SQLiteConnection cn) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Models\SqlLite\CreateTabeles.cs:wiersz 68
+
+
+Data : 2021-03-27 01:31:52
+SendEmail
+System.Net.Mail.SmtpException: Wysyłanie poczty nie powiodło się. ---> System.Net.WebException: Nie można rozpoznać nazwy zdalnej: 'smtp.gmail.com'
+   w System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   w System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   w System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   w System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   w System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpClient.GetConnection()
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Koniec śladu stosu wyjątków wewnętrznych ---
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   w Pizza.Presenters.Email.EmailSend.SendEmail(String message) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Email\EmailSend.cs:wiersz 37
+
+
+Data : 2021-03-27 01:32:02
+SendEmail
+System.Net.Mail.SmtpException: Wysyłanie poczty nie powiodło się. ---> System.Net.WebException: Nie można rozpoznać nazwy zdalnej: 'smtp.gmail.com'
+   w System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   w System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   w System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   w System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   w System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   w System.Net.Mail.SmtpClient.GetConnection()
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Koniec śladu stosu wyjątków wewnętrznych ---
+   w System.Net.Mail.SmtpClient.Send(MailMessage message)
+   w Pizza.Presenters.Email.EmailSend.SendEmail(String message) w A:\pendrive\repozytoria git\Pizza Git\Pizza\Presenters\Email\EmailSend.cs:wiersz 37
+
+

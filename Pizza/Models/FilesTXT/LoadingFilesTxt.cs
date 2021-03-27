@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Pizza.Models.FilesTXT;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,7 +10,7 @@ namespace Pizza
     public class LoadingFilesTxt : ILoadHistoryOrders
     {
         const string _path = @"c:\SQL\Konsola\sqlite\Historia zamówień.txt";
- 
+
         private List<Order> LoadOrderListFromTxt()
         {
             List<Order> orderList = new List<Order>();
@@ -22,8 +23,8 @@ namespace Pizza
                     jsonFromFile = reader.ReadToEnd();
                 }
 
-              var order = JsonConvert.DeserializeObject<List<Order>>(jsonFromFile);
-              orderList = order;
+              var order = JsonConvert.DeserializeObject<ListOrder>(jsonFromFile);
+              orderList = order.List;
             }
             catch (Exception ex)
             {
@@ -32,7 +33,6 @@ namespace Pizza
 
             return orderList;
         }
-
 
         public List<Order> LoadHistory()
         {

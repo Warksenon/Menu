@@ -9,6 +9,6 @@ namespace Pizza.View.Form1
 {
     public interface IButtonSend
     {
-        Button ButtonSendMassage { get; set; }
+        Button ButtonSubmitOrder { get; set; }
     }
 }

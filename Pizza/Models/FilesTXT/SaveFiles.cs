@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Pizza.Models.FilesTXT;
 using Pizza.Presenters;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace Pizza
     {
         const string _path = @"c:\SQL\Konsola\sqlite\Historia zamówień.txt";
         Order order;
-        List<Order> listOrder;
+        ListOrder listOrder = new ListOrder();
 
         public SaveFiles(Order order)
         {
@@ -21,7 +22,7 @@ namespace Pizza
 
         public SaveFiles(List<Order> listOrder)
         {
-            this.listOrder = listOrder;
+            this.listOrder.List = listOrder;
         }
 
 
@@ -32,7 +33,7 @@ namespace Pizza
                 var customer = listOrder;
                 var jsonToWrite = JsonConvert.SerializeObject(customer, Formatting.Indented);
 
-                using (var writer = new StreamWriter(_path, false))
+                using (var writer = new StreamWriter(_path))
                 {
                     writer.Write(jsonToWrite);
                 }
@@ -48,14 +49,14 @@ namespace Pizza
         {
             try
             {
-                var customer = order;
+                LoadHistoryToListOrder();                
+                listOrder.AddOrder(order);
+                var customer = listOrder;
                 var jsonToWrite = JsonConvert.SerializeObject(customer, Formatting.Indented);
 
-                using (StreamWriter streamW = new StreamWriter((_path), true))
+                using (StreamWriter writer = new StreamWriter((_path)))
                 {
-                    
-                    streamW.WriteLine(jsonToWrite);
-                    streamW.Flush();
+                    writer.Write(jsonToWrite);
                 }
             }
             catch (Exception ex)
@@ -63,6 +64,12 @@ namespace Pizza
                 MessageBox.Show("Zapisanie do pilku txt nie powiodło się ", "Błąd przy zapisie", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 RecordOfExceptions.Save(Convert.ToString(ex), "Save");
             }
+        }
+
+        private void LoadHistoryToListOrder()
+        {
+            LoadingFilesTxt load = new LoadingFilesTxt();
+            listOrder.List = load.LoadHistory();
         }
 
         public void SaveHistoryOrders()

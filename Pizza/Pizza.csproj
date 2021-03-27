@@ -84,6 +84,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\FilesTXT\ListOrder.cs" />
     <Compile Include="Models\Menu\Dishes\ListDishes.cs" />
     <Compile Include="Models\Menu\Dishes\ListDrinks.cs" />
     <Compile Include="Models\Menu\Dishes\ListMainDishes.cs" />

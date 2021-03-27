@@ -1,6 +1,7 @@
 ﻿using Pizza.View.FormMenuView.ViewSettings;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,7 @@ namespace Pizza
 
             if (number > 0) 
             {
+                form.ButtonSubmitOrder.BackColor = Color.LawnGreen;
                 form.ButtonRemoveAll.Visible = true;
                 ButtonRemoveAll = true;
             }

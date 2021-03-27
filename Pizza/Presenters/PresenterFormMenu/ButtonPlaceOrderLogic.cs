@@ -1,4 +1,5 @@
 ﻿using Pizza.View.Form1View;
+using Pizza.View.FormMenuView.InterfaceFormMenu;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Windows.Forms;
 namespace Pizza.Presenters.PresenterFormMenu
 {
     class ButtonPlaceOrderLogic : ViewFormMenu, ILogic
-    {
+    {    
         public ButtonPlaceOrderLogic(FormMenu form) :base(form) { }
 
         public void LogicSettings()
@@ -24,6 +25,7 @@ namespace Pizza.Presenters.PresenterFormMenu
                 if (form.BackgroundWorker.IsBusy != true)
                 {
                     form.BackgroundWorker.RunWorkerAsync();
+                    eevent.SetLogic(new BackgroundWorkerLogic(form));
                 }
                 else
                 {

@@ -12,7 +12,7 @@ namespace Pizza
 
         protected void RemoveAll()
         {
-            form.ButtonSendMassage.BackColor = SystemColors.Control;
+            form.ButtonSubmitOrder.BackColor = SystemColors.Control;
             form.ButtonRemoveAll.Visible = false;
             ButtonRemoveAll = false;
             form.ButtonRemoveOne.Visible = false;

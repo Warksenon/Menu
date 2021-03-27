@@ -30,9 +30,10 @@ namespace Pizza
         }
 
         private IEvent eevent = new Event();
-
+        private FormMenu form;
         private void Form1_Load_1(object sender, EventArgs e)
         {
+            form = this;
             eevent.SetLogic(new FormMenuLogic(this));
             eevent.SetView(new FormMenuView(this));  
         } 
@@ -53,7 +54,7 @@ namespace Pizza
         public Label LabelPrice { get => lPrice; set => lPrice = value; }
         public Button ButtonRemoveOne { get => bRemoveListBox; set => bRemoveListBox = value; }
         public Button ButtonRemoveAll { get => bRemoveAllListBox; set => bRemoveAllListBox = value; }
-        public Button ButtonSendMassage { get => bOrder; set => bOrder = value; }
+        public Button ButtonSubmitOrder { get => bOrder; set => bOrder = value; }
         
 
         private void ButtonPizza_Click(object sender, EventArgs e)
@@ -138,20 +139,10 @@ namespace Pizza
                 MessageBox.Show("Historia jeszcze nie gotowa", "Przetwarzanie danych");
             }         
         }
-      
-        private void BackgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
-        {
-            bOrder.BackColor = Color.Firebrick;
-            eevent.SetLogic(new BackgroundWorkerLogic(this));          
-        }
 
-        private void BackgroundWorker2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            bOrder.BackColor = SystemColors.Control;
-        }
-
-        private void BackgroundWorker2_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
+            
         }
     }
 }

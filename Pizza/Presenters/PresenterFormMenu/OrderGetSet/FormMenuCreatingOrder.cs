@@ -1,4 +1,5 @@
 ﻿using Pizza.Presenters.PresenterForm1.Order;
+using System;
 using System.Collections.Generic;
 
 namespace Pizza
@@ -14,6 +15,7 @@ namespace Pizza
             GetListDishesFromListViewOrder();
             AddPriceAllToOrder();
             GetComments();
+            GetDate();
             return order;
         }
 
@@ -26,6 +28,11 @@ namespace Pizza
         private void GetComments()
         {
             order.PriceAll.Comments = form.TextBoxComments.Text;
+        }
+
+        private void GetDate()
+        {
+            order.PriceAll.Date = DateTime.Now.ToString();
         }
 
         private void GetListDishesFromListViewOrder()

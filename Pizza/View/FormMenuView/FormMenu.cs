@@ -30,10 +30,9 @@ namespace Pizza
         }
 
         private IEvent eevent = new Event();
-        private FormMenu form;
+        
         private void Form1_Load_1(object sender, EventArgs e)
         {
-            form = this;
             eevent.SetLogic(new FormMenuLogic(this));
             eevent.SetView(new FormMenuView(this));  
         } 
@@ -142,7 +141,12 @@ namespace Pizza
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            
+            ButtonSubmitOrder.BackColor = Color.Firebrick;
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            ButtonSubmitOrder.BackColor = Color.LawnGreen;
         }
     }
 }

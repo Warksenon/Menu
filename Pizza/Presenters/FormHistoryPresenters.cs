@@ -13,7 +13,6 @@ namespace Pizza.Presenters
         List<Order> orderList = new List<Order>();
         readonly LoadOrder load = new LoadOrder();
 
-
         public FormHistoryPresenters(FormHistory form)
         {
             this.form = form;
@@ -21,21 +20,20 @@ namespace Pizza.Presenters
 
         public void CopyDataFromFilesTxt()
         {
-            Save save = new Save();
+            SaveHistory save = new SaveHistory();
             List<Order> listOrder = new List<Order>();
 
             listOrder = load.LoadOrderList(new LoadingFilesTxt());
-            save.SaveOrderList(new SaveHistorySQL(listOrder));
-
+            save.SaveList(new SaveHistorySQL(listOrder));
         }
 
         public void CopyDataFromSQL()
         {
-            Save save = new Save();
+            SaveHistory save = new SaveHistory();
             List<Order> listOrder = new List<Order>();
 
             listOrder = load.LoadOrderList(new LoadHistorySQL());
-            save.SaveOrderList(new SaveFiles(listOrder));
+            save.SaveList(new SaveFiles(listOrder));
         }
 
         public void LoadHistroyFromTxt()

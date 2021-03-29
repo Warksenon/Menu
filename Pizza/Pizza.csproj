@@ -121,7 +121,6 @@
     <Compile Include="Presenters\PresenterFormMenu\Remove\RemoveOrderLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\Remove\RemoveOrderAllLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\Remove\RemoveOrderOneLogic.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\SendEmailPresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\Form1LoadSidesPresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\IForm1Dishes.cs" />
     <Compile Include="Presenters\SaveOrder.cs" />
@@ -157,6 +156,7 @@
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IFormMenuBackgroundWorker.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\ITextBoxComments.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\ViewFormMenu.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\BackgroundWorkerViewFormMenu.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonMenu.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonDrinksView.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonMainDishesSetting.cs" />
@@ -191,7 +191,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Presenters\RecordOfExceptions.cs" />
-    <Compile Include="Presenters\Save.cs" />
+    <Compile Include="Presenters\SaveHistory.cs" />
     <Compile Include="Models\SqlLite\CreateConnection.cs" />
     <Compile Include="Models\SqlLite\CreateTabeles.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\TestVisibleElements.cs" />

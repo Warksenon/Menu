@@ -452,7 +452,6 @@ C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\System.Ru
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\Microsoft.Data.Sqlite.xml
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\System.Buffers.xml
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\System.Data.SQLite.xml
-C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\System.Memory.xml
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
@@ -461,3 +460,5 @@ A:\pendrive\repozytoria git\Pizza Git\Pizza\obj\Debug\Pizza.FormMenu.resources
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.FormMenu.resources
 A:\pendrive\repozytoria git\Pizza Git\Pizza\bin\Debug\Newtonsoft.Json.dll
 A:\pendrive\repozytoria git\Pizza Git\Pizza\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\Newtonsoft.Json.xml

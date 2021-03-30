@@ -6,7 +6,7 @@ namespace Pizza
 {
     public partial class FormMail : Form , IFormMail
     { 
-        private FormMailPresenters presenters;
+        private FormMailSavePresenters presenters;
 
 
         public TextBox TextBoxSender { get => tSender; set => tSender = value; }
@@ -23,8 +23,8 @@ namespace Pizza
 
         private void FormMail_Load(object sender, EventArgs e)
         {
-            presenters = new FormMailPresenters(this);
-            presenters.SetTextView();
+            presenters = new FormMailSavePresenters(this);
+            presenters.SetTextForTextBox();
         }
 
         private void ButtonSave_Click(object sender, EventArgs e)

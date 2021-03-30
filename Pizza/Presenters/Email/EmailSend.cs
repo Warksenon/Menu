@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Pizza.Models.Registry;
+using System;
 using System.Net;
 using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pizza.Presenters.Email
 {
@@ -12,8 +9,9 @@ namespace Pizza.Presenters.Email
     {
         public bool SendEmail(string message)
         {
-            bool flag = false;           
-            Registry registry = new Registry();            
+            bool flag = false;
+            ILoadEmailData loadEmail = new LoadRegistry();
+            EmailData registry = loadEmail.Load();            
             MailMessage send = new MailMessage();
             SmtpClient client = new SmtpClient();
             try
@@ -27,8 +25,7 @@ namespace Pizza.Presenters.Email
                     send.From = new MailAddress(registry.Sender);
                     send.Subject = "Zamówienie Pizza";
                     send.Body = message;
-                    send.To.Add(registry.Recipient);
-                    
+                    send.To.Add(registry.Recipient);                   
                 }
                 catch (Exception ex)
                 {
@@ -42,7 +39,6 @@ namespace Pizza.Presenters.Email
                 RecordOfExceptions.Save(Convert.ToString(ex), "SendEmail");
             }
             return flag;
-
         }
     }
 }

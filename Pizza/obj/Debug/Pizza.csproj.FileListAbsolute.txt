@@ -425,7 +425,6 @@ A:\pendrive\repozytoria git\Pizza Git\Pizza\bin\Debug\System.Memory.xml
 A:\pendrive\repozytoria git\Pizza Git\Pizza\bin\Debug\System.Numerics.Vectors.xml
 A:\pendrive\repozytoria git\Pizza Git\Pizza\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 A:\pendrive\repozytoria git\Pizza Git\Pizza\obj\Debug\Pizza.csproj.CopyComplete
-C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.csprojAssemblyReference.cache
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.FormHistory.resources
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.FormMail.resources
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.Properties.Resources.resources

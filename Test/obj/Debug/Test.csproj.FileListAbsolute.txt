@@ -160,3 +160,7 @@ C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Test.cspro
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Test.csproj.CopyComplete
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Test.dll
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Test.pdb
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\bin\Debug\nunit.framework.dll
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\bin\Debug\nunit.framework.xml
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\bin\Debug\Newtonsoft.Json.xml

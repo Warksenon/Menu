@@ -1,10 +1,4 @@
 ﻿using Pizza.View.Form1View;
-using Pizza.View.FormMenuView.InterfaceFormMenu;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pizza.Presenters.PresenterFormMenu

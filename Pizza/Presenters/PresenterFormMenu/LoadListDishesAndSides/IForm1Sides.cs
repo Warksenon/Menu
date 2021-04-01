@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1
 {

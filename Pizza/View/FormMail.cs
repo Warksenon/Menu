@@ -24,7 +24,7 @@ namespace Pizza
         private void FormMail_Load(object sender, EventArgs e)
         {
             presenters = new FormMailSavePresenters(this);
-            presenters.SetTextForTextBox();
+          //  presenters.SetTextForTextBox();
         }
 
         private void ButtonSave_Click(object sender, EventArgs e)

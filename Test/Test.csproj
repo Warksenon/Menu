@@ -61,24 +61,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnumMenu.cs" />
-    <Compile Include="SimulatingClassesMainProject\Models\Registry\LoadRegistry.cs" />
-    <Compile Include="SimulatingClassesMainProject\Models\Registry\Registry.cs" />
-    <Compile Include="SimulatingClassesMainProject\Models\Registry\SaveRegistry.cs" />
-    <Compile Include="SimulatingClassesMainProject\Presenters\Email\EmailData.cs" />
-    <Compile Include="SimulatingClassesMainProject\Presenters\Email\EmailMessage.cs" />
-    <Compile Include="SimulatingClassesMainProject\Presenters\Email\EmailSend.cs" />
-    <Compile Include="SimulatingClassesMainProject\Presenters\Email\ILoadEmailData.cs" />
-    <Compile Include="SimulatingClassesMainProject\Presenters\Email\ISaveEmailData.cs" />
-    <Compile Include="SimulatingClassesMainProject\Presenters\FormMenuPresenter\LoadListDishesAndSides\Form1LoadDishesPresenters.cs" />
-    <Compile Include="SimulatingClassesMainProject\Presenters\FormMenuPresenter\LoadListDishesAndSides\Form1LoadSidesPresenter.cs" />
-    <Compile Include="SimulatingClassesMainProject\Presenters\FormMenuPresenter\OrderGetSet\Form1ListViewOrder.cs" />
-    <Compile Include="SimulatingClassesMainProject\Presenters\FormMenuPresenter\OrderGetSet\FormMenuAddOrderListViewPresenters.cs" />
-    <Compile Include="SimulatingClassesMainProject\Presenters\FormMenuPresenter\OrderGetSet\FormMenuCreatingOrder.cs" />
-    <Compile Include="SimulatingClassesMainProject\Presenters\FormMenuPresenter\OrderGetSet\IPriceAll.cs" />
-    <Compile Include="Test\Form1\Form1Test.cs" />
-    <Compile Include="Test\Form1\TestViewSettings\TestButtonMenu.cs" />
-    <Compile Include="Test\Form1\TestViewSettings\TestButtonRemove.cs" />
-    <Compile Include="Test\Form1\TestViewSettings\TestButtonOk.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\LoadRegistry.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\Registry.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\SaveRegistry.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\EmailData.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\EmailMessage.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\EmailSend.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\ILoadEmailData.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\ISaveEmailData.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresentersTest\FormMenuPresenterTest\LoadListDishesAndSides\Form1LoadDishesPresenters.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresentersTest\FormMenuPresenterTest\LoadListDishesAndSides\Form1LoadSidesPresenter.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresentersTest\FormMenuPresenterTest\OrderGetSet\Form1ListViewOrder.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresentersTest\FormMenuPresenterTest\OrderGetSet\FormMenuAddOrderListViewPresenters.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresentersTest\FormMenuPresenterTest\OrderGetSet\FormMenuCreatingOrder.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresentersTest\FormMenuPresenterTest\OrderGetSet\IPriceAll.cs" />
+    <Compile Include="Test\TestFormMenu\Form1Test.cs" />
+    <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonMenu.cs" />
+    <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonRemove.cs" />
+    <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonOk.cs" />
     <Compile Include="Test\TestMenu\Dishes\TestListDrinks.cs" />
     <Compile Include="Test\TestMenu\Dishes\TestListSoups.cs" />
     <Compile Include="Test\TestMenu\Sides\TestSidesMainDishes.cs" />
@@ -99,7 +99,7 @@
     <Compile Include="old\TestOrderPresenters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="old\TestLoadDishesPresenters.cs" />
-    <Compile Include="TestName.cs" />
+    <Compile Include="Test\TestName.cs" />
     <Compile Include="old\TestOrder.cs" />
     <Compile Include="old\TestMessage.cs" />
     <Compile Include="old\TestSqLite.cs" />
@@ -108,7 +108,7 @@
     <Compile Include="old\TestFormMailPresenters.cs" />
     <Compile Include="Test\TestMenu\Dishes\TestListPizza.cs" />
     <Compile Include="Test\TestMenu\Dishes\TestListMainDishes.cs" />
-    <Compile Include="RegistryTTTTTT.cs" />
+    <Compile Include="Test\TestRegistryTTTTTT.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

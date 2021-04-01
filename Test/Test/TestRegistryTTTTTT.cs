@@ -7,7 +7,7 @@ using Pizza.Presenters;
 namespace Test
 {
     [TestClass]
-    public class RegistryTTTTTT
+    public class TestRegistryTTTTTT
     {
         IEvent eevent = new Event();
         FormMail form = new FormMail();

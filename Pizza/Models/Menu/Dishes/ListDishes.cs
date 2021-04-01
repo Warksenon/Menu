@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Pizza.Models.Menu.Dishes
+namespace Pizza
 {
    public abstract class ListDishes
     {

@@ -461,3 +461,4 @@ A:\pendrive\repozytoria git\Pizza Git\Pizza\bin\Debug\Newtonsoft.Json.dll
 A:\pendrive\repozytoria git\Pizza Git\Pizza\bin\Debug\Newtonsoft.Json.xml
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\Newtonsoft.Json.dll
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.csprojAssemblyReference.cache

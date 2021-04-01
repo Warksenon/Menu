@@ -153,7 +153,6 @@ C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\bin\Debug\Pizza.exe.
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\bin\Debug\System.Data.SQLite.xml
-C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Test.csprojAssemblyReference.cache
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\obj\Debug\Test.csproj.CopyComplete
@@ -171,3 +170,7 @@ A:\pendrive\repozytoria git\Pizza Git\Test\bin\Debug\pl\Microsoft.TestPlatform.A
 A:\pendrive\repozytoria git\Pizza Git\Test\bin\Debug\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
 A:\pendrive\repozytoria git\Pizza Git\Test\bin\Debug\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 A:\pendrive\repozytoria git\Pizza Git\Test\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\bin\Debug\pl\Microsoft.TestPlatform.AdapterUtilities.resources.dll
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\bin\Debug\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\bin\Debug\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Test\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll

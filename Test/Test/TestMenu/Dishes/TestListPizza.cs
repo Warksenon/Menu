@@ -1,8 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Pizza;
-using Pizza.Models.Menu;
-using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
-using System.Collections.Generic;
 
 
 namespace Test

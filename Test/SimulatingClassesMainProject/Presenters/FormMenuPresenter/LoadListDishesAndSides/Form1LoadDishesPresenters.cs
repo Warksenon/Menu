@@ -1,22 +1,22 @@
-﻿using Pizza.Models.Menu;
-using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
-using Pizza.View.Form1View;
-using System;
+﻿using Pizza.View.Form1View;
 using System.Collections.Generic;
-using System.Windows.Forms;
 
 namespace Pizza.Presenters
 {
     public class Form1LoadDishesPresenters : ViewFormMenu
     {
         int index = 0;
-        public Form1LoadDishesPresenters(FormMenu form, int index) : base(form) { }
+        int numbersRepetitions;
+        public Form1LoadDishesPresenters(FormMenu form, int index,int numbersRepetitions) : base(form) 
+        {
+            this.index = index;
+            this.numbersRepetitions = numbersRepetitions;
+        }
 
 
         public List<Dish> GetListSelektedDishes()
         {
             List<Dish> list = new List<Dish>();
-            int numbersRepetitions = CheckNumberTextViewDishes();
             if (numbersRepetitions > 0)
             {
                 int x = CheckListDishesSelectedItem();

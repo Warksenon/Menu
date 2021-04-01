@@ -1,11 +1,10 @@
-﻿using Pizza.Models.Menu;
-using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
+﻿using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
 using Pizza.View.Form1View;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace Pizza.Presenters
+namespace Pizza
 {
     public class Form1LoadDishesPresenters : ViewFormMenu
     {

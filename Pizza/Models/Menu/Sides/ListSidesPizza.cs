@@ -1,7 +1,7 @@
 ﻿using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
 using System.Collections.Generic;
 
-namespace Pizza.Models.Menu.Sides
+namespace Pizza
 {
     public class ListSidesPizza : ListSides, IForm1Sides
     {

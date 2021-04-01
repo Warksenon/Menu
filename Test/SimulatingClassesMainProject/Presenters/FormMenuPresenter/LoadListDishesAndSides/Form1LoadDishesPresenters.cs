@@ -1,19 +1,17 @@
-﻿using System;
+﻿using Pizza.Models.Menu;
+using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
+using Pizza.View.Form1View;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Pizza;
-using Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1;
 
-namespace Test.TPresenters
+namespace Pizza.Presenters
 {
-    public class TForm1ListDishes : Form1Quantity
+    public class Form1LoadDishesPresenters : ViewFormMenu
     {
         int index = 0;
-        public TForm1ListDishes(FormMenu form, int index) : base(form) { }
-       
+        public Form1LoadDishesPresenters(FormMenu form, int index) : base(form) { }
+
 
         public List<Dish> GetListSelektedDishes()
         {
@@ -21,7 +19,7 @@ namespace Test.TPresenters
             int numbersRepetitions = CheckNumberTextViewDishes();
             if (numbersRepetitions > 0)
             {
-                int x = CheckListDishesSelectedItem();             
+                int x = CheckListDishesSelectedItem();
                 for (int i = 0; i < numbersRepetitions; i++)
                 {
                     Dish dish = new Dish

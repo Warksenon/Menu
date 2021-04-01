@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Pizza.Models.Menu.Sides
+namespace Pizza
 {
     public abstract class ListSides: IListSides
     {

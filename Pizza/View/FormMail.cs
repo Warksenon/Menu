@@ -1,13 +1,13 @@
 ﻿using Pizza.Presenters;
+using Pizza.Presenters.PresenterFormMail;
 using System;
 using System.Windows.Forms;
 
 namespace Pizza
 {
     public partial class FormMail : Form , IFormMail
-    { 
-        private FormMailSavePresenters presenters;
-
+    {
+        IEvent eevent = new Event();
 
         public TextBox TextBoxSender { get => tSender; set => tSender = value; }
         public TextBox TextBoxRecipient { get => tRecipient; set => tRecipient = value; }
@@ -16,24 +16,18 @@ namespace Pizza
         public TextBox TextBoxPort { get => tPort; set => tPort = value; }
 
         public FormMail()
-        {
-            
+        {            
             InitializeComponent();          
         }
 
         private void FormMail_Load(object sender, EventArgs e)
         {
-            presenters = new FormMailSavePresenters(this);
-          //  presenters.SetTextForTextBox();
+            eevent.SetLogic(new FormMailLoad(this));
         }
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-            
-            //if (presenters.SaveDataEmial())
-            //{
-            //    this.Close();
-            //}            
+            eevent.SetLogic(new FormMailSavePresenters(this));                
         }
 
         private void ButtonClose_Click(object sender, EventArgs e)

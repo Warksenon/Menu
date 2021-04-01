@@ -59,10 +59,7 @@ namespace Test
  
         //    presenter.SetTextView();
 
-        //    Assert.AreEqual("listorders39@gmail.com", tSender.Text);
-        //    Assert.AreEqual("listorders39@gmail.com", tRecipient.Text);
-        //    Assert.AreEqual("Testy2020!", tPassword.Text);
-        //    Assert.AreEqual("smtp.gmail.com", tSmtp.Text);
+        
         //    Assert.AreEqual("587", tPort.Text);
         //}
     }

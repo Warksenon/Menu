@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pizza
+namespace Test.SimulatingClassesMainProject.Models.Registry
 {
-    interface IListSides
+    class Class1
     {
-        void AddSideToList(List<String> listSides, string sideText);     
     }
 }

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pizza
+namespace Test
 {
-    interface IListSides
+    public interface ISaveEmailData
     {
-        void AddSideToList(List<String> listSides, string sideText);     
+        bool Save(EmailData emailData);
     }
 }

@@ -1,8 +1,5 @@
-﻿using System;
-using Pizza.Presenters.PresenterFormMail;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pizza;
-using Pizza.Presenters;
 
 namespace Test
 {

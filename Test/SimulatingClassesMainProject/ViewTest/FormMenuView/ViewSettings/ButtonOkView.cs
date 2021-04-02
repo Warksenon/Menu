@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace Test
 {
-    public class ButtonOkView : IView
+    public class ButtonOkView : TestVisibleElements, IView
     {
         FormMenu form;
 
@@ -21,13 +21,16 @@ namespace Test
             {
                 form.ButtonSubmitOrder.BackColor = Color.LawnGreen;
                 form.ButtonRemoveAll.Visible = true;
+                ButtonRemoveAll = true;
             }
             else 
             { 
                 form.ButtonRemoveAll.Visible = false;
+                ButtonRemoveAll = false;
             }
 
             form.ButtonRemoveOne.Visible = false;
+            ButtonRemoveOne = false;
         }
     }
 }

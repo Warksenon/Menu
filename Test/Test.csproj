@@ -64,6 +64,9 @@
     <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\LoadRegistry.cs" />
     <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\Registry.cs" />
     <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\SaveRegistry.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresenterFormMail\FormMailLoad.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresenterFormMail\FormMailPresenter.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresenterFormMail\FormMailSavePresenters.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\Aktion.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\EmailData.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\EmailMessage.cs" />

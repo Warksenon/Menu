@@ -12,8 +12,11 @@ namespace Test
         protected void RemoveAll()
         {
             form.ButtonSubmitOrder.BackColor = SystemColors.Control;
-            form.ButtonRemoveAll.Visible = false;      
+            form.ButtonRemoveAll.Visible = false;
+            ButtonRemoveAll = false;
             form.ButtonRemoveOne.Visible = false;
+            ButtonRemoveOne = false;
+
         }
     }
 }

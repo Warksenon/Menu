@@ -1,6 +1,5 @@
-﻿using Pizza;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Windows.Forms;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Test.Test.Form1.ViewSettings
 {

@@ -1,5 +1,4 @@
-﻿using Pizza.View.Form1;
-using Pizza.View.Form1View;
+﻿using Pizza.View.Form1View;
 using System.Drawing;
 
 namespace Pizza
@@ -13,10 +12,8 @@ namespace Pizza
         protected void RemoveAll()
         {
             form.ButtonSubmitOrder.BackColor = SystemColors.Control;
-            form.ButtonRemoveAll.Visible = false;
-            ButtonRemoveAll = false;
+            form.ButtonRemoveAll.Visible = false;      
             form.ButtonRemoveOne.Visible = false;
-            ButtonRemoveOne = false;
         }
     }
 }

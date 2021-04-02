@@ -1,14 +1,8 @@
-﻿using Pizza.View.FormMenuView.ViewSettings;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace Pizza
 {
-    public class ButtonOkView : TestVisibleElements, IView
+    public class ButtonOkView : IView
     {
         FormMenu form;
 
@@ -26,16 +20,13 @@ namespace Pizza
             {
                 form.ButtonSubmitOrder.BackColor = Color.LawnGreen;
                 form.ButtonRemoveAll.Visible = true;
-                ButtonRemoveAll = true;
             }
             else 
             { 
                 form.ButtonRemoveAll.Visible = false;
-                ButtonRemoveAll = false;
             }
 
             form.ButtonRemoveOne.Visible = false;
-            ButtonRemoveOne = false;
         }
     }
 }

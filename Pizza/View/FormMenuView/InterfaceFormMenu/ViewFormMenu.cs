@@ -1,9 +1,8 @@
 ﻿using Pizza.Presenters;
-using Pizza.View.FormMenuView.ViewSettings;
 
 namespace Pizza.View.Form1View
 {
-    public abstract class ViewFormMenu : TestVisibleElements
+    public abstract class ViewFormMenu 
     {
         protected FormMenu form;
         protected IEvent eevent = new Event();

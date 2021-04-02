@@ -75,6 +75,7 @@
     <Compile Include="SimulatingClassesMainProject\PresentersTest\FormMenuPresenterTest\OrderGetSet\FormMenuAddOrderListViewPresenters.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\FormMenuPresenterTest\OrderGetSet\FormMenuCreatingOrder.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\FormMenuPresenterTest\OrderGetSet\IPriceAll.cs" />
+    <Compile Include="SimulatingClassesMainProject\ViewTest\TestVisibleElements.cs" />
     <Compile Include="Test\TestFormMenu\Form1Test.cs" />
     <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonMenu.cs" />
     <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonRemove.cs" />

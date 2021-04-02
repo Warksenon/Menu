@@ -163,7 +163,6 @@
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IFormMenuBackgroundWorker.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\ITextBoxComments.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\ViewFormMenu.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\BackgroundWorkerViewFormMenu.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonMenu.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonDrinksView.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonMainDishesSetting.cs" />
@@ -201,7 +200,6 @@
     <Compile Include="Presenters\SaveHistory.cs" />
     <Compile Include="Models\SqlLite\CreateConnection.cs" />
     <Compile Include="Models\SqlLite\CreateTabeles.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\TestVisibleElements.cs" />
     <Compile Include="View\IView.cs" />
     <EmbeddedResource Include="View\FormMenuView\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>

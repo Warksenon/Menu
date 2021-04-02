@@ -1,5 +1,4 @@
-﻿using Pizza.Presenters.PresenterForm1.VisableElements.Button;
-using Pizza.View.Form1View.ViewSettings.ButtonMenu;
+﻿using Pizza.View.Form1View.ViewSettings.ButtonMenu;
 using System.Drawing;
 
 namespace Pizza

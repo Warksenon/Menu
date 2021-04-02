@@ -1,6 +1,4 @@
-﻿using Pizza;
-using Pizza.View.Form1;
-using System.Drawing;
+﻿using System.Drawing;
 
 namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
 {

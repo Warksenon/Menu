@@ -21,7 +21,6 @@ namespace Pizza
             else
             {
                 form.ButtonRemoveOne.Visible = false;
-                ButtonRemoveOne = false;
             }
         }
 

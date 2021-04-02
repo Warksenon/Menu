@@ -1,7 +1,4 @@
-﻿
-using Pizza.View.Form1;
-using Pizza.View.Form1View;
-using System.Drawing;
+﻿using Pizza.View.Form1View;
 
 namespace Pizza
 {

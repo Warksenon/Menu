@@ -1,6 +1,6 @@
-﻿using Pizza.View.Form1View;
+﻿using Pizza;
 
-namespace Pizza
+namespace Test
 {
     public class ListViewDishes: ViewFormMenu, IView
     {

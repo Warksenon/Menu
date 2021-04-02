@@ -1,6 +1,5 @@
 ﻿using Microsoft.Win32;
 using Pizza;
-using Pizza.Presenters.Email;
 using System;
 
 namespace Test

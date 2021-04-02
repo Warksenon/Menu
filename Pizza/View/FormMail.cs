@@ -7,7 +7,7 @@ namespace Pizza
 {
     public partial class FormMail : Form , IFormMail
     {
-        IEvent eevent = new Event();
+        IOnEvent eevent = new OnEvent();
 
         public TextBox TextBoxSender { get => tSender; set => tSender = value; }
         public TextBox TextBoxRecipient { get => tRecipient; set => tRecipient = value; }

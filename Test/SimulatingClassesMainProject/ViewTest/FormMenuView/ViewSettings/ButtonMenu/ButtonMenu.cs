@@ -1,6 +1,7 @@
-﻿using System.Drawing;
+﻿using Pizza;
+using System.Drawing;
 
-namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
+namespace Test
 {
     public abstract class ButtonMenu : ViewFormMenu, IView
     {

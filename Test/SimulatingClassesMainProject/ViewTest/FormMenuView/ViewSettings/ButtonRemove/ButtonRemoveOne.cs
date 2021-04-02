@@ -1,6 +1,7 @@
-﻿using Pizza.Presenters.PresenterForm1;
+﻿using Pizza;
+using Pizza.Presenters.PresenterForm1;
 
-namespace Pizza
+namespace Test
 {
     public class ButtonRemoveOne : ButtonRemove
     {
@@ -8,7 +9,7 @@ namespace Pizza
 
         public override void ViewSetting()
         {
-            SetSettingsButton();            
+            SetSettingsButton();
         }
 
         private void SetSettingsButton()

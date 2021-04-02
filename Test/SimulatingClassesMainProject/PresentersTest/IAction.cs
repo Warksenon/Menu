@@ -1,6 +1,6 @@
-﻿namespace Pizza
+﻿namespace Test
 {
-    public interface IEvent
+    public interface IAction
     {
         void SetView(IView view);
 

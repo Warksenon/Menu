@@ -104,15 +104,15 @@
     <Compile Include="Presenters\Email\EmailSend.cs" />
     <Compile Include="Presenters\Email\ILoadEmailData.cs" />
     <Compile Include="Presenters\Email\ISaveEmailData.cs" />
-    <Compile Include="Presenters\Event.cs" />
+    <Compile Include="Presenters\OnEvent.cs" />
     <Compile Include="Presenters\IAddOrder.cs" />
-    <Compile Include="Presenters\IEvent.cs" />
+    <Compile Include="Presenters\IOnEvent.cs" />
     <Compile Include="Presenters\ILogiccs.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailLoad.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailPresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\BackgroundWorkerLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\ButtonPlaceOrderLogic.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\Form1LabelPricePresenter.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\FormMenuLabelPricePresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\FormMenuLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\Form1ListDishes.cs" />
     <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\Form1Quantity.cs" />
@@ -162,7 +162,7 @@
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IFrom1InfoLabel.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IFormMenuBackgroundWorker.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\ITextBoxComments.cs" />
-    <Compile Include="View\FormMenuView\InterfaceFormMenu\ViewFormMenu.cs" />
+    <Compile Include="View\FormMenuView\ViewFormMenu.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonMenu.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonDrinksView.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonMainDishesSetting.cs" />

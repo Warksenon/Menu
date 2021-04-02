@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Pizza.Presenters.PresenterForm1
+﻿namespace Pizza.Presenters.PresenterForm1
 {
     abstract class RemoveOrderLogic : ILogic
     {
+        protected FormMenu form;
         protected IForm1ListViewOrder lvOrder;
-        public RemoveOrderLogic(FormMenu form1)
+        public RemoveOrderLogic(FormMenu form)
         {
-            lvOrder = form1;
+            lvOrder = form;
+            this.form = form;
         }
 
         public abstract void LogicSettings();

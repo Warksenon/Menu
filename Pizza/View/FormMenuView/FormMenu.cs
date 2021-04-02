@@ -20,7 +20,7 @@ namespace Pizza
 
     public partial class FormMenu : Form , IForm1ListViewDishes, IForm1ListViewOrder, IForm1ButtonMenu, 
                                      IForm1ChecedListBoxSides, IForm1AddButton, IForm1QuantityTextBox, IFrom1InfoLabel,
-                                     IForm1LabelPrice, IButtonRemove, IButtonSend, ITextBoxComments, IFormMenuBackgroundWorker
+                                     IFormMenuLabelPrice, IButtonRemove, IButtonSend, ITextBoxComments, IFormMenuBackgroundWorker
     {
         public FormMenu()
         { 
@@ -29,7 +29,7 @@ namespace Pizza
             backgroundWorker1.WorkerSupportsCancellation = true;            
         }
 
-        private IEvent eevent = new Event();
+        private IOnEvent eevent = new OnEvent();
         
         private void Form1_Load_1(object sender, EventArgs e)
         {
@@ -89,7 +89,7 @@ namespace Pizza
         {
             eevent.SetView(new ButtonOkView(this));
             eevent.SetLogic(new FormMenuAddOrderListViewPresenters(this));          
-            eevent.SetView(new Form1LabelPricePresenter(this));
+            eevent.SetLogic(new Form1LabelPricePresenter(this));
         }
 
         private void ListViewDish_SelectedIndexChanged(object sender, EventArgs e)
@@ -113,7 +113,7 @@ namespace Pizza
         {         
             eevent.SetView(new ButtonRemoveAll(this));
             eevent.SetLogic(new RemoveOrderAllLogic(this));
-            eevent.SetView(new Form1LabelPricePresenter(this));         
+            eevent.SetLogic(new Form1LabelPricePresenter(this));         
         }
 
        

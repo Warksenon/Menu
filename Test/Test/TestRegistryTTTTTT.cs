@@ -9,7 +9,7 @@ namespace Test
     [TestClass]
     public class TestRegistryTTTTTT
     {
-        IEvent eevent = new Event();
+        IAction eevent = new Aktion();
         FormMail form = new FormMail();
         
 

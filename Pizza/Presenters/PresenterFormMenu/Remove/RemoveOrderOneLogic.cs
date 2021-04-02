@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Pizza.Presenters.PresenterForm1.Remove
+﻿namespace Pizza.Presenters.PresenterForm1.Remove
 {
     class RemoveOrderOneLogic : RemoveOrderLogic
     {
-        public RemoveOrderOneLogic(FormMenu form1) : base(form1) { }
+        OnEvent action = new OnEvent();
+       
+        public RemoveOrderOneLogic(FormMenu form) : base(form)
+        { 
+
+        }
 
         public override void LogicSettings()
         {
             lvOrder.ListViewOrder.SelectedItems[0].Remove();
+            action.SetLogic(new Form1LabelPricePresenter(form));
         }
     }
 }

@@ -3,10 +3,10 @@ using Pizza.View.Form1;
 
 namespace Pizza.Presenters.PresenterForm1
 {
-    class Form1LabelPricePresenter : IView
+    class Form1LabelPricePresenter : ILogic
     {
         IPriceAll price;
-        IForm1LabelPrice label;
+        IFormMenuLabelPrice label;
         //TODO zmienić na logike
         public Form1LabelPricePresenter(FormMenu form1)
         {
@@ -14,14 +14,14 @@ namespace Pizza.Presenters.PresenterForm1
             label = form1;
         }
 
-        public void SetTextLabelPrice()
-        {
-            label.LabelPrice.Text = "Cena: "+ price.GetPricaAll() + " zł";
-        }
-
-        public void ViewSetting()
+        public void LogicSettings()
         {
             SetTextLabelPrice();
+        }
+
+        private void SetTextLabelPrice()
+        {
+            label.LabelPrice.Text = "Cena: "+ price.GetPricaAll() + " zł";
         }
     }
 }

@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Pizza.View;
 
-namespace Pizza.Presenters
+namespace Test
 {
-    public class Event : IEvent
+    public class Aktion : IAction
     {
-        public Event() { }
+        public Aktion() { }
 
 
         public void SetLogic(ILogic logic)

@@ -107,7 +107,6 @@
     <Compile Include="old\TestDish.cs" />
     <Compile Include="old\TModelsOld\TFilesTxt\TSaveFiles.cs" />
     <Compile Include="old\TModelsOld\TFilesTxt\TLoadingFilesTxt.cs" />
-    <Compile Include="old\TModelsOld\TRegistry.cs" />
     <Compile Include="old\TModelsOld\TSQLite\TCreateConnection.cs" />
     <Compile Include="old\TModelsOld\TSQLite\TCreateTabeles.cs" />
     <Compile Include="old\TModelsOld\TSQLite\TInsertAndQuestionSQL.cs" />
@@ -129,7 +128,7 @@
     <Compile Include="old\TestFormMailPresenters.cs" />
     <Compile Include="Test\TestMenu\Dishes\TestListPizza.cs" />
     <Compile Include="Test\TestMenu\Dishes\TestListMainDishes.cs" />
-    <Compile Include="Test\TestRegistryTTTTTT.cs" />
+    <Compile Include="Test\TestRegistry.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

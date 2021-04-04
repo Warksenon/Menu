@@ -1,6 +1,7 @@
 ﻿using Pizza;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Test
 {
@@ -8,7 +9,6 @@ namespace Test
     {
         readonly List<Dish> listDishes;
         readonly PriceAll priceAll;
-
 
         public EmailMessage(Order order)
         {
@@ -25,73 +25,110 @@ namespace Test
             return bill;
         }
 
-        string WritePriceAll(PriceAll priceAll)
+        private string WritePriceAll(PriceAll priceAll)
         {
-            string priceAllEmail = "";
-            priceAllEmail += LinesHashAndNewLines() + OneHashAndNewLine();
-            priceAllEmail += Data(priceAll);
-            priceAllEmail += NamePrice();
-            priceAllEmail += OneHashAndNewLine();
-            priceAllEmail += LinesHashAndNewLines();
-            return priceAllEmail;
+            StringBuilder price = new StringBuilder();
+            price.AppendLine(LinesHash());
+            price.AppendLine(OneHash());
+            price.Append(Data(priceAll));
+            price.Append(NamePrice());
+            price.AppendLine(OneHash());
+            price.AppendLine(LinesHash());
+
+            return price.ToString();
         }
-        string LinesHashAndNewLines()
+        private string LinesHash()
         {
-            return Name.HashSigns51 + "\n";
+            return Name.HashSigns51;
         }
 
-        string Data(PriceAll priceAll)
+        private string Data(PriceAll priceAll)
         {
             string data = String.Format("# {0,33}{1,16}", priceAll.Date, " ") + "\n";
             return data;
         }
 
-        string NamePrice()
+        private string NamePrice()
         {
             return "#" + String.Format("{0,27}{1,-22}", Name.NPrice + ": ", priceAll.Price) + "\n";
         }
 
-
-        string WriteDischesAll()
+        private string WriteDischesAll()
         {
-            string dischesAll = "";
+            StringBuilder dischesAll = new StringBuilder(); ;
             foreach (var item in listDishes)
             {
-                dischesAll += WriteDisch(item);
+                dischesAll.Append(WriteDisch(item));
+
             }
-            return dischesAll;
+            return dischesAll.ToString();
         }
 
-        string OneHashAndNewLine()
+        private string OneHash()
         {
-            string st = "#" + "\n";
-            return st;
+            return "#";
         }
 
-        string WriteDisch(Dish disch)
+        private StringBuilder WriteDisch(Dish disch)
         {
-            string wirteDisch = "";
-            wirteDisch += LinesHashAndNewLines();
-            wirteDisch += OneHashAndNewLine();
-            wirteDisch += TextPlusNewLines(disch.Name);
+            StringBuilder wirteDisch = new StringBuilder();
+            wirteDisch.AppendLine(LinesHash());
+            wirteDisch.AppendLine(OneHash());
+            wirteDisch.Append(TextPlusNewLines(disch.Name));
+
             if (CheckingAddOns(disch))
             {
                 string sidesDishes = disch.Sides;
-                string oneSideDish;
-                string newSidesDishes = "";
+                StringBuilder newSidesDishes = new StringBuilder();
                 while (SideDishesIsEmpty(sidesDishes))
-                {                  
-                    oneSideDish = HelpFinding.FindingCommaOrPeriodAndCuttingCharacters(sidesDishes);
-                    sidesDishes = HelpFinding.RemoveSideDishAndWhiteSigns(sidesDishes);
-                    newSidesDishes += TextPlusNewLines(oneSideDish);
+                {
+                    newSidesDishes.Append("# ");
+                    newSidesDishes.AppendLine(FindingCommaOrPeriodAndCuttingCharacters(sidesDishes));
+                    sidesDishes = RemoveSideDishAndWhiteSigns(sidesDishes);
+
                 }
-                wirteDisch += newSidesDishes;
+                wirteDisch.Append(newSidesDishes);
             }
             string price = Name.PriceForDish + disch.Price + "\n";
-            wirteDisch += price;
-            wirteDisch += OneHashAndNewLine();
-            wirteDisch += LinesHashAndNewLines();
+            wirteDisch.Append(price);
+            wirteDisch.AppendLine(OneHash());
+            wirteDisch.AppendLine(LinesHash());
             return wirteDisch;
+        }
+
+        private string FindingCommaOrPeriodAndCuttingCharacters(string sideDishes)
+        {
+            int index = FindIndexCommaOrPeriod(sideDishes);
+            return ReturningCutWord(index, sideDishes);
+        }
+
+        private string ReturningCutWord(int index, string sideDishes)
+        {
+            if (index == -1)
+            {
+                return "";
+            }
+            else
+            {
+                return sideDishes.Substring(0, index);
+            }
+        }
+
+        private int FindIndexCommaOrPeriod(string sideDishes)
+        {
+            int index = sideDishes.IndexOf(",");
+            if (index == -1)
+            {
+                index = sideDishes.IndexOf(".");
+            }
+            return index;
+        }
+
+        private string RemoveSideDishAndWhiteSigns(string sideDish)
+        {
+            int index = FindIndexCommaOrPeriod(sideDish);
+            sideDish = sideDish.Remove(0, index + 1);
+            return sideDish.Trim();
         }
 
         private bool CheckingAddOns(Dish disch)
@@ -109,6 +146,5 @@ namespace Test
         {
             return "# " + text + "\n";
         }
-
     }
 }

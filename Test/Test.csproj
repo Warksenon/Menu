@@ -129,6 +129,7 @@
     <Compile Include="Test\TestMenu\Dishes\TestListPizza.cs" />
     <Compile Include="Test\TestMenu\Dishes\TestListMainDishes.cs" />
     <Compile Include="Test\TestRegistry.cs" />
+    <Compile Include="Test\TestEmailMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

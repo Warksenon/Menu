@@ -22,13 +22,13 @@
 
         public string Price
         {
-            get { return price; }
+            get { return HelpFinding.CheckIsNotNull(price); }
             set { price = value; }
         }
 
         public string Sides
         {
-            get { return sides; }
+            get { return HelpFinding.CheckIsNotNull(sides); }
             set { sides = value; }
         }
 

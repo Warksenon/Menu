@@ -19,9 +19,9 @@ namespace Test.Test
 
             string message = "###################################################\r\n"+
                              "#\r\n"+
-                             "#                                                  \n"+
-                             "#                     Cena:                       \n"+
-                             "#\r\n"+
+                             "#               05.04.2021 00:10:54                \n" +
+                             "#                     Cena: 20zł                  \n" +
+                             "#\r\n" +
                              "###################################################\r\n"+
                              "###################################################\r\n"+
                              "#\r\n"+
@@ -44,18 +44,30 @@ namespace Test.Test
             };
         }
 
+        PriceAll CreatePriceAllWthoutSides()
+        {
+            return new PriceAll
+            {
+                Price = "20zł",
+                Comments = "",
+                Date = "05.04.2021 00:10:54"
+            };
+        }
+
 
         [TestMethod]
         public void TestMethod2()
         {
             order.ListDishes.Add(CreateDishwWithSides());
+            order.PriceAll = CreatePriceAllWithSides();
             emailMessage = new EmailMessage(order);
 
             string message =    "###################################################\r\n" +
                                 "#\r\n" +
-                                "#                                                  \n" +
-                                "#                     Cena:                       \n" +
-                                "#\r\n###################################################\r\n"+
+                                "#               05.04.2021 00:10:54                \n" +
+                                "#                     Cena: 28zł                  \n" +
+                                "#\r\n"+
+                                "###################################################\r\n"+
                                 "###################################################\r\n" +
                                 "#\r\n" +
                                 "# Margheritta\n" +
@@ -67,7 +79,7 @@ namespace Test.Test
                                 "#\r\n"+
                                 "###################################################\r\n"+
                                 "Uwagi do zamówienia: \n";
-
+ 
             Assert.AreEqual(message, emailMessage.WriteBill());
         }
 
@@ -81,5 +93,14 @@ namespace Test.Test
             };
         }
 
+        PriceAll CreatePriceAllWithSides()
+        {
+            return new PriceAll
+            {
+                Price = "28zł",
+                Comments = "",
+                Date = "05.04.2021 00:10:54"
+            };
+        }
     }
 }

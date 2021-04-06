@@ -10,7 +10,7 @@ using Test.TPresenters;
 namespace Test
 {
     [TestClass]
-    public class TestFormHistoryPresenters : IFormHistory
+    public class TestFormHistoryPresenters : IListViewHistory
     {
         ListView lvPrice = new ListView();
         ListView lvDish = new ListView();

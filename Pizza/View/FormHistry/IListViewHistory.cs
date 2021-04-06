@@ -2,7 +2,7 @@
 
 namespace Pizza
 {
-    public interface IFormHistory
+    public interface IListViewHistory
     {
         ListView ListViewPrice { get; set; }
 

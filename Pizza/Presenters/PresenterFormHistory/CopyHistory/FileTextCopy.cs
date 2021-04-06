@@ -1,16 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Pizza.Models.SqlLite;
+using Pizza.Presenters.PresenterFormHistory.CopyHistory;
+using Pizza.Presenters.PresenterFormHistory.LoadHistory;
 
 namespace Pizza.Presenters.PresenterFormHistory
 {
-    class FileTextCopy : ILogic
+    class FileTextCopy : CopyHistoryOrder
     {
-        public void LogicSettings()
+        public FileTextCopy(FormHistory form) : base(form) { }
+
+        public override void LogicSettings()
         {
-            throw new NotImplementedException();
+            CopyDataFromFilesTxt();
+            new FileTextLoad(form).LogicSettings();
+        }
+
+        public void CopyDataFromFilesTxt()
+        {
+            copyListOrder = load.LoadOrderList(new LoadingFilesTxt());
+            save.SaveList(new SaveHistorySQL(copyListOrder));
         }
     }
 }

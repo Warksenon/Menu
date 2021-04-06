@@ -108,8 +108,11 @@
     <Compile Include="Presenters\IAddOrder.cs" />
     <Compile Include="Presenters\IOnEvent.cs" />
     <Compile Include="Presenters\ILogiccs.cs" />
+    <Compile Include="Presenters\PresenterFormHistory\CopyHistory\CopyHistoryOrder.cs" />
     <Compile Include="Presenters\PresenterFormHistory\CopyHistory\FileTextCopy.cs" />
     <Compile Include="Presenters\PresenterFormHistory\CopyHistory\SqlCopy.cs" />
+    <Compile Include="Presenters\PresenterFormHistory\HistorySelect.cs" />
+    <Compile Include="Presenters\PresenterFormHistory\ListViewHistory.cs" />
     <Compile Include="Presenters\PresenterFormHistory\LoadHistory\FileTextLoad.cs" />
     <Compile Include="Presenters\PresenterFormHistory\LoadHistory\SqlLoad.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailLoad.cs" />
@@ -135,20 +138,20 @@
     <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\Form1LoadSidesPresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\IForm1Dishes.cs" />
     <Compile Include="Presenters\SaveOrder.cs" />
+    <Compile Include="View\FormHistry\IButtonHistory.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1ListViewDishes.cs" />
     <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\IPriceAll.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IButtonRemove.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IButtonSend.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1LabelPrice.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1ListViewOrder.cs" />
-    <Compile Include="interfejs\IFormHistory.cs" />
+    <Compile Include="View\FormHistry\IListViewHistory.cs" />
     <Compile Include="interfejs\IFormMail.cs" />
     <Compile Include="interfejs\ILoadHistoryOrders.cs" />
     <Compile Include="interfejs\ISaveHistory.cs" />
     <Compile Include="Presenters\Email\EmailMessage.cs" />
     <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\Form1LoadDishesPresenters.cs" />
     <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\FormMenuAddOrderListViewPresenters.cs" />
-    <Compile Include="Presenters\FormHistoryPresenters.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailSavePresenters.cs" />
     <Compile Include="Presenters\LoadOrder.cs" />
     <Compile Include="Models\Order\PriceAll.cs" />
@@ -186,10 +189,10 @@
     <Compile Include="View\FormMenuView\ViewSettings\ButtonRemove\ButtonRemoveOne.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\FormMenuView.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ListViewDishes.cs" />
-    <Compile Include="View\FormHistory.cs">
+    <Compile Include="View\FormHistry\FormHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormHistory.Designer.cs">
+    <Compile Include="View\FormHistry\FormHistory.Designer.cs">
       <DependentUpon>FormHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormMail.cs">
@@ -208,7 +211,7 @@
     <EmbeddedResource Include="View\FormMenuView\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormHistory.resx">
+    <EmbeddedResource Include="View\FormHistry\FormHistory.resx">
       <DependentUpon>FormHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormMail.resx">

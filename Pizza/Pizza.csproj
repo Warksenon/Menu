@@ -108,6 +108,10 @@
     <Compile Include="Presenters\IAddOrder.cs" />
     <Compile Include="Presenters\IOnEvent.cs" />
     <Compile Include="Presenters\ILogiccs.cs" />
+    <Compile Include="Presenters\PresenterFormHistory\CopyHistory\FileTextCopy.cs" />
+    <Compile Include="Presenters\PresenterFormHistory\CopyHistory\SqlCopy.cs" />
+    <Compile Include="Presenters\PresenterFormHistory\LoadHistory\FileTextLoad.cs" />
+    <Compile Include="Presenters\PresenterFormHistory\LoadHistory\SqlLoad.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailLoad.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailPresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\BackgroundWorkerLogic.cs" />

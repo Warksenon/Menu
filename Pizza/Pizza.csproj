@@ -138,7 +138,12 @@
     <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\Form1LoadSidesPresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\IForm1Dishes.cs" />
     <Compile Include="Presenters\SaveOrder.cs" />
-    <Compile Include="View\FormHistry\IButtonHistory.cs" />
+    <Compile Include="View\FormHistry\ButtonFormHistory\ButtonFormHistory.cs" />
+    <Compile Include="View\FormHistry\ButtonFormHistory\CopySqlView.cs" />
+    <Compile Include="View\FormHistry\ButtonFormHistory\CopyTxtView.cs" />
+    <Compile Include="View\FormHistry\ButtonFormHistory\IButtonFormHistory.cs" />
+    <Compile Include="View\FormHistry\ButtonFormHistory\LoadSqlView.cs" />
+    <Compile Include="View\FormHistry\ButtonFormHistory\LoadTxtView.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1ListViewDishes.cs" />
     <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\IPriceAll.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IButtonRemove.cs" />
@@ -146,9 +151,9 @@
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1LabelPrice.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1ListViewOrder.cs" />
     <Compile Include="View\FormHistry\IListViewHistory.cs" />
-    <Compile Include="interfejs\IFormMail.cs" />
-    <Compile Include="interfejs\ILoadHistoryOrders.cs" />
-    <Compile Include="interfejs\ISaveHistory.cs" />
+    <Compile Include="View\FormMail\IFormMail.cs" />
+    <Compile Include="Models\ILoadHistoryOrders.cs" />
+    <Compile Include="Models\ISaveHistory.cs" />
     <Compile Include="Presenters\Email\EmailMessage.cs" />
     <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\Form1LoadDishesPresenters.cs" />
     <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\FormMenuAddOrderListViewPresenters.cs" />
@@ -195,10 +200,10 @@
     <Compile Include="View\FormHistry\FormHistory.Designer.cs">
       <DependentUpon>FormHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormMail.cs">
+    <Compile Include="View\FormMail\FormMail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormMail.Designer.cs">
+    <Compile Include="View\FormMail\FormMail.Designer.cs">
       <DependentUpon>FormMail.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -214,7 +219,7 @@
     <EmbeddedResource Include="View\FormHistry\FormHistory.resx">
       <DependentUpon>FormHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormMail.resx">
+    <EmbeddedResource Include="View\FormMail\FormMail.resx">
       <DependentUpon>FormMail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

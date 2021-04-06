@@ -4,7 +4,6 @@ namespace Pizza
 {
     public interface IFormMail
     {
-
         TextBox TextBoxSender { get; set; }
 
         TextBox TextBoxRecipient { get; set; }

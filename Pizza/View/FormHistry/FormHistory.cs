@@ -2,13 +2,14 @@
 using Pizza.Presenters.PresenterFormHistory;
 using Pizza.Presenters.PresenterFormHistory.Copy;
 using Pizza.Presenters.PresenterFormHistory.LoadHistory;
+using Pizza.View.FormHistry.ButtonFormHistory;
+using Pizza.View.FormHistry.ButtonFormMail;
 using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace Pizza
 {
-    public partial class FormHistory : Form , IListViewHistory
+    public partial class FormHistory : Form , IListViewHistory, IButtonFormHistory
     {
         OnEvent onEvent = new OnEvent();
         public FormHistory()
@@ -18,67 +19,41 @@ namespace Pizza
    
         public ListView ListViewPrice { get => LVprice; set => LVprice = value; }
         public ListView ListViewDishes { get => LVdishes; set => LVdishes = value; }
+        public Button ButtonLoadTxt { get => bText; set => bText = value; }
+        public Button ButtonLoadSql { get => bSql; set => bSql = value; }
+        public Button ButtonCopyTxt { get => bTxtToSQL; set => bTxtToSQL = value; }
+        public Button ButtonCopySql { get => buttonSQLToTxt; set => buttonSQLToTxt = value; }
 
         private void FormHistory_Load(object sender, EventArgs e)
         {
             onEvent.SetLogic(new SqlLoad(this));
-            ButtonColorChange(Button.HistSQL);
+            onEvent.SetView(new LoadSqlView(this));
         }
-
-        public enum Button
-        {
-            HistSQL,
-            HistTXT,
-            SqlToTxt,
-            TxtToSql
-        }
-
-        private void ButtonColorChange(Button p)
-        {
-            AllButtonSetSystemColorsControl();
-
-            switch (p)
-            {
-                case Button.HistSQL: bSql.BackColor = Color.LawnGreen; break;
-                case Button.HistTXT: bText.BackColor = Color.LawnGreen; break;
-                case Button.SqlToTxt: buttonSQLToTxt.BackColor = Color.Firebrick; break;
-                case Button.TxtToSql: bTxtToSQL.BackColor = Color.Firebrick; break;
-            }
-
-        }
-
-        private void AllButtonSetSystemColorsControl()
-        {
-            bSql.BackColor = SystemColors.Control;
-            bText.BackColor = SystemColors.Control;
-            buttonSQLToTxt.BackColor = SystemColors.Control;
-            bTxtToSQL.BackColor = SystemColors.Control;
-        }
-
+     
         private void ButtonTextList_Click(object sender, EventArgs e)
         {
             onEvent.SetLogic(new FileTextLoad(this));
-            ButtonColorChange(Button.HistTXT);
+            onEvent.SetView(new LoadTxtView(this)); ;
         }
 
         private void ButtonSqlList_Click(object sender, EventArgs e)
         {
             onEvent.SetLogic(new SqlLoad(this));
-            ButtonColorChange(Button.HistSQL);
+            onEvent.SetView(new LoadSqlView(this));
         }
 
         private void ButtonTxtToSql(object sender, EventArgs e)
         {
+            onEvent.SetView(new CopyTxtView(this));
             onEvent.SetLogic(new SqlCopy(this));
-            ButtonColorChange(Button.TxtToSql);        
-            ButtonColorChange(Button.HistTXT);
+            onEvent.SetView(new LoadTxtView(this));
         }
 
         private void ButtonSQLToTxt_Click(object sender, EventArgs e)
         {
+            onEvent.SetView(new CopySqlView(this));
             onEvent.SetLogic(new FileTextCopy(this));
-            ButtonColorChange(Button.SqlToTxt);        
-            ButtonColorChange(Button.HistSQL);
+            onEvent.SetView(new LoadSqlView(this));
         }
 
         private void ButtonClose_Click(object sender, EventArgs e)

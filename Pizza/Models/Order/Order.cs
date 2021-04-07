@@ -2,11 +2,8 @@
 
 namespace Pizza
 {
-
     public class Order
     {
-
-
         private List<Dish> listDisch;
         private PriceAll priceAll;
 

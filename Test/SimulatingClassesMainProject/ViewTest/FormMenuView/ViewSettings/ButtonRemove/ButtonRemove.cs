@@ -5,7 +5,7 @@ namespace Test
 {
     public abstract class ButtonRemove : ViewFormMenu, IView
     {
-        protected ButtonRemove(FormMenu form) : base(form) { }
+        protected ButtonRemove( FormMenu form ) : base( form ) { }
 
         public abstract void ViewSetting();
 

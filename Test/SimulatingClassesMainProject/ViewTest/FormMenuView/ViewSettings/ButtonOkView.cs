@@ -7,7 +7,7 @@ namespace Test
     {
         FormMenu form;
 
-        public ButtonOkView(FormMenu form)
+        public ButtonOkView( FormMenu form )
         {
             this.form = form;
         }
@@ -17,14 +17,14 @@ namespace Test
             string text = form.QTextbox.Text;
             int number = HelpFinding.ConvertTextToInt(text);
 
-            if (number > 0) 
+            if (number > 0)
             {
                 form.ButtonSubmitOrder.BackColor = Color.LawnGreen;
                 form.ButtonRemoveAll.Visible = true;
                 ButtonRemoveAll = true;
             }
-            else 
-            { 
+            else
+            {
                 form.ButtonRemoveAll.Visible = false;
                 ButtonRemoveAll = false;
             }

@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Pizza
 {
-    public partial class FormMail : Form , IFormMail
+    public partial class FormMail : Form, IFormMail
     {
         IOnEvent eevent = new OnEvent();
 
@@ -16,21 +16,21 @@ namespace Pizza
         public TextBox TextBoxPort { get => tPort; set => tPort = value; }
 
         public FormMail()
-        {            
-            InitializeComponent();          
-        }
-
-        private void FormMail_Load(object sender, EventArgs e)
         {
-            eevent.SetLogic(new FormMailLoad(this));
+            InitializeComponent();
         }
 
-        private void ButtonSave_Click(object sender, EventArgs e)
+        private void FormMail_Load( object sender, EventArgs e )
         {
-            eevent.SetLogic(new FormMailSavePresenters(this));                
+            eevent.SetLogic( new FormMailLoad( this ) );
         }
 
-        private void ButtonClose_Click(object sender, EventArgs e)
+        private void ButtonSave_Click( object sender, EventArgs e )
+        {
+            eevent.SetLogic( new FormMailSavePresenters( this ) );
+        }
+
+        private void ButtonClose_Click( object sender, EventArgs e )
         {
             this.Close();
         }

@@ -1,11 +1,10 @@
 ﻿using Pizza;
-using Pizza.Presenters.PresenterForm1;
 
 namespace Test
 {
     public class ButtonRemoveOne : ButtonRemove
     {
-        public ButtonRemoveOne(FormMenu form) : base(form) { }
+        public ButtonRemoveOne( FormMenu form ) : base( form ) { }
 
         public override void ViewSetting()
         {
@@ -27,8 +26,10 @@ namespace Test
 
         private bool CheckingListOrderIfEmpty()
         {
-            if (form.ListViewOrder.Items.Count < 1) return true;
-            else return false;
+            if (form.ListViewOrder.Items.Count < 1)
+                return true;
+            else
+                return false;
         }
     }
 }

@@ -9,11 +9,11 @@ namespace Pizza.Presenters
     {
         Form1ListDishes lvDishes;
         Form1SidesDish chblSides;
-        
-        public FormMenuAddOrderListViewPresenters(FormMenu form1):base(form1)
-        {                     
-            lvDishes = new Form1ListDishes(form1);
-            chblSides = new Form1SidesDish(form1);           
+
+        public FormMenuAddOrderListViewPresenters( FormMenu form1 ) : base( form1 )
+        {
+            lvDishes = new Form1ListDishes( form1 );
+            chblSides = new Form1SidesDish( form1 );
         }
 
 
@@ -31,31 +31,31 @@ namespace Pizza.Presenters
             foreach (var dish in listDishes)
             {
                 ListViewItem lvi;
-                if (HelpFinding.CheckStringIsEmpty(allSidesToGether))
+                if (HelpFinding.CheckStringIsEmpty( allSidesToGether ))
                 {
-                    lvi = new ListViewItem(dish.Name);
-                    lvi.SubItems.Add(allSidesToGether);
-                    lvi.SubItems.Add(dish.Price);
+                    lvi = new ListViewItem( dish.Name );
+                    lvi.SubItems.Add( allSidesToGether );
+                    lvi.SubItems.Add( dish.Price );
                 }
                 else
                 {
                     string priceAll = AddPriceDisheAndSide(listDishes, listSides);
-                    lvi = new ListViewItem(dish.Name + " - " + dish.Price);
-                    lvi.SubItems.Add(allSidesToGether);
-                    lvi.SubItems.Add(priceAll);
+                    lvi = new ListViewItem( dish.Name + " - " + dish.Price );
+                    lvi.SubItems.Add( allSidesToGether );
+                    lvi.SubItems.Add( priceAll );
                 }
 
-                form.ListViewOrder.Items.Add(lvi);
+                form.ListViewOrder.Items.Add( lvi );
             }
         }
 
-        private string AddAllSides(List<string> listSides)
+        private string AddAllSides( List<string> listSides )
         {
             string allSidesToGether = "";
-            for(int i = 0; i < listSides.Count; i++ )
-            {                
-                allSidesToGether += listSides[i];
-                if(i== listSides.Count)
+            for (int i = 0; i < listSides.Count; i++)
+            {
+                allSidesToGether += listSides [i];
+                if (i == listSides.Count)
                 {
                     allSidesToGether += ".";
                 }
@@ -64,11 +64,11 @@ namespace Pizza.Presenters
                     allSidesToGether += ",";
                 }
             }
-           
+
             return allSidesToGether;
         }
 
-        private string AddPriceDisheAndSide(List<Dish> listDishes, List<string> listSides)
+        private string AddPriceDisheAndSide( List<Dish> listDishes, List<string> listSides )
         {
             double priceSides=0;
             double price;
@@ -76,8 +76,8 @@ namespace Pizza.Presenters
             foreach (var side in listSides)
             {
                 string textPrice = side;
-                price = FindPrice(textPrice);
-                priceSides += price; 
+                price = FindPrice( textPrice );
+                priceSides += price;
             }
 
             double priceDish = FindPrice(listDishes[0].Price);

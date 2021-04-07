@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Pizza;
-using Test.TModels.TSQLite;
-using Test.TPresenters;
-
-
-namespace Test
+﻿namespace Test
 {
     //[TestClass]
     //public class TestSqLite
     //{
-       
+
 
     //    [TestMethod]
     //    public void TestSaveOrder()
@@ -62,7 +54,7 @@ namespace Test
     //        createSql.CreateSQLiteTables();
     //        TInsertAndQuestionSQL sql = new TInsertAndQuestionSQL();
     //        sql.RemoveAllTask();    
-            
+
     //        ListOfDishes listOfDishes = new ListOfDishes();        
 
     //        Order order = new Order
@@ -153,7 +145,7 @@ namespace Test
     //        Assert.AreEqual(lOrder[2].ListDishes[1].SidesDishes, loadSql[2].ListDishes[1].SidesDishes);
     //    }
 
-    
+
     //}
 }
 

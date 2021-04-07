@@ -1,10 +1,4 @@
-﻿using Pizza;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SQLite;
-
-namespace Test.TModels.TSQLite
+﻿namespace Test.TModels.TSQLite
 {
     //class TInsertAndQuestionSQL : TCreateConnection, ILoadHistoryOrders, ISaveHistory
     //{

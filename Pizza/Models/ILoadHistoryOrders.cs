@@ -2,7 +2,7 @@
 
 namespace Pizza
 {
-    public  interface ILoadHistoryOrders
+    public interface ILoadHistoryOrders
     {
         List<Order> LoadHistory();
     }

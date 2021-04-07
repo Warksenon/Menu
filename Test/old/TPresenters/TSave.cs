@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Pizza;
-using Test.TModels.TFilesTxt;
-using Test.TModels.TSQLite;
-
-namespace Test
+﻿namespace Test
 
 {
     //class TSave

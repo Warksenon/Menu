@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pizza;
-using Test.TModels.TFilesTxt;
-using Test.TModels.TSQLite;
-using Test.TPresenters;
+using System.Windows.Forms;
 
 namespace Test
 {
@@ -19,7 +14,7 @@ namespace Test
         public ListView ListViewDishes { get => lvDish; set => lvDish = value; }
 
         //TFormHistoryPresenters history;
-        
+
 
         //[TestMethod]
         //public void TestLoadHistoryFromSQLAndLoadLVDishes()
@@ -92,7 +87,7 @@ namespace Test
         //{
         //    TSaveFiles saveFiles = new TSaveFiles();
         //    saveFiles.CleanFilesTxt();
-            
+
         //    ListOfDishes listOfDishes = new ListOfDishes();                       
         //    Order order = new Order
         //    {

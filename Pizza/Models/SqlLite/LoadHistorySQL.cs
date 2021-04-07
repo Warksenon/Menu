@@ -26,20 +26,20 @@ namespace Pizza.Models.SqlLite
                     SQLiteDataReader dr = cmd.ExecuteReader();
                     if (dr.HasRows)
                     {
-                        AddOrdersToListOrders(dr, listorder);
+                        AddOrdersToListOrders( dr, listorder );
                         dr.Close();
                     }
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("Błąd przy pobieraniu listy zamowień\n" + e);
+                    Console.WriteLine( "Błąd przy pobieraniu listy zamowień\n" + e );
                 }
                 cn.Close();
             }
             return listorder;
         }
 
-        private void AddOrdersToListOrders(SQLiteDataReader dr, List<Order> listorder)
+        private void AddOrdersToListOrders( SQLiteDataReader dr, List<Order> listorder )
         {
             while (dr.Read())
             {
@@ -54,8 +54,8 @@ namespace Pizza.Models.SqlLite
                         Comments = Convert.ToString(dr[3])
                     };
                     order.PriceAll = price;
-                    order = LoadDishes(Convert.ToString(price.ID), order);
-                    listorder.Add(order);
+                    order = LoadDishes( Convert.ToString( price.ID ), order );
+                    listorder.Add( order );
                 }
                 catch
                 {
@@ -64,7 +64,7 @@ namespace Pizza.Models.SqlLite
             }
         }
 
-        private Order LoadDishes(string num, Order order)
+        private Order LoadDishes( string num, Order order )
         {
             SQLiteConnection cn = CreateSQLiteConnection();
             using (cn)
@@ -74,19 +74,19 @@ namespace Pizza.Models.SqlLite
                 {
                     cn.Open();
                     SQLiteCommand cmd = new SQLiteCommand(qIdCeny, cn);
-                    AddDihes(order, cmd);
+                    AddDihes( order, cmd );
                     cmd.Cancel();
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e);
+                    Console.WriteLine( e );
                 }
                 cn.Close();
             }
             return order;
         }
 
-        private void AddDihes(Order order, SQLiteCommand cmd)
+        private void AddDihes( Order order, SQLiteCommand cmd )
         {
             SQLiteDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
@@ -98,12 +98,12 @@ namespace Pizza.Models.SqlLite
                         int id = Convert.ToInt32(dr[1]);
                         Dish dish = new Dish()
                         {
-                              
+
                             Name = Convert.ToString(dr[2]),
                             Price = Convert.ToString(dr[3]),
-                               Sides = Convert.ToString(dr[4])
+                            Sides = Convert.ToString(dr[4])
                         };
-                        order.AddDishToListDisch(dish);
+                        order.AddDishToListDisch( dish );
                     }
                     catch
                     {

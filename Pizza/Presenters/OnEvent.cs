@@ -5,12 +5,12 @@
         public OnEvent() { }
 
 
-        public void SetLogic(ILogic logic)
+        public void SetLogic( ILogic logic )
         {
             logic.LogicSettings();
         }
 
-        public void SetView(IView view)
+        public void SetView( IView view )
         {
             view.ViewSetting();
         }

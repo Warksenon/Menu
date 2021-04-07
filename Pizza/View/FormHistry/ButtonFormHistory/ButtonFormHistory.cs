@@ -6,7 +6,7 @@ namespace Pizza.View.FormHistry.ButtonFormHistory
     {
         protected FormHistory form;
 
-        public ButtonFormHistory (FormHistory form)
+        public ButtonFormHistory( FormHistory form )
         {
             this.form = form;
         }

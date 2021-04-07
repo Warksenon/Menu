@@ -7,17 +7,18 @@ namespace Pizza.Presenters
 {
     class FormMailSavePresenters : FormMailPresenter
     {
-        public FormMailSavePresenters(FormMail mail) : base(mail) { }
+        public FormMailSavePresenters( FormMail mail ) : base( mail ) { }
 
         public override void LogicSettings()
         {
             bool saveSuccess = SaveDataEmial();
-            if (saveSuccess) mail.Close();
+            if (saveSuccess)
+                mail.Close();
         }
 
         public bool SaveDataEmial()
         {
-            EmailData emailData = new EmailData();            
+            EmailData emailData = new EmailData();
             emailData.Sender = mail.TextBoxSender.Text;
             emailData.Password = mail.TextBoxPassword.Text;
             emailData.Port = mail.TextBoxPort.Text;
@@ -33,9 +34,9 @@ namespace Pizza.Presenters
             }
             else
             {
-                MessageBox.Show("Nieprawidłowe dane. Upewni się że wprowadzone dane: andresów e-mail, hasło, smtp, port są prawidłowe ", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show( "Nieprawidłowe dane. Upewni się że wprowadzone dane: andresów e-mail, hasło, smtp, port są prawidłowe ", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error );
                 return false;
-            }           
+            }
         }
     }
 }

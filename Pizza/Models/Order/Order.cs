@@ -3,22 +3,22 @@
 namespace Pizza
 {
 
-    public class Order 
+    public class Order
     {
-        
-        
+
+
         private List<Dish> listDisch;
         private PriceAll priceAll;
 
         public Order()
         {
             listDisch = new List<Dish>();
-            priceAll = new PriceAll();           
+            priceAll = new PriceAll();
         }
 
         public PriceAll PriceAll
         {
-            get{ return priceAll; }
+            get { return priceAll; }
             set { priceAll = value; }
         }
 
@@ -28,9 +28,9 @@ namespace Pizza
             set { listDisch = value; }
         }
 
-        public void AddDishToListDisch(Dish d)
+        public void AddDishToListDisch( Dish d )
         {
-            listDisch.Add(d);
-        }        
+            listDisch.Add( d );
+        }
     }
 }

@@ -1,9 +1,4 @@
-﻿using Pizza;
-using System.Collections.Generic;
-using Test.TModels.TFilesTxt;
-using Test.TModels.TSQLite;
-
-namespace Test.TPresenters
+﻿namespace Test.TPresenters
 {
     //public class TLoadOrder
     //{

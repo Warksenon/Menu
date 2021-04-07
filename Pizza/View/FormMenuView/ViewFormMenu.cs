@@ -2,12 +2,12 @@
 
 namespace Pizza.View.Form1View
 {
-    public abstract class ViewFormMenu 
+    public abstract class ViewFormMenu
     {
         protected FormMenu form;
         protected IOnEvent eevent = new OnEvent();
 
-        protected ViewFormMenu(FormMenu form)
+        protected ViewFormMenu( FormMenu form )
         {
             this.form = form;
         }

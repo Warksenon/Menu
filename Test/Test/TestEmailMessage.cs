@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pizza;
 
 namespace Test.Test
@@ -14,8 +13,8 @@ namespace Test.Test
         [TestMethod]
         public void TestMethod1()
         {
-            order.ListDishes.Add(CreateDishwWthoutSides());
-            emailMessage = new EmailMessage(order);
+            order.ListDishes.Add( CreateDishwWthoutSides() );
+            emailMessage = new EmailMessage( order );
 
             string message = "###################################################\r\n"+
                              "#\r\n"+
@@ -30,8 +29,8 @@ namespace Test.Test
                              "#\r\n"+
                              "###################################################\r\n"+
                              "Uwagi do zamówienia: \n";
-           
-            Assert.AreEqual(message, emailMessage.WriteBill());
+
+            Assert.AreEqual( message, emailMessage.WriteBill() );
         }
 
         Dish CreateDishwWthoutSides()
@@ -58,9 +57,9 @@ namespace Test.Test
         [TestMethod]
         public void TestMethod2()
         {
-            order.ListDishes.Add(CreateDishwWithSides());
+            order.ListDishes.Add( CreateDishwWithSides() );
             order.PriceAll = CreatePriceAllWithSides();
-            emailMessage = new EmailMessage(order);
+            emailMessage = new EmailMessage( order );
 
             string message =    "###################################################\r\n" +
                                 "#\r\n" +
@@ -79,8 +78,8 @@ namespace Test.Test
                                 "#\r\n"+
                                 "###################################################\r\n"+
                                 "Uwagi do zamówienia: \n";
- 
-            Assert.AreEqual(message, emailMessage.WriteBill());
+
+            Assert.AreEqual( message, emailMessage.WriteBill() );
         }
 
         Dish CreateDishwWithSides()

@@ -1,10 +1,4 @@
-﻿using Pizza;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Windows.Forms;
-
-namespace Test.TModels.TFilesTxt
+﻿namespace Test.TModels.TFilesTxt
 {
     //public class TLoadingFilesTxt : ILoadHistoryOrders
     //{
@@ -210,6 +204,6 @@ namespace Test.TModels.TFilesTxt
     //        return LoadOrderListFromTxt();
     //    }
 
-        
+
     //}
 }

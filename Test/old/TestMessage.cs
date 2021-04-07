@@ -1,8 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Pizza;
-
-namespace Test
+﻿namespace Test
 {
     //[TestClass]
     //public class TestMessage
@@ -11,7 +7,7 @@ namespace Test
     //    [TestMethod]
     //    public void TestMessagePizzaAll()
     //    {
-            
+
 
     //        PriceAll priceAll = new PriceAll()
     //        {

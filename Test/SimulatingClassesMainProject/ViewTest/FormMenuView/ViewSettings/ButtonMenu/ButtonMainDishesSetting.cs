@@ -3,9 +3,9 @@ using System.Drawing;
 
 namespace Test
 {
-    public class ButtonMainDishesView :ButtonMenu
+    public class ButtonMainDishesView : ButtonMenu
     {
-        public ButtonMainDishesView(FormMenu form1) : base(form1) { }
+        public ButtonMainDishesView( FormMenu form1 ) : base( form1 ) { }
 
         public override void ViewSetting()
         {
@@ -15,7 +15,7 @@ namespace Test
 
         private void MainDishButtonSettings()
         {
-            ChengeNameLabelMenuInfo("Dania główne");
+            ChengeNameLabelMenuInfo( "Dania główne" );
             ButtonSeting();
             form.MainButton.BackColor = Color.LawnGreen;
         }

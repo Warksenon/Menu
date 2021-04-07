@@ -4,22 +4,23 @@ namespace Pizza
 {
     public static class Name
     {
-        public static string GetNameConfig(string key)
+        public static string GetNameConfig( string key )
         {
             string name = ConfigurationManager.AppSettings[key];
-           
-            if (HelpFinding.CheckStringIsNotEmpty(name))
+
+            if (HelpFinding.CheckStringIsNotEmpty( name ))
             {
                 return name;
             }
-            else return "name retrieval error: " + key;
+            else
+                return "name retrieval error: " + key;
         }
 
         public static string LMenuInfoPizza
         {
             get
             {
-                return GetNameConfig("lMenuInfoPizza");
+                return GetNameConfig( "lMenuInfoPizza" );
             }
         }
 
@@ -27,7 +28,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("lMenuInfoMainDish");
+                return GetNameConfig( "lMenuInfoMainDish" );
             }
         }
 
@@ -35,7 +36,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("lMenuInfoSoups");
+                return GetNameConfig( "lMenuInfoSoups" );
             }
         }
 
@@ -43,7 +44,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("lMenuInfoDrinks");
+                return GetNameConfig( "lMenuInfoDrinks" );
             }
         }
 
@@ -51,7 +52,7 @@ namespace Pizza
         {
             get
             {
-               return GetNameConfig("priceAll");
+                return GetNameConfig( "priceAll" );
             }
         }
 
@@ -59,7 +60,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("dishes");
+                return GetNameConfig( "dishes" );
             }
         }
 
@@ -67,7 +68,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("idPrice");
+                return GetNameConfig( "idPrice" );
             }
         }
 
@@ -75,7 +76,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("comments");
+                return GetNameConfig( "comments" );
             }
         }
 
@@ -83,7 +84,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("id");
+                return GetNameConfig( "id" );
             }
         }
 
@@ -91,7 +92,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("sidesDishes");
+                return GetNameConfig( "sidesDishes" );
             }
         }
 
@@ -99,7 +100,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("Date");
+                return GetNameConfig( "Date" );
             }
         }
 
@@ -107,7 +108,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("Price");
+                return GetNameConfig( "Price" );
             }
         }
 
@@ -115,7 +116,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("Dish");
+                return GetNameConfig( "Dish" );
             }
         }
 
@@ -123,7 +124,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("priceForDish");
+                return GetNameConfig( "priceForDish" );
             }
         }
 
@@ -131,7 +132,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("hashSigns51");
+                return GetNameConfig( "hashSigns51" );
             }
         }
 
@@ -139,7 +140,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("commentsMessag");
+                return GetNameConfig( "commentsMessag" );
             }
         }
 
@@ -147,14 +148,14 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("beginningOfOrderCode");
+                return GetNameConfig( "beginningOfOrderCode" );
             }
         }
         public static string EndOfOrderCode
         {
             get
             {
-                return GetNameConfig("endOfOrderCode");
+                return GetNameConfig( "endOfOrderCode" );
             }
         }
 
@@ -162,7 +163,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("priceAllBeginning");
+                return GetNameConfig( "priceAllBeginning" );
             }
         }
 
@@ -170,7 +171,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("priceAllEnd");
+                return GetNameConfig( "priceAllEnd" );
             }
         }
 
@@ -178,7 +179,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("dishBeginning");
+                return GetNameConfig( "dishBeginning" );
             }
         }
 
@@ -186,7 +187,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("dishEnd");
+                return GetNameConfig( "dishEnd" );
             }
         }
 
@@ -194,7 +195,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("nPrice");
+                return GetNameConfig( "nPrice" );
             }
         }
 
@@ -202,7 +203,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("pizza");
+                return GetNameConfig( "pizza" );
             }
         }
 
@@ -210,7 +211,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("denmark");
+                return GetNameConfig( "denmark" );
             }
         }
 
@@ -218,7 +219,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("soups");
+                return GetNameConfig( "soups" );
             }
         }
 
@@ -226,7 +227,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("drinks");
+                return GetNameConfig( "drinks" );
             }
         }
 
@@ -234,7 +235,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("margh");
+                return GetNameConfig( "margh" );
             }
         }
 
@@ -242,7 +243,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("veget");
+                return GetNameConfig( "veget" );
             }
         }
 
@@ -250,7 +251,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("tosca");
+                return GetNameConfig( "tosca" );
             }
         }
 
@@ -258,7 +259,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("venec");
+                return GetNameConfig( "venec" );
             }
         }
 
@@ -266,7 +267,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("marghPrice");
+                return GetNameConfig( "marghPrice" );
             }
         }
 
@@ -274,7 +275,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("vegetPrice");
+                return GetNameConfig( "vegetPrice" );
             }
         }
 
@@ -282,7 +283,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("toscaPrice");
+                return GetNameConfig( "toscaPrice" );
             }
         }
 
@@ -290,7 +291,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("venecPrice");
+                return GetNameConfig( "venecPrice" );
             }
         }
 
@@ -298,7 +299,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("doubelCheese");
+                return GetNameConfig( "doubelCheese" );
             }
         }
 
@@ -306,7 +307,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("salami");
+                return GetNameConfig( "salami" );
             }
         }
 
@@ -314,7 +315,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("ham");
+                return GetNameConfig( "ham" );
             }
         }
 
@@ -322,7 +323,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("mushrooms");
+                return GetNameConfig( "mushrooms" );
             }
         }
 
@@ -330,7 +331,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("doubelCheesePrice");
+                return GetNameConfig( "doubelCheesePrice" );
             }
         }
 
@@ -338,7 +339,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("salamiPrice");
+                return GetNameConfig( "salamiPrice" );
             }
         }
 
@@ -346,7 +347,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("hamPrice");
+                return GetNameConfig( "hamPrice" );
             }
         }
 
@@ -354,7 +355,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("mushroomsPrice");
+                return GetNameConfig( "mushroomsPrice" );
             }
         }
 
@@ -362,7 +363,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("schnitzel");
+                return GetNameConfig( "schnitzel" );
             }
         }
 
@@ -370,7 +371,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("fish");
+                return GetNameConfig( "fish" );
             }
         }
 
@@ -378,7 +379,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("potato");
+                return GetNameConfig( "potato" );
             }
         }
 
@@ -386,7 +387,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("schnitzelPrice");
+                return GetNameConfig( "schnitzelPrice" );
             }
         }
 
@@ -394,7 +395,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("fishPrice");
+                return GetNameConfig( "fishPrice" );
             }
         }
 
@@ -402,7 +403,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("potatoPrice");
+                return GetNameConfig( "potatoPrice" );
             }
         }
 
@@ -410,7 +411,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("bar");
+                return GetNameConfig( "bar" );
             }
         }
 
@@ -418,7 +419,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("setOfSauces");
+                return GetNameConfig( "setOfSauces" );
             }
         }
 
@@ -426,7 +427,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("barPrice");
+                return GetNameConfig( "barPrice" );
             }
         }
 
@@ -434,7 +435,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("setOfSaucesPrice");
+                return GetNameConfig( "setOfSaucesPrice" );
             }
         }
 
@@ -442,7 +443,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("tomato");
+                return GetNameConfig( "tomato" );
             }
         }
 
@@ -450,7 +451,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("chickenSoup");
+                return GetNameConfig( "chickenSoup" );
             }
         }
 
@@ -458,7 +459,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("tomatoPrice");
+                return GetNameConfig( "tomatoPrice" );
             }
         }
 
@@ -466,7 +467,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("chickenSoupPrice");
+                return GetNameConfig( "chickenSoupPrice" );
             }
         }
 
@@ -474,7 +475,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("coffee");
+                return GetNameConfig( "coffee" );
             }
         }
 
@@ -482,7 +483,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("tea");
+                return GetNameConfig( "tea" );
             }
         }
 
@@ -490,7 +491,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("cola");
+                return GetNameConfig( "cola" );
             }
         }
 
@@ -498,7 +499,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("coffeePrice");
+                return GetNameConfig( "coffeePrice" );
             }
         }
 
@@ -506,7 +507,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("teaPrice");
+                return GetNameConfig( "teaPrice" );
             }
         }
 
@@ -514,7 +515,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("colaPrice");
+                return GetNameConfig( "colaPrice" );
             }
         }
 
@@ -522,7 +523,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("sender");
+                return GetNameConfig( "sender" );
             }
         }
 
@@ -530,7 +531,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("password");
+                return GetNameConfig( "password" );
             }
         }
 
@@ -538,7 +539,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("smtp");
+                return GetNameConfig( "smtp" );
             }
         }
 
@@ -546,7 +547,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("port");
+                return GetNameConfig( "port" );
             }
         }
 
@@ -554,7 +555,7 @@ namespace Pizza
         {
             get
             {
-                return GetNameConfig("recipient");
+                return GetNameConfig( "recipient" );
             }
         }
 

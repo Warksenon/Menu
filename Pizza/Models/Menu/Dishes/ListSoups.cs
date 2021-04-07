@@ -8,9 +8,9 @@ namespace Pizza
         private List<Dish> LoadListSoups()
         {
             List<string> key = new List<string> { "tomatoPrice", "chickenSoupPrice" };
-            AddDishesToList(key);
+            AddDishesToList( key );
             return listDisches;
-        } 
+        }
 
         public List<Dish> GetDishes()
         {

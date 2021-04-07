@@ -5,9 +5,9 @@ namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
     public abstract class ButtonMenu : ViewFormMenu, IView
     {
 
-        public ButtonMenu(FormMenu form1) : base(form1) { }
+        public ButtonMenu( FormMenu form1 ) : base( form1 ) { }
 
-        protected void ButtonSeting() 
+        protected void ButtonSeting()
         {
             ClearColorButton();
             HidenButtonDishesOK();
@@ -38,12 +38,12 @@ namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
             form.QTextbox.Text = "1";
         }
 
-        protected void ChengeNameLabelMenuInfo(string infoMenu)
+        protected void ChengeNameLabelMenuInfo( string infoMenu )
         {
             form.LabelMenu.Text = infoMenu;
         }
 
         public abstract void ViewSetting();
-        
+
     }
 }

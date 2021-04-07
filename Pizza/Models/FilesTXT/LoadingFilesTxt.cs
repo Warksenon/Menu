@@ -3,7 +3,6 @@ using Pizza.Models.FilesTXT;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Windows.Forms;
 
 namespace Pizza
 {
@@ -14,20 +13,21 @@ namespace Pizza
         private List<Order> LoadOrderListFromTxt()
         {
             List<Order> orderList = new List<Order>();
-       
+
             try
             {
                 string jsonFromFile;
-                using (var reader = new StreamReader(_path))
+                using (var reader = new StreamReader( _path ))
                 {
                     jsonFromFile = reader.ReadToEnd();
                 }
 
-              var order = JsonConvert.DeserializeObject<ListOrder>(jsonFromFile);
-              orderList = order.List;
+                var order = JsonConvert.DeserializeObject<ListOrder>(jsonFromFile);
+                orderList = order.List;
             }
             catch (Exception ex)
             {
+                //Todo dopisac zapisywanie bledow
                 // ignored
             }
 

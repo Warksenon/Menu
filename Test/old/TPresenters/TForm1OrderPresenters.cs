@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using Test;
-
-namespace Pizza.Presenters
+﻿namespace Pizza.Presenters
 {
     //class TForm1OrderPresenters
     //{

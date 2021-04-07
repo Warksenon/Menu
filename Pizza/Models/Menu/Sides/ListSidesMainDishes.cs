@@ -8,7 +8,7 @@ namespace Pizza
         private List<string> LoadSideMainDish()
         {
             List<string> listKey = new List<string> { "barPrice", "setOfSaucesPrice" };
-            AddTolist(listKey);
+            AddTolist( listKey );
 
             return listSides;
         }

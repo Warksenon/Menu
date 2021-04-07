@@ -6,6 +6,6 @@ namespace Pizza.Presenters.PresenterFormHistory.CopyHistory
         protected SaveHistory save = new SaveHistory();
         protected List<Order> copyListOrder = new List<Order>();
 
-        public CopyHistoryOrder(FormHistory form) : base(form) { }
+        public CopyHistoryOrder( FormHistory form ) : base( form ) { }
     }
 }

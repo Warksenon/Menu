@@ -6,14 +6,13 @@ namespace Test.Test
     [TestClass]
     public class TestEmailMessage
     {
-        Order order = new Order();
+        Order order;
         EmailMessage emailMessage;
-
 
         [TestMethod]
         public void TestMethod1()
         {
-            order.ListDishes.Add( CreateDishwWthoutSides() );
+            order = CreateorderWthoutSides();
             emailMessage = new EmailMessage( order );
 
             string message = "###################################################\r\n"+
@@ -30,7 +29,17 @@ namespace Test.Test
                              "###################################################\r\n"+
                              "Uwagi do zamówienia: \n";
 
-            Assert.AreEqual( message, emailMessage.WriteBill() );
+            string result = emailMessage.WriteBill();
+
+            Assert.AreEqual( message, result );
+        }
+
+        Order CreateorderWthoutSides() 
+        {
+            Order order = new Order();
+            order.ListDishes.Add( CreateDishwWthoutSides() );
+            order.PriceAll = CreatePriceAllWthoutSides();
+            return order;
         }
 
         Dish CreateDishwWthoutSides()
@@ -57,8 +66,7 @@ namespace Test.Test
         [TestMethod]
         public void TestMethod2()
         {
-            order.ListDishes.Add( CreateDishwWithSides() );
-            order.PriceAll = CreatePriceAllWithSides();
+            order = CreateorderWithSides();
             emailMessage = new EmailMessage( order );
 
             string message =    "###################################################\r\n" +
@@ -79,8 +87,19 @@ namespace Test.Test
                                 "###################################################\r\n"+
                                 "Uwagi do zamówienia: \n";
 
-            Assert.AreEqual( message, emailMessage.WriteBill() );
+            string result = emailMessage.WriteBill();
+
+            Assert.AreEqual( message, result );
         }
+
+        Order CreateorderWithSides()
+        {
+            Order order = new Order();
+            order.ListDishes.Add( CreateDishwWithSides() );
+            order.PriceAll = CreatePriceAllWithSides();
+            return order;
+        }
+
 
         Dish CreateDishwWithSides()
         {

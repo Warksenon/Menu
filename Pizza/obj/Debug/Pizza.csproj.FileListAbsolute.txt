@@ -461,3 +461,4 @@ C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\System.Ru
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.csproj.CopyComplete
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.exe
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.pdb
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.csprojAssemblyReference.cache

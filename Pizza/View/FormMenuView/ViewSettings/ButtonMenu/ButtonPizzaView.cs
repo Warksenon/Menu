@@ -1,7 +1,7 @@
 ﻿using Pizza.View.Form1View.ViewSettings.ButtonMenu;
 using System.Drawing;
 
-namespace Pizza.Presenters.PresenterForm1.VisableElements.Button
+namespace Pizza.Presenters.PresenterFormMenu.VisableElements.Button
 {
     public class ButtonPizzaView : ButtonMenu
     {

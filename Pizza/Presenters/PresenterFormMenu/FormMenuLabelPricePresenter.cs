@@ -1,7 +1,7 @@
-﻿using Pizza.Presenters.PresenterForm1.Order;
+﻿using Pizza.Presenters.PresenterFormMenu.Order;
 using Pizza.View.Form1;
 
-namespace Pizza.Presenters.PresenterForm1
+namespace Pizza.Presenters.PresenterFormMenu
 {
     class Form1LabelPricePresenter : ILogic
     {
@@ -10,7 +10,7 @@ namespace Pizza.Presenters.PresenterForm1
         //TODO zmienić na logike
         public Form1LabelPricePresenter( FormMenu form1 )
         {
-            price = new FormMenuAddOrderListViewPresenters( form1 );
+            price = new FormMenuAddOrderListView( form1 );
             label = form1;
         }
 

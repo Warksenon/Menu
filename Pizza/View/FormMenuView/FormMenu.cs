@@ -1,9 +1,8 @@
 ﻿using Pizza.Presenters;
-using Pizza.Presenters.PresenterForm1;
-using Pizza.Presenters.PresenterForm1.Logic;
-using Pizza.Presenters.PresenterForm1.Remove;
-using Pizza.Presenters.PresenterForm1.VisableElements.Button;
 using Pizza.Presenters.PresenterFormMenu;
+using Pizza.Presenters.PresenterFormMenu.Logic;
+using Pizza.Presenters.PresenterFormMenu.Remove;
+using Pizza.Presenters.PresenterFormMenu.VisableElements.Button;
 using Pizza.View.Form1;
 using Pizza.View.FormMenuView.InterfaceFormMenu;
 using Pizza.View.FormMenuView.ViewSettings;
@@ -86,7 +85,7 @@ namespace Pizza
         private void ButtonOk_Click( object sender, EventArgs e )
         {
             eevent.SetView( new ButtonOkView( this ) );
-            eevent.SetLogic( new FormMenuAddOrderListViewPresenters( this ) );
+            eevent.SetLogic( new FormMenuAddOrderListView( this ) );
             eevent.SetLogic( new Form1LabelPricePresenter( this ) );
         }
 

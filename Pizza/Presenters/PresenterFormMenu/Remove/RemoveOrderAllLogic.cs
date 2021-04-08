@@ -1,4 +1,4 @@
-﻿namespace Pizza.Presenters.PresenterForm1.Remove
+﻿namespace Pizza.Presenters.PresenterFormMenu.Remove
 {
     class RemoveOrderAllLogic : RemoveOrderLogic
     {

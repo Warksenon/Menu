@@ -1,10 +1,10 @@
-﻿using Pizza.Presenters.PresenterForm1.Order;
+﻿using Pizza.Presenters.PresenterFormMenu.Order;
 using System;
 using System.Collections.Generic;
 
 namespace Pizza
 {
-    class FormMenuCreatingOrder : Form1ListViewOrder
+    class FormMenuCreatingOrder : FormMenuListViewOrder
     {
         private Order order = new Order();
 

@@ -1,16 +1,16 @@
-﻿using Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1;
-using Pizza.Presenters.PresenterForm1.Order;
+﻿using Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1;
+using Pizza.Presenters.PresenterFormMenu.Order;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Pizza.Presenters
 {
-    class FormMenuAddOrderListViewPresenters : Form1ListViewOrder, ILogic
+    class FormMenuAddOrderListView : FormMenuListViewOrder, ILogic
     {
         Form1ListDishes lvDishes;
         Form1SidesDish chblSides;
 
-        public FormMenuAddOrderListViewPresenters( FormMenu form1 ) : base( form1 )
+        public FormMenuAddOrderListView( FormMenu form1 ) : base( form1 )
         {
             lvDishes = new Form1ListDishes( form1 );
             chblSides = new Form1SidesDish( form1 );

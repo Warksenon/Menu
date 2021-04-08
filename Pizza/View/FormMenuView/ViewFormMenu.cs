@@ -5,7 +5,7 @@ namespace Pizza.View.Form1View
     public abstract class ViewFormMenu
     {
         protected FormMenu form;
-        protected IOnEvent eevent = new OnEvent();
+       // protected IOnEvent eevent = new OnEvent();
 
         protected ViewFormMenu( FormMenu form )
         {

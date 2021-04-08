@@ -1,9 +1,9 @@
-﻿using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
+﻿using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
 using System.Collections.Generic;
 
 namespace Pizza
 {
-    public class ListSoups : ListDishes, IForm1Dishes
+    public class ListSoups : ListDishes
     {
         private List<Dish> LoadListSoups()
         {
@@ -12,7 +12,7 @@ namespace Pizza
             return listDisches;
         }
 
-        public List<Dish> GetDishes()
+        public override List<Dish> GetDishes()
         {
             return LoadListSoups();
         }

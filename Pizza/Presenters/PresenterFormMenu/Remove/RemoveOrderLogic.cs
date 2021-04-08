@@ -1,4 +1,4 @@
-﻿namespace Pizza.Presenters.PresenterForm1
+﻿namespace Pizza.Presenters.PresenterFormMenu
 {
     abstract class RemoveOrderLogic : ILogic
     {

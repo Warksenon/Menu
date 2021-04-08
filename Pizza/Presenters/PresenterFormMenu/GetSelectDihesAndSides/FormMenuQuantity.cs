@@ -1,12 +1,12 @@
 ﻿using Pizza.View.Form1View;
 using System.Windows.Forms;
 
-namespace Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1
+namespace Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1
 {
-    public abstract class Form1Quantity : ViewFormMenu
+    public abstract class FormMenuQuantity : ViewFormMenu
     {
 
-        protected Form1Quantity( FormMenu form1 ) : base( form1 ) { }
+        protected FormMenuQuantity( FormMenu form1 ) : base( form1 ) { }
 
         protected int CheckNumberTextViewDishes()
         {

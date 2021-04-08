@@ -1,11 +1,11 @@
 ﻿using Pizza.View.Form1View;
 using System;
 
-namespace Pizza.Presenters.PresenterForm1.Order
+namespace Pizza.Presenters.PresenterFormMenu.Order
 {
-    public abstract class Form1ListViewOrder : ViewFormMenu, IPriceAll
+    public abstract class FormMenuListViewOrder : ViewFormMenu, IPriceAll
     {
-        protected Form1ListViewOrder( FormMenu form ) : base( form ) { }
+        protected FormMenuListViewOrder( FormMenu form ) : base( form ) { }
 
         public double GetPricaAll()
         {

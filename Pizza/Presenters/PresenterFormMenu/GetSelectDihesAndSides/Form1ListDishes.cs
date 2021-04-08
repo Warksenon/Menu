@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1
+namespace Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1
 {
-    public class Form1ListDishes : Form1Quantity
+    public class Form1ListDishes : FormMenuQuantity
     {
         public Form1ListDishes( FormMenu form ) : base( form ) { }
 

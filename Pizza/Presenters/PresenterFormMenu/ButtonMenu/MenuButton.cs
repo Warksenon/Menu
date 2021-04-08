@@ -1,6 +1,6 @@
-﻿using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
+﻿using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
 
-namespace Pizza.Presenters.PresenterForm1.Logic.ButtonMenu
+namespace Pizza.Presenters.PresenterFormMenu.Logic.ButtonMenu
 {
     public abstract class MenuButton : ILogic
     {

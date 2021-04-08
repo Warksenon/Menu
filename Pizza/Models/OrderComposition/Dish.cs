@@ -1,6 +1,8 @@
-﻿namespace Pizza
+﻿using Pizza.Models.OrderComposition;
+
+namespace Pizza
 {
-    public class Dish
+    public class Dish : Verifier
     {
         private string name;
         private string price;
@@ -16,20 +18,20 @@
 
         public string Name
         {
-            get { return HelpFinding.CheckIsNotNull( name ); }
-            set { name = HelpFinding.CheckIsNotNull( value ); }
+            get { return CheckIsNotNull( name ); }
+            set { name = CheckIsNotNull( value ); }
         }
 
         public string Price
         {
-            get { return HelpFinding.CheckIsNotNull( price ); }
-            set { price = value; }
+            get { return CheckIsNotNull( price ); }
+            set { price = CheckIsNotNull( value ); }
         }
 
         public string Sides
         {
-            get { return HelpFinding.CheckIsNotNull( sides ); }
-            set { sides = value; }
+            get { return CheckIsNotNull( sides ); }
+            set { sides = CheckIsNotNull( value ); }
         }
 
         public int Id

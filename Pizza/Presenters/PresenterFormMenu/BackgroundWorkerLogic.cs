@@ -2,10 +2,11 @@
 using Pizza.Presenters.Email;
 using Pizza.View.Form1View;
 using System.Windows.Forms;
-using Pizza;
+using Pizza.Models;
 
 
-namespace Pizza.Presenters.PresenterFormMenu
+
+namespace Pizza.Presenters.PresenterFormMenu.OrderGetSet
 {
     class BackgroundWorkerLogic : ViewFormMenu, ILogic
     {
@@ -32,8 +33,7 @@ namespace Pizza.Presenters.PresenterFormMenu
             GetMessage();
             EmailSend emailSend = new EmailSend();
             bool checkSendEmail = emailSend.SendEmail(message);
-            // TODO   usunac
-            //checkSendEmail = true;
+
             if (checkSendEmail)
             {
                 SaveOrder( order );

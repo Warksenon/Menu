@@ -40,8 +40,7 @@ namespace Pizza
             }
             catch (Exception ex)
             {
-                MessageBox.Show( "Zapisanie do pilku txt nie powiodło się ", "Błąd przy zapisie", MessageBoxButtons.OK, MessageBoxIcon.Error );
-                RecordOfExceptions.Save( Convert.ToString( ex ), "SaveFiles" );
+                RecordOfExceptions.Save( Convert.ToString( ex ), "SaveListOrder" );
             }
         }
 
@@ -61,7 +60,6 @@ namespace Pizza
             }
             catch (Exception ex)
             {
-                MessageBox.Show( "Zapisanie do pilku txt nie powiodło się ", "Błąd przy zapisie", MessageBoxButtons.OK, MessageBoxIcon.Error );
                 RecordOfExceptions.Save( Convert.ToString( ex ), "Save" );
             }
         }

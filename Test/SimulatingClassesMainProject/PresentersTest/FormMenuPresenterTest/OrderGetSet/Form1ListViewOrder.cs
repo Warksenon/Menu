@@ -1,7 +1,7 @@
 ﻿using Pizza.View.Form1View;
 using System;
 
-namespace Pizza.Presenters.PresenterFormMenu.Order
+namespace Pizza.Presenters.PresenterFormMenu.OrderGetSet
 {
     public abstract class Form1ListViewOrder : ViewFormMenu, IPriceAll
     {

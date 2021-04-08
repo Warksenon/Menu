@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Pizza.Models;
 using Pizza.Models.FilesTXT;
 using System;
 using System.Collections.Generic;
@@ -25,10 +26,9 @@ namespace Pizza
                 var order = JsonConvert.DeserializeObject<ListOrder>(jsonFromFile);
                 orderList = order.List;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                //Todo dopisac zapisywanie bledow
-                // ignored
+                RecordOfExceptions.Save( e.ToString(), "LoadOrderListFromTxt" );
             }
 
             return orderList;

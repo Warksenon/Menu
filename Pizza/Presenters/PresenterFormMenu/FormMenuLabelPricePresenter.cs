@@ -1,4 +1,4 @@
-﻿using Pizza.Presenters.PresenterFormMenu.Order;
+﻿using Pizza.Presenters.PresenterFormMenu.OrderGetSet;
 using Pizza.View.Form1;
 
 namespace Pizza.Presenters.PresenterFormMenu

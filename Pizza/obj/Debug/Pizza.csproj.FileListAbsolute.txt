@@ -428,6 +428,12 @@ A:\pendrive\repozytoria git\Pizza Git\Pizza\obj\Debug\Pizza.csproj.CopyComplete
 A:\pendrive\repozytoria git\Pizza Git\Pizza\obj\Debug\Pizza.FormMenu.resources
 A:\pendrive\repozytoria git\Pizza Git\Pizza\bin\Debug\Newtonsoft.Json.dll
 A:\pendrive\repozytoria git\Pizza Git\Pizza\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.FormMenu.resources
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.FormHistory.resources
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.FormMail.resources
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.Properties.Resources.resources
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.csproj.GenerateResource.cache
+C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\runtimes\win-arm\native\e_sqlite3.dll
@@ -452,12 +458,6 @@ C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\System.Da
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\System.Memory.xml
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.FormMenu.resources
-C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.FormHistory.resources
-C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.FormMail.resources
-C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.Properties.Resources.resources
-C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.csproj.GenerateResource.cache
-C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.csproj.CopyComplete
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.exe
 C:\Users\user\Desktop\projekty\visual studio\Pizza Git\Pizza\obj\Debug\Pizza.pdb

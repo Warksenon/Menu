@@ -1,5 +1,5 @@
 ﻿using Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1;
-using Pizza.Presenters.PresenterFormMenu.Order;
+using Pizza.Presenters.PresenterFormMenu.OrderGetSet;
 using System.Collections.Generic;
 using System.Windows.Forms;
 

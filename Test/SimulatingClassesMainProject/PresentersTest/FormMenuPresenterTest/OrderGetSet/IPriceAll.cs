@@ -1,4 +1,4 @@
-﻿namespace Pizza.Presenters.PresenterFormMenu.Order
+﻿namespace Pizza.Presenters.PresenterFormMenu.OrderGetSet
 {
     interface IPriceAll
     {

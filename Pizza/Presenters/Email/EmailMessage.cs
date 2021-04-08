@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
+using Pizza.Models;
+
 namespace Pizza
 {
     class EmailMessage

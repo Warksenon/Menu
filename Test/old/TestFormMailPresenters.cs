@@ -1,8 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pizza;
 using System.Windows.Forms;
-using Test.TModels;
-using Test.TPresenters;
 
 namespace Test
 {
@@ -56,10 +54,10 @@ namespace Test
         //    presenter = new TFormMailPresenters(this);
         //    TRegistry registry = new TRegistry();
         //    registry.ClearTRegistry();
- 
+
         //    presenter.SetTextView();
 
-        
+
         //    Assert.AreEqual("587", tPort.Text);
         //}
     }

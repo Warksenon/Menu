@@ -1,13 +1,10 @@
-﻿using Pizza.Presenters.PresenterForm1.LoadDishesAndSideDishForm1;
-using Pizza.Presenters.PresenterForm1.Logic.ButtonMenu;
-using Pizza.Presenters.PresenterForm1.VisableElements.Button;
-using Pizza.View.Form1;
+﻿using Pizza.Presenters.PresenterFormMenu.Logic.ButtonMenu;
 
-namespace Pizza.Presenters.PresenterForm1.Logic
+namespace Pizza.Presenters.PresenterFormMenu.Logic
 {
     class ButtonSoupsLogic : MenuButton
     {
-        public ButtonSoupsLogic(FormMenu form1) : base(form1) { }
+        public ButtonSoupsLogic( FormMenu form1 ) : base( form1 ) { }
 
         public override void LogicSettings()
         {

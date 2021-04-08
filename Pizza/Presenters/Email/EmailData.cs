@@ -7,17 +7,20 @@
         private string port;
         private string smtp;
         private string recipient;
-        
+
         public string Sender
         {
             get
             {
-                if (HelpFinding.CheckStringIsEmpty(sender)) return "listorders39@gmail.com";
-                else return sender;
+                if (HelpFinding.CheckStringIsEmpty( sender ))
+                    return "listorders39@gmail.com";
+                else
+                    return sender;
             }
             set
             {
-                if (HelpFinding.CheckStringIsNotEmpty(value)) sender = value;
+                if (HelpFinding.CheckStringIsNotEmpty( value ))
+                    sender = value;
             }
         }
 
@@ -25,12 +28,15 @@
         {
             get
             {
-                if (HelpFinding.CheckStringIsEmpty(password)) return "Testy2020!";
-                else return password;
+                if (HelpFinding.CheckStringIsEmpty( password ))
+                    return "Testy2020!";
+                else
+                    return password;
             }
-            set 
+            set
             {
-                if (HelpFinding.CheckStringIsNotEmpty(value)) password = value;
+                if (HelpFinding.CheckStringIsNotEmpty( value ))
+                    password = value;
             }
         }
 
@@ -38,12 +44,15 @@
         {
             get
             {
-                if (HelpFinding.CheckStringIsEmpty(port)) return "587";
-                else return port;
+                if (HelpFinding.CheckStringIsEmpty( port ))
+                    return "587";
+                else
+                    return port;
             }
-            set 
-            { 
-                if (HelpFinding.CheckStringIsNotEmpty(value)) port = value;
+            set
+            {
+                if (HelpFinding.CheckStringIsNotEmpty( value ))
+                    port = value;
             }
         }
 
@@ -51,12 +60,15 @@
         {
             get
             {
-                if (HelpFinding.CheckStringIsEmpty(smtp)) return "smtp.gmail.com";
-                else return smtp;
+                if (HelpFinding.CheckStringIsEmpty( smtp ))
+                    return "smtp.gmail.com";
+                else
+                    return smtp;
             }
             set
-            { 
-                if (HelpFinding.CheckStringIsNotEmpty(value)) smtp = value;
+            {
+                if (HelpFinding.CheckStringIsNotEmpty( value ))
+                    smtp = value;
             }
         }
 
@@ -64,17 +76,20 @@
         {
             get
             {
-                if (HelpFinding.CheckStringIsEmpty(recipient)) return "listorders39@gmail.com";
-                else return recipient;
+                if (HelpFinding.CheckStringIsEmpty( recipient ))
+                    return "listorders39@gmail.com";
+                else
+                    return recipient;
             }
-            set 
-            { 
-                if (HelpFinding.CheckStringIsNotEmpty(value)) recipient = value;
+            set
+            {
+                if (HelpFinding.CheckStringIsNotEmpty( value ))
+                    recipient = value;
             }
         }
 
-     
 
-        
+
+
     }
 }

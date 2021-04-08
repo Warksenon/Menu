@@ -6,14 +6,14 @@ namespace Pizza.Models.SqlLite
     {
         Order order;
 
-        public AddOrderSQL(Order order)
+        public AddOrderSQL( Order order )
         {
             this.order = order;
         }
 
         public void AddOrder()
         {
-            AddNewTaskOrder(order);
+            AddNewTaskOrder( order );
         }
     }
 }

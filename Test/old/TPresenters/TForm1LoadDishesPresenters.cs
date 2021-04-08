@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Pizza.Presenters
+﻿namespace Pizza.Presenters
 {
     //class TForm1LoadDishesPresenters
     //{
@@ -50,7 +43,7 @@ namespace Pizza.Presenters
     //        }
     //    }
 
-       
+
 
     //    public void LoadSidesDishPizza()
     //    {
@@ -78,6 +71,6 @@ namespace Pizza.Presenters
     //        form1.CheckedListBoxSideDish.Items.Clear();
     //    }
 
-      
+
     //}
 }

@@ -3,7 +3,7 @@
 namespace Pizza.SqlLite
 {
     abstract class CreateConnection
-    {     
+    {
         protected const string folderDatabase = @"c:\SQL\Konsola\sqlite\";
         protected const string databaseFile = "SqlLitePizza.sqlite";
         protected const string strConnection = @"Data Source=" + folderDatabase + databaseFile + ";Version=3;";

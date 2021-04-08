@@ -1,10 +1,10 @@
-﻿namespace Pizza.Presenters.PresenterForm1
+﻿namespace Pizza.Presenters.PresenterFormMenu
 {
     abstract class RemoveOrderLogic : ILogic
     {
         protected FormMenu form;
         protected IForm1ListViewOrder lvOrder;
-        public RemoveOrderLogic(FormMenu form)
+        public RemoveOrderLogic( FormMenu form )
         {
             lvOrder = form;
             this.form = form;

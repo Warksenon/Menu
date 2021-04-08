@@ -4,6 +4,6 @@ namespace Pizza
 {
     public interface IForm1ListViewDishes
     {
-        ListView ListViewDishes { get; set; }        
+        ListView ListViewDishes { get; set; }
     }
 }

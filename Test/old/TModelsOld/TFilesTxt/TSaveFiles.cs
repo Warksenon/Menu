@@ -1,9 +1,4 @@
-﻿using Pizza;
-using System;
-using System.Collections.Generic;
-using System.IO;
-
-namespace Test.TModels.TFilesTxt
+﻿namespace Test.TModels.TFilesTxt
 {
     //public class TSaveFiles : ISaveHistory
     //{

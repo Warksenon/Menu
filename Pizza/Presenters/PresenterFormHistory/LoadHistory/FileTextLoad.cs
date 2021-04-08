@@ -1,16 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Pizza.Presenters.PresenterFormHistory.LoadHistory
+﻿namespace Pizza.Presenters.PresenterFormHistory.LoadHistory
 {
-    class FileTextLoad : ILogic
+    class FileTextLoad : ListViewHistory
     {
-        public void LogicSettings()
+        public FileTextLoad( FormHistory form ) : base( form ) { }
+
+        public override void LogicSettings()
         {
-            throw new NotImplementedException();
+            LoadHistroyFromTxt();
+        }
+
+        private void LoadHistroyFromTxt()
+        {
+            ClearAllList();
+            orderList = load.LoadOrderList( new LoadingFilesTxt() );
+            LoadLVPriceAll();
         }
     }
 }

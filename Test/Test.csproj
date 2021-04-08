@@ -64,6 +64,12 @@
     <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\LoadRegistry.cs" />
     <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\Registry.cs" />
     <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\SaveRegistry.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\AddOrderSQL.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\CreateConnection.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\CreateTabeles.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\LoadHistorySQL.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\OrderSQL.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\SaveHistorySQL.cs" />
     <Compile Include="SimulatingClassesMainProject\PresenterFormMail\FormMailLoad.cs" />
     <Compile Include="SimulatingClassesMainProject\PresenterFormMail\FormMailPresenter.cs" />
     <Compile Include="SimulatingClassesMainProject\PresenterFormMail\FormMailSavePresenters.cs" />

@@ -85,15 +85,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\FilesTXT\ListOrder.cs" />
-    <Compile Include="Models\Menu\Dishes\ListDishes.cs" />
-    <Compile Include="Models\Menu\Dishes\ListDrinks.cs" />
-    <Compile Include="Models\Menu\Dishes\ListMainDishes.cs" />
-    <Compile Include="Models\Menu\Dishes\ListPizza.cs" />
-    <Compile Include="Models\Menu\Dishes\ListSoups.cs" />
-    <Compile Include="Models\Menu\Sides\IListSides.cs" />
-    <Compile Include="Models\Menu\Sides\ListSides.cs" />
-    <Compile Include="Models\Menu\Sides\ListSidesMainDishes.cs" />
-    <Compile Include="Models\Menu\Sides\ListSidesPizza.cs" />
+    <Compile Include="Models\Menu\ListDishesAndSides\DishesList\ListDishes.cs" />
+    <Compile Include="Models\Menu\ListDishesAndSides\DishesList\ListDrinks.cs" />
+    <Compile Include="Models\Menu\ListDishesAndSides\DishesList\ListMainDishes.cs" />
+    <Compile Include="Models\Menu\ListDishesAndSides\DishesList\ListPizza.cs" />
+    <Compile Include="Models\Menu\ListDishesAndSides\DishesList\ListSoups.cs" />
+    <Compile Include="Models\Menu\ListDishesAndSides\ListName.cs" />
+    <Compile Include="Models\Menu\ListDishesAndSides\SidesList\ListSides.cs" />
+    <Compile Include="Models\Menu\ListDishesAndSides\SidesList\ListSidesMainDishes.cs" />
+    <Compile Include="Models\Menu\ListDishesAndSides\SidesList\ListSidesPizza.cs" />
+    <Compile Include="Models\OrderComposition\Verifier.cs" />
     <Compile Include="Models\Registry\LoadRegistry.cs" />
     <Compile Include="Models\Registry\Registry.cs" />
     <Compile Include="Models\Registry\SaveRegistry.cs" />
@@ -108,8 +109,11 @@
     <Compile Include="Presenters\IAddOrder.cs" />
     <Compile Include="Presenters\IOnEvent.cs" />
     <Compile Include="Presenters\ILogiccs.cs" />
+    <Compile Include="Presenters\PresenterFormHistory\CopyHistory\CopyHistoryOrder.cs" />
     <Compile Include="Presenters\PresenterFormHistory\CopyHistory\FileTextCopy.cs" />
     <Compile Include="Presenters\PresenterFormHistory\CopyHistory\SqlCopy.cs" />
+    <Compile Include="Presenters\PresenterFormHistory\HistorySelect.cs" />
+    <Compile Include="Presenters\PresenterFormHistory\ListViewHistory.cs" />
     <Compile Include="Presenters\PresenterFormHistory\LoadHistory\FileTextLoad.cs" />
     <Compile Include="Presenters\PresenterFormHistory\LoadHistory\SqlLoad.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailLoad.cs" />
@@ -119,43 +123,47 @@
     <Compile Include="Presenters\PresenterFormMenu\FormMenuLabelPricePresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\FormMenuLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\Form1ListDishes.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\Form1Quantity.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\FormMenuQuantity.cs" />
     <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\Form1SidesDish.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\ButtonDriks.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\ButtonMainDishes.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\ButtonPizza.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\ButtonDriksLogic.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\ButtonMainDishesLogic.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\ButtonPizzaLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\ButtonSoupsLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\MenuButton.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\Logic\LogicListViewOrderForm1.cs" />
     <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\FormMenuCreatingOrder.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\Form1ListViewOrder.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\FormMenuListViewOrder.cs" />
     <Compile Include="Presenters\PresenterFormMenu\Remove\RemoveOrderLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\Remove\RemoveOrderAllLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\Remove\RemoveOrderOneLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\Form1LoadSidesPresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\IForm1Dishes.cs" />
     <Compile Include="Presenters\SaveOrder.cs" />
+    <Compile Include="View\FormHistry\ButtonFormHistory\ButtonFormHistory.cs" />
+    <Compile Include="View\FormHistry\ButtonFormHistory\CopySqlView.cs" />
+    <Compile Include="View\FormHistry\ButtonFormHistory\CopyTxtView.cs" />
+    <Compile Include="View\FormHistry\ButtonFormHistory\IButtonFormHistory.cs" />
+    <Compile Include="View\FormHistry\ButtonFormHistory\LoadSqlView.cs" />
+    <Compile Include="View\FormHistry\ButtonFormHistory\LoadTxtView.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1ListViewDishes.cs" />
     <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\IPriceAll.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IButtonRemove.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IButtonSend.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1LabelPrice.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1ListViewOrder.cs" />
-    <Compile Include="interfejs\IFormHistory.cs" />
-    <Compile Include="interfejs\IFormMail.cs" />
-    <Compile Include="interfejs\ILoadHistoryOrders.cs" />
-    <Compile Include="interfejs\ISaveHistory.cs" />
+    <Compile Include="View\FormHistry\IListViewHistory.cs" />
+    <Compile Include="View\FormMail\IFormMail.cs" />
+    <Compile Include="Models\ILoadHistoryOrders.cs" />
+    <Compile Include="Models\ISaveHistory.cs" />
     <Compile Include="Presenters\Email\EmailMessage.cs" />
     <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\Form1LoadDishesPresenters.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\FormMenuAddOrderListViewPresenters.cs" />
-    <Compile Include="Presenters\FormHistoryPresenters.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\FormMenuAddOrderListView.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailSavePresenters.cs" />
     <Compile Include="Presenters\LoadOrder.cs" />
-    <Compile Include="Models\Order\PriceAll.cs" />
-    <Compile Include="Models\Order\Dish.cs" />
+    <Compile Include="Models\OrderComposition\PriceAll.cs" />
+    <Compile Include="Models\OrderComposition\Dish.cs" />
     <Compile Include="Presenters\HelpFinding.cs" />
     <Compile Include="Models\Name.cs" />
-    <Compile Include="Models\Order\Order.cs" />
+    <Compile Include="Models\OrderComposition\Order.cs" />
     <Compile Include="Presenters\Email\EmailData.cs" />
     <Compile Include="Models\FilesTXT\SaveFiles.cs" />
     <Compile Include="Models\FilesTXT\LoadingFilesTxt.cs" />
@@ -186,16 +194,16 @@
     <Compile Include="View\FormMenuView\ViewSettings\ButtonRemove\ButtonRemoveOne.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\FormMenuView.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ListViewDishes.cs" />
-    <Compile Include="View\FormHistory.cs">
+    <Compile Include="View\FormHistry\FormHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormHistory.Designer.cs">
+    <Compile Include="View\FormHistry\FormHistory.Designer.cs">
       <DependentUpon>FormHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormMail.cs">
+    <Compile Include="View\FormMail\FormMail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormMail.Designer.cs">
+    <Compile Include="View\FormMail\FormMail.Designer.cs">
       <DependentUpon>FormMail.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -208,10 +216,10 @@
     <EmbeddedResource Include="View\FormMenuView\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormHistory.resx">
+    <EmbeddedResource Include="View\FormHistry\FormHistory.resx">
       <DependentUpon>FormHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormMail.resx">
+    <EmbeddedResource Include="View\FormMail\FormMail.resx">
       <DependentUpon>FormMail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

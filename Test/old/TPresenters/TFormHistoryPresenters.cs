@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Pizza;
-using Test.TModels.TSQLite;
-
-namespace Test.TPresenters
+﻿namespace Test.TPresenters
 {
     //class TFormHistoryPresenters
     //{

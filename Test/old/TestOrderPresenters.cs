@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Windows.Forms;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Pizza;
-using Pizza.Presenters;
-
-namespace Test
+﻿namespace Test
 {
     //[TestClass]
     //public class TestOrderPresenters : IListViewDishes , IForm1Order
@@ -343,7 +335,7 @@ namespace Test
     //        dishPresenter = new TForm1LoadDishesPresenters(this);
     //        orderPresenters = new TForm1OrderPresenters(this, this);
     //        lvOrder.Clear();
-            
+
     //        //Check add one dish 
     //        quantityDishes.Text = "1";           
     //        dishPresenter.LoadSoups();
@@ -409,21 +401,21 @@ namespace Test
 
     //        int i = 0;
     //        orderPresenters.AddDishesToListViewOrder(i);
-            
+
     //        Assert.AreEqual(name.Coffee, lvOrder.Items[i].SubItems[0].Text);
     //        Assert.AreEqual("", lvOrder.Items[i].SubItems[1].Text);
     //        Assert.AreEqual("5zł", lvOrder.Items[i].SubItems[2].Text);
 
     //        i = 1;
     //        orderPresenters.AddDishesToListViewOrder(i);
-           
+
     //        Assert.AreEqual(name.Tea, lvOrder.Items[i].SubItems[0].Text);
     //        Assert.AreEqual("", lvOrder.Items[i].SubItems[1].Text);
     //        Assert.AreEqual("5zł", lvOrder.Items[i].SubItems[2].Text);
 
     //        i = 2;
     //        orderPresenters.AddDishesToListViewOrder(i);
-            
+
     //        Assert.AreEqual(name.Cola, lvOrder.Items[i].SubItems[0].Text);
     //        Assert.AreEqual("", lvOrder.Items[i].SubItems[1].Text);
     //        Assert.AreEqual("5zł", lvOrder.Items[i].SubItems[2].Text);
@@ -556,7 +548,7 @@ namespace Test
     //        orderPresenters.SetCommentsAndDate(comments);
     //        string date = DateTime.Now.ToString();
     //        Order order = orderPresenters.GetOrder();
-            
+
     //        Assert.AreEqual(comments, order.PriceAll.Comments);
     //        Assert.AreEqual(date, order.PriceAll.Date);
     //    }

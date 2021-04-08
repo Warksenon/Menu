@@ -1,9 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Pizza;
-using Pizza.Presenters;
-using System.Windows.Forms;
-
-namespace Test
+﻿namespace Test
 {
     //[TestClass]
     //public class TestLoadDishesPresenters : IListViewDishes

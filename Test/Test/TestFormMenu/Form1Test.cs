@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Pizza.Presenters;
-using Pizza;
+﻿using Pizza;
 
 namespace Test
 {

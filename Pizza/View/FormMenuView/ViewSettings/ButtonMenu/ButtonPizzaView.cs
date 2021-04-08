@@ -1,11 +1,11 @@
 ﻿using Pizza.View.Form1View.ViewSettings.ButtonMenu;
 using System.Drawing;
 
-namespace Pizza.Presenters.PresenterForm1.VisableElements.Button
+namespace Pizza.Presenters.PresenterFormMenu.VisableElements.Button
 {
     public class ButtonPizzaView : ButtonMenu
     {
-        public ButtonPizzaView(FormMenu form1) : base(form1) { }
+        public ButtonPizzaView( FormMenu form1 ) : base( form1 ) { }
 
         public override void ViewSetting()
         {
@@ -14,8 +14,8 @@ namespace Pizza.Presenters.PresenterForm1.VisableElements.Button
         }
 
         private void PizzaButtonSettings()
-        {          
-            ChengeNameLabelMenuInfo("Pizza");
+        {
+            ChengeNameLabelMenuInfo( "Pizza" );
             ButtonSeting();
             form.PizzzaButton.BackColor = Color.LawnGreen;
         }

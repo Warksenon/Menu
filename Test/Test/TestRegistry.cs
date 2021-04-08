@@ -15,14 +15,14 @@ namespace Test
         public void TestSaveRegisrty()
         {
             EmailData emailSave = CreateEmailData();
-            save.Save(emailSave);
+            save.Save( emailSave );
             EmailData emailLoad = load.Load();
 
-            Assert.AreEqual(emailLoad.Sender, emailSave.Sender);
-            Assert.AreEqual(emailLoad.Recipient, emailSave.Recipient);
-            Assert.AreEqual(emailLoad.Password, emailSave.Password);
-            Assert.AreEqual(emailLoad.Smtp, emailSave.Smtp);
-            Assert.AreEqual(emailLoad.Port, emailSave.Port);
+            Assert.AreEqual( emailLoad.Sender, emailSave.Sender );
+            Assert.AreEqual( emailLoad.Recipient, emailSave.Recipient );
+            Assert.AreEqual( emailLoad.Password, emailSave.Password );
+            Assert.AreEqual( emailLoad.Smtp, emailSave.Smtp );
+            Assert.AreEqual( emailLoad.Port, emailSave.Port );
         }
 
         EmailData CreateEmailData()
@@ -40,13 +40,13 @@ namespace Test
         public void TestSetTextBoxWithFormMailAndLoadRegistry()
         {
             EmailData emailLoad = load.Load();
-            eevent.SetLogic(new FormMailLoad(form));
+            eevent.SetLogic( new FormMailLoad( form ) );
 
-            Assert.AreEqual(emailLoad.Sender, form.TextBoxSender.Text);
-            Assert.AreEqual(emailLoad.Recipient, form.TextBoxRecipient.Text);
-            Assert.AreEqual(emailLoad.Password, form.TextBoxPassword.Text);
-            Assert.AreEqual(emailLoad.Smtp, form.TextBoxSmtp.Text);
-            Assert.AreEqual(emailLoad.Port, form.TextBoxPort.Text);            
+            Assert.AreEqual( emailLoad.Sender, form.TextBoxSender.Text );
+            Assert.AreEqual( emailLoad.Recipient, form.TextBoxRecipient.Text );
+            Assert.AreEqual( emailLoad.Password, form.TextBoxPassword.Text );
+            Assert.AreEqual( emailLoad.Smtp, form.TextBoxSmtp.Text );
+            Assert.AreEqual( emailLoad.Port, form.TextBoxPort.Text );
         }
 
         [TestMethod]
@@ -59,14 +59,14 @@ namespace Test
             form.TextBoxSmtp.Text = emailSave.Smtp;
             form.TextBoxPort.Text = emailSave.Port;
 
-            eevent.SetLogic(new FormMailSavePresenters(form));
+            eevent.SetLogic( new FormMailSavePresenters( form ) );
             EmailData emailLoad = load.Load();
 
-            Assert.AreEqual(emailLoad.Sender, form.TextBoxSender.Text);
-            Assert.AreEqual(emailLoad.Recipient, form.TextBoxRecipient.Text);
-            Assert.AreEqual(emailLoad.Password, form.TextBoxPassword.Text);
-            Assert.AreEqual(emailLoad.Smtp, form.TextBoxSmtp.Text);
-            Assert.AreEqual(emailLoad.Port, form.TextBoxPort.Text);
+            Assert.AreEqual( emailLoad.Sender, form.TextBoxSender.Text );
+            Assert.AreEqual( emailLoad.Recipient, form.TextBoxRecipient.Text );
+            Assert.AreEqual( emailLoad.Password, form.TextBoxPassword.Text );
+            Assert.AreEqual( emailLoad.Smtp, form.TextBoxSmtp.Text );
+            Assert.AreEqual( emailLoad.Port, form.TextBoxPort.Text );
         }
 
         EmailData CreateEmailData2()

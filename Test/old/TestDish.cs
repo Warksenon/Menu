@@ -1,12 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Pizza;
-
-namespace Test
+﻿namespace Test
 {
     //[TestClass]
     //public class TestDish
     //{
-       
+
 
     //    [TestMethod]
     //    public void TestDishAllAddAdditions()
@@ -21,7 +18,7 @@ namespace Test
     //        //dish.SidesDishes = Name.SalamiPrice;
     //        dish.Name = Name.Veget;
     //        dish.Price = "22zł";
-          
+
     //       // Assert.AreEqual("Salami -2zł", dish.SidesDishes);
     //        Assert.AreEqual("Vegetariana", dish.Name);
     //        Assert.AreEqual("22zł", dish.Price);

@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Pizza;
 using System.Windows.Forms;
 
 namespace Test.Test.Form1.ViewSettings
@@ -19,10 +18,10 @@ namespace Test.Test.Form1.ViewSettings
             buttonTestRemoveAll.Visible = false;
             ButtonRemoveOne buttonRemoveOne = new ButtonRemoveOne(form);
 
-            eevent.SetView(buttonRemoveOne);
+            eevent.SetView( buttonRemoveOne );
 
-            Assert.AreEqual(buttonTestRemoveOne.Visible, buttonRemoveOne.ButtonRemoveOne);
-            Assert.AreEqual(buttonTestRemoveAll.Visible, buttonRemoveOne.ButtonRemoveAll);
+            Assert.AreEqual( buttonTestRemoveOne.Visible, buttonRemoveOne.ButtonRemoveOne );
+            Assert.AreEqual( buttonTestRemoveAll.Visible, buttonRemoveOne.ButtonRemoveAll );
         }
 
         [TestMethod]
@@ -31,12 +30,12 @@ namespace Test.Test.Form1.ViewSettings
             buttonTestRemoveOne.Visible = false;
             buttonTestRemoveAll.Visible = false;
             ButtonRemoveOne buttonRemoveOne = new ButtonRemoveOne(form);
-            
 
-            eevent.SetView(buttonRemoveOne);
 
-            Assert.AreEqual(buttonTestRemoveOne.Visible, buttonRemoveOne.ButtonRemoveOne);
-            Assert.AreEqual(buttonTestRemoveAll.Visible, buttonRemoveOne.ButtonRemoveAll);
+            eevent.SetView( buttonRemoveOne );
+
+            Assert.AreEqual( buttonTestRemoveOne.Visible, buttonRemoveOne.ButtonRemoveOne );
+            Assert.AreEqual( buttonTestRemoveAll.Visible, buttonRemoveOne.ButtonRemoveAll );
         }
 
         [TestMethod]
@@ -46,10 +45,10 @@ namespace Test.Test.Form1.ViewSettings
             buttonTestRemoveAll.Visible = false;
             ButtonRemoveOne buttonRemoveOne = new ButtonRemoveOne(form);
 
-            eevent.SetView(buttonRemoveOne);
+            eevent.SetView( buttonRemoveOne );
 
-            Assert.AreEqual(buttonTestRemoveOne.Visible, buttonRemoveOne.ButtonRemoveOne);
-            Assert.AreEqual(buttonTestRemoveAll.Visible, buttonRemoveOne.ButtonRemoveAll);
+            Assert.AreEqual( buttonTestRemoveOne.Visible, buttonRemoveOne.ButtonRemoveOne );
+            Assert.AreEqual( buttonTestRemoveAll.Visible, buttonRemoveOne.ButtonRemoveAll );
         }
     }
 }

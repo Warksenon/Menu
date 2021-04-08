@@ -1,17 +1,17 @@
-﻿using Pizza.Presenters.PresenterForm1.Order;
+﻿using Pizza.Presenters.PresenterFormMenu.OrderGetSet;
 using System;
 using System.Collections.Generic;
 
 namespace Pizza
 {
-    class FormMenuCreatingOrder : Form1ListViewOrder
+    class FormMenuCreatingOrder : FormMenuListViewOrder
     {
         private Order order = new Order();
 
-        public FormMenuCreatingOrder(FormMenu form) : base(form) { }
- 
-        public Order  GetOrderFromListView()
-        {            
+        public FormMenuCreatingOrder( FormMenu form ) : base( form ) { }
+
+        public Order GetOrderFromListView()
+        {
             GetListDishesFromListViewOrder();
             AddPriceAllToOrder();
             GetComments();
@@ -21,7 +21,7 @@ namespace Pizza
 
         private void AddPriceAllToOrder()
         {
-            double price = GetPricaAll();          
+            double price = GetPricaAll();
             order.PriceAll.Price = price + " zł";
         }
 
@@ -42,12 +42,12 @@ namespace Pizza
 
             for (int i = 0; i < counter; i++)
             {
-                list.Add(new Dish()
+                list.Add( new Dish()
                 {
-                    Name = form.ListViewOrder.Items[i].SubItems[0].Text,
-                    Sides = form.ListViewOrder.Items[i].SubItems[1].Text,
-                    Price = form.ListViewOrder.Items[i].SubItems[2].Text
-                });
+                    Name = form.ListViewOrder.Items [i].SubItems [0].Text,
+                    Sides = form.ListViewOrder.Items [i].SubItems [1].Text,
+                    Price = form.ListViewOrder.Items [i].SubItems [2].Text
+                } );
             }
 
             order.ListDishes = list;

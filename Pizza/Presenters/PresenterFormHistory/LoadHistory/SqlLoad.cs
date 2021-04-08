@@ -1,16 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Pizza.Models.SqlLite;
 
 namespace Pizza.Presenters.PresenterFormHistory.LoadHistory
 {
-    class SqlLoad : ILogic
+    class SqlLoad : ListViewHistory
     {
-        public void LogicSettings()
+        public SqlLoad( FormHistory form ) : base( form ) { }
+
+        public override void LogicSettings()
         {
-            throw new NotImplementedException();
+            LoadHistoryFromSQL();
+        }
+
+        private void LoadHistoryFromSQL()
+        {
+            ClearAllList();
+            orderList = load.LoadOrderList( new LoadHistorySQL() );
+            LoadLVPriceAll();
         }
     }
 }

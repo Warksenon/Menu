@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Collections.Generic;
 
-namespace Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1
+namespace Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1
 {
-    public class Form1ListDishes : Form1Quantity
-    {     
-        public Form1ListDishes(FormMenu form):base(form) { }
-        
+    public class Form1ListDishes : FormMenuQuantity
+    {
+        public Form1ListDishes( FormMenu form ) : base( form ) { }
+
 
         public List<Dish> GetListSelektedDishes()
         {
@@ -18,7 +13,7 @@ namespace Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1
             int numbersRepetitions = CheckNumberTextViewDishes();
             if (numbersRepetitions > 0)
             {
-                int x = CheckListDishesSelectedItem();             
+                int x = CheckListDishesSelectedItem();
                 for (int i = 0; i < numbersRepetitions; i++)
                 {
                     Dish dish = new Dish
@@ -26,7 +21,7 @@ namespace Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1
                         Name = form.ListViewDishes.Items[x].SubItems[0].Text,
                         Price = form.ListViewDishes.Items[x].SubItems[1].Text
                     };
-                    list.Add(dish);
+                    list.Add( dish );
                 }
             }
 
@@ -34,7 +29,7 @@ namespace Pizza.Presenters.PresenterForm1.GetDishesAndSideDishForm1
         }
 
         private int CheckListDishesSelectedItem()
-        {            
+        {
             return form.ListViewDishes.FocusedItem.Index;
         }
 

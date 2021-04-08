@@ -1,12 +1,4 @@
-﻿using System;
-
-using System.IO;
-using System.Collections.Generic;
-using System.Data;
-using Pizza;
-using System.Data.SQLite;
-
-namespace Test.TModels.TSQLite
+﻿namespace Test.TModels.TSQLite
 {
     //class TCreateTabeles : TCreateConnection
     //{

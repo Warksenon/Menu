@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Pizza;
-
-namespace Test
+﻿namespace Test
 {
     //[TestClass]
     //public class TestOrder

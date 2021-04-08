@@ -3,9 +3,9 @@ using System.Drawing;
 
 namespace Test
 {
-    public class ButtonSoupsView :ButtonMenu
+    public class ButtonSoupsView : ButtonMenu
     {
-        public ButtonSoupsView(FormMenu form) : base(form) { }
+        public ButtonSoupsView( FormMenu form ) : base( form ) { }
 
         public override void ViewSetting()
         {
@@ -16,8 +16,8 @@ namespace Test
         private void SoupsButtonSettings()
         {
             ButtonSeting();
-            ChengeNameLabelMenuInfo("Zupy");
-            form.SoupButton.BackColor = Color.LawnGreen;             
+            ChengeNameLabelMenuInfo( "Zupy" );
+            form.SoupButton.BackColor = Color.LawnGreen;
         }
     }
 }

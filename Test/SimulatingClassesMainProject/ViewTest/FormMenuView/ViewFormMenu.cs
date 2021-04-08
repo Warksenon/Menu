@@ -1,5 +1,4 @@
 ﻿using Pizza;
-using Pizza.Presenters;
 
 namespace Test
 {
@@ -8,7 +7,7 @@ namespace Test
         protected FormMenu form;
         protected IAction eevent = new Aktion();
 
-        protected ViewFormMenu(FormMenu form)
+        protected ViewFormMenu( FormMenu form )
         {
             this.form = form;
         }

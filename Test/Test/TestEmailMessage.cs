@@ -6,6 +6,7 @@ namespace Test.Test
     [TestClass]
     public class TestEmailMessage
     {
+        //todo ponazywac metody
         Order order;
         EmailMessage emailMessage;
 

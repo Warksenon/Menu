@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Windows.Forms;
 
 namespace Test.Test.Form1.ViewSettings
 {
@@ -7,35 +6,47 @@ namespace Test.Test.Form1.ViewSettings
     public class TestButtonOk : Form1Test
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestVisableButtonRemoveOneAndButtonRemoveAllFromOnClickButtonOkWhenGivenQuantityAreZeros ()
         {
-            Button buttonRemoveOne = new Button();
-            Button buttonRemoveAll = new Button();
             ButtonOkView buttonOk = new ButtonOkView(form);
             form.QTextbox.Text = "0";
-            buttonRemoveOne.Visible = false;
-            buttonRemoveAll.Visible = false;
+            buttonOk.ButtonRemoveOne = true;
+            buttonOk.ButtonRemoveAll = true;
+
 
             eevent.SetView(buttonOk);
 
-            Assert.AreEqual(buttonRemoveOne.Visible, buttonOk.ButtonRemoveOne);
-            Assert.AreEqual(buttonRemoveAll.Visible, buttonOk.ButtonRemoveAll);
+            Assert.AreEqual(false, buttonOk.ButtonRemoveOne);
+            Assert.AreEqual(false, buttonOk.ButtonRemoveAll);
         }
 
+        [TestMethod]
+        public void TestVisableButtonRemoveOneAndButtonRemoveAllFromOnClickButtonOkWhenGivenQuantityIsNotNumber ()
+        {
+            ButtonOkView buttonOk = new ButtonOkView(form);
+            form.QTextbox.Text = "ddd";
+            buttonOk.ButtonRemoveOne = true;
+            buttonOk.ButtonRemoveAll = true;
+
+
+            eevent.SetView( buttonOk );
+
+            Assert.AreEqual( false, buttonOk.ButtonRemoveOne );
+            Assert.AreEqual( false, buttonOk.ButtonRemoveAll );
+        }
 
         [TestMethod]
-        public void TestMethod2()
+        public void TestVisableButtonRemoveOneAndButtonRemoveAllFromOnClickButtonOkWhenGivenQuantityAreOne ()
         {
-            Button buttonRemoveOne = new Button();
-            Button buttonRemoveAll = new Button();
             ButtonOkView buttonOk = new ButtonOkView(form);
-            buttonRemoveOne.Visible = false;
             form.QTextbox.Text = "1";
+            buttonOk.ButtonRemoveOne = true;
+            buttonOk.ButtonRemoveAll = false;
 
             eevent.SetView(buttonOk);
 
-            Assert.AreEqual(buttonRemoveOne.Visible, buttonOk.ButtonRemoveOne);
-            Assert.AreEqual(buttonRemoveAll.Visible, buttonOk.ButtonRemoveAll);
+            Assert.AreEqual(false, buttonOk.ButtonRemoveOne);
+            Assert.AreEqual(true, buttonOk.ButtonRemoveAll);
         }
     }
 }

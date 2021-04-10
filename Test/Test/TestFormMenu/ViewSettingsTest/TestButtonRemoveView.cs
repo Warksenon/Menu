@@ -8,9 +8,11 @@ namespace Test.Test.Form1.ViewSettings
 
         [TestMethod]
         public void TestViewOnClickButtonRemoveOneWithEmptyListViewOrder()
-        {
+        {           
             bool EmptyListViewOrder = true;
             ButtonRemoveOne buttonRemoveOne = new ButtonRemoveOne(form, EmptyListViewOrder);
+            buttonRemoveOne.ButtonRemoveOne = true;
+            buttonRemoveOne.ButtonRemoveAll = true;
 
             eevent.SetView(buttonRemoveOne);
 
@@ -20,9 +22,11 @@ namespace Test.Test.Form1.ViewSettings
 
         [TestMethod]
         public void TestViewOnClickButtonRemoveOneWithDishesPizzaListViewOrder()
-        {
+        {         
             bool EmptyListViewOrder = false;
             ButtonRemoveOne buttonRemoveOne = new ButtonRemoveOne(form, EmptyListViewOrder);
+            buttonRemoveOne.ButtonRemoveOne = true;
+            buttonRemoveOne.ButtonRemoveAll = true;
 
             eevent.SetView(buttonRemoveOne);
 
@@ -32,8 +36,10 @@ namespace Test.Test.Form1.ViewSettings
 
         [TestMethod]
         public void TestViewOnClickButtonRemoveAll()
-        {
+        {        
             ButtonRemoveAll buttonRemoveAll = new ButtonRemoveAll(form);
+            buttonRemoveAll.ButtonRemoveOne = true;
+            buttonRemoveAll.ButtonRemoveAll = true;
 
             eevent.SetView(buttonRemoveAll);
 

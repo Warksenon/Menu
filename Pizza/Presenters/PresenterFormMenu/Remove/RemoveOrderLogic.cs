@@ -3,10 +3,10 @@
     abstract class RemoveOrderLogic : ILogic
     {
         protected FormMenu form;
-        protected IForm1ListViewOrder lvOrder;
+        protected OnEvent action = new OnEvent();
+
         public RemoveOrderLogic(FormMenu form)
         {
-            lvOrder = form;
             this.form = form;
         }
 

@@ -119,6 +119,7 @@
     <Compile Include="Presenters\PresenterFormMail\FormMailLoad.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailPresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\BackgroundWorkerLogic.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\ButtonOkLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\ButtonPlaceOrderLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\FormMenuLabelPricePresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\FormMenuLogic.cs" />

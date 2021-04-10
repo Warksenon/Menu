@@ -2,11 +2,12 @@
 {
     class RemoveOrderAllLogic : RemoveOrderLogic
     {
-        public RemoveOrderAllLogic(FormMenu form1) : base(form1) { }
+        public RemoveOrderAllLogic(FormMenu form) : base(form) { }
 
         public override void LogicSettings()
         {
-            lvOrder.ListViewOrder.Items.Clear();
+            form.ListViewOrder.Items.Clear();
+            action.SetLogic( new Form1LabelPricePresenter( form ) );
         }
     }
 }

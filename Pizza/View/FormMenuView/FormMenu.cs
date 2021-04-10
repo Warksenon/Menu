@@ -85,8 +85,7 @@ namespace Pizza
         private void ButtonOk_Click(object sender, EventArgs e)
         {
             eevent.SetView(new ButtonOkView(this));
-            eevent.SetLogic(new FormMenuAddOrderListView(this));
-            eevent.SetLogic(new Form1LabelPricePresenter(this));
+            eevent.SetLogic(new ButtonOkLogic( this));
         }
 
         private void ListViewDish_SelectedIndexChanged(object sender, EventArgs e)
@@ -110,7 +109,6 @@ namespace Pizza
         {
             eevent.SetView(new ButtonRemoveAll(this));
             eevent.SetLogic(new RemoveOrderAllLogic(this));
-            eevent.SetLogic(new Form1LabelPricePresenter(this));
         }
 
 

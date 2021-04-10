@@ -8,22 +8,6 @@ namespace Test
     public class TestName
     {
 
-        FormMenu form = new FormMenu();
-        OnEvent eevent = new OnEvent();
-
-        [TestCase("Kawa", "0")]
-        [TestCase("Herbata", "1")]
-        [TestCase("Cola", "2")]
-        public void TestMethod1(string expectationsName, int index)
-        {
-            eevent.SetLogic(new ButtonDriksLogic(form));
-
-            Assert.AreEqual(expectationsName, form.ListViewDishes.Items[index].SubItems[0].Text);
-            Assert.AreEqual("5zł", form.ListViewDishes.Items[index].SubItems[1].Text);
-        }
-
-
-
         [TestCase("pizza", "Pizza")]
         [TestCase("denmark", "Dania główne")]
         [TestCase("soups", "Zupy")]

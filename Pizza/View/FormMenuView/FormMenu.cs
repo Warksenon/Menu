@@ -10,7 +10,7 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using Label = System.Windows.Forms.Label;
+
 
 namespace Pizza
 {

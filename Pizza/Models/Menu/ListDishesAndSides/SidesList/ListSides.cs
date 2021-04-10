@@ -9,13 +9,13 @@ namespace Pizza
         protected List<string> listSides = new List<string>();
 
         public abstract List<string> GetSides();
-      
-        protected void AddTolist( List<string> listKey )
+
+        protected void AddTolist(List<string> listKey)
         {
             foreach (var k in listKey)
             {
                 string side = Name.GetNameConfig(k);
-                listSides.Add( side );
+                listSides.Add(side);
             }
         }
     }

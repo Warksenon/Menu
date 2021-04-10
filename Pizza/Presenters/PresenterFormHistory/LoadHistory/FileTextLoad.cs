@@ -2,7 +2,7 @@
 {
     class FileTextLoad : ListViewHistory
     {
-        public FileTextLoad( FormHistory form ) : base( form ) { }
+        public FileTextLoad(FormHistory form) : base(form) { }
 
         public override void LogicSettings()
         {
@@ -12,7 +12,7 @@
         private void LoadHistroyFromTxt()
         {
             ClearAllList();
-            orderList = load.LoadOrderList( new LoadingFilesTxt() );
+            orderList = load.LoadOrderList(new LoadingFilesTxt());
             LoadLVPriceAll();
         }
     }

@@ -5,9 +5,9 @@ namespace Test
     public abstract class ViewFormMenu : TestVisibleElements
     {
         protected FormMenu form;
-        protected IOnEvent eevent = new OnEvent();
+        protected IOnEventTest eevent = new OnEventTest();
 
-        protected ViewFormMenu( FormMenu form )
+        protected ViewFormMenu(FormMenu form)
         {
             this.form = form;
         }

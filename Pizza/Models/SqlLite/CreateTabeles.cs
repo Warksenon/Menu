@@ -9,8 +9,8 @@ namespace Pizza.SqlLite
         private void CreateSqliteTables()
         {
             CreateSQLiteDatabaseFile();
-            CreateSQLitePriceAll( CreateSQLiteConnection() );
-            CreateSQLiteDishes( CreateSQLiteConnection() );
+            CreateSQLitePriceAll(CreateSQLiteConnection());
+            CreateSQLiteDishes(CreateSQLiteConnection());
         }
 
         private void CreateSQLiteDatabaseFile()
@@ -24,7 +24,7 @@ namespace Pizza.SqlLite
                 }
                 catch (Exception ex)
                 {
-                    RecordOfExceptions.Save( Convert.ToString( ex ), "CreateSQLiteDatabaseFile" );
+                    RecordOfExceptions.Save(Convert.ToString(ex), "CreateSQLiteDatabaseFile");
                 }
             }
 
@@ -32,11 +32,11 @@ namespace Pizza.SqlLite
 
             if (!fi.Exists)
             {
-                SQLiteConnection.CreateFile( folderDatabase + databaseFile );
+                SQLiteConnection.CreateFile(folderDatabase + databaseFile);
             }
         }
 
-        private void CreateSQLitePriceAll( SQLiteConnection cn )
+        private void CreateSQLitePriceAll(SQLiteConnection cn)
         {
             using (cn)
             {
@@ -50,13 +50,13 @@ namespace Pizza.SqlLite
                 }
                 catch (Exception ex)
                 {
-                    RecordOfExceptions.Save( Convert.ToString( ex ), "CreateSQLitePriceAll" );
+                    RecordOfExceptions.Save(Convert.ToString(ex), "CreateSQLitePriceAll");
                 }
                 cn.Close();
             }
         }
 
-        private void CreateSQLiteDishes( SQLiteConnection cn )
+        private void CreateSQLiteDishes(SQLiteConnection cn)
         {
             using (cn)
             {
@@ -70,7 +70,7 @@ namespace Pizza.SqlLite
                 }
                 catch (Exception ex)
                 {
-                    RecordOfExceptions.Save( Convert.ToString( ex ), "CreateSQLiteDishes" );
+                    RecordOfExceptions.Save(Convert.ToString(ex), "CreateSQLiteDishes");
                 }
                 cn.Close();
             }

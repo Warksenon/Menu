@@ -4,7 +4,7 @@ namespace Pizza.View.FormHistry.ButtonFormHistory
 {
     class CopySqlView : ButtonFormHistory
     {
-        public CopySqlView( FormHistory form ) : base( form ) { }
+        public CopySqlView(FormHistory form) : base(form) { }
 
         public override void ViewSetting()
         {

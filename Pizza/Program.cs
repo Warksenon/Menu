@@ -12,8 +12,8 @@ namespace Pizza
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault( false );
-            Application.Run( new FormMenu() );
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FormMenu());
         }
     }
 }

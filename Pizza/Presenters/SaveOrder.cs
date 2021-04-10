@@ -2,7 +2,7 @@
 {
     class SaveOrder
     {
-        public void AddOrder( IAddOrder save )
+        public void AddOrder(IAddOrder save)
         {
             save.AddOrder();
         }

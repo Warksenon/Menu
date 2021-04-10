@@ -5,7 +5,7 @@ namespace Test
     public class ButtonRemoveOne : ButtonRemove
     {
         bool checkingListOrderIfEmpty;
-        public ButtonRemoveOne( FormMenu form, bool checkingListOrderIfEmpty) : base( form ) 
+        public ButtonRemoveOne(FormMenu form, bool checkingListOrderIfEmpty) : base(form)
         {
             this.checkingListOrderIfEmpty = checkingListOrderIfEmpty;
         }
@@ -28,7 +28,7 @@ namespace Test
                 ButtonRemoveAll = true;
             }
         }
-       //Todo usunać
+        //Todo usunać
         //private bool CheckingListOrderIfEmpty()
         //{
         //    if (form.ListViewOrder.Items.Count < 1)

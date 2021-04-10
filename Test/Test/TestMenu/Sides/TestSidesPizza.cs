@@ -14,10 +14,10 @@ namespace Test.Menu.Sides
             IForm1Sides list = new ListSidesPizza();
             List<string> listSides = list.GetSides();
 
-            Assert.AreEqual( "Podwójny Ser -2zł", listSides [0] );
-            Assert.AreEqual( "Salami -2zł", listSides [1] );
-            Assert.AreEqual( "Szynka -2zł", listSides [2] );
-            Assert.AreEqual( "Pieczarki -2zł", listSides [3] );
+            Assert.AreEqual("Podwójny Ser -2zł", listSides[0]);
+            Assert.AreEqual("Salami -2zł", listSides[1]);
+            Assert.AreEqual("Szynka -2zł", listSides[2]);
+            Assert.AreEqual("Pieczarki -2zł", listSides[3]);
         }
     }
 }

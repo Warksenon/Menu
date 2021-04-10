@@ -2,7 +2,7 @@
 {
     class SaveHistory
     {
-        public void SaveList( ISaveHistory save )
+        public void SaveList(ISaveHistory save)
         {
             save.SaveHistoryOrders();
         }

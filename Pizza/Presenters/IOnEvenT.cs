@@ -2,8 +2,8 @@
 {
     public interface IOnEvent
     {
-        void SetView( IView view );
+        void SetView(IView view);
 
-        void SetLogic( ILogic logic );
+        void SetLogic(ILogic logic);
     }
 }

@@ -8,7 +8,7 @@ namespace Pizza.Models.SqlLite
     {
         List<Order> listOrder;
 
-        public SaveHistorySQL( List<Order> listOrder )
+        public SaveHistorySQL(List<Order> listOrder)
         {
             this.listOrder = listOrder;
         }
@@ -24,7 +24,7 @@ namespace Pizza.Models.SqlLite
 
             foreach (var order in listOrder)
             {
-                AddNewTaskOrder( order );
+                AddNewTaskOrder(order);
             }
         }
 
@@ -42,7 +42,7 @@ namespace Pizza.Models.SqlLite
                 }
                 catch (Exception e)
                 {
-                    RecordOfExceptions.Save( Convert.ToString( e ), "SaveHistorySQL -DELETE FROM PriceAll" );
+                    RecordOfExceptions.Save(Convert.ToString(e), "SaveHistorySQL -DELETE FROM PriceAll");
                 }
 
                 cn.Close();
@@ -65,7 +65,7 @@ namespace Pizza.Models.SqlLite
                 }
                 catch (Exception e)
                 {
-                    RecordOfExceptions.Save( Convert.ToString( e ), "SaveHistorySQL -DELETE FROM Dishes" );
+                    RecordOfExceptions.Save(Convert.ToString(e), "SaveHistorySQL -DELETE FROM Dishes");
                 }
 
                 cn.Close();

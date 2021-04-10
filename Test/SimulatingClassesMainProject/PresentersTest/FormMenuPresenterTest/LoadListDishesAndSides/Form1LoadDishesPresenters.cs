@@ -7,7 +7,7 @@ namespace Pizza.Presenters
     {
         int index = 0;
         int numbersRepetitions;
-        public Form1LoadDishesPresenters( FormMenu form, int index, int numbersRepetitions ) : base( form )
+        public Form1LoadDishesPresenters(FormMenu form, int index, int numbersRepetitions) : base(form)
         {
             this.index = index;
             this.numbersRepetitions = numbersRepetitions;
@@ -27,7 +27,7 @@ namespace Pizza.Presenters
                         Name = form.ListViewDishes.Items[x].SubItems[0].Text,
                         Price = form.ListViewDishes.Items[x].SubItems[1].Text
                     };
-                    list.Add( dish );
+                    list.Add(dish);
                 }
             }
 

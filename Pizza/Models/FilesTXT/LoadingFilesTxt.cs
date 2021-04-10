@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using Pizza.Models;
 using Pizza.Models.FilesTXT;
 using System;
 using System.Collections.Generic;
@@ -18,7 +17,7 @@ namespace Pizza
             try
             {
                 string jsonFromFile;
-                using (var reader = new StreamReader( _path ))
+                using (var reader = new StreamReader(_path))
                 {
                     jsonFromFile = reader.ReadToEnd();
                 }
@@ -28,7 +27,7 @@ namespace Pizza
             }
             catch (Exception e)
             {
-                RecordOfExceptions.Save( e.ToString(), "LoadOrderListFromTxt" );
+                RecordOfExceptions.Save(e.ToString(), "LoadOrderListFromTxt");
             }
 
             return orderList;

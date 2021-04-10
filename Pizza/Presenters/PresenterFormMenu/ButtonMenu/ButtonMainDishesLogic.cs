@@ -4,7 +4,7 @@ namespace Pizza.Presenters.PresenterFormMenu.Logic
 {
     class ButtonMainDishesLogic : MenuButton
     {
-        public ButtonMainDishesLogic( FormMenu form1 ) : base( form1 ) { }
+        public ButtonMainDishesLogic(FormMenu form1) : base(form1) { }
 
         public override void LogicSettings()
         {

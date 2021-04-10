@@ -2,7 +2,7 @@
 {
     class RemoveOrderAllLogic : RemoveOrderLogic
     {
-        public RemoveOrderAllLogic( FormMenu form1 ) : base( form1 ) { }
+        public RemoveOrderAllLogic(FormMenu form1) : base(form1) { }
 
         public override void LogicSettings()
         {

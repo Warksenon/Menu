@@ -73,7 +73,12 @@
     <Compile Include="SimulatingClassesMainProject\PresenterFormMail\FormMailLoad.cs" />
     <Compile Include="SimulatingClassesMainProject\PresenterFormMail\FormMailPresenter.cs" />
     <Compile Include="SimulatingClassesMainProject\PresenterFormMail\FormMailSavePresenters.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\OnEvent.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresenterFormMenu\ButtonMenu\ButtonDriksLogic.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresenterFormMenu\ButtonMenu\ButtonMainDishesLogic.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresenterFormMenu\ButtonMenu\ButtonPizzaLogic.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresenterFormMenu\ButtonMenu\ButtonSoupsLogic.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresenterFormMenu\ButtonMenu\MenuButton.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresentersTest\OnEventTest.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\EmailData.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\EmailMessage.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\EmailSend.cs" />
@@ -85,7 +90,7 @@
     <Compile Include="SimulatingClassesMainProject\PresentersTest\FormMenuPresenterTest\OrderGetSet\FormMenuAddOrderListViewPresenters.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\FormMenuPresenterTest\OrderGetSet\FormMenuCreatingOrder.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\FormMenuPresenterTest\OrderGetSet\IPriceAll.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\IOnEvent.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresentersTest\IOnEventTest.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\ILogic.cs" />
     <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewFormMenu.cs" />
     <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewSettings\ButtonMenu\ButtonDrinksView.cs" />
@@ -103,6 +108,7 @@
     <Compile Include="SimulatingClassesMainProject\ViewTest\IView.cs" />
     <Compile Include="SimulatingClassesMainProject\ViewTest\TestVisibleElements.cs" />
     <Compile Include="Test\TestFormMenu\Form1Test.cs" />
+    <Compile Include="Test\TestFormMenu\PresenterFormMenu\ButtonMenuLogic\TestButtonMenuLogic.cs" />
     <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonRemoveView.cs" />
     <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonOk.cs" />
     <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestMenuButtonView.cs" />
@@ -147,6 +153,7 @@
       <Name>Pizza</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

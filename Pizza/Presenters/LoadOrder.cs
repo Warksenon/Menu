@@ -4,7 +4,7 @@ namespace Pizza
 {
     public class LoadOrder
     {
-        public List<Order> LoadOrderList( ILoadHistoryOrders load )
+        public List<Order> LoadOrderList(ILoadHistoryOrders load)
         {
             return load.LoadHistory();
         }

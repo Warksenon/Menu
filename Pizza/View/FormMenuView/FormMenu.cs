@@ -28,10 +28,10 @@ namespace Pizza
 
         private IOnEvent eevent = new OnEvent();
 
-        private void Form1_Load_1( object sender, EventArgs e )
+        private void Form1_Load_1(object sender, EventArgs e)
         {
-            eevent.SetLogic( new FormMenuLogic( this ) );
-            eevent.SetView( new FormMenuView( this ) );
+            eevent.SetLogic(new FormMenuLogic(this));
+            eevent.SetView(new FormMenuView(this));
         }
 
         public ListView ListViewDishes { get => listViewDish; set => listViewDish = value; }
@@ -53,76 +53,76 @@ namespace Pizza
         public Button ButtonSubmitOrder { get => bOrder; set => bOrder = value; }
 
 
-        private void ButtonPizza_Click( object sender, EventArgs e )
+        private void ButtonPizza_Click(object sender, EventArgs e)
         {
-            eevent.SetLogic( new ButtonPizzaLogic( this ) );
-            eevent.SetView( new ButtonPizzaView( this ) );
+            eevent.SetLogic(new ButtonPizzaLogic(this));
+            eevent.SetView(new ButtonPizzaView(this));
         }
 
-        private void ButtonMainDish_Click( object sender, EventArgs e )
+        private void ButtonMainDish_Click(object sender, EventArgs e)
         {
-            eevent.SetLogic( new ButtonMainDishesLogic( this ) );
-            eevent.SetView( new ButtonMainDishesView( this ) );
+            eevent.SetLogic(new ButtonMainDishesLogic(this));
+            eevent.SetView(new ButtonMainDishesView(this));
         }
 
-        private void ButtonDrinks_Click( object sender, EventArgs e )
+        private void ButtonDrinks_Click(object sender, EventArgs e)
         {
-            eevent.SetView( new ButtonDrinksView( this ) );
-            eevent.SetLogic( new ButtonDriksLogic( this ) );
+            eevent.SetView(new ButtonDrinksView(this));
+            eevent.SetLogic(new ButtonDriksLogic(this));
         }
 
-        private void ButtonSoup_Click( object sender, EventArgs e )
+        private void ButtonSoup_Click(object sender, EventArgs e)
         {
-            eevent.SetView( new ButtonSoupsView( this ) );
-            eevent.SetLogic( new ButtonSoupsLogic( this ) );
+            eevent.SetView(new ButtonSoupsView(this));
+            eevent.SetLogic(new ButtonSoupsLogic(this));
         }
 
-        private void ButtonOrder_Click( object sender, EventArgs e )
+        private void ButtonOrder_Click(object sender, EventArgs e)
         {
-            eevent.SetLogic( new ButtonPlaceOrderLogic( this ) );
+            eevent.SetLogic(new ButtonPlaceOrderLogic(this));
         }
 
-        private void ButtonOk_Click( object sender, EventArgs e )
+        private void ButtonOk_Click(object sender, EventArgs e)
         {
-            eevent.SetView( new ButtonOkView( this ) );
-            eevent.SetLogic( new FormMenuAddOrderListView( this ) );
-            eevent.SetLogic( new Form1LabelPricePresenter( this ) );
+            eevent.SetView(new ButtonOkView(this));
+            eevent.SetLogic(new FormMenuAddOrderListView(this));
+            eevent.SetLogic(new Form1LabelPricePresenter(this));
         }
 
-        private void ListViewDish_SelectedIndexChanged( object sender, EventArgs e )
+        private void ListViewDish_SelectedIndexChanged(object sender, EventArgs e)
         {
-            eevent.SetView( new ListViewDishes( this ) );
+            eevent.SetView(new ListViewDishes(this));
         }
 
-        private void listViewOrder_SelectedIndexChanged( object sender, EventArgs e )
+        private void listViewOrder_SelectedIndexChanged(object sender, EventArgs e)
         {
             bRemoveListBox.Visible = true;
         }
 
 
-        private void ButtonRemoveListBox_Click( object sender, EventArgs e )
+        private void ButtonRemoveListBox_Click(object sender, EventArgs e)
         {
-            eevent.SetLogic( new RemoveOrderOneLogic( this ) );
-            eevent.SetView( new ButtonRemoveOne( this ) );
+            eevent.SetLogic(new RemoveOrderOneLogic(this));
+            eevent.SetView(new ButtonRemoveOne(this));
         }
 
-        private void ButtonRemoveAllListBox_Click( object sender, EventArgs e )
+        private void ButtonRemoveAllListBox_Click(object sender, EventArgs e)
         {
-            eevent.SetView( new ButtonRemoveAll( this ) );
-            eevent.SetLogic( new RemoveOrderAllLogic( this ) );
-            eevent.SetLogic( new Form1LabelPricePresenter( this ) );
+            eevent.SetView(new ButtonRemoveAll(this));
+            eevent.SetLogic(new RemoveOrderAllLogic(this));
+            eevent.SetLogic(new Form1LabelPricePresenter(this));
         }
 
 
 
-        private void AddressEmailToolStripMenuItem_Click( object sender, EventArgs e )
+        private void AddressEmailToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormMail fm = new FormMail();
             fm.ShowDialog();
             fm.Close();
         }
 
-        private void HistoryToolStripMenuItem_Click( object sender, EventArgs e )
+        private void HistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (backgroundWorker1.IsBusy != true)
             {
@@ -132,16 +132,16 @@ namespace Pizza
             }
             else
             {
-                MessageBox.Show( "Historia jeszcze nie gotowa", "Przetwarzanie danych" );
+                MessageBox.Show("Historia jeszcze nie gotowa", "Przetwarzanie danych");
             }
         }
 
-        private void backgroundWorker1_DoWork( object sender, DoWorkEventArgs e )
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             ButtonSubmitOrder.BackColor = Color.Firebrick;
         }
 
-        private void backgroundWorker1_RunWorkerCompleted( object sender, RunWorkerCompletedEventArgs e )
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             ButtonSubmitOrder.BackColor = Color.LawnGreen;
         }

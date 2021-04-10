@@ -4,7 +4,7 @@ namespace Pizza.View.FormHistry.ButtonFormHistory
 {
     class LoadSqlView : ButtonFormHistory
     {
-        public LoadSqlView( FormHistory form ) : base( form ) { }
+        public LoadSqlView(FormHistory form) : base(form) { }
 
         public override void ViewSetting()
         {

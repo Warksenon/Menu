@@ -6,7 +6,7 @@ namespace Pizza
     {
         FormMenu form;
 
-        public ButtonOkView( FormMenu form )
+        public ButtonOkView(FormMenu form)
         {
             this.form = form;
         }

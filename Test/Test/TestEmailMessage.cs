@@ -13,31 +13,31 @@ namespace Test.Test
         public void TestMethod1()
         {
             order = CreateorderWthoutSides();
-            emailMessage = new EmailMessage( order );
+            emailMessage = new EmailMessage(order);
 
-            string message = "###################################################\r\n"+
-                             "#\r\n"+
+            string message = "###################################################\r\n" +
+                             "#\r\n" +
                              "#               05.04.2021 00:10:54                \n" +
                              "#                     Cena: 20zł                  \n" +
                              "#\r\n" +
-                             "###################################################\r\n"+
-                             "###################################################\r\n"+
-                             "#\r\n"+
-                             "# Margheritta\n"+
-                             "# Cenna za danie: 20zł\n"+
-                             "#\r\n"+
-                             "###################################################\r\n"+
+                             "###################################################\r\n" +
+                             "###################################################\r\n" +
+                             "#\r\n" +
+                             "# Margheritta\n" +
+                             "# Cenna za danie: 20zł\n" +
+                             "#\r\n" +
+                             "###################################################\r\n" +
                              "Uwagi do zamówienia: \n";
 
             string result = emailMessage.WriteBill();
 
-            Assert.AreEqual( message, result );
+            Assert.AreEqual(message, result);
         }
 
-        Order CreateorderWthoutSides() 
+        Order CreateorderWthoutSides()
         {
             Order order = new Order();
-            order.ListDishes.Add( CreateDishwWthoutSides() );
+            order.ListDishes.Add(CreateDishwWthoutSides());
             order.PriceAll = CreatePriceAllWthoutSides();
             return order;
         }
@@ -67,35 +67,35 @@ namespace Test.Test
         public void TestMethod2()
         {
             order = CreateorderWithSides();
-            emailMessage = new EmailMessage( order );
+            emailMessage = new EmailMessage(order);
 
-            string message =    "###################################################\r\n" +
+            string message = "###################################################\r\n" +
                                 "#\r\n" +
                                 "#               05.04.2021 00:10:54                \n" +
                                 "#                     Cena: 28zł                  \n" +
-                                "#\r\n"+
-                                "###################################################\r\n"+
+                                "#\r\n" +
+                                "###################################################\r\n" +
                                 "###################################################\r\n" +
                                 "#\r\n" +
                                 "# Margheritta\n" +
-                                "# Podwójny Ser -2zł\r\n"+
-                                "# Salami -2zł\r\n"+
-                                "# Szynka -2zł\r\n"+
-                                "# Pieczarki -2zł\r\n"+
-                                "# Cenna za danie: 20zł\n"+
-                                "#\r\n"+
-                                "###################################################\r\n"+
+                                "# Podwójny Ser -2zł\r\n" +
+                                "# Salami -2zł\r\n" +
+                                "# Szynka -2zł\r\n" +
+                                "# Pieczarki -2zł\r\n" +
+                                "# Cenna za danie: 20zł\n" +
+                                "#\r\n" +
+                                "###################################################\r\n" +
                                 "Uwagi do zamówienia: \n";
 
             string result = emailMessage.WriteBill();
 
-            Assert.AreEqual( message, result );
+            Assert.AreEqual(message, result);
         }
 
         Order CreateorderWithSides()
         {
             Order order = new Order();
-            order.ListDishes.Add( CreateDishwWithSides() );
+            order.ListDishes.Add(CreateDishwWithSides());
             order.PriceAll = CreatePriceAllWithSides();
             return order;
         }

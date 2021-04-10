@@ -4,7 +4,6 @@ using Pizza.Presenters;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Windows.Forms;
 
 namespace Pizza
 {
@@ -15,12 +14,12 @@ namespace Pizza
         Order order;
         ListOrder listOrder = new ListOrder();
 
-        public SaveFiles( Order order )
+        public SaveFiles(Order order)
         {
             this.order = order;
         }
 
-        public SaveFiles( List<Order> listOrder )
+        public SaveFiles(List<Order> listOrder)
         {
             this.listOrder.List = listOrder;
         }
@@ -33,14 +32,14 @@ namespace Pizza
                 var customer = listOrder;
                 var jsonToWrite = JsonConvert.SerializeObject(customer, Formatting.Indented);
 
-                using (var writer = new StreamWriter( _path ))
+                using (var writer = new StreamWriter(_path))
                 {
-                    writer.Write( jsonToWrite );
+                    writer.Write(jsonToWrite);
                 }
             }
             catch (Exception ex)
             {
-                RecordOfExceptions.Save( Convert.ToString( ex ), "SaveListOrder" );
+                RecordOfExceptions.Save(Convert.ToString(ex), "SaveListOrder");
             }
         }
 
@@ -49,18 +48,18 @@ namespace Pizza
             try
             {
                 LoadHistoryToListOrder();
-                listOrder.AddOrder( order );
+                listOrder.AddOrder(order);
                 var customer = listOrder;
                 var jsonToWrite = JsonConvert.SerializeObject(customer, Formatting.Indented);
 
-                using (StreamWriter writer = new StreamWriter( (_path) ))
+                using (StreamWriter writer = new StreamWriter((_path)))
                 {
-                    writer.Write( jsonToWrite );
+                    writer.Write(jsonToWrite);
                 }
             }
             catch (Exception ex)
             {
-                RecordOfExceptions.Save( Convert.ToString( ex ), "Save" );
+                RecordOfExceptions.Save(Convert.ToString(ex), "Save");
             }
         }
 

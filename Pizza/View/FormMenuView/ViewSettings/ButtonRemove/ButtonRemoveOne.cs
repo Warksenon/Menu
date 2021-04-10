@@ -2,7 +2,7 @@
 {
     public class ButtonRemoveOne : ButtonRemove
     {
-        public ButtonRemoveOne( FormMenu form ) : base( form ) { }
+        public ButtonRemoveOne(FormMenu form) : base(form) { }
 
         public override void ViewSetting()
         {

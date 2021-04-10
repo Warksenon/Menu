@@ -7,7 +7,7 @@ namespace Pizza
         public List<Dish> LoadListDrinks()
         {
             List<string> key = new List<string> { "coffeePrice", "teaPrice", "colaPrice" };
-            AddDishesToList( key );
+            AddDishesToList(key);
             return listDisches;
         }
 

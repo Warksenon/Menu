@@ -16,10 +16,10 @@ namespace Test.Test.Form1.ViewSettings
             buttonRemoveOne.Visible = false;
             buttonRemoveAll.Visible = false;
 
-            eevent.SetView( buttonOk );
+            eevent.SetView(buttonOk);
 
-            Assert.AreEqual( buttonRemoveOne.Visible, buttonOk.ButtonRemoveOne );
-            Assert.AreEqual( buttonRemoveAll.Visible, buttonOk.ButtonRemoveAll );
+            Assert.AreEqual(buttonRemoveOne.Visible, buttonOk.ButtonRemoveOne);
+            Assert.AreEqual(buttonRemoveAll.Visible, buttonOk.ButtonRemoveAll);
         }
 
 
@@ -32,10 +32,10 @@ namespace Test.Test.Form1.ViewSettings
             buttonRemoveOne.Visible = false;
             form.QTextbox.Text = "1";
 
-            eevent.SetView( buttonOk );
+            eevent.SetView(buttonOk);
 
-            Assert.AreEqual( buttonRemoveOne.Visible, buttonOk.ButtonRemoveOne );
-            Assert.AreEqual( buttonRemoveAll.Visible, buttonOk.ButtonRemoveAll );
+            Assert.AreEqual(buttonRemoveOne.Visible, buttonOk.ButtonRemoveOne);
+            Assert.AreEqual(buttonRemoveAll.Visible, buttonOk.ButtonRemoveAll);
         }
     }
 }

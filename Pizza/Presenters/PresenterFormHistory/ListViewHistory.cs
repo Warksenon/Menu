@@ -10,7 +10,7 @@ namespace Pizza.Presenters.PresenterFormHistory
         protected static List<Order> orderList = new List<Order>();
         protected readonly LoadOrder load = new LoadOrder();
 
-        public ListViewHistory( FormHistory form )
+        public ListViewHistory(FormHistory form)
         {
             this.form = form;
         }
@@ -29,23 +29,23 @@ namespace Pizza.Presenters.PresenterFormHistory
             foreach (var price in orderList)
             {
                 ListViewItem lvi = new ListViewItem(Convert.ToString(price.PriceAll.ID));
-                lvi.SubItems.Add( price.PriceAll.Date );
-                lvi.SubItems.Add( price.PriceAll.Price );
-                lvi.SubItems.Add( price.PriceAll.Comments );
-                form.ListViewPrice.Items.Add( lvi );
+                lvi.SubItems.Add(price.PriceAll.Date);
+                lvi.SubItems.Add(price.PriceAll.Price);
+                lvi.SubItems.Add(price.PriceAll.Comments);
+                form.ListViewPrice.Items.Add(lvi);
             }
         }
 
         protected void LoadLVDishes()
         {
             form.ListViewDishes.Items.Clear();
-            foreach (var dish in orderList [form.ListViewPrice.FocusedItem.Index].ListDishes)
+            foreach (var dish in orderList[form.ListViewPrice.FocusedItem.Index].ListDishes)
             {
                 ListViewItem lvi = new ListViewItem(Convert.ToString(dish.Id));
-                lvi.SubItems.Add( dish.Name );
-                lvi.SubItems.Add( dish.Price );
-                lvi.SubItems.Add( dish.Sides );
-                form.ListViewDishes.Items.Add( lvi );
+                lvi.SubItems.Add(dish.Name);
+                lvi.SubItems.Add(dish.Price);
+                lvi.SubItems.Add(dish.Sides);
+                form.ListViewDishes.Items.Add(lvi);
             }
         }
     }

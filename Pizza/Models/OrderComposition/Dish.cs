@@ -11,27 +11,27 @@ namespace Pizza
 
         public Dish() { }
 
-        public Dish( int id )
+        public Dish(int id)
         {
             this.id = id;
         }
 
         public string Name
         {
-            get { return CheckIsNotNull( name ); }
-            set { name = CheckIsNotNull( value ); }
+            get { return CheckIsNotNull(name); }
+            set { name = CheckIsNotNull(value); }
         }
 
         public string Price
         {
-            get { return CheckIsNotNull( price ); }
-            set { price = CheckIsNotNull( value ); }
+            get { return CheckIsNotNull(price); }
+            set { price = CheckIsNotNull(value); }
         }
 
         public string Sides
         {
-            get { return CheckIsNotNull( sides ); }
-            set { sides = CheckIsNotNull( value ); }
+            get { return CheckIsNotNull(sides); }
+            set { sides = CheckIsNotNull(value); }
         }
 
         public int Id

@@ -5,7 +5,7 @@ namespace Test
 {
     public class ButtonPizzaView : ButtonMenu
     {
-        public ButtonPizzaView( FormMenu form ) : base( form ) { }
+        public ButtonPizzaView(FormMenu form) : base(form) { }
 
         public override void ViewSetting()
         {
@@ -15,7 +15,7 @@ namespace Test
 
         private void PizzaButtonSettings()
         {
-            ChengeNameLabelMenuInfo( "Pizza" );
+            ChengeNameLabelMenuInfo("Pizza");
             ButtonSeting();
             form.PizzzaButton.BackColor = Color.LawnGreen;
         }

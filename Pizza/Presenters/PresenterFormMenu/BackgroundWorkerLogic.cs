@@ -2,7 +2,6 @@
 using Pizza.Presenters.Email;
 using Pizza.View.Form1View;
 using System.Windows.Forms;
-using Pizza.Models;
 
 
 
@@ -13,7 +12,7 @@ namespace Pizza.Presenters.PresenterFormMenu.OrderGetSet
         Order order;
         string message;
 
-        public BackgroundWorkerLogic( FormMenu form ) : base( form ) { }
+        public BackgroundWorkerLogic(FormMenu form) : base(form) { }
 
         private void GetOrderFromListView()
         {
@@ -36,20 +35,20 @@ namespace Pizza.Presenters.PresenterFormMenu.OrderGetSet
 
             if (checkSendEmail)
             {
-                SaveOrder( order );
-                MessageBox.Show( "Zamówienie zostało złożone" );
+                SaveOrder(order);
+                MessageBox.Show("Zamówienie zostało złożone");
             }
             else
             {
-                MessageBox.Show( "Wysłanie wiadomości nie powiodło się. Problem z adres e-mail lub z połaczeniem internetowym" );
+                MessageBox.Show("Wysłanie wiadomości nie powiodło się. Problem z adres e-mail lub z połaczeniem internetowym");
             }
         }
 
-        private void SaveOrder( Order order )
+        private void SaveOrder(Order order)
         {
             SaveOrder save = new SaveOrder();
-            save.AddOrder( new AddOrderSQL( order ) );
-            save.AddOrder( new SaveFiles( order ) );
+            save.AddOrder(new AddOrderSQL(order));
+            save.AddOrder(new SaveFiles(order));
         }
     }
 }

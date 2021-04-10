@@ -23,9 +23,9 @@ namespace Pizza.Models.FilesTXT
             }
         }
 
-        public void AddOrder( Order order )
+        public void AddOrder(Order order)
         {
-            List.Add( order );
+            List.Add(order);
         }
     }
 }

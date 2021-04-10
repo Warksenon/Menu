@@ -1,5 +1,4 @@
-﻿using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Pizza
 {
@@ -8,7 +7,7 @@ namespace Pizza
         private List<string> LoadSideMainDish()
         {
             List<string> listKey = new List<string> { "barPrice", "setOfSaucesPrice" };
-            AddTolist( listKey );
+            AddTolist(listKey);
 
             return listSides;
         }

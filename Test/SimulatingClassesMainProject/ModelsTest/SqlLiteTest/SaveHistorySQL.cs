@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Pizza;
+using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
-using Pizza;
 
 namespace Test
 {
@@ -9,7 +9,7 @@ namespace Test
     {
         List<Order> listOrder;
 
-        public SaveHistorySQL( List<Order> listOrder )
+        public SaveHistorySQL(List<Order> listOrder)
         {
             this.listOrder = listOrder;
         }
@@ -25,7 +25,7 @@ namespace Test
 
             foreach (var order in listOrder)
             {
-                AddNewTaskOrder( order );
+                AddNewTaskOrder(order);
             }
         }
 
@@ -43,7 +43,7 @@ namespace Test
                 }
                 catch (Exception e)
                 {
-                    RecordOfExceptions.Save( Convert.ToString( e ), "SaveHistorySQL -DELETE FROM PriceAll" );
+                    RecordOfExceptions.Save(Convert.ToString(e), "SaveHistorySQL -DELETE FROM PriceAll");
                 }
 
                 cn.Close();
@@ -66,7 +66,7 @@ namespace Test
                 }
                 catch (Exception e)
                 {
-                    RecordOfExceptions.Save( Convert.ToString( e ), "SaveHistorySQL -DELETE FROM Dishes" );
+                    RecordOfExceptions.Save(Convert.ToString(e), "SaveHistorySQL -DELETE FROM Dishes");
                 }
 
                 cn.Close();

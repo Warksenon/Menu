@@ -1,5 +1,5 @@
-﻿using Pizza.Presenters;
-using Pizza;
+﻿using Pizza;
+using Pizza.Presenters;
 
 namespace Test
 {
@@ -7,14 +7,14 @@ namespace Test
     {
         Order order;
 
-        public AddOrderSQL( Order order )
+        public AddOrderSQL(Order order)
         {
             this.order = order;
         }
 
         public void AddOrder()
         {
-            AddNewTaskOrder( order );
+            AddNewTaskOrder(order);
         }
     }
 }

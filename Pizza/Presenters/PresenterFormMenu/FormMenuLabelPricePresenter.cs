@@ -8,9 +8,9 @@ namespace Pizza.Presenters.PresenterFormMenu
         IPriceAll price;
         IFormMenuLabelPrice label;
         //TODO zmienić na logike
-        public Form1LabelPricePresenter( FormMenu form1 )
+        public Form1LabelPricePresenter(FormMenu form1)
         {
-            price = new FormMenuAddOrderListView( form1 );
+            price = new FormMenuAddOrderListView(form1);
             label = form1;
         }
 

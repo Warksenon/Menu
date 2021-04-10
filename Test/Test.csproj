@@ -73,7 +73,7 @@
     <Compile Include="SimulatingClassesMainProject\PresenterFormMail\FormMailLoad.cs" />
     <Compile Include="SimulatingClassesMainProject\PresenterFormMail\FormMailPresenter.cs" />
     <Compile Include="SimulatingClassesMainProject\PresenterFormMail\FormMailSavePresenters.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\Aktion.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresentersTest\OnEvent.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\EmailData.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\EmailMessage.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\EmailSend.cs" />
@@ -85,8 +85,8 @@
     <Compile Include="SimulatingClassesMainProject\PresentersTest\FormMenuPresenterTest\OrderGetSet\FormMenuAddOrderListViewPresenters.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\FormMenuPresenterTest\OrderGetSet\FormMenuCreatingOrder.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\FormMenuPresenterTest\OrderGetSet\IPriceAll.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\IAction.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\ILogiccs.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresentersTest\IOnEvent.cs" />
+    <Compile Include="SimulatingClassesMainProject\PresentersTest\ILogic.cs" />
     <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewFormMenu.cs" />
     <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewSettings\ButtonMenu\ButtonDrinksView.cs" />
     <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewSettings\ButtonMenu\ButtonMainDishesSetting.cs" />
@@ -103,9 +103,9 @@
     <Compile Include="SimulatingClassesMainProject\ViewTest\IView.cs" />
     <Compile Include="SimulatingClassesMainProject\ViewTest\TestVisibleElements.cs" />
     <Compile Include="Test\TestFormMenu\Form1Test.cs" />
-    <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonMenu.cs" />
-    <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonRemove.cs" />
+    <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonRemoveView.cs" />
     <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonOk.cs" />
+    <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestMenuButtonView.cs" />
     <Compile Include="Test\TestMenu\Dishes\TestListDrinks.cs" />
     <Compile Include="Test\TestMenu\Dishes\TestListSoups.cs" />
     <Compile Include="Test\TestMenu\Sides\TestSidesMainDishes.cs" />

@@ -7,7 +7,6 @@ namespace Test
     [TestFixture]
     public class TestName
     {
-
         [TestCase( "pizza", "Pizza" )]
         [TestCase( "denmark", "Dania główne" )]
         [TestCase( "soups", "Zupy" )]

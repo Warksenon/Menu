@@ -6,23 +6,24 @@ namespace Test
     [TestClass]
     public class TestRegistry
     {
-        IAction eevent = new Aktion();
+        IOnEvent eevent = new OnEvent();
         FormMail form = new FormMail();
         ISaveEmailData save = new SaveRegistry();
         ILoadEmailData load = new LoadRegistry();
 
         [TestMethod]
-        public void TestSaveRegisrty()
+        public void TestSaveRegisrtyAndLoad()
         {
             EmailData emailSave = CreateEmailData();
             save.Save( emailSave );
+
             EmailData emailLoad = load.Load();
 
-            Assert.AreEqual( emailLoad.Sender, emailSave.Sender );
-            Assert.AreEqual( emailLoad.Recipient, emailSave.Recipient );
-            Assert.AreEqual( emailLoad.Password, emailSave.Password );
-            Assert.AreEqual( emailLoad.Smtp, emailSave.Smtp );
-            Assert.AreEqual( emailLoad.Port, emailSave.Port );
+            Assert.AreEqual("orders39@gmail.com", emailLoad.Sender);
+            Assert.AreEqual("oooorders39@gmail.com", emailLoad.Recipient );
+            Assert.AreEqual("password", emailLoad.Password );
+            Assert.AreEqual("smtp.wp.com", emailLoad.Smtp );
+            Assert.AreEqual("537", emailLoad.Port );
         }
 
         EmailData CreateEmailData()
@@ -39,45 +40,35 @@ namespace Test
         [TestMethod]
         public void TestSetTextBoxWithFormMailAndLoadRegistry()
         {
-            EmailData emailLoad = load.Load();
+            EmailData emailSave = CreateEmailData();
+            save.Save(emailSave);
+
             eevent.SetLogic( new FormMailLoad( form ) );
 
-            Assert.AreEqual( emailLoad.Sender, form.TextBoxSender.Text );
-            Assert.AreEqual( emailLoad.Recipient, form.TextBoxRecipient.Text );
-            Assert.AreEqual( emailLoad.Password, form.TextBoxPassword.Text );
-            Assert.AreEqual( emailLoad.Smtp, form.TextBoxSmtp.Text );
-            Assert.AreEqual( emailLoad.Port, form.TextBoxPort.Text );
+            Assert.AreEqual("orders39@gmail.com", form.TextBoxSender.Text );
+            Assert.AreEqual("oooorders39@gmail.com", form.TextBoxRecipient.Text );
+            Assert.AreEqual("password", form.TextBoxPassword.Text );
+            Assert.AreEqual("smtp.wp.com", form.TextBoxSmtp.Text );
+            Assert.AreEqual("537", form.TextBoxPort.Text );
         }
 
         [TestMethod]
         public void TestGetTextBoxWithFormMailAndSaveRegistry()
-        {
-            EmailData emailSave = CreateEmailData2();
-            form.TextBoxSender.Text = emailSave.Sender;
-            form.TextBoxRecipient.Text = emailSave.Recipient;
-            form.TextBoxPassword.Text = emailSave.Password;
-            form.TextBoxSmtp.Text = emailSave.Smtp;
-            form.TextBoxPort.Text = emailSave.Port;
-
+        {           
+            form.TextBoxSender.Text = "aaorders39@gmail.com";
+            form.TextBoxRecipient.Text = "aaoooorders39@gmail.com";
+            form.TextBoxPassword.Text = "aapassword";
+            form.TextBoxSmtp.Text = "aasmtp.wp.com";
+            form.TextBoxPort.Text = "527";
             eevent.SetLogic( new FormMailSavePresenters( form ) );
+
             EmailData emailLoad = load.Load();
 
-            Assert.AreEqual( emailLoad.Sender, form.TextBoxSender.Text );
-            Assert.AreEqual( emailLoad.Recipient, form.TextBoxRecipient.Text );
-            Assert.AreEqual( emailLoad.Password, form.TextBoxPassword.Text );
-            Assert.AreEqual( emailLoad.Smtp, form.TextBoxSmtp.Text );
-            Assert.AreEqual( emailLoad.Port, form.TextBoxPort.Text );
-        }
-
-        EmailData CreateEmailData2()
-        {
-            EmailData email = new EmailData();
-            email.Sender = "aaorders39@gmail.com";
-            email.Recipient = "aaoooorders39@gmail.com";
-            email.Password = "aapassword";
-            email.Smtp = "aasmtp.wp.com";
-            email.Port = "527";
-            return email;
-        }
+            Assert.AreEqual("aaorders39@gmail.com", emailLoad.Sender );
+            Assert.AreEqual("aaoooorders39@gmail.com", emailLoad.Recipient );
+            Assert.AreEqual("aapassword", emailLoad.Password);
+            Assert.AreEqual("aasmtp.wp.com", emailLoad.Smtp );
+            Assert.AreEqual("527", emailLoad.Port );
+        }     
     }
 }

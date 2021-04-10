@@ -4,7 +4,11 @@ namespace Test
 {
     public class ButtonRemoveOne : ButtonRemove
     {
-        public ButtonRemoveOne( FormMenu form ) : base( form ) { }
+        bool checkingListOrderIfEmpty;
+        public ButtonRemoveOne( FormMenu form, bool checkingListOrderIfEmpty) : base( form ) 
+        {
+            this.checkingListOrderIfEmpty = checkingListOrderIfEmpty;
+        }
 
         public override void ViewSetting()
         {
@@ -13,7 +17,7 @@ namespace Test
 
         private void SetSettingsButton()
         {
-            if (CheckingListOrderIfEmpty())
+            if (checkingListOrderIfEmpty)
             {
                 RemoveAll();
             }
@@ -21,15 +25,16 @@ namespace Test
             {
                 form.ButtonRemoveOne.Visible = false;
                 ButtonRemoveOne = false;
+                ButtonRemoveAll = true;
             }
         }
-
-        private bool CheckingListOrderIfEmpty()
-        {
-            if (form.ListViewOrder.Items.Count < 1)
-                return true;
-            else
-                return false;
-        }
+       //Todo usunać
+        //private bool CheckingListOrderIfEmpty()
+        //{
+        //    if (form.ListViewOrder.Items.Count < 1)
+        //        return true;
+        //    else
+        //        return false;
+        //}
     }
 }

@@ -1,17 +1,19 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Windows.Forms;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using Pizza;
-using System.Windows.Forms;
 
 namespace Test
 {
     [TestClass]
     public class TestFormMailPresenters : IFormMail
     {
-        TextBox tSender = new TextBox();
-        TextBox tRecipient = new TextBox();
-        TextBox tPassword = new TextBox();
-        TextBox tSmtp = new TextBox();
-        TextBox tPort = new TextBox();
+        private TextBox tSender = new TextBox();
+        private TextBox tRecipient = new TextBox();
+        private TextBox tPassword = new TextBox();
+        private TextBox tSmtp = new TextBox();
+        private TextBox tPort = new TextBox();
 
         public TextBox TextBoxSender { get => tSender; set => tSender = value; }
         public TextBox TextBoxRecipient { get => tRecipient; set => tRecipient = value; }

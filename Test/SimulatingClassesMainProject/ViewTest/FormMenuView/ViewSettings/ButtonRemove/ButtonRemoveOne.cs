@@ -4,8 +4,8 @@ namespace Test
 {
     public class ButtonRemoveOne : ButtonRemove
     {
-        bool checkingListOrderIfEmpty;
-        public ButtonRemoveOne(FormMenu form, bool checkingListOrderIfEmpty) : base(form)
+        private readonly bool checkingListOrderIfEmpty;
+        public ButtonRemoveOne( FormMenu form, bool checkingListOrderIfEmpty ) : base( form )
         {
             this.checkingListOrderIfEmpty = checkingListOrderIfEmpty;
         }

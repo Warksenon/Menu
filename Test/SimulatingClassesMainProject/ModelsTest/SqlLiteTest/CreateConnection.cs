@@ -2,7 +2,7 @@
 
 namespace Test
 {
-    abstract class CreateConnection
+    internal abstract class CreateConnection
     {
         protected const string folderDatabase = @"c:\SQLTEST\Konsola\sqlite\";
         protected const string databaseFile = "SqlLitePizza.sqlite";

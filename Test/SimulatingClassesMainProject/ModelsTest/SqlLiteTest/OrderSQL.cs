@@ -1,14 +1,15 @@
-﻿using Pizza;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 
+using Pizza;
+
 namespace Test
 {
-    abstract class OrderSQL : CreateConnection
+    internal abstract class OrderSQL : CreateConnection
     {
-        protected void AddNewTaskOrder(Order order)
+        protected void AddNewTaskOrder( Order order )
         {
             PriceAll priceAll = order.PriceAll;
             priceAll.ID = FindingMaxIdCena();
@@ -26,10 +27,10 @@ namespace Test
                 SQLiteParameter param4 = new SQLiteParameter("param4", DbType.String);
 
                 SQLiteCommand cmd = new SQLiteCommand(sql, cn);
-                cmd.Parameters.Add(param1);
-                cmd.Parameters.Add(param2);
-                cmd.Parameters.Add(param3);
-                cmd.Parameters.Add(param4);
+                cmd.Parameters.Add( param1 );
+                cmd.Parameters.Add( param2 );
+                cmd.Parameters.Add( param3 );
+                cmd.Parameters.Add( param4 );
 
 
                 param1.Value = order.PriceAll.ID;
@@ -43,15 +44,15 @@ namespace Test
                 }
                 catch (Exception e)
                 {
-                    RecordOfExceptions.Save(Convert.ToString(e), "InsertAndQuestionSQL - AddNewTaskOrder");
+                    RecordOfExceptions.Save( Convert.ToString( e ), "InsertAndQuestionSQL - AddNewTaskOrder" );
                 }
                 cn.Close();
-                AddNewTaskDish(order);
+                AddNewTaskDish( order );
             }
 
         }
 
-        private void AddNewTaskDish(Order order)
+        private void AddNewTaskDish( Order order )
         {
             SQLiteConnection cn = CreateSQLiteConnection();
             using (cn)
@@ -70,10 +71,10 @@ namespace Test
 
 
                     SQLiteCommand cmd = new SQLiteCommand(sql, cn);
-                    cmd.Parameters.Add(param1);
-                    cmd.Parameters.Add(param2);
-                    cmd.Parameters.Add(param3);
-                    cmd.Parameters.Add(param4);
+                    cmd.Parameters.Add( param1 );
+                    cmd.Parameters.Add( param2 );
+                    cmd.Parameters.Add( param3 );
+                    cmd.Parameters.Add( param4 );
 
                     param1.Value = order.PriceAll.ID;
                     param2.Value = dania.Name;
@@ -86,7 +87,7 @@ namespace Test
                     }
                     catch (Exception e)
                     {
-                        RecordOfExceptions.Save(Convert.ToString(e), "InsertAndQuestionSQL - AddNewTaskDish");
+                        RecordOfExceptions.Save( Convert.ToString( e ), "InsertAndQuestionSQL - AddNewTaskDish" );
                     }
                 }
                 cn.Close();
@@ -102,7 +103,7 @@ namespace Test
                 string findingMaxIdPrice = "SELECT  MAX(id) FROM " + Name.PriceAll;
                 try
                 {
-                    using (SQLiteCommand cmd = new SQLiteCommand(findingMaxIdPrice, cn))
+                    using (SQLiteCommand cmd = new SQLiteCommand( findingMaxIdPrice, cn ))
                     {
                         cn.Open();
                         SQLiteDataReader dr = cmd.ExecuteReader();
@@ -113,7 +114,7 @@ namespace Test
                                 //Did not close the connection, in the case of an epty table
                                 try
                                 {
-                                    id = Convert.ToInt32(dr[0]);
+                                    id = Convert.ToInt32( dr [0] );
 
                                 }
                                 catch
@@ -128,7 +129,7 @@ namespace Test
                 }
                 catch (Exception e)
                 {
-                    RecordOfExceptions.Save(Convert.ToString(e), "InsertAndQuestionSQL - FindingMaxIdCena");
+                    RecordOfExceptions.Save( Convert.ToString( e ), "InsertAndQuestionSQL - FindingMaxIdCena" );
                     id = 1;
                     cn.Close();
                 }

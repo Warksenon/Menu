@@ -2,7 +2,7 @@
 
 namespace Pizza.View.Form1
 {
-    interface IFormMenuLabelPrice
+    internal interface IFormMenuLabelPrice
     {
         Label LabelPrice { get; set; }
     }

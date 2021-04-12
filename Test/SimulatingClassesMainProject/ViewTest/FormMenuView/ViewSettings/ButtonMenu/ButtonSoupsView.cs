@@ -1,11 +1,12 @@
-﻿using Pizza;
-using System.Drawing;
+﻿using System.Drawing;
+
+using Pizza;
 
 namespace Test
 {
     public class ButtonSoupsView : ButtonMenu
     {
-        public ButtonSoupsView(FormMenu form) : base(form) { }
+        public ButtonSoupsView( FormMenu form ) : base( form ) { }
 
         public override void ViewSetting()
         {
@@ -16,7 +17,7 @@ namespace Test
         private void SoupsButtonSettings()
         {
             ButtonSeting();
-            ChengeNameLabelMenuInfo("Zupy");
+            ChengeNameLabelMenuInfo( "Zupy" );
             form.SoupButton.BackColor = Color.LawnGreen;
         }
     }

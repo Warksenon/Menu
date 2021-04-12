@@ -2,7 +2,7 @@
 
 namespace Pizza
 {
-    interface IForm1ChecedListBoxSides
+    internal interface IForm1ChecedListBoxSides
     {
         CheckedListBox CheckedListBoxSide { get; set; }
     }

@@ -2,7 +2,7 @@
 
 namespace Pizza.SqlLite
 {
-    abstract class CreateConnection
+    internal abstract class CreateConnection
     {
         protected const string folderDatabase = @"c:\SQL\Konsola\sqlite\";
         protected const string databaseFile = "SqlLitePizza.sqlite";

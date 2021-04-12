@@ -1,12 +1,13 @@
-﻿using Pizza.Presenters.PresenterFormMenu.OrderGetSet;
+﻿using System.Windows.Forms;
+
+using Pizza.Presenters.PresenterFormMenu.OrderGetSet;
 using Pizza.View.Form1View;
-using System.Windows.Forms;
 
 namespace Pizza.Presenters.PresenterFormMenu
 {
-    class ButtonPlaceOrderLogic : ViewFormMenu, ILogic
+    internal class ButtonPlaceOrderLogic : ViewFormMenu, ILogic
     {
-        public ButtonPlaceOrderLogic(FormMenu form) : base(form) { }
+        public ButtonPlaceOrderLogic( FormMenu form ) : base( form ) { }
 
         public void LogicSettings()
         {
@@ -20,16 +21,16 @@ namespace Pizza.Presenters.PresenterFormMenu
                 if (form.BackgroundWorker.IsBusy != true)
                 {
                     form.BackgroundWorker.RunWorkerAsync();
-                    eevent.SetLogic(new BackgroundWorkerLogic(form));
+                    eevent.SetLogic( new BackgroundWorkerLogic( form ) );
                 }
                 else
                 {
-                    MessageBox.Show("Przetwarzanie danych proszę czekać");
+                    MessageBox.Show( "Przetwarzanie danych proszę czekać" );
                 }
             }
             else
             {
-                MessageBox.Show("Proszę wybrać produkt");
+                MessageBox.Show( "Proszę wybrać produkt" );
             }
         }
 

@@ -7,7 +7,7 @@ namespace Pizza.View.Form1View
         protected FormMenu form;
         protected IOnEvent eevent = new OnEvent();
 
-        protected ViewFormMenu(FormMenu form)
+        protected ViewFormMenu( FormMenu form )
         {
             this.form = form;
         }

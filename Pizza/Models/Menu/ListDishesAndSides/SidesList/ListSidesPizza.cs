@@ -7,7 +7,7 @@ namespace Pizza
         public List<string> LoadSidePizza()
         {
             List<string> listKey = new List<string> { "doubelCheesePrice", "salamiPrice", "hamPrice", "mushroomsPrice" };
-            AddTolist(listKey);
+            AddTolist( listKey );
 
             return listSides;
         }

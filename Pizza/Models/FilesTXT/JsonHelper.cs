@@ -2,9 +2,9 @@
 
 namespace Pizza.Models.FilesTXT
 {
-    class JsonHelper
+    internal class JsonHelper
     {
-        List<Order> list;
+        private List<Order> list;
 
         public JsonHelper()
         {
@@ -23,9 +23,9 @@ namespace Pizza.Models.FilesTXT
             }
         }
 
-        public void AddOrder(Order order)
+        public void AddOrder( Order order )
         {
-            List.Add(order);
+            List.Add( order );
         }
     }
 }

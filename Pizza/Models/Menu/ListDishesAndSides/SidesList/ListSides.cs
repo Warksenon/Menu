@@ -1,6 +1,7 @@
-﻿using Pizza.Models.Menu.ListDishesAndSides;
+﻿using System.Collections.Generic;
+
+using Pizza.Models.Menu.ListDishesAndSides;
 using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
-using System.Collections.Generic;
 
 namespace Pizza
 {
@@ -10,12 +11,12 @@ namespace Pizza
 
         public abstract List<string> GetSides();
 
-        protected void AddTolist(List<string> listKey)
+        protected void AddTolist( List<string> listKey )
         {
             foreach (var k in listKey)
             {
                 string side = Name.GetNameConfig(k);
-                listSides.Add(side);
+                listSides.Add( side );
             }
         }
     }

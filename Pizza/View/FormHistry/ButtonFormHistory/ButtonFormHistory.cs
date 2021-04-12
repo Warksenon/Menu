@@ -2,11 +2,11 @@
 
 namespace Pizza.View.FormHistry.ButtonFormHistory
 {
-    abstract class ButtonFormHistory : IView
+    internal abstract class ButtonFormHistory : IView
     {
         protected FormHistory form;
 
-        public ButtonFormHistory(FormHistory form)
+        public ButtonFormHistory( FormHistory form )
         {
             this.form = form;
         }

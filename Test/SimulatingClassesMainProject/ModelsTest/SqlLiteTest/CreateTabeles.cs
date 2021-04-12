@@ -1,17 +1,18 @@
-﻿using Pizza;
-using System;
+﻿using System;
 using System.Data.SQLite;
 using System.IO;
 
+using Pizza;
+
 namespace Test
 {
-    class CreateSQLiteTables : CreateConnection, ILogic
+    internal class CreateSQLiteTables : CreateConnection, ILogic
     {
         private void CreateSqliteTables()
         {
             CreateSQLiteDatabaseFile();
-            CreateSQLitePriceAll(CreateSQLiteConnection());
-            CreateSQLiteDishes(CreateSQLiteConnection());
+            CreateSQLitePriceAll( CreateSQLiteConnection() );
+            CreateSQLiteDishes( CreateSQLiteConnection() );
         }
 
         private void CreateSQLiteDatabaseFile()
@@ -25,7 +26,7 @@ namespace Test
                 }
                 catch (Exception ex)
                 {
-                    RecordOfExceptions.Save(Convert.ToString(ex), "CreateSQLiteDatabaseFile");
+                    RecordOfExceptions.Save( Convert.ToString( ex ), "CreateSQLiteDatabaseFile" );
                 }
             }
 
@@ -33,11 +34,11 @@ namespace Test
 
             if (!fi.Exists)
             {
-                SQLiteConnection.CreateFile(folderDatabase + databaseFile);
+                SQLiteConnection.CreateFile( folderDatabase + databaseFile );
             }
         }
 
-        private void CreateSQLitePriceAll(SQLiteConnection cn)
+        private void CreateSQLitePriceAll( SQLiteConnection cn )
         {
             using (cn)
             {
@@ -51,13 +52,13 @@ namespace Test
                 }
                 catch (Exception ex)
                 {
-                    RecordOfExceptions.Save(Convert.ToString(ex), "CreateSQLitePriceAll");
+                    RecordOfExceptions.Save( Convert.ToString( ex ), "CreateSQLitePriceAll" );
                 }
                 cn.Close();
             }
         }
 
-        private void CreateSQLiteDishes(SQLiteConnection cn)
+        private void CreateSQLiteDishes( SQLiteConnection cn )
         {
             using (cn)
             {
@@ -71,7 +72,7 @@ namespace Test
                 }
                 catch (Exception ex)
                 {
-                    RecordOfExceptions.Save(Convert.ToString(ex), "CreateSQLiteDishes");
+                    RecordOfExceptions.Save( Convert.ToString( ex ), "CreateSQLiteDishes" );
                 }
                 cn.Close();
             }

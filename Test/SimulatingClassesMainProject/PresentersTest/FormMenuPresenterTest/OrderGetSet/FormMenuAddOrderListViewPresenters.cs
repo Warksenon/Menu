@@ -1,19 +1,20 @@
-﻿using Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1;
-using Pizza.Presenters.PresenterFormMenu.OrderGetSet;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
+
+using Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1;
+using Pizza.Presenters.PresenterFormMenu.OrderGetSet;
 
 namespace Pizza.Presenters
 {
-    class FormMenuAddOrderListViewPresenters : Form1ListViewOrder, ILogic
+    internal class FormMenuAddOrderListViewPresenters : Form1ListViewOrder, ILogic
     {
-        Form1ListDishes lvDishes;
-        Form1SidesDish chblSides;
+        private readonly Form1ListDishes lvDishes;
+        private readonly Form1SidesDish chblSides;
 
-        public FormMenuAddOrderListViewPresenters(FormMenu form1) : base(form1)
+        public FormMenuAddOrderListViewPresenters( FormMenu form1 ) : base( form1 )
         {
-            lvDishes = new Form1ListDishes(form1);
-            chblSides = new Form1SidesDish(form1);
+            lvDishes = new Form1ListDishes( form1 );
+            chblSides = new Form1SidesDish( form1 );
         }
 
 
@@ -31,30 +32,30 @@ namespace Pizza.Presenters
             foreach (var dish in listDishes)
             {
                 ListViewItem lvi;
-                if (HelpFinding.CheckStringIsEmpty(allSidesToGether))
+                if (HelpFinding.CheckStringIsEmpty( allSidesToGether ))
                 {
-                    lvi = new ListViewItem(dish.Name);
-                    lvi.SubItems.Add(allSidesToGether);
-                    lvi.SubItems.Add(dish.Price);
+                    lvi = new ListViewItem( dish.Name );
+                    lvi.SubItems.Add( allSidesToGether );
+                    lvi.SubItems.Add( dish.Price );
                 }
                 else
                 {
                     string priceAll = AddPriceDisheAndSide(listDishes, listSides);
-                    lvi = new ListViewItem(dish.Name + " - " + dish.Price);
-                    lvi.SubItems.Add(allSidesToGether);
-                    lvi.SubItems.Add(priceAll);
+                    lvi = new ListViewItem( dish.Name + " - " + dish.Price );
+                    lvi.SubItems.Add( allSidesToGether );
+                    lvi.SubItems.Add( priceAll );
                 }
 
-                form.ListViewOrder.Items.Add(lvi);
+                form.ListViewOrder.Items.Add( lvi );
             }
         }
 
-        private string AddAllSides(List<string> listSides)
+        private string AddAllSides( List<string> listSides )
         {
             string allSidesToGether = "";
             for (int i = 0; i < listSides.Count; i++)
             {
-                allSidesToGether += listSides[i];
+                allSidesToGether += listSides [i];
                 if (i == listSides.Count)
                 {
                     allSidesToGether += ".";
@@ -68,7 +69,7 @@ namespace Pizza.Presenters
             return allSidesToGether;
         }
 
-        private string AddPriceDisheAndSide(List<Dish> listDishes, List<string> listSides)
+        private string AddPriceDisheAndSide( List<Dish> listDishes, List<string> listSides )
         {
             double priceSides = 0;
             double price;
@@ -76,7 +77,7 @@ namespace Pizza.Presenters
             foreach (var side in listSides)
             {
                 string textPrice = side;
-                price = FindPrice(textPrice);
+                price = FindPrice( textPrice );
                 priceSides += price;
             }
 

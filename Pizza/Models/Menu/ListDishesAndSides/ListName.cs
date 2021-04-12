@@ -2,7 +2,7 @@
 {
     public abstract class ListName
     {
-        protected string FindName(string nameAndPrice)
+        protected string FindName( string nameAndPrice )
         {
             int index = nameAndPrice.IndexOf("-") - 1;
             if (index == -1)

@@ -4,7 +4,7 @@ namespace Test
 {
     public class FormMailLoad : FormMailPresenter
     {
-        public FormMailLoad(FormMail mail) : base(mail) { }
+        public FormMailLoad( FormMail mail ) : base( mail ) { }
 
         public override void LogicSettings()
         {

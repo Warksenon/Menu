@@ -1,6 +1,6 @@
 ﻿namespace Pizza.Presenters.PresenterFormMenu.OrderGetSet
 {
-    interface IPriceAll
+    internal interface IPriceAll
     {
         double GetPricaAll();
     }

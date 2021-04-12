@@ -2,9 +2,9 @@
 
 namespace Pizza.Presenters.PresenterFormHistory.LoadHistory
 {
-    class SqlLoad : ListViewHistory
+    internal class SqlLoad : ListViewHistory
     {
-        public SqlLoad(FormHistory form) : base(form) { }
+        public SqlLoad( FormHistory form ) : base( form ) { }
 
         public override void LogicSettings()
         {
@@ -14,7 +14,7 @@ namespace Pizza.Presenters.PresenterFormHistory.LoadHistory
         private void LoadHistoryFromSQL()
         {
             ClearAllList();
-            orderList = load.LoadOrderList(new LoadHistorySQL());
+            orderList = load.LoadOrderList( new LoadHistorySQL() );
             LoadLVPriceAll();
         }
     }

@@ -1,11 +1,12 @@
-﻿using Pizza;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 
+using Pizza;
+
 namespace Test
 {
-    class LoadHistorySQL : CreateConnection, ILoadHistoryOrders
+    internal class LoadHistorySQL : CreateConnection, ILoadHistoryOrders
     {
         public List<Order> LoadHistory()
         {
@@ -26,20 +27,20 @@ namespace Test
                     SQLiteDataReader dr = cmd.ExecuteReader();
                     if (dr.HasRows)
                     {
-                        AddOrdersToListOrders(dr, listorder);
+                        AddOrdersToListOrders( dr, listorder );
                         dr.Close();
                     }
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("Błąd przy pobieraniu listy zamowień\n" + e);
+                    Console.WriteLine( "Błąd przy pobieraniu listy zamowień\n" + e );
                 }
                 cn.Close();
             }
             return listorder;
         }
 
-        private void AddOrdersToListOrders(SQLiteDataReader dr, List<Order> listorder)
+        private void AddOrdersToListOrders( SQLiteDataReader dr, List<Order> listorder )
         {
             while (dr.Read())
             {
@@ -54,8 +55,8 @@ namespace Test
                         Comments = Convert.ToString(dr[3])
                     };
                     order.PriceAll = price;
-                    order = LoadDishes(Convert.ToString(price.ID), order);
-                    listorder.Add(order);
+                    order = LoadDishes( Convert.ToString( price.ID ), order );
+                    listorder.Add( order );
                 }
                 catch
                 {
@@ -64,7 +65,7 @@ namespace Test
             }
         }
 
-        private Order LoadDishes(string num, Order order)
+        private Order LoadDishes( string num, Order order )
         {
             SQLiteConnection cn = CreateSQLiteConnection();
             using (cn)
@@ -74,19 +75,19 @@ namespace Test
                 {
                     cn.Open();
                     SQLiteCommand cmd = new SQLiteCommand(qIdCeny, cn);
-                    AddDihes(order, cmd);
+                    AddDihes( order, cmd );
                     cmd.Cancel();
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e);
+                    Console.WriteLine( e );
                 }
                 cn.Close();
             }
             return order;
         }
 
-        private void AddDihes(Order order, SQLiteCommand cmd)
+        private void AddDihes( Order order, SQLiteCommand cmd )
         {
             SQLiteDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
@@ -103,7 +104,7 @@ namespace Test
                             Price = Convert.ToString(dr[3]),
                             Sides = Convert.ToString(dr[4])
                         };
-                        order.AddDishToListDisch(dish);
+                        order.AddDishToListDisch( dish );
                     }
                     catch
                     {

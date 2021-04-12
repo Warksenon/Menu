@@ -4,7 +4,7 @@ namespace Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1
 {
     public class Form1SidesDish : FormMenuQuantity
     {
-        public Form1SidesDish(FormMenu form) : base(form) { }
+        public Form1SidesDish( FormMenu form ) : base( form ) { }
 
         public List<string> GetListCheckedSides()
         {
@@ -12,9 +12,10 @@ namespace Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1
             foreach (object item in form.CheckedListBoxSide.CheckedItems)
             {
                 string side = item.ToString();
-                list.Add(side);
+                list.Add( side );
             }
             return list;
         }
+
     }
 }

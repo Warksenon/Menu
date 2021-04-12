@@ -1,14 +1,15 @@
-﻿using Pizza.Presenters.PresenterFormMenu.OrderGetSet;
-using System;
+﻿using System;
 using System.Collections.Generic;
+
+using Pizza.Presenters.PresenterFormMenu.OrderGetSet;
 
 namespace Pizza
 {
-    class FormMenuCreatingOrder : FormMenuListViewOrder
+    internal class FormMenuCreatingOrder : FormMenuListViewOrder
     {
-        private Order order = new Order();
+        private readonly Order order = new Order();
 
-        public FormMenuCreatingOrder(FormMenu form) : base(form) { }
+        public FormMenuCreatingOrder( FormMenu form ) : base( form ) { }
 
         public Order GetOrderFromListView()
         {
@@ -42,12 +43,12 @@ namespace Pizza
 
             for (int i = 0; i < counter; i++)
             {
-                list.Add(new Dish()
+                list.Add( new Dish()
                 {
-                    Name = form.ListViewOrder.Items[i].SubItems[0].Text,
-                    Sides = form.ListViewOrder.Items[i].SubItems[1].Text,
-                    Price = form.ListViewOrder.Items[i].SubItems[2].Text
-                });
+                    Name = form.ListViewOrder.Items [i].SubItems [0].Text,
+                    Sides = form.ListViewOrder.Items [i].SubItems [1].Text,
+                    Price = form.ListViewOrder.Items [i].SubItems [2].Text
+                } );
             }
 
             order.ListDishes = list;

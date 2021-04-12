@@ -1,11 +1,12 @@
-﻿using Pizza.View.Form1View;
-using System.Drawing;
+﻿using System.Drawing;
+
+using Pizza.View.Form1View;
 
 namespace Pizza
 {
     public abstract class ButtonRemove : ViewFormMenu, IView
     {
-        protected ButtonRemove(FormMenu form) : base(form) { }
+        protected ButtonRemove( FormMenu form ) : base( form ) { }
 
         public abstract void ViewSetting();
 

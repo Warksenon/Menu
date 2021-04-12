@@ -1,13 +1,14 @@
-﻿using Pizza.Presenters;
-using Pizza.Presenters.PresenterFormMail;
-using System;
+﻿using System;
 using System.Windows.Forms;
+
+using Pizza.Presenters;
+using Pizza.Presenters.PresenterFormMail;
 
 namespace Pizza
 {
     public partial class FormMail : Form, IFormMail
     {
-        IOnEvent eevent = new OnEvent();
+        private readonly IOnEvent eevent = new OnEvent();
 
         public TextBox TextBoxSender { get => tSender; set => tSender = value; }
         public TextBox TextBoxRecipient { get => tRecipient; set => tRecipient = value; }
@@ -20,17 +21,17 @@ namespace Pizza
             InitializeComponent();
         }
 
-        private void FormMail_Load(object sender, EventArgs e)
+        private void FormMail_Load( object sender, EventArgs e )
         {
-            eevent.SetLogic(new FormMailLoad(this));
+            eevent.SetLogic( new FormMailLoad( this ) );
         }
 
-        private void ButtonSave_Click(object sender, EventArgs e)
+        private void ButtonSave_Click( object sender, EventArgs e )
         {
-            eevent.SetLogic(new FormMailSavePresenters(this));
+            eevent.SetLogic( new FormMailSavePresenters( this ) );
         }
 
-        private void ButtonClose_Click(object sender, EventArgs e)
+        private void ButtonClose_Click( object sender, EventArgs e )
         {
             this.Close();
         }

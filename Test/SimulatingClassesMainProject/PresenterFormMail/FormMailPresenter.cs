@@ -6,7 +6,7 @@ namespace Test
     {
         protected FormMail mail;
 
-        protected FormMailPresenter(FormMail mail)
+        protected FormMailPresenter( FormMail mail )
         {
             this.mail = mail;
         }

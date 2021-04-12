@@ -1,11 +1,12 @@
-﻿using Pizza;
-using System.Drawing;
+﻿using System.Drawing;
+
+using Pizza;
 
 namespace Test
 {
     public class ButtonDrinksView : ButtonMenu
     {
-        public ButtonDrinksView(FormMenu form1) : base(form1) { }
+        public ButtonDrinksView( FormMenu form1 ) : base( form1 ) { }
 
         public override void ViewSetting()
         {
@@ -15,7 +16,7 @@ namespace Test
 
         private void DrinkseButtonSettings()
         {
-            ChengeNameLabelMenuInfo("Napoje");
+            ChengeNameLabelMenuInfo( "Napoje" );
             ButtonSeting();
             form.DrinksButton.BackColor = Color.LawnGreen;
         }

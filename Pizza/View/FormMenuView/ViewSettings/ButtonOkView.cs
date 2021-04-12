@@ -4,9 +4,9 @@ namespace Pizza
 {
     public class ButtonOkView : IView
     {
-        FormMenu form;
+        private readonly FormMenu form;
 
-        public ButtonOkView(FormMenu form)
+        public ButtonOkView( FormMenu form )
         {
             this.form = form;
         }

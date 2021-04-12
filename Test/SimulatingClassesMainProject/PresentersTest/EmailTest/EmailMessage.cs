@@ -1,16 +1,16 @@
-﻿using Pizza;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
+
+using Pizza;
 
 namespace Test
 {
-    class EmailMessage
+    internal class EmailMessage
     {
-        readonly List<Dish> listDishes;
-        readonly PriceAll priceAll;
+        private readonly List<Dish> listDishes;
+        private readonly PriceAll priceAll;
 
-        public EmailMessage(Order order)
+        public EmailMessage( Order order )
         {
             this.listDishes = order.ListDishes;
             this.priceAll = order.PriceAll;
@@ -19,21 +19,21 @@ namespace Test
         public string WriteBill()
         {
             string bill;
-            bill = WritePriceAll(priceAll);
+            bill = WritePriceAll( priceAll );
             bill += WriteDischesAll();
             bill += Name.CommentsMessag + "\n" + priceAll.Comments;
             return bill;
         }
 
-        private string WritePriceAll(PriceAll priceAll)
+        private string WritePriceAll( PriceAll priceAll )
         {
             StringBuilder price = new StringBuilder();
-            price.AppendLine(LinesHash());
-            price.AppendLine(OneHash());
-            price.Append(Data(priceAll));
-            price.Append(NamePrice());
-            price.AppendLine(OneHash());
-            price.AppendLine(LinesHash());
+            price.AppendLine( LinesHash() );
+            price.AppendLine( OneHash() );
+            price.Append( Data( priceAll ) );
+            price.Append( NamePrice() );
+            price.AppendLine( OneHash() );
+            price.AppendLine( LinesHash() );
 
             return price.ToString();
         }
@@ -42,15 +42,15 @@ namespace Test
             return Name.HashSigns51;
         }
 
-        private string Data(PriceAll priceAll)
+        private string Data( PriceAll priceAll )
         {
-            string data = String.Format("# {0,33}{1,16}", priceAll.Date, " ") + "\n";
+            string data = string.Format("# {0,33}{1,16}", priceAll.Date, " ") + "\n";
             return data;
         }
 
         private string NamePrice()
         {
-            return "#" + String.Format("{0,27}{1,-22}", Name.NPrice + ": ", priceAll.Price) + "\n";
+            return "#" + string.Format( "{0,27}{1,-22}", Name.NPrice + ": ", priceAll.Price ) + "\n";
         }
 
         private string WriteDischesAll()
@@ -59,7 +59,7 @@ namespace Test
             ;
             foreach (var item in listDishes)
             {
-                dischesAll.Append(WriteDisch(item));
+                dischesAll.Append( WriteDisch( item ) );
 
             }
             return dischesAll.ToString();
@@ -70,40 +70,40 @@ namespace Test
             return "#";
         }
 
-        private StringBuilder WriteDisch(Dish disch)
+        private StringBuilder WriteDisch( Dish disch )
         {
             StringBuilder wirteDisch = new StringBuilder();
-            wirteDisch.AppendLine(LinesHash());
-            wirteDisch.AppendLine(OneHash());
-            wirteDisch.Append(TextPlusNewLines(disch.Name));
+            wirteDisch.AppendLine( LinesHash() );
+            wirteDisch.AppendLine( OneHash() );
+            wirteDisch.Append( TextPlusNewLines( disch.Name ) );
 
-            if (CheckingAddOns(disch))
+            if (CheckingAddOns( disch ))
             {
                 string sidesDishes = disch.Sides;
                 StringBuilder newSidesDishes = new StringBuilder();
-                while (SideDishesIsEmpty(sidesDishes))
+                while (SideDishesIsEmpty( sidesDishes ))
                 {
-                    newSidesDishes.Append("# ");
-                    newSidesDishes.AppendLine(FindingCommaOrPeriodAndCuttingCharacters(sidesDishes));
-                    sidesDishes = RemoveSideDishAndWhiteSigns(sidesDishes);
+                    newSidesDishes.Append( "# " );
+                    newSidesDishes.AppendLine( FindingCommaOrPeriodAndCuttingCharacters( sidesDishes ) );
+                    sidesDishes = RemoveSideDishAndWhiteSigns( sidesDishes );
 
                 }
-                wirteDisch.Append(newSidesDishes);
+                wirteDisch.Append( newSidesDishes );
             }
             string price = Name.PriceForDish + disch.Price + "\n";
-            wirteDisch.Append(price);
-            wirteDisch.AppendLine(OneHash());
-            wirteDisch.AppendLine(LinesHash());
+            wirteDisch.Append( price );
+            wirteDisch.AppendLine( OneHash() );
+            wirteDisch.AppendLine( LinesHash() );
             return wirteDisch;
         }
 
-        private string FindingCommaOrPeriodAndCuttingCharacters(string sideDishes)
+        private string FindingCommaOrPeriodAndCuttingCharacters( string sideDishes )
         {
             int index = FindIndexCommaOrPeriod(sideDishes);
-            return ReturningCutWord(index, sideDishes);
+            return ReturningCutWord( index, sideDishes );
         }
 
-        private string ReturningCutWord(int index, string sideDishes)
+        private string ReturningCutWord( int index, string sideDishes )
         {
             if (index == -1)
             {
@@ -111,43 +111,43 @@ namespace Test
             }
             else
             {
-                return sideDishes.Substring(0, index);
+                return sideDishes.Substring( 0, index );
             }
         }
 
-        private int FindIndexCommaOrPeriod(string sideDishes)
+        private int FindIndexCommaOrPeriod( string sideDishes )
         {
             int index = sideDishes.IndexOf(",");
             if (index == -1)
             {
-                index = sideDishes.IndexOf(".");
+                index = sideDishes.IndexOf( "." );
             }
             return index;
         }
 
-        private string RemoveSideDishAndWhiteSigns(string sideDish)
+        private string RemoveSideDishAndWhiteSigns( string sideDish )
         {
             int index = FindIndexCommaOrPeriod(sideDish);
-            sideDish = sideDish.Remove(0, index + 1);
+            sideDish = sideDish.Remove( 0, index + 1 );
             return sideDish.Trim();
         }
 
-        private bool CheckingAddOns(Dish disch)
+        private bool CheckingAddOns( Dish disch )
         {
-            if (disch.Sides.Equals(""))
+            if (disch.Sides.Equals( "" ))
                 return false;
             else
                 return true;
         }
-        private bool SideDishesIsEmpty(string sideDishes)
+        private bool SideDishesIsEmpty( string sideDishes )
         {
-            if (sideDishes.Equals(""))
+            if (sideDishes.Equals( "" ))
                 return false;
             else
                 return true;
 
         }
-        private string TextPlusNewLines(string text)
+        private string TextPlusNewLines( string text )
         {
             return "# " + text + "\n";
         }

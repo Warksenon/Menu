@@ -3,14 +3,14 @@ using Pizza.View.Form1;
 
 namespace Pizza.Presenters.PresenterFormMenu
 {
-    class Form1LabelPricePresenter : ILogic
+    internal class Form1LabelPricePresenter : ILogic
     {
-        IPriceAll price;
-        IFormMenuLabelPrice label;
+        private readonly IPriceAll price;
+        private readonly IFormMenuLabelPrice label;
         //TODO zmienić na logike
-        public Form1LabelPricePresenter(FormMenu form1)
+        public Form1LabelPricePresenter( FormMenu form1 )
         {
-            price = new FormMenuAddOrderListView(form1);
+            price = new FormMenuAddOrderListView( form1 );
             label = form1;
         }
 

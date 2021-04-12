@@ -1,13 +1,14 @@
-﻿using Pizza;
-using System.Drawing;
+﻿using System.Drawing;
+
+using Pizza;
 
 namespace Test
 {
     public class ButtonOkView : TestVisibleElements, IView
     {
-        FormMenu form;
+        private readonly FormMenu form;
 
-        public ButtonOkView(FormMenu form)
+        public ButtonOkView( FormMenu form )
         {
             this.form = form;
         }

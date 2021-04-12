@@ -1,13 +1,14 @@
-﻿using Pizza.View.Form1View;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+
+using Pizza.View.Form1View;
 
 namespace Pizza.Presenters
 {
     public class Form1LoadDishesPresenters : ViewFormMenu
     {
-        int index = 0;
-        int numbersRepetitions;
-        public Form1LoadDishesPresenters(FormMenu form, int index, int numbersRepetitions) : base(form)
+        private readonly int index = 0;
+        private readonly int numbersRepetitions;
+        public Form1LoadDishesPresenters( FormMenu form, int index, int numbersRepetitions ) : base( form )
         {
             this.index = index;
             this.numbersRepetitions = numbersRepetitions;
@@ -27,7 +28,7 @@ namespace Pizza.Presenters
                         Name = form.ListViewDishes.Items[x].SubItems[0].Text,
                         Price = form.ListViewDishes.Items[x].SubItems[1].Text
                     };
-                    list.Add(dish);
+                    list.Add( dish );
                 }
             }
 

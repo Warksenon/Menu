@@ -1,12 +1,13 @@
-﻿using Pizza;
-using System.Drawing;
+﻿using System.Drawing;
+
+using Pizza;
 
 namespace Test
 {
     public abstract class ButtonMenu : ViewFormMenu, IView
     {
 
-        public ButtonMenu(FormMenu form1) : base(form1) { }
+        public ButtonMenu( FormMenu form1 ) : base( form1 ) { }
 
         protected void ButtonSeting()
         {
@@ -39,7 +40,7 @@ namespace Test
             form.QTextbox.Text = "1";
         }
 
-        protected void ChengeNameLabelMenuInfo(string infoMenu)
+        protected void ChengeNameLabelMenuInfo( string infoMenu )
         {
             form.LabelMenu.Text = infoMenu;
         }

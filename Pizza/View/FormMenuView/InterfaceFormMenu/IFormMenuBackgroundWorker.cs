@@ -2,7 +2,7 @@
 
 namespace Pizza.View.FormMenuView.InterfaceFormMenu
 {
-    interface IFormMenuBackgroundWorker
+    internal interface IFormMenuBackgroundWorker
     {
         BackgroundWorker BackgroundWorker { get; set; }
     }

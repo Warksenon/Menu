@@ -1,12 +1,14 @@
-﻿using Newtonsoft.Json;
-using Pizza.Models.FilesTXT;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 
+using Newtonsoft.Json;
+
+using Pizza.Models.FilesTXT;
+
 namespace Pizza
 {
-    class LoadingFilesTxt : Files, ILoadHistoryOrders
+    internal class LoadingFilesTxt : Files, ILoadHistoryOrders
     {
         private List<Order> LoadOrderListFromTxt()
         {
@@ -14,7 +16,7 @@ namespace Pizza
             try
             {
                 string jsonFromFile;
-                using (var reader = new StreamReader(_path))
+                using (var reader = new StreamReader( _path ))
                 {
                     jsonFromFile = reader.ReadToEnd();
                 }
@@ -24,7 +26,7 @@ namespace Pizza
             }
             catch (Exception e)
             {
-                RecordOfExceptions.Save(e.ToString(), "LoadOrderListFromTxt");
+                RecordOfExceptions.Save( e.ToString(), "LoadOrderListFromTxt" );
             }
 
             return listOrder;

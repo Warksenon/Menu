@@ -1,13 +1,14 @@
-﻿using Pizza.Models.Registry;
+﻿using System.Windows.Forms;
+
+using Pizza.Models.Registry;
 using Pizza.Presenters.Email;
 using Pizza.Presenters.PresenterFormMail;
-using System.Windows.Forms;
 
 namespace Pizza.Presenters
 {
-    class FormMailSavePresenters : FormMailPresenter
+    internal class FormMailSavePresenters : FormMailPresenter
     {
-        public FormMailSavePresenters(FormMail mail) : base(mail) { }
+        public FormMailSavePresenters( FormMail mail ) : base( mail ) { }
 
         public override void LogicSettings()
         {
@@ -34,7 +35,7 @@ namespace Pizza.Presenters
             }
             else
             {
-                MessageBox.Show("Nieprawidłowe dane. Upewni się że wprowadzone dane: andresów e-mail, hasło, smtp, port są prawidłowe ", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show( "Nieprawidłowe dane. Upewni się że wprowadzone dane: andresów e-mail, hasło, smtp, port są prawidłowe ", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error );
                 return false;
             }
         }

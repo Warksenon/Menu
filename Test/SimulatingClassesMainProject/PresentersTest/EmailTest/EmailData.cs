@@ -14,14 +14,14 @@ namespace Test
         {
             get
             {
-                if (HelpFinding.CheckStringIsEmpty(sender))
+                if (HelpFinding.CheckStringIsEmpty( sender ))
                     return "listorders39@gmail.com";
                 else
                     return sender;
             }
             set
             {
-                if (HelpFinding.CheckStringIsNotEmpty(value))
+                if (HelpFinding.CheckStringIsNotEmpty( value ))
                     sender = value;
             }
         }
@@ -30,14 +30,14 @@ namespace Test
         {
             get
             {
-                if (HelpFinding.CheckStringIsEmpty(password))
+                if (HelpFinding.CheckStringIsEmpty( password ))
                     return "Testy2020!";
                 else
                     return password;
             }
             set
             {
-                if (HelpFinding.CheckStringIsNotEmpty(value))
+                if (HelpFinding.CheckStringIsNotEmpty( value ))
                     password = value;
             }
         }
@@ -46,14 +46,14 @@ namespace Test
         {
             get
             {
-                if (HelpFinding.CheckStringIsEmpty(port))
+                if (HelpFinding.CheckStringIsEmpty( port ))
                     return "587";
                 else
                     return port;
             }
             set
             {
-                if (HelpFinding.CheckStringIsNotEmpty(value))
+                if (HelpFinding.CheckStringIsNotEmpty( value ))
                     port = value;
             }
         }
@@ -62,14 +62,14 @@ namespace Test
         {
             get
             {
-                if (HelpFinding.CheckStringIsEmpty(smtp))
+                if (HelpFinding.CheckStringIsEmpty( smtp ))
                     return "smtp.gmail.com";
                 else
                     return smtp;
             }
             set
             {
-                if (HelpFinding.CheckStringIsNotEmpty(value))
+                if (HelpFinding.CheckStringIsNotEmpty( value ))
                     smtp = value;
             }
         }
@@ -78,14 +78,14 @@ namespace Test
         {
             get
             {
-                if (HelpFinding.CheckStringIsEmpty(recipient))
+                if (HelpFinding.CheckStringIsEmpty( recipient ))
                     return "listorders39@gmail.com";
                 else
                     return recipient;
             }
             set
             {
-                if (HelpFinding.CheckStringIsNotEmpty(value))
+                if (HelpFinding.CheckStringIsNotEmpty( value ))
                     recipient = value;
             }
         }

@@ -1,8 +1,8 @@
 ﻿namespace Pizza.Presenters.PresenterFormMenu.Remove
 {
-    class RemoveOrderAllLogic : RemoveOrderLogic
+    internal class RemoveOrderAllLogic : RemoveOrderLogic
     {
-        public RemoveOrderAllLogic(FormMenu form) : base(form) { }
+        public RemoveOrderAllLogic( FormMenu form ) : base( form ) { }
 
         public override void LogicSettings()
         {

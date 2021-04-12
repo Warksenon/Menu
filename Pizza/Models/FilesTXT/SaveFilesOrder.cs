@@ -1,15 +1,14 @@
 ﻿using System;
-using System.IO;
-using Newtonsoft.Json;
+
 using Pizza.Presenters;
 
 namespace Pizza.Models.FilesTXT
 {
-    class SaveFilesOrder  : Files  , IAddOrder
+    internal class SaveFilesOrder : Files, IAddOrder
     {
-        Order order;
+        private readonly Order order;
 
-        public SaveFilesOrder( Order order)
+        public SaveFilesOrder( Order order )
         {
             this.order = order;
         }
@@ -22,14 +21,6 @@ namespace Pizza.Models.FilesTXT
                 listOrder.Add( order );
                 SaveFilesHistoryOrder saveList = new SaveFilesHistoryOrder(listOrder);
                 saveList.SaveHistoryOrders();
-              
-                //var customer = listOrder;
-                //var jsonToWrite = JsonConvert.SerializeObject(customer, Formatting.Indented);
-
-                //using (StreamWriter writer = new StreamWriter( (_path) ))
-                //{
-                //    writer.Write( jsonToWrite );
-                //}
             }
             catch (Exception ex)
             {

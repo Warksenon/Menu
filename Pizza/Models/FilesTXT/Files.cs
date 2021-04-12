@@ -2,7 +2,7 @@
 
 namespace Pizza.Models.FilesTXT
 {
-    abstract class Files
+    internal abstract class Files
     {
         protected List<Order> listOrder = new List<Order>();
         protected const string _path = @"c:\SQL\Konsola\sqlite\Historia zamówień.txt";

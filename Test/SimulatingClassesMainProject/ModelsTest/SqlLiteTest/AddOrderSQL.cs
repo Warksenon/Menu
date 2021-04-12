@@ -3,18 +3,18 @@ using Pizza.Presenters;
 
 namespace Test
 {
-    class AddOrderSQL : OrderSQL, IAddOrder
+    internal class AddOrderSQL : OrderSQL, IAddOrder
     {
-        Order order;
+        private readonly Order order;
 
-        public AddOrderSQL(Order order)
+        public AddOrderSQL( Order order )
         {
             this.order = order;
         }
 
         public void AddOrder()
         {
-            AddNewTaskOrder(order);
+            AddNewTaskOrder( order );
         }
     }
 }

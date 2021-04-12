@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using Pizza;
 
 namespace Test.Test
@@ -7,14 +8,14 @@ namespace Test.Test
     public class TestEmailMessage
     {
         //todo ponazywac metody
-        Order order;
-        EmailMessage emailMessage;
+        private Order order;
+        private EmailMessage emailMessage;
 
         [TestMethod]
         public void TestMethod1()
         {
             order = CreateorderWthoutSides();
-            emailMessage = new EmailMessage(order);
+            emailMessage = new EmailMessage( order );
 
             string message = "###################################################\r\n" +
                              "#\r\n" +
@@ -32,18 +33,18 @@ namespace Test.Test
 
             string result = emailMessage.WriteBill();
 
-            Assert.AreEqual(message, result);
+            Assert.AreEqual( message, result );
         }
 
-        Order CreateorderWthoutSides()
+        private Order CreateorderWthoutSides()
         {
             Order order = new Order();
-            order.ListDishes.Add(CreateDishwWthoutSides());
+            order.ListDishes.Add( CreateDishwWthoutSides() );
             order.PriceAll = CreatePriceAllWthoutSides();
             return order;
         }
 
-        Dish CreateDishwWthoutSides()
+        private Dish CreateDishwWthoutSides()
         {
             return new Dish
             {
@@ -53,7 +54,7 @@ namespace Test.Test
             };
         }
 
-        PriceAll CreatePriceAllWthoutSides()
+        private PriceAll CreatePriceAllWthoutSides()
         {
             return new PriceAll
             {
@@ -68,7 +69,7 @@ namespace Test.Test
         public void TestMethod2()
         {
             order = CreateorderWithSides();
-            emailMessage = new EmailMessage(order);
+            emailMessage = new EmailMessage( order );
 
             string message = "###################################################\r\n" +
                                 "#\r\n" +
@@ -90,19 +91,18 @@ namespace Test.Test
 
             string result = emailMessage.WriteBill();
 
-            Assert.AreEqual(message, result);
+            Assert.AreEqual( message, result );
         }
 
-        Order CreateorderWithSides()
+        private Order CreateorderWithSides()
         {
             Order order = new Order();
-            order.ListDishes.Add(CreateDishwWithSides());
+            order.ListDishes.Add( CreateDishwWithSides() );
             order.PriceAll = CreatePriceAllWithSides();
             return order;
         }
 
-
-        Dish CreateDishwWithSides()
+        private Dish CreateDishwWithSides()
         {
             return new Dish
             {
@@ -112,7 +112,7 @@ namespace Test.Test
             };
         }
 
-        PriceAll CreatePriceAllWithSides()
+        private PriceAll CreatePriceAllWithSides()
         {
             return new PriceAll
             {

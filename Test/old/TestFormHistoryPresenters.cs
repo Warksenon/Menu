@@ -1,14 +1,16 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Windows.Forms;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using Pizza;
-using System.Windows.Forms;
 
 namespace Test
 {
     [TestClass]
     public class TestFormHistoryPresenters : IListViewHistory
     {
-        ListView lvPrice = new ListView();
-        ListView lvDish = new ListView();
+        private ListView lvPrice = new ListView();
+        private ListView lvDish = new ListView();
 
         public ListView ListViewPrice { get => lvPrice; set => lvPrice = value; }
         public ListView ListViewDishes { get => lvDish; set => lvDish = value; }

@@ -25,9 +25,9 @@ namespace Pizza
             set { listDisch = value; }
         }
 
-        public void AddDishToListDisch(Dish d)
+        public void AddDishToListDisch( Dish d )
         {
-            listDisch.Add(d);
+            listDisch.Add( d );
         }
     }
 }

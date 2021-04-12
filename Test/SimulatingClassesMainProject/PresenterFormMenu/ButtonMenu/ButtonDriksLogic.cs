@@ -1,11 +1,8 @@
-﻿using Pizza.Presenters.PresenterFormMenu.Logic.ButtonMenu;
-using Pizza;
-
-namespace Pizza
+﻿namespace Pizza
 {
-    class ButtonDriksLogic : MenuButton
+    internal class ButtonDriksLogic : MenuButton
     {
-        public ButtonDriksLogic(FormMenu form1) : base(form1) { }
+        public ButtonDriksLogic( FormMenu form1 ) : base( form1 ) { }
 
         public override void LogicSettings()
         {

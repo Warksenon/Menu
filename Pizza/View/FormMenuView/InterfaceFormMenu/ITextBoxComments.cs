@@ -2,7 +2,7 @@
 
 namespace Pizza.View.Form1
 {
-    interface ITextBoxComments
+    internal interface ITextBoxComments
     {
         TextBox TextBoxComments { get; set; }
     }

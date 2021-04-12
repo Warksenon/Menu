@@ -4,20 +4,20 @@ using Pizza.Presenters.PresenterFormHistory.LoadHistory;
 
 namespace Pizza.Presenters.PresenterFormHistory
 {
-    class FileTextCopy : CopyHistoryOrder
+    internal class FileTextCopy : CopyHistoryOrder
     {
-        public FileTextCopy(FormHistory form) : base(form) { }
+        public FileTextCopy( FormHistory form ) : base( form ) { }
 
         public override void LogicSettings()
         {
             CopyDataFromFilesTxt();
-            new FileTextLoad(form).LogicSettings();
+            new FileTextLoad( form ).LogicSettings();
         }
 
         public void CopyDataFromFilesTxt()
         {
-            copyListOrder = load.LoadOrderList(new LoadingFilesTxt());
-            save.SaveList(new SaveHistorySQL(copyListOrder));
+            copyListOrder = load.LoadOrderList( new LoadingFilesTxt() );
+            save.SaveList( new SaveHistorySQL( copyListOrder ) );
         }
     }
 }

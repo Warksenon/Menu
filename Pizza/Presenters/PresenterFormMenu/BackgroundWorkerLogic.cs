@@ -1,4 +1,5 @@
-﻿using Pizza.Models.SqlLite;
+﻿using Pizza.Models.FilesTXT;
+using Pizza.Models.SqlLite;
 using Pizza.Presenters.Email;
 using Pizza.View.Form1View;
 using System.Windows.Forms;
@@ -47,8 +48,8 @@ namespace Pizza.Presenters.PresenterFormMenu.OrderGetSet
         private void SaveOrder(Order order)
         {
             SaveOrder save = new SaveOrder();
-            save.AddOrder(new AddOrderSQL(order));
-            save.AddOrder(new SaveFiles(order));
+            save.AddOrder(new SaveOrderSQL(order));
+            save.AddOrder(new SaveFilesOrder( order));
         }
     }
 }

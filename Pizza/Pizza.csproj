@@ -84,7 +84,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\FilesTXT\Files.cs" />
     <Compile Include="Models\FilesTXT\ListOrder.cs" />
+    <Compile Include="Models\FilesTXT\SaveFilesOrder.cs" />
     <Compile Include="Models\Menu\ListDishesAndSides\DishesList\ListDishes.cs" />
     <Compile Include="Models\Menu\ListDishesAndSides\DishesList\ListDrinks.cs" />
     <Compile Include="Models\Menu\ListDishesAndSides\DishesList\ListMainDishes.cs" />
@@ -98,7 +100,7 @@
     <Compile Include="Models\Registry\LoadRegistry.cs" />
     <Compile Include="Models\Registry\Registry.cs" />
     <Compile Include="Models\Registry\SaveRegistry.cs" />
-    <Compile Include="Models\SqlLite\AddOrderSQL.cs" />
+    <Compile Include="Models\SqlLite\SaveOrderSQL.cs" />
     <Compile Include="Models\SqlLite\LoadHistorySQL.cs" />
     <Compile Include="Models\SqlLite\OrderSQL.cs" />
     <Compile Include="Models\SqlLite\SaveHistorySQL.cs" />
@@ -166,7 +168,7 @@
     <Compile Include="Models\Name.cs" />
     <Compile Include="Models\OrderComposition\Order.cs" />
     <Compile Include="Presenters\Email\EmailData.cs" />
-    <Compile Include="Models\FilesTXT\SaveFiles.cs" />
+    <Compile Include="Models\FilesTXT\SaveFilesHistoryOrder.cs" />
     <Compile Include="Models\FilesTXT\LoadingFilesTxt.cs" />
     <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\IForm1Sides.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1ChecedListBoxSides.cs" />

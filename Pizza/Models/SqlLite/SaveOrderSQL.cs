@@ -2,11 +2,11 @@
 
 namespace Pizza.Models.SqlLite
 {
-    class AddOrderSQL : OrderSQL, IAddOrder
+    class SaveOrderSQL : OrderSQL, IAddOrder
     {
         Order order;
 
-        public AddOrderSQL(Order order)
+        public SaveOrderSQL(Order order)
         {
             this.order = order;
         }

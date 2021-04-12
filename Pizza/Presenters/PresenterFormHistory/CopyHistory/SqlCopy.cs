@@ -17,7 +17,7 @@ namespace Pizza.Presenters.PresenterFormHistory.Copy
         public void CopyDataFromSQL()
         {
             copyListOrder = load.LoadOrderList(new LoadHistorySQL());
-            save.SaveList(new SaveFiles(copyListOrder));
+            save.SaveList(new SaveFilesHistoryOrder(copyListOrder));
         }
     }
 }

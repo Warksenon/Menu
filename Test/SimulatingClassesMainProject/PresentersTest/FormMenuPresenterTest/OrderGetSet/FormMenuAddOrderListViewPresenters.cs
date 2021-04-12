@@ -8,13 +8,14 @@ namespace Pizza.Presenters
 {
     internal class FormMenuAddOrderListViewPresenters : Form1ListViewOrder, ILogic
     {
-        private readonly Form1ListDishes lvDishes;
-        private readonly Form1SidesDish chblSides;
+        private readonly FormMenuListDishes lvDishes;
+        private readonly FormMenuSidesDish chblSides;
 
         public FormMenuAddOrderListViewPresenters( FormMenu form1 ) : base( form1 )
         {
-            lvDishes = new Form1ListDishes( form1 );
-            chblSides = new Form1SidesDish( form1 );
+            //todo dodac do testow wlasne  FormMenuListDishes i FormMenuSidesDish
+            lvDishes = new FormMenuListDishes( form1 );
+            chblSides = new FormMenuSidesDish( form1 );
         }
 
 

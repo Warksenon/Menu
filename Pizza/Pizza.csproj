@@ -125,9 +125,9 @@
     <Compile Include="Presenters\PresenterFormMenu\ButtonPlaceOrderLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\FormMenuLabelPricePresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\FormMenuLogic.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\Form1ListDishes.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\FormMenuListDishes.cs" />
     <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\FormMenuQuantity.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\Form1SidesDish.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\FormMenuSidesDish.cs" />
     <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\ButtonDriksLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\ButtonMainDishesLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\ButtonPizzaLogic.cs" />

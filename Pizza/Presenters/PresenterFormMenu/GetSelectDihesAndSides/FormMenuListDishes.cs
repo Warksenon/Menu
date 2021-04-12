@@ -2,9 +2,9 @@
 
 namespace Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1
 {
-    public class Form1ListDishes : FormMenuQuantity
+    public class FormMenuListDishes : FormMenuQuantity
     {
-        public Form1ListDishes( FormMenu form ) : base( form ) { }
+        public FormMenuListDishes( FormMenu form ) : base( form ) { }
 
         public List<Dish> GetListSelektedDishes()
         {

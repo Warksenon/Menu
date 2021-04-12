@@ -44,6 +44,8 @@ namespace Test.Test.Form1.ViewSettings
         public void TestViewOnClickButtonRemoveAll()
         {
             ButtonRemoveAll buttonRemoveAll = new ButtonRemoveAll(form);
+            buttonRemoveAll.ButtonRemoveOneVisibility = true;
+            buttonRemoveAll.ButtonRemoveAllVisibility = true;
             bool expectedVisibilityRemoveOne = false;
             bool expectedVisibilityRemoveAll = false;
 

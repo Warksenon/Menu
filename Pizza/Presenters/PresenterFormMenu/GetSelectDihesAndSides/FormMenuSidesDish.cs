@@ -2,9 +2,9 @@
 
 namespace Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1
 {
-    public class Form1SidesDish : FormMenuQuantity
+    public class FormMenuSidesDish : FormMenuQuantity
     {
-        public Form1SidesDish( FormMenu form ) : base( form ) { }
+        public FormMenuSidesDish( FormMenu form ) : base( form ) { }
 
         public List<string> GetListCheckedSides()
         {

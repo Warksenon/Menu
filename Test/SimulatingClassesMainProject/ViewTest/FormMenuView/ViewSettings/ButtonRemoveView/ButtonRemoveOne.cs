@@ -28,13 +28,5 @@ namespace Test
                 ButtonRemoveAllVisibility = true;
             }
         }
-        //Todo usunać
-        //private bool CheckingListOrderIfEmpty()
-        //{
-        //    if (form.ListViewOrder.Items.Count < 1)
-        //        return true;
-        //    else
-        //        return false;
-        //}
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Pizza
 {
-    public interface IForm1ButtonMenu
+    public interface IFormMenuButtonMenu
     {
         Button PizzzaButton { get; set; }
         Button MainButton { get; set; }

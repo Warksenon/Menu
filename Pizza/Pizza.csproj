@@ -178,13 +178,13 @@
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IFormMenuBackgroundWorker.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\ITextBoxComments.cs" />
     <Compile Include="View\FormMenuView\ViewFormMenu.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonMenu.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonDrinksView.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonMainDishesSetting.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonPizzaView.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ButtonSoupsView.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\IForm1ButtonMenu.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenu\ViewSettingButtonMenu.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenuView\ButtonMenuView.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenuView\ButtonDrinksView.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenuView\ButtonMainDishesSetting.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenuView\ButtonPizzaView.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenuView\ButtonSoupsView.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenuView\IFormMenuButtonMenu.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenuView\ViewSettingButtonMenu.cs" />
     <Compile Include="View\FormMenuView\FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,9 +192,9 @@
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormMenuView\ViewSettings\ButtonOkView.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\ButtonRemove\ButtonRemove.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\ButtonRemove\ButtonRemoveAll.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\ButtonRemove\ButtonRemoveOne.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonRemoveView\ButtonRemove.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonRemoveView\ButtonRemoveAll.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonRemoveView\ButtonRemoveOne.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\FormMenuView.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ListViewDishes.cs" />
     <Compile Include="View\FormHistry\FormHistory.cs">

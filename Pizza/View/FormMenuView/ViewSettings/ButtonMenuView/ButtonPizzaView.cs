@@ -1,12 +1,12 @@
 ﻿using System.Drawing;
 
-using Pizza;
+using Pizza.View.Form1View.ViewSettings.ButtonMenu;
 
-namespace Test
+namespace Pizza.Presenters.PresenterFormMenu.VisableElements.Button
 {
-    public class ButtonPizzaView : ButtonMenu
+    public class ButtonPizzaView : ButtonMenuView
     {
-        public ButtonPizzaView( FormMenu form ) : base( form ) { }
+        public ButtonPizzaView( FormMenu form1 ) : base( form1 ) { }
 
         public override void ViewSetting()
         {

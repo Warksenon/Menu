@@ -16,7 +16,7 @@ using Pizza.View.FormMenuView.ViewSettings;
 namespace Pizza
 {
 
-    public partial class FormMenu : Form, IForm1ListViewDishes, IForm1ListViewOrder, IForm1ButtonMenu,
+    public partial class FormMenu : Form, IForm1ListViewDishes, IForm1ListViewOrder, IFormMenuButtonMenu,
                                      IForm1ChecedListBoxSides, IForm1AddButton, IForm1QuantityTextBox, IFrom1InfoLabel,
                                      IFormMenuLabelPrice, IButtonRemove, IButtonSend, ITextBoxComments, IFormMenuBackgroundWorker
     {

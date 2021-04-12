@@ -3,7 +3,7 @@
 namespace Test.Test.Form1.ViewSettings
 {
     [TestClass]
-    public class TestButtonRemoveView : Form1Test
+    public class TestButtonRemoveView : FormMenuTest
     {
 
         [TestMethod]

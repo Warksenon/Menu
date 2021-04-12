@@ -4,10 +4,10 @@ using Pizza;
 
 namespace Test
 {
-    public abstract class ButtonMenu : ViewFormMenu, IView
+    public abstract class ButtonMenuView : ViewFormMenu, IView
     {
 
-        public ButtonMenu( FormMenu form1 ) : base( form1 ) { }
+        public ButtonMenuView( FormMenu form1 ) : base( form1 ) { }
 
         protected void ButtonSeting()
         {

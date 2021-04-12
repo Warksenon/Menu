@@ -4,7 +4,7 @@ using Pizza.View.Form1View.ViewSettings.ButtonMenu;
 
 namespace Pizza
 {
-    public class ButtonDrinksView : ButtonMenu
+    public class ButtonDrinksView : ButtonMenuView
     {
         public ButtonDrinksView( FormMenu form1 ) : base( form1 ) { }
 

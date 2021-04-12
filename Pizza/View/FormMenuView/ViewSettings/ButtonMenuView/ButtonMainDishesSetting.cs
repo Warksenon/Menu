@@ -1,10 +1,10 @@
 ﻿using System.Drawing;
 
-using Pizza;
+using Pizza.View.Form1View.ViewSettings.ButtonMenu;
 
-namespace Test
+namespace Pizza.Presenters.PresenterFormMenu.VisableElements.Button
 {
-    public class ButtonMainDishesView : ButtonMenu
+    public class ButtonMainDishesView : ButtonMenuView
     {
         public ButtonMainDishesView( FormMenu form1 ) : base( form1 ) { }
 

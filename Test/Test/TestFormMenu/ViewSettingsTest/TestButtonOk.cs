@@ -12,12 +12,14 @@ namespace Test.Test.Form1.ViewSettings
             form.QTextbox.Text = "0";
             buttonOk.ButtonRemoveOneVisibility = true;
             buttonOk.ButtonRemoveAllVisibility = true;
-
+            bool expectedVisibilityRemoveOne = false;
+            bool expectedVisibilityRemoveAll = false;
 
             eevent.SetView( buttonOk );
+            var  current  = buttonOk;
 
-            Assert.AreEqual( false, buttonOk.ButtonRemoveOneVisibility );
-            Assert.AreEqual( false, buttonOk.ButtonRemoveAllVisibility );
+            Assert.AreEqual( expectedVisibilityRemoveOne, current.ButtonRemoveOneVisibility );
+            Assert.AreEqual( expectedVisibilityRemoveAll, current.ButtonRemoveAllVisibility );
         }
 
         [TestMethod]
@@ -27,12 +29,14 @@ namespace Test.Test.Form1.ViewSettings
             form.QTextbox.Text = "ddd";
             buttonOk.ButtonRemoveOneVisibility = true;
             buttonOk.ButtonRemoveAllVisibility = true;
-
+            bool expectedVisibilityRemoveOne = false;
+            bool expectedVisibilityRemoveAll = false;
 
             eevent.SetView( buttonOk );
+            var  current  = buttonOk;
 
-            Assert.AreEqual( false, buttonOk.ButtonRemoveOneVisibility );
-            Assert.AreEqual( false, buttonOk.ButtonRemoveAllVisibility );
+            Assert.AreEqual( expectedVisibilityRemoveOne, current.ButtonRemoveOneVisibility );
+            Assert.AreEqual( expectedVisibilityRemoveAll, current.ButtonRemoveAllVisibility );
         }
 
         [TestMethod]
@@ -42,11 +46,14 @@ namespace Test.Test.Form1.ViewSettings
             form.QTextbox.Text = "1";
             buttonOk.ButtonRemoveOneVisibility = true;
             buttonOk.ButtonRemoveAllVisibility = false;
+            bool expectedVisibilityRemoveOne = false;
+            bool expectedVisibilityRemoveAll = true;
 
             eevent.SetView( buttonOk );
+            var  current  = buttonOk;
 
-            Assert.AreEqual( false, buttonOk.ButtonRemoveOneVisibility );
-            Assert.AreEqual( true, buttonOk.ButtonRemoveAllVisibility );
+            Assert.AreEqual( expectedVisibilityRemoveOne, current.ButtonRemoveOneVisibility );
+            Assert.AreEqual( expectedVisibilityRemoveAll, current.ButtonRemoveAllVisibility );
         }
     }
 }

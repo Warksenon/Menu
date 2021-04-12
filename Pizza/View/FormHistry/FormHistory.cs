@@ -46,14 +46,14 @@ namespace Pizza
         private void ButtonTxtToSql(object sender, EventArgs e)
         {
             onEvent.SetView(new CopyTxtView(this));
-            onEvent.SetLogic(new SqlCopy(this));
+            onEvent.SetLogic( new FileTextCopy( this ) );
             onEvent.SetView(new LoadTxtView(this));
         }
 
         private void ButtonSQLToTxt_Click(object sender, EventArgs e)
         {
-            onEvent.SetView(new CopySqlView(this));
-            onEvent.SetLogic(new FileTextCopy(this));
+            onEvent.SetView(new CopySqlView(this));          
+            onEvent.SetLogic( new SqlCopy( this ) );
             onEvent.SetView(new LoadSqlView(this));
         }
 

@@ -6,13 +6,10 @@ using System.IO;
 
 namespace Pizza
 {
-    public class LoadingFilesTxt : ILoadHistoryOrders
+    class LoadingFilesTxt : Files, ILoadHistoryOrders
     {
-        const string _path = @"c:\SQL\Konsola\sqlite\Historia zamówień.txt";
-
         private List<Order> LoadOrderListFromTxt()
         {
-            List<Order> orderList = new List<Order>();
 
             try
             {
@@ -22,15 +19,15 @@ namespace Pizza
                     jsonFromFile = reader.ReadToEnd();
                 }
 
-                var order = JsonConvert.DeserializeObject<ListOrder>(jsonFromFile);
-                orderList = order.List;
+                var order = JsonConvert.DeserializeObject<JsonHelper>(jsonFromFile);
+                listOrder = order.List;
             }
             catch (Exception e)
             {
                 RecordOfExceptions.Save(e.ToString(), "LoadOrderListFromTxt");
             }
 
-            return orderList;
+            return listOrder;
         }
 
         public List<Order> LoadHistory()

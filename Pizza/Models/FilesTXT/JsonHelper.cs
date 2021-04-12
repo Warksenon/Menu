@@ -2,11 +2,11 @@
 
 namespace Pizza.Models.FilesTXT
 {
-    class ListOrder
+    class JsonHelper
     {
         List<Order> list;
 
-        public ListOrder()
+        public JsonHelper()
         {
             list = new List<Order>();
         }

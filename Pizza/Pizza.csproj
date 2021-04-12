@@ -85,7 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\FilesTXT\Files.cs" />
-    <Compile Include="Models\FilesTXT\ListOrder.cs" />
+    <Compile Include="Models\FilesTXT\JsonHelper.cs" />
     <Compile Include="Models\FilesTXT\SaveFilesOrder.cs" />
     <Compile Include="Models\Menu\ListDishesAndSides\DishesList\ListDishes.cs" />
     <Compile Include="Models\Menu\ListDishesAndSides\DishesList\ListDrinks.cs" />

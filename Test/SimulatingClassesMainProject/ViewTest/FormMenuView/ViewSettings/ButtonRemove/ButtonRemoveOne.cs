@@ -24,8 +24,8 @@ namespace Test
             else
             {
                 form.ButtonRemoveOne.Visible = false;
-                ButtonRemoveOne = false;
-                ButtonRemoveAll = true;
+                ButtonRemoveOneVisibility = false;
+                ButtonRemoveAllVisibility = true;
             }
         }
         //Todo usunać

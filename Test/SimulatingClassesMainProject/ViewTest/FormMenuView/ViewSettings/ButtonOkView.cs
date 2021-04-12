@@ -22,16 +22,16 @@ namespace Test
             {
                 form.ButtonSubmitOrder.BackColor = Color.LawnGreen;
                 form.ButtonRemoveAll.Visible = true;
-                ButtonRemoveAll = true;
+                ButtonRemoveAllVisibility = true;
             }
             else
             {
                 form.ButtonRemoveAll.Visible = false;
-                ButtonRemoveAll = false;
+                ButtonRemoveAllVisibility = false;
             }
 
             form.ButtonRemoveOne.Visible = false;
-            ButtonRemoveOne = false;
+            ButtonRemoveOneVisibility = false;
         }
     }
 }

@@ -9,42 +9,49 @@ namespace Test.Test.Form1.ViewSettings
         [TestMethod]
         public void TestViewOnClickButtonRemoveOneWithEmptyListViewOrder()
         {
-            bool EmptyListViewOrder = true;
-            ButtonRemoveOne buttonRemoveOne = new ButtonRemoveOne(form, EmptyListViewOrder);
-            buttonRemoveOne.ButtonRemoveOne = true;
-            buttonRemoveOne.ButtonRemoveAll = true;
+            bool checkingListOrderIfEmpty = true;
+            ButtonRemoveOne buttonRemoveOne = new ButtonRemoveOne(form, checkingListOrderIfEmpty);
+            buttonRemoveOne.ButtonRemoveOneVisibility = true;
+            buttonRemoveOne.ButtonRemoveAllVisibility = true;
+            bool expectedVisibilityRemoveOne = false;
+            bool expectedVisibilityRemoveAll = false;
 
             eevent.SetView( buttonRemoveOne );
+            var  current  = buttonRemoveOne;
 
-            Assert.AreEqual( false, buttonRemoveOne.ButtonRemoveOne );
-            Assert.AreEqual( false, buttonRemoveOne.ButtonRemoveAll );
+            Assert.AreEqual( expectedVisibilityRemoveOne, current.ButtonRemoveOneVisibility );
+            Assert.AreEqual( expectedVisibilityRemoveAll, current.ButtonRemoveAllVisibility );
         }
 
         [TestMethod]
         public void TestViewOnClickButtonRemoveOneWithDishesPizzaListViewOrder()
         {
-            bool EmptyListViewOrder = false;
-            ButtonRemoveOne buttonRemoveOne = new ButtonRemoveOne(form, EmptyListViewOrder);
-            buttonRemoveOne.ButtonRemoveOne = true;
-            buttonRemoveOne.ButtonRemoveAll = true;
+            bool checkingListOrderIfEmpty = false;
+            ButtonRemoveOne buttonRemoveOne = new ButtonRemoveOne(form, checkingListOrderIfEmpty);
+            buttonRemoveOne.ButtonRemoveOneVisibility = true;
+            buttonRemoveOne.ButtonRemoveAllVisibility = true;
+            bool expectedVisibilityRemoveOne = false;
+            bool expectedVisibilityRemoveAll = true;
 
             eevent.SetView( buttonRemoveOne );
+            var  current  = buttonRemoveOne;
 
-            Assert.AreEqual( false, buttonRemoveOne.ButtonRemoveOne );
-            Assert.AreEqual( true, buttonRemoveOne.ButtonRemoveAll );
+            Assert.AreEqual( expectedVisibilityRemoveOne, current.ButtonRemoveOneVisibility );
+            Assert.AreEqual( expectedVisibilityRemoveAll, current.ButtonRemoveAllVisibility );
         }
 
         [TestMethod]
         public void TestViewOnClickButtonRemoveAll()
         {
             ButtonRemoveAll buttonRemoveAll = new ButtonRemoveAll(form);
-            buttonRemoveAll.ButtonRemoveOne = true;
-            buttonRemoveAll.ButtonRemoveAll = true;
+            bool expectedVisibilityRemoveOne = false;
+            bool expectedVisibilityRemoveAll = false;
 
             eevent.SetView( buttonRemoveAll );
+            var  current  = buttonRemoveAll;
 
-            Assert.AreEqual( false, buttonRemoveAll.ButtonRemoveOne );
-            Assert.AreEqual( false, buttonRemoveAll.ButtonRemoveAll );
+            Assert.AreEqual( expectedVisibilityRemoveOne, current.ButtonRemoveOneVisibility );
+            Assert.AreEqual( expectedVisibilityRemoveAll, current.ButtonRemoveAllVisibility );
         }
     }
 }

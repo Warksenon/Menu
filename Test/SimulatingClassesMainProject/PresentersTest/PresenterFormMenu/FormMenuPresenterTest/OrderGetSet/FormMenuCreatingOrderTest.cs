@@ -23,7 +23,7 @@ namespace Test
         private void AddPriceAllToOrder()
         {
             double price = GetPricaAll();
-            order.PriceAll.Price = price + " zł";
+            order.PriceAll.Price = price + "zł";
         }
 
         private void GetComments()

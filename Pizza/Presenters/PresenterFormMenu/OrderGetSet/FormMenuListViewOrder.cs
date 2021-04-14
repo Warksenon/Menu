@@ -18,6 +18,7 @@ namespace Pizza.Presenters.PresenterFormMenu.OrderGetSet
             {
                 for (int i = 0; i < form.ListViewOrder.Items.Count; i++)
                 {
+                    textPrice.Clear();
                     textPrice.Append(form.ListViewOrder.Items [i].SubItems [2].Text);
                     price = FindPrice( textPrice.ToString() );
                     priceAll += price;

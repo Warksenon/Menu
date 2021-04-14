@@ -113,6 +113,7 @@
     <Compile Include="Test\TestFormMenu\FormMenuTest.cs" />
     <Compile Include="Test\TestFormMenu\PresenterFormMenu\ButtonMenuLogic\TestButtonMenuLogic.cs" />
     <Compile Include="Test\TestFormMenu\PresenterFormMenu\TestFormMenuAddOrderToListViewOrder.cs" />
+    <Compile Include="Test\TestFormMenu\PresenterFormMenu\TestFormMenuCreatingOrder.cs" />
     <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonRemoveView.cs" />
     <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonOk.cs" />
     <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestMenuButtonView.cs" />

@@ -1,30 +1,32 @@
 ﻿using System;
-
+using System.Text;
+using Pizza;
+using Pizza.Presenters.PresenterFormMenu.OrderGetSet;
 using Pizza.View.Form1View;
 
-namespace Pizza.Presenters.PresenterFormMenu.OrderGetSet
+namespace Test
 {
-    public abstract class Form1ListViewOrder : ViewFormMenu, IPriceAll
+    public abstract class FormMenuListViewOrderTest : ViewFormMenuTest, IPriceAll
     {
-        protected Form1ListViewOrder( FormMenu form ) : base( form ) { }
+        protected FormMenuListViewOrderTest( FormMenu form ) : base( form ) { }
 
         public double GetPricaAll()
         {
             double priceAll = 0;
             double price;
-            string textPrice;
+            StringBuilder textPrice = new StringBuilder();
             try
             {
                 for (int i = 0; i < form.ListViewOrder.Items.Count; i++)
                 {
-                    textPrice = form.ListViewOrder.Items [i].SubItems [2].Text;
-                    price = FindPrice( textPrice );
+                    textPrice.Append(form.ListViewOrder.Items [i].SubItems [2].Text);
+                    price = FindPrice( textPrice.ToString() );
                     priceAll += price;
                 }
             }
             catch (Exception e)
             {
-                RecordOfExceptions.Save( Convert.ToString( e ), "Form1OrderPresenter - FindPrice" );
+                RecordOfExceptions.Save( Convert.ToString( e ), "Form1OrderPresenter - GetPricaAll" );
             }
             return priceAll;
         }

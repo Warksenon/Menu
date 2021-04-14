@@ -29,9 +29,9 @@ namespace Test.Test.TestFormMenu.ViewSettingsTest
 
             eevent.SetView( new ButtonPizzaView( form ) );
             var currentColorBatonMenuPizza = form.PizzzaButton.BackColor;
-            var currentColorBatonMenuMainDishes = form.PizzzaButton.BackColor;
-            var currentColorBatonMenuSoups = form.PizzzaButton.BackColor;
-            var currentColorBatonMenuDrinks = form.PizzzaButton.BackColor;
+            var currentColorBatonMenuMainDishes = form.MainButton.BackColor;
+            var currentColorBatonMenuSoups = form.SoupButton.BackColor;
+            var currentColorBatonMenuDrinks = form.DrinksButton.BackColor;
             var currentQuantityText =  form.QTextbox.Text;
             var currentLabelMenuText = form.LabelMenu.Text;
 
@@ -52,9 +52,9 @@ namespace Test.Test.TestFormMenu.ViewSettingsTest
 
             eevent.SetView( new ButtonMainDishesView( form ) );
             var currentColorBatonMenuPizza = form.PizzzaButton.BackColor;
-            var currentColorBatonMenuMainDishes = form.PizzzaButton.BackColor;
-            var currentColorBatonMenuSoups = form.PizzzaButton.BackColor;
-            var currentColorBatonMenuDrinks = form.PizzzaButton.BackColor;
+            var currentColorBatonMenuMainDishes = form.MainButton.BackColor;
+            var currentColorBatonMenuSoups = form.SoupButton.BackColor;
+            var currentColorBatonMenuDrinks = form.DrinksButton.BackColor;
             var currentQuantityText =  form.QTextbox.Text;
             var currentLabelMenuText = form.LabelMenu.Text;
 
@@ -63,7 +63,7 @@ namespace Test.Test.TestFormMenu.ViewSettingsTest
             Assert.AreEqual( off, currentColorBatonMenuSoups );
             Assert.AreEqual( off, currentColorBatonMenuDrinks );
             Assert.AreEqual( "1", currentQuantityText );
-            Assert.AreEqual( "Pizza", currentLabelMenuText );
+            Assert.AreEqual( "Dania główne", currentLabelMenuText );
         }
 
         [TestMethod]
@@ -75,15 +75,15 @@ namespace Test.Test.TestFormMenu.ViewSettingsTest
 
             eevent.SetView( new ButtonSoupsView( form ) );
             var currentColorBatonMenuPizza = form.PizzzaButton.BackColor;
-            var currentColorBatonMenuMainDishes = form.PizzzaButton.BackColor;
-            var currentColorBatonMenuSoups = form.PizzzaButton.BackColor;
-            var currentColorBatonMenuDrinks = form.PizzzaButton.BackColor;
+            var currentColorBatonMenuMainDishes = form.MainButton.BackColor;
+            var currentColorBatonMenuSoups = form.SoupButton.BackColor;
+            var currentColorBatonMenuDrinks = form.DrinksButton.BackColor;
             var currentQuantityText =  form.QTextbox.Text;
             var currentLabelMenuText = form.LabelMenu.Text;
 
-            Assert.AreEqual( on, currentColorBatonMenuPizza );
+            Assert.AreEqual( off, currentColorBatonMenuPizza );
             Assert.AreEqual(off, currentColorBatonMenuMainDishes );
-            Assert.AreEqual( off, currentColorBatonMenuSoups );
+            Assert.AreEqual( on, currentColorBatonMenuSoups );
             Assert.AreEqual( off, currentColorBatonMenuDrinks );
             Assert.AreEqual( "1", currentQuantityText );
             Assert.AreEqual( "Zupy", currentLabelMenuText );
@@ -98,9 +98,9 @@ namespace Test.Test.TestFormMenu.ViewSettingsTest
 
             eevent.SetView( new ButtonDrinksView( form ) );
             var currentColorBatonMenuPizza = form.PizzzaButton.BackColor;
-            var currentColorBatonMenuMainDishes = form.PizzzaButton.BackColor;
-            var currentColorBatonMenuSoups = form.PizzzaButton.BackColor;
-            var currentColorBatonMenuDrinks = form.PizzzaButton.BackColor;
+            var currentColorBatonMenuMainDishes = form.MainButton.BackColor;
+            var currentColorBatonMenuSoups = form.SoupButton.BackColor;
+            var currentColorBatonMenuDrinks = form.DrinksButton.BackColor;
             var currentQuantityText =  form.QTextbox.Text;
             var currentLabelMenuText = form.LabelMenu.Text;
 

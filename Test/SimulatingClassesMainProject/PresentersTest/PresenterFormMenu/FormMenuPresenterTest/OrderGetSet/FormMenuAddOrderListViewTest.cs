@@ -1,23 +1,22 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 using System.Windows.Forms;
-
+using Pizza;
 using Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1;
 using Pizza.Presenters.PresenterFormMenu.OrderGetSet;
 
-namespace Pizza.Presenters
+namespace Test
 {
-    internal class FormMenuAddOrderListViewPresenters : Form1ListViewOrder, ILogic
+    internal class FormMenuAddOrderListViewTest : FormMenuListViewOrderTest, ILogic
     {
         private readonly FormMenuListDishes lvDishes;
         private readonly FormMenuSidesDish chblSides;
 
-        public FormMenuAddOrderListViewPresenters( FormMenu form1 ) : base( form1 )
+        public FormMenuAddOrderListViewTest( FormMenu form1 ) : base( form1 )
         {
-            //todo dodac do testow wlasne  FormMenuListDishes i FormMenuSidesDish
             lvDishes = new FormMenuListDishes( form1 );
             chblSides = new FormMenuSidesDish( form1 );
         }
-
 
         public void LogicSettings()
         {
@@ -53,21 +52,21 @@ namespace Pizza.Presenters
 
         private string AddAllSides( List<string> listSides )
         {
-            string allSidesToGether = "";
+            StringBuilder allSidesToGether = new StringBuilder();          
             for (int i = 0; i < listSides.Count; i++)
             {
-                allSidesToGether += listSides [i];
+                allSidesToGether.Append( listSides [i] );
                 if (i == listSides.Count)
                 {
-                    allSidesToGether += ".";
+                    allSidesToGether.Append( "." );
                 }
                 else
                 {
-                    allSidesToGether += ",";
+                    allSidesToGether.Append( "," );
                 }
             }
 
-            return allSidesToGether;
+            return allSidesToGether.ToString();
         }
 
         private string AddPriceDisheAndSide( List<Dish> listDishes, List<string> listSides )
@@ -86,5 +85,6 @@ namespace Pizza.Presenters
             double priceAll = priceDish + priceSides;
             return priceAll + " zł";
         }
+
     }
 }

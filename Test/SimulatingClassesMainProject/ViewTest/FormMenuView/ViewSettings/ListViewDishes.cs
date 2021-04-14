@@ -2,7 +2,7 @@
 
 namespace Test
 {
-    public class ListViewDishes : ViewFormMenu, IView
+    public class ListViewDishes : ViewFormMenuTest, IView
     {
         public ListViewDishes( FormMenu form ) : base( form ) { }
 

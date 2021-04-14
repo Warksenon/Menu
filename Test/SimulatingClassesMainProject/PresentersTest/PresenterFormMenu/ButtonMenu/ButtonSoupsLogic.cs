@@ -1,4 +1,6 @@
-﻿namespace Pizza
+﻿using Pizza;
+
+namespace Test
 {
     internal class ButtonSoupsLogic : MenuButton
     {

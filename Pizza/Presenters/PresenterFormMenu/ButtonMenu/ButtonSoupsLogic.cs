@@ -2,7 +2,7 @@
 
 namespace Pizza.Presenters.PresenterFormMenu.Logic
 {
-    internal class ButtonSoupsLogic : MenuButton
+    public class ButtonSoupsLogic : MenuButton
     {
         public ButtonSoupsLogic( FormMenu form1 ) : base( form1 ) { }
 

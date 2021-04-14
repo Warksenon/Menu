@@ -5,7 +5,7 @@ using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
 
 namespace Test
 {
-    public class Form1LoadSidesPresenter : ViewFormMenu
+    public class Form1LoadSidesPresenter : ViewFormMenuTest
     {
         public Form1LoadSidesPresenter( FormMenu form ) : base( form ) { }
 

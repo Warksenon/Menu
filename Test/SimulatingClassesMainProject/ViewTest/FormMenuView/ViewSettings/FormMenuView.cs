@@ -2,7 +2,7 @@
 
 namespace Test
 {
-    internal class FormMenuView : ViewFormMenu, IView
+    internal class FormMenuView : ViewFormMenuTest, IView
     {
         public FormMenuView( FormMenu form ) : base( form ) { }
 

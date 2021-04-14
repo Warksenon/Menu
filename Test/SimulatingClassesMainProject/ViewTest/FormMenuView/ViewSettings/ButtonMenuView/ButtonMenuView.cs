@@ -4,7 +4,7 @@ using Pizza;
 
 namespace Test
 {
-    public abstract class ButtonMenuView : ViewFormMenu, IView
+    public abstract class ButtonMenuView : ViewFormMenuTest, IView
     {
 
         public ButtonMenuView( FormMenu form1 ) : base( form1 ) { }

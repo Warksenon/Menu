@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Pizza;
 using Pizza.Presenters.PresenterFormMenu.OrderGetSet;
 
-namespace Pizza
+namespace Test
 {
-    internal class FormMenuCreatingOrder : Form1ListViewOrder
+    internal class FormMenuCreatingOrderTest : FormMenuListViewOrderTest
     {
         private readonly Order order = new Order();
 
-        public FormMenuCreatingOrder( FormMenu form ) : base( form ) { }
+        public FormMenuCreatingOrderTest( FormMenu form ) : base( form ) { }
 
         public Order GetOrderFromListView()
         {

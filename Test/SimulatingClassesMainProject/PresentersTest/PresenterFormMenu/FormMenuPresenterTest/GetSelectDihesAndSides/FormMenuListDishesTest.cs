@@ -9,15 +9,11 @@ namespace Test
     {
         int  selectedItem;
 
-        public FormMenuListDishesTest( FormMenu form ) : base( form ) { }
-
-        public int SelectedItem
+        public FormMenuListDishesTest( FormMenu form, int selectedItem ) : base( form ) 
         {
-            set
-            {
-                selectedItem = value;
-            }
+            this.selectedItem = selectedItem;
         }
+
         public List<Dish> GetListSelektedDishes()
         {
             List<Dish> list = new List<Dish>();

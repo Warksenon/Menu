@@ -9,13 +9,13 @@ namespace Test
 {
     internal class FormMenuAddOrderListViewTest : FormMenuListViewOrderTest, ILogic
     {
-        private readonly FormMenuListDishes lvDishes;
-        private readonly FormMenuSidesDish chblSides;
+        private readonly FormMenuListDishesTest lvDishes;
+        private readonly FormMenuSidesDishTest chblSides;
 
-        public FormMenuAddOrderListViewTest( FormMenu form1 ) : base( form1 )
+        public FormMenuAddOrderListViewTest( FormMenu form1, int selectedItem ) : base( form1 )
         {
-            lvDishes = new FormMenuListDishes( form1 );
-            chblSides = new FormMenuSidesDish( form1 );
+            lvDishes = new FormMenuListDishesTest( form1, selectedItem );
+            chblSides = new FormMenuSidesDishTest( form1 );
         }
 
         public void LogicSettings()

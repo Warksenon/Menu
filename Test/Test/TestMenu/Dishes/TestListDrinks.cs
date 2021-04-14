@@ -12,7 +12,7 @@ namespace Test
     {
         [TestMethod]
         public void TestDishes()
-        {
+        {    //todo Przerobic na  TestCase
             IForm1Dishes list = new ListDrinks();
             List<Dish> listPizza = list.GetDishes();
 

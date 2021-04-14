@@ -12,7 +12,7 @@ namespace Test.Menu.Sides
     {
         [TestMethod]
         public void TestGetLitStringSidesMainDishes()
-        {
+        {    //todo Przerobic na  TestCase
             IForm1Sides list = new ListSidesMainDishes();
             List<string> listSides = list.GetSides();
 

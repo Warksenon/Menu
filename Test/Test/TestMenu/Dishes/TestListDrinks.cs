@@ -17,9 +17,9 @@ namespace Test
         {  
             IForm1Dishes list = new ListDrinks();
 
-            List<Dish> listPizza = list.GetDishes();
-            var currentName = listPizza [index].Name;
-            var currentPrice = listPizza [index].Price;
+            List<Dish> listDrinks = list.GetDishes();
+            var currentName = listDrinks [index].Name;
+            var currentPrice = listDrinks [index].Price;
 
             Assert.AreEqual( expectationsName, currentName );
             Assert.AreEqual( expectationsPrice, currentPrice );

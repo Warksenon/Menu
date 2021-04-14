@@ -7,17 +7,16 @@ namespace Test.Test
     [TestClass]
     public class TestEmailMessage
     {
-        //todo ponazywac metody
         private Order order;
         private EmailMessage emailMessage;
 
         [TestMethod]
-        public void TestMethod1()
+        public void TestCreateMessageWithOneDishWithoutSides()
         {
-            order = CreateorderWthoutSides();
+            order = CreateOrderWthoutSides();
             emailMessage = new EmailMessage( order );
 
-            string message = "###################################################\r\n" +
+            string expectationsMessage = "###################################################\r\n" +
                              "#\r\n" +
                              "#               05.04.2021 00:10:54                \n" +
                              "#                     Cena: 20zł                  \n" +
@@ -33,10 +32,10 @@ namespace Test.Test
 
             string result = emailMessage.WriteBill();
 
-            Assert.AreEqual( message, result );
+            Assert.AreEqual( expectationsMessage, result );
         }
 
-        private Order CreateorderWthoutSides()
+        private Order CreateOrderWthoutSides()
         {
             Order order = new Order();
             order.ListDishes.Add( CreateDishwWthoutSides() );
@@ -66,12 +65,12 @@ namespace Test.Test
 
 
         [TestMethod]
-        public void TestMethod2()
+        public void TestCreateMessageWithOneDishAndSides ()
         {
             order = CreateorderWithSides();
             emailMessage = new EmailMessage( order );
 
-            string message = "###################################################\r\n" +
+            string expectationsMessage = "###################################################\r\n" +
                                 "#\r\n" +
                                 "#               05.04.2021 00:10:54                \n" +
                                 "#                     Cena: 28zł                  \n" +
@@ -91,7 +90,7 @@ namespace Test.Test
 
             string result = emailMessage.WriteBill();
 
-            Assert.AreEqual( message, result );
+            Assert.AreEqual( expectationsMessage, result );
         }
 
         private Order CreateorderWithSides()

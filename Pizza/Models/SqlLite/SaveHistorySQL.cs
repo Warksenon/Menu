@@ -34,15 +34,17 @@ namespace Pizza.Models.SqlLite
             using (cn)
             {
                 string deletePriceAll = "DELETE FROM " + Name.PriceAll;
-                SQLiteCommand cmd = new SQLiteCommand(deletePriceAll, cn);
-                cn.Open();
-                try
+                using (SQLiteCommand cmd = new SQLiteCommand( deletePriceAll, cn ))
                 {
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception e)
-                {
-                    RecordOfExceptions.Save( Convert.ToString( e ), "SaveHistorySQL -DELETE FROM PriceAll" );
+                    cn.Open();
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception e)
+                    {
+                        RecordOfExceptions.Save( Convert.ToString( e ), "SaveHistorySQL -DELETE FROM PriceAll" );
+                    }
                 }
 
                 cn.Close();
@@ -56,16 +58,17 @@ namespace Pizza.Models.SqlLite
                 cn.Open();
                 string sql = "DELETE FROM " + Name.Dishes;
 
-                SQLiteCommand cmd = new SQLiteCommand(sql, cn);
-
-                try
+                using (SQLiteCommand cmd = new SQLiteCommand( sql, cn ))
                 {
-                    cmd.ExecuteNonQuery();
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
 
-                }
-                catch (Exception e)
-                {
-                    RecordOfExceptions.Save( Convert.ToString( e ), "SaveHistorySQL -DELETE FROM Dishes" );
+                    }
+                    catch (Exception e)
+                    {
+                        RecordOfExceptions.Save( Convert.ToString( e ), "SaveHistorySQL -DELETE FROM Dishes" );
+                    }
                 }
 
                 cn.Close();

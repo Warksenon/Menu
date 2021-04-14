@@ -285,7 +285,7 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu
             onEvent.SetLogic( new FormMenuAddOrderListViewTest( form, selectedItem ) );
             var currentListViewOrderCount = form.ListViewOrder.Items.Count;
 
-            Assert.AreEqual( expectationsListViewOrderCount, form.ListViewOrder.Items.Count );
+            Assert.AreEqual( expectationsListViewOrderCount, currentListViewOrderCount );
         }
     }
 }

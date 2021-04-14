@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
 
 using Pizza;
+using Pizza.Presenters;
 using Pizza.View.Form1View;
 
 namespace Test
@@ -11,7 +12,7 @@ namespace Test
 
         protected int CheckNumberTextViewDishes()
         {
-            int number = HelpFinding.ConvertTextToInt(form.QTextbox.Text);
+            int number = HelperConvert.ConvertTextToInt(form.QTextbox.Text);
             if (number < 1)
             {
                // MessageBox.Show( "Podana ilość produktów nie jest prawidłowa" );

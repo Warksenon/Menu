@@ -44,9 +44,11 @@ namespace Pizza.SqlLite
                 try
                 {
                     cn.Open();
-                    SQLiteCommand cmd = new SQLiteCommand(sql, cn);
-                    cmd.ExecuteNonQuery();
-                    cmd.Cancel();
+                    using (SQLiteCommand cmd = new SQLiteCommand( sql, cn ))
+                    {
+                        cmd.ExecuteNonQuery();
+                        cmd.Cancel();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -64,8 +66,10 @@ namespace Pizza.SqlLite
                 try
                 {
                     cn.Open();
-                    SQLiteCommand cmd = new SQLiteCommand(sql2, cn);
-                    cmd.ExecuteNonQuery();
+                    using (SQLiteCommand cmd = new SQLiteCommand( sql2, cn ))
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
 
                 }
                 catch (Exception ex)

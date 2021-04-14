@@ -19,8 +19,10 @@ namespace Pizza
         {
             try
             {
-                JsonHelper jsonHelper = new JsonHelper();
-                jsonHelper.List = listOrder;
+                JsonHelper jsonHelper = new JsonHelper
+                {
+                    List = listOrder
+                };
                 var customer = jsonHelper;
 
                 var jsonToWrite = JsonConvert.SerializeObject(customer, Formatting.Indented);

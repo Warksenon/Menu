@@ -5,7 +5,7 @@
         protected string CheckIsNotNull( string str )
         {
             if (string.IsNullOrEmpty( str ))
-                return str = "";
+                return "";
             else
                 return str;
         }

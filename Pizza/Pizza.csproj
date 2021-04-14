@@ -107,6 +107,7 @@
     <Compile Include="Presenters\Email\EmailSend.cs" />
     <Compile Include="Presenters\Email\ILoadEmailData.cs" />
     <Compile Include="Presenters\Email\ISaveEmailData.cs" />
+    <Compile Include="Presenters\HelperConvert.cs" />
     <Compile Include="Presenters\OnEvent.cs" />
     <Compile Include="Presenters\IAddOrder.cs" />
     <Compile Include="Presenters\IOnEvent.cs" />

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 
 namespace Pizza
 {
@@ -34,20 +33,6 @@ namespace Pizza
                 string price = nameAndPrice.Substring(index);
                 return price;
             }
-        }
-
-        public static int ConvertTextToInt( string textNumber )
-        {
-            int number;
-            try
-            {
-                number = Convert.ToUInt16( textNumber );
-            }
-            catch
-            {
-                number = -1;
-            }
-            return number;
         }
     }
 }

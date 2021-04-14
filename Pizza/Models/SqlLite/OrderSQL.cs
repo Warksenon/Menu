@@ -26,25 +26,27 @@ namespace Pizza.Models.SqlLite
                 SQLiteParameter param3 = new SQLiteParameter("param3", DbType.String);
                 SQLiteParameter param4 = new SQLiteParameter("param4", DbType.String);
 
-                SQLiteCommand cmd = new SQLiteCommand(sql, cn);
-                cmd.Parameters.Add( param1 );
-                cmd.Parameters.Add( param2 );
-                cmd.Parameters.Add( param3 );
-                cmd.Parameters.Add( param4 );
-
-
-                param1.Value = order.PriceAll.ID;
-                param2.Value = order.PriceAll.Price;
-                param3.Value = order.PriceAll.Date;
-                param4.Value = order.PriceAll.Comments;
-
-                try
+                using (SQLiteCommand cmd = new SQLiteCommand( sql, cn ))
                 {
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception e)
-                {
-                    RecordOfExceptions.Save( Convert.ToString( e ), "InsertAndQuestionSQL - AddNewTaskOrder" );
+                    cmd.Parameters.Add( param1 );
+                    cmd.Parameters.Add( param2 );
+                    cmd.Parameters.Add( param3 );
+                    cmd.Parameters.Add( param4 );
+
+
+                    param1.Value = order.PriceAll.ID;
+                    param2.Value = order.PriceAll.Price;
+                    param3.Value = order.PriceAll.Date;
+                    param4.Value = order.PriceAll.Comments;
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception e)
+                    {
+                        RecordOfExceptions.Save( Convert.ToString( e ), "InsertAndQuestionSQL - AddNewTaskOrder" );
+                    }
                 }
                 cn.Close();
                 AddNewTaskDish( order );
@@ -70,24 +72,26 @@ namespace Pizza.Models.SqlLite
                     SQLiteParameter param4 = new SQLiteParameter("param4", DbType.String);
 
 
-                    SQLiteCommand cmd = new SQLiteCommand(sql, cn);
-                    cmd.Parameters.Add( param1 );
-                    cmd.Parameters.Add( param2 );
-                    cmd.Parameters.Add( param3 );
-                    cmd.Parameters.Add( param4 );
-
-                    param1.Value = order.PriceAll.ID;
-                    param2.Value = dania.Name;
-                    param3.Value = dania.Price;
-                    param4.Value = dania.Sides;
-
-                    try
+                    using (SQLiteCommand cmd = new SQLiteCommand( sql, cn ))
                     {
-                        cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception e)
-                    {
-                        RecordOfExceptions.Save( Convert.ToString( e ), "InsertAndQuestionSQL - AddNewTaskDish" );
+                        cmd.Parameters.Add( param1 );
+                        cmd.Parameters.Add( param2 );
+                        cmd.Parameters.Add( param3 );
+                        cmd.Parameters.Add( param4 );
+
+                        param1.Value = order.PriceAll.ID;
+                        param2.Value = dania.Name;
+                        param3.Value = dania.Price;
+                        param4.Value = dania.Sides;
+
+                        try
+                        {
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception e)
+                        {
+                            RecordOfExceptions.Save( Convert.ToString( e ), "InsertAndQuestionSQL - AddNewTaskDish" );
+                        }
                     }
                 }
                 cn.Close();

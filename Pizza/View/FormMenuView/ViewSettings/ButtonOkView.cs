@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using Pizza.Presenters;
 
 namespace Pizza
 {
@@ -14,7 +15,7 @@ namespace Pizza
         public void ViewSetting()
         {
             string text = form.QTextbox.Text;
-            int number = HelpFinding.ConvertTextToInt(text);
+            int number = HelperConvert.ConvertTextToInt(text);
 
             if (number > 0)
             {

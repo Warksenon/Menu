@@ -6,7 +6,7 @@ namespace Test
 {
     public class FormMenuSidesDishTest : FormMenuQuantityTest
     {
-        int[] simulationSelectionSides;
+        readonly int [] simulationSelectionSides;
         public FormMenuSidesDishTest( FormMenu form, int[] simulationSelectionSides ) : base( form ) 
         {
             this.simulationSelectionSides = simulationSelectionSides;

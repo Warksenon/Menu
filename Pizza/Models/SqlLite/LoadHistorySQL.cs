@@ -23,12 +23,14 @@ namespace Pizza.Models.SqlLite
                 try
                 {
                     cn.Open();
-                    SQLiteCommand cmd = new SQLiteCommand(qCeny, cn);
-                    SQLiteDataReader dr = cmd.ExecuteReader();
-                    if (dr.HasRows)
+                    using (SQLiteCommand cmd = new SQLiteCommand( qCeny, cn ))
                     {
-                        AddOrdersToListOrders( dr, listorder );
-                        dr.Close();
+                        SQLiteDataReader dr = cmd.ExecuteReader();
+                        if (dr.HasRows)
+                        {
+                            AddOrdersToListOrders( dr, listorder );
+                            dr.Close();
+                        }
                     }
                 }
                 catch (Exception e)
@@ -74,9 +76,11 @@ namespace Pizza.Models.SqlLite
                 try
                 {
                     cn.Open();
-                    SQLiteCommand cmd = new SQLiteCommand(qIdCeny, cn);
-                    AddDihes( order, cmd );
-                    cmd.Cancel();
+                    using (SQLiteCommand cmd = new SQLiteCommand( qIdCeny, cn ))
+                    {
+                        AddDihes( order, cmd );
+                        cmd.Cancel();
+                    }
                 }
                 catch (Exception e)
                 {

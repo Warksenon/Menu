@@ -18,12 +18,14 @@ namespace Test
 
         public bool SaveDataEmial()
         {
-            EmailData emailData = new EmailData();
-            emailData.Sender = mail.TextBoxSender.Text;
-            emailData.Password = mail.TextBoxPassword.Text;
-            emailData.Port = mail.TextBoxPort.Text;
-            emailData.Smtp = mail.TextBoxSmtp.Text;
-            emailData.Recipient = mail.TextBoxRecipient.Text;
+            EmailData emailData = new EmailData
+            {
+                Sender = mail.TextBoxSender.Text,
+                Password = mail.TextBoxPassword.Text,
+                Port = mail.TextBoxPort.Text,
+                Smtp = mail.TextBoxSmtp.Text,
+                Recipient = mail.TextBoxRecipient.Text
+            };
 
             ISaveEmailData saveEmail = new SaveRegistry();
             bool saveIsOk = saveEmail.Save(emailData);

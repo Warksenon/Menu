@@ -10,9 +10,11 @@ namespace Test.Test.Form1.ViewSettings
         public void TestViewOnClickButtonRemoveOneWithEmptyListViewOrder()
         {
             bool checkingListOrderIfEmpty = true;
-            ButtonRemoveOne buttonRemoveOne = new ButtonRemoveOne(form, checkingListOrderIfEmpty);
-            buttonRemoveOne.ButtonRemoveOneVisibility = true;
-            buttonRemoveOne.ButtonRemoveAllVisibility = true;
+            ButtonRemoveOne buttonRemoveOne = new ButtonRemoveOne( form, checkingListOrderIfEmpty )
+            {
+                ButtonRemoveOneVisibility = true,
+                ButtonRemoveAllVisibility = true
+            };
             bool expectedVisibilityRemoveOne = false;
             bool expectedVisibilityRemoveAll = false;
 
@@ -27,9 +29,11 @@ namespace Test.Test.Form1.ViewSettings
         public void TestViewOnClickButtonRemoveOneWithDishesPizzaListViewOrder()
         {
             bool checkingListOrderIfEmpty = false;
-            ButtonRemoveOne buttonRemoveOne = new ButtonRemoveOne(form, checkingListOrderIfEmpty);
-            buttonRemoveOne.ButtonRemoveOneVisibility = true;
-            buttonRemoveOne.ButtonRemoveAllVisibility = true;
+            ButtonRemoveOne buttonRemoveOne = new ButtonRemoveOne( form, checkingListOrderIfEmpty )
+            {
+                ButtonRemoveOneVisibility = true,
+                ButtonRemoveAllVisibility = true
+            };
             bool expectedVisibilityRemoveOne = false;
             bool expectedVisibilityRemoveAll = true;
 
@@ -43,9 +47,11 @@ namespace Test.Test.Form1.ViewSettings
         [TestMethod]
         public void TestViewOnClickButtonRemoveAll()
         {
-            ButtonRemoveAll buttonRemoveAll = new ButtonRemoveAll(form);
-            buttonRemoveAll.ButtonRemoveOneVisibility = true;
-            buttonRemoveAll.ButtonRemoveAllVisibility = true;
+            ButtonRemoveAll buttonRemoveAll = new ButtonRemoveAll( form )
+            {
+                ButtonRemoveOneVisibility = true,
+                ButtonRemoveAllVisibility = true
+            };
             bool expectedVisibilityRemoveOne = false;
             bool expectedVisibilityRemoveAll = false;
 

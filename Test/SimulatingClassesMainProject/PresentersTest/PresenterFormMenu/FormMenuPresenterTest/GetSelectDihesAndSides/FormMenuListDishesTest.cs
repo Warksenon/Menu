@@ -7,7 +7,7 @@ namespace Test
 {
     public class FormMenuListDishesTest : FormMenuQuantityTest
     {
-        int  selectedItem;
+        readonly int  selectedItem;
 
         public FormMenuListDishesTest( FormMenu form, int selectedItem ) : base( form ) 
         {

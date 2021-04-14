@@ -13,31 +13,35 @@ namespace Test
             bool flag = false;
             ILoadEmailData loadEmail = new LoadRegistry();
             EmailData registry = loadEmail.Load();
-            MailMessage send = new MailMessage();
-            SmtpClient client = new SmtpClient();
-            try
+            using (MailMessage send = new MailMessage())
             {
-                client.Credentials = new NetworkCredential( registry.Sender, registry.Password );
-                client.Host = registry.Smtp;
-                client.Port = Convert.ToInt32( registry.Port );
-                client.EnableSsl = true;
-                try
+                using (SmtpClient client = new SmtpClient())
                 {
-                    send.From = new MailAddress( registry.Sender );
-                    send.Subject = "Zamówienie Pizza";
-                    send.Body = message;
-                    send.To.Add( registry.Recipient );
+                    try
+                    {
+                        client.Credentials = new NetworkCredential( registry.Sender, registry.Password );
+                        client.Host = registry.Smtp;
+                        client.Port = Convert.ToInt32( registry.Port );
+                        client.EnableSsl = true;
+                        try
+                        {
+                            send.From = new MailAddress( registry.Sender );
+                            send.Subject = "Zamówienie Pizza";
+                            send.Body = message;
+                            send.To.Add( registry.Recipient );
+                        }
+                        catch (Exception ex)
+                        {
+                            RecordOfExceptions.Save( Convert.ToString( ex ), "SendEmail" );
+                        }
+                        client.Send( send );
+                        flag = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        RecordOfExceptions.Save( Convert.ToString( ex ), "SendEmail" );
+                    }
                 }
-                catch (Exception ex)
-                {
-                    RecordOfExceptions.Save( Convert.ToString( ex ), "SendEmail" );
-                }
-                client.Send( send );
-                flag = true;
-            }
-            catch (Exception ex)
-            {
-                RecordOfExceptions.Save( Convert.ToString( ex ), "SendEmail" );
             }
             return flag;
         }

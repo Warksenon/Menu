@@ -60,7 +60,6 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EnumMenu.cs" />
     <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\LoadRegistry.cs" />
     <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\Registry.cs" />
     <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\SaveRegistry.cs" />
@@ -121,28 +120,8 @@
     <Compile Include="Test\TestMenu\Dishes\TestListSoups.cs" />
     <Compile Include="Test\TestMenu\Sides\TestSidesMainDishes.cs" />
     <Compile Include="Test\TestMenu\Sides\TestSidesPizza.cs" />
-    <Compile Include="old\TestDish.cs" />
-    <Compile Include="old\TModelsOld\TFilesTxt\TSaveFiles.cs" />
-    <Compile Include="old\TModelsOld\TFilesTxt\TLoadingFilesTxt.cs" />
-    <Compile Include="old\TModelsOld\TSQLite\TCreateConnection.cs" />
-    <Compile Include="old\TModelsOld\TSQLite\TCreateTabeles.cs" />
-    <Compile Include="old\TModelsOld\TSQLite\TInsertAndQuestionSQL.cs" />
-    <Compile Include="old\TPresenters\TFormMailPresenters.cs" />
-    <Compile Include="old\TPresenters\TFormHistoryPresenters.cs" />
-    <Compile Include="old\TPresenters\TLoadOrder.cs" />
-    <Compile Include="old\TPresenters\TSave.cs" />
-    <Compile Include="old\TPresenters\TForm1OrderPresenters.cs" />
-    <Compile Include="old\TPresenters\TForm1LoadDishesPresenters.cs" />
-    <Compile Include="old\TestOrderPresenters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="old\TestLoadDishesPresenters.cs" />
     <Compile Include="Test\TestName.cs" />
-    <Compile Include="old\TestOrder.cs" />
-    <Compile Include="old\TestMessage.cs" />
-    <Compile Include="old\TestSqLite.cs" />
-    <Compile Include="old\TestLoadingAnDSaveFiles.cs" />
-    <Compile Include="old\TestFormHistoryPresenters.cs" />
-    <Compile Include="old\TestFormMailPresenters.cs" />
     <Compile Include="Test\TestMenu\Dishes\TestListPizza.cs" />
     <Compile Include="Test\TestMenu\Dishes\TestListMainDishes.cs" />
     <Compile Include="Test\TestRegistry.cs" />

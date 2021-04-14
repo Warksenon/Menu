@@ -1,0 +1,112 @@
+Data : 2021-04-15 00:04:39
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Test.FormMenuListViewOrderTest.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Test\SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\FormMenuPresenterTest\OrderGetSet\FormMenuListViewOrderTest.cs:wiersz 42
+
+Data : 2021-04-15 00:04:39
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Test.FormMenuListViewOrderTest.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Test\SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\FormMenuPresenterTest\OrderGetSet\FormMenuListViewOrderTest.cs:wiersz 42
+
+Data : 2021-04-15 00:04:39
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Test.FormMenuListViewOrderTest.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Test\SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\FormMenuPresenterTest\OrderGetSet\FormMenuListViewOrderTest.cs:wiersz 42
+
+Data : 2021-04-15 00:04:39
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Test.FormMenuListViewOrderTest.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Test\SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\FormMenuPresenterTest\OrderGetSet\FormMenuListViewOrderTest.cs:wiersz 42
+
+Data : 2021-04-15 00:04:39
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Test.FormMenuListViewOrderTest.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Test\SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\FormMenuPresenterTest\OrderGetSet\FormMenuListViewOrderTest.cs:wiersz 42
+
+Data : 2021-04-15 00:04:39
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Test.FormMenuListViewOrderTest.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Test\SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\FormMenuPresenterTest\OrderGetSet\FormMenuListViewOrderTest.cs:wiersz 42
+
+Data : 2021-04-15 00:04:39
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Test.FormMenuListViewOrderTest.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Test\SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\FormMenuPresenterTest\OrderGetSet\FormMenuListViewOrderTest.cs:wiersz 42
+
+Data : 2021-04-15 00:04:39
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Test.FormMenuListViewOrderTest.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Test\SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\FormMenuPresenterTest\OrderGetSet\FormMenuListViewOrderTest.cs:wiersz 42
+
+Data : 2021-04-15 00:04:39
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Test.FormMenuListViewOrderTest.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Test\SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\FormMenuPresenterTest\OrderGetSet\FormMenuListViewOrderTest.cs:wiersz 42
+
+Data : 2021-04-15 00:04:39
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Test.FormMenuListViewOrderTest.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Test\SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\FormMenuPresenterTest\OrderGetSet\FormMenuListViewOrderTest.cs:wiersz 42
+
+Data : 2021-04-15 00:04:39
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Test.FormMenuListViewOrderTest.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Test\SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\FormMenuPresenterTest\OrderGetSet\FormMenuListViewOrderTest.cs:wiersz 42
+
+Data : 2021-04-15 00:04:39
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Test.FormMenuListViewOrderTest.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Test\SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\FormMenuPresenterTest\OrderGetSet\FormMenuListViewOrderTest.cs:wiersz 42
+
+Data : 2021-04-15 00:04:39
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Test.FormMenuListViewOrderTest.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Test\SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\FormMenuPresenterTest\OrderGetSet\FormMenuListViewOrderTest.cs:wiersz 42
+
+Data : 2021-04-15 00:04:39
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Test.FormMenuListViewOrderTest.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Test\SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\FormMenuPresenterTest\OrderGetSet\FormMenuListViewOrderTest.cs:wiersz 42
+
+Data : 2021-04-15 00:04:39
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Test.FormMenuListViewOrderTest.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Test\SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\FormMenuPresenterTest\OrderGetSet\FormMenuListViewOrderTest.cs:wiersz 42
+
+Data : 2021-04-15 00:04:39
+Form1OrderPresenter - FindPrice
+System.FormatException: Nieprawidłowy format ciągu wejściowego.
+   w System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   w System.Convert.ToDouble(String value)
+   w Test.FormMenuListViewOrderTest.FindPrice(String text) w A:\pendrive\repozytoria git\Pizza Git\Test\SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\FormMenuPresenterTest\OrderGetSet\FormMenuListViewOrderTest.cs:wiersz 42
+

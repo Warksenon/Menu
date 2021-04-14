@@ -16,6 +16,7 @@ namespace Test
         public void TestGetListDrinks( string expectationsName, string expectationsPrice, int index )
         {   
             IForm1Dishes list = new ListSoups();
+
             List<Dish> listSoup = list.GetDishes();
             var currentName = listSoup [index].Name;
             var currentPrice = listSoup [index].Price;

@@ -1,23 +1,25 @@
 ﻿using System.Collections.Generic;
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 using Pizza;
 using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
 
 namespace Test.Menu.Sides
 {
-    [TestClass]
+    [TestFixture]
     public class TestSidesMainDishes
     {
-        [TestMethod]
-        public void TestGetLitStringSidesMainDishes()
-        {    //todo Przerobic na  TestCase
+        [TestCase( "Bar sałatkowy -5zł", "0" )]
+        [TestCase( "Zestaw sosów -6zł", "1" )]
+        public void TestGetListSidesMainDishes( string expectationsName, int index )
+        { 
             IForm1Sides list = new ListSidesMainDishes();
-            List<string> listSides = list.GetSides();
 
-            Assert.AreEqual( "Bar sałatkowy -5zł", listSides [0] );
-            Assert.AreEqual( "Zestaw sosów -6zł", listSides [1] );
+            List<string> listSides = list.GetSides();
+            var currentName = listSides [index];
+
+            Assert.AreEqual( expectationsName, currentName );
         }
     }
 }

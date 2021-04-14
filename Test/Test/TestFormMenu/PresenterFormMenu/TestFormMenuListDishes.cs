@@ -1,46 +1,134 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿
+using NUnit.Framework;
+
 using Pizza;
-using Pizza.Presenters;
 
 namespace Test.Test.TestFormMenu.PresenterFormMenu
 {
-    [TestClass]
+    [TestFixture]
     public class TestFormMenuListDishes
     {
-        [TestMethod]
-        public void TestMethod1 ()
+        [TestCase( "Margheritta", "20zł", "", "0" )]
+        [TestCase( "Vegetariana", "22zł", "", "1" )]
+        [TestCase( "Tosca", "25zł", "", "2" )]
+        [TestCase( "Venecia", "25zł", "", "3" )]
+        public void TestAddOrderToFormMenuListViewOrderAndCheckingDownloadOfEachPizza( string expectationsName, string expectationsPrice, string expectationsSides, int simulationChoosingDish )
+        {
+            FormMenu form = new FormMenu();
+            OnEventTest  onEvent = new OnEventTest();
+            onEvent.SetLogic( new ButtonPizzaLogic( form ) );
+            form.QTextbox.Text = "1";
+
+            onEvent.SetLogic( new FormMenuAddOrderListViewTest( form, simulationChoosingDish ) );
+            var currentName = form.ListViewOrder.Items [0].SubItems [0].Text;
+            var currentSides = form.ListViewOrder.Items [0].SubItems [1].Text;
+            var currentPrice = form.ListViewOrder.Items [0].SubItems [2].Text;
+
+            Assert.AreEqual( expectationsName, currentName );
+            Assert.AreEqual( expectationsPrice, currentPrice );
+            Assert.AreEqual( expectationsSides, currentSides );
+        }
+
+
+        [TestCase( "Schabowy z frytkami/ryżem/ziemniakami", "30zł", "", "0" )]
+        [TestCase( "Ryba z frytkami", "28zł", "", "1" )]
+        [TestCase( "Placek po węgiersku", "27zł", "", "2" )]
+        public void TestAddOrderToFormMenuListViewOrderAndCheckingDownloadOfEachMainDishes( string expectationsName, string expectationsPrice, string expectationsSides, int simulationChoosingDish )
+        {
+            FormMenu form = new FormMenu();
+            OnEventTest  onEvent = new OnEventTest();
+            onEvent.SetLogic( new ButtonMainDishesLogic( form ) );
+            form.QTextbox.Text = "1";
+
+            onEvent.SetLogic( new FormMenuAddOrderListViewTest( form, simulationChoosingDish ) );
+            var currentName = form.ListViewOrder.Items [0].SubItems [0].Text;
+            var currentSides = form.ListViewOrder.Items [0].SubItems [1].Text;
+            var currentPrice = form.ListViewOrder.Items [0].SubItems [2].Text;
+
+            Assert.AreEqual( expectationsName, currentName );
+            Assert.AreEqual( expectationsPrice, currentPrice );
+            Assert.AreEqual( expectationsSides, currentSides );
+        }
+
+        [TestCase( "Pomidorowa", "12zł", "", "0" )]
+        [TestCase( "Rosół", "10zł", "", "1" )]
+        public void TestAddOrderToFormMenuListViewOrderAndCheckingDownloadOfEachSoups( string expectationsName, string expectationsPrice, string expectationsSides, int simulationChoosingDish )
+        {
+            FormMenu form = new FormMenu();
+            OnEventTest  onEvent = new OnEventTest();
+            onEvent.SetLogic( new ButtonSoupsLogic( form ) );
+            form.QTextbox.Text = "1";
+
+            onEvent.SetLogic( new FormMenuAddOrderListViewTest( form, simulationChoosingDish ) );
+            var currentName = form.ListViewOrder.Items [0].SubItems [0].Text;
+            var currentSides = form.ListViewOrder.Items [0].SubItems [1].Text;
+            var currentPrice = form.ListViewOrder.Items [0].SubItems [2].Text;
+
+            Assert.AreEqual( expectationsName, currentName );
+            Assert.AreEqual( expectationsPrice, currentPrice );
+            Assert.AreEqual( expectationsSides, currentSides );
+        }
+
+        [TestCase( "Kawa", "5zł", "", "0" )]
+        [TestCase( "Herbata", "5zł", "", "1" )]
+        [TestCase( "Cola", "5zł", "", "2" )]
+        public void TestAddOrderToFormMenuListViewOrderAndCheckingDownloadOfEachDrinks( string expectationsName, string expectationsPrice, string expectationsSides, int simulationChoosingDish )
+        {
+            FormMenu form = new FormMenu();
+            OnEventTest  onEvent = new OnEventTest();
+            onEvent.SetLogic( new ButtonDriksLogic( form ) );
+            form.QTextbox.Text = "1";
+
+            onEvent.SetLogic( new FormMenuAddOrderListViewTest( form, simulationChoosingDish ) );
+            var currentName = form.ListViewOrder.Items [0].SubItems [0].Text;
+            var currentSides = form.ListViewOrder.Items [0].SubItems [1].Text;
+            var currentPrice = form.ListViewOrder.Items [0].SubItems [2].Text;
+
+            Assert.AreEqual( expectationsName, currentName );
+            Assert.AreEqual( expectationsPrice, currentPrice );
+            Assert.AreEqual( expectationsSides, currentSides );
+        }
+
+        [TestCase( "Margheritta", "20zł","", "0" )]
+        [TestCase( "Margheritta", "20zł", "", "1" )]
+        [TestCase( "Margheritta", "20zł", "", "2" )]
+        public void TestAddOrderToFormMenuListViewOrderFromThreeRepeatsProduct( string expectationsName, string expectationsPrice, string expectationsSides, int index )
         {
             FormMenu form = new FormMenu();           
             OnEventTest  onEvent = new OnEventTest();
             onEvent.SetLogic( new ButtonPizzaLogic( form ) );
             form.QTextbox.Text = "3";
-            //todo Przerobic na  TestCase
-            onEvent.SetLogic( new FormMenuAddOrderListViewTest( form,0 ) );
-            var Name1 = form.ListViewOrder.Items [0].SubItems [0].Text;
-            var Sides1 = form.ListViewOrder.Items [0].SubItems [1].Text;
-            var Price1 = form.ListViewOrder.Items [0].SubItems [2].Text;
+            int selectedItem = 0;
 
-            var Name2 = form.ListViewOrder.Items [0].SubItems [0].Text;
-            var Sides2 = form.ListViewOrder.Items [0].SubItems [1].Text;
-            var Price2 = form.ListViewOrder.Items [0].SubItems [2].Text;
+            onEvent.SetLogic( new FormMenuAddOrderListViewTest( form, selectedItem ) );
+            var currentName = form.ListViewOrder.Items [index].SubItems [0].Text;
+            var currentSides = form.ListViewOrder.Items [index].SubItems [1].Text;
+            var currentPrice = form.ListViewOrder.Items [index].SubItems [2].Text;
 
-            var Name3 = form.ListViewOrder.Items [0].SubItems [0].Text;
-            var Sides3 = form.ListViewOrder.Items [0].SubItems [1].Text;
-            var Price3 = form.ListViewOrder.Items [0].SubItems [2].Text;
+            Assert.AreEqual( expectationsName, currentName );
+            Assert.AreEqual( expectationsPrice, currentPrice );
+            Assert.AreEqual( expectationsSides, currentSides );
+        }
 
-            Assert.AreEqual( "Margheritta", Name1);
-            Assert.AreEqual( "", Sides1 );
-            Assert.AreEqual( "20zł", Price1 );
+        [TestCase( "a" )]
+        [TestCase( "b" )]
+        [TestCase( "c" )]
+        [TestCase( "" )]
+        [TestCase( "1b" )]
+        public void TestAddOrderToFormMenuListViewOrderAndWronglyEnteredProductAmount( string productQuantity )
+        {
+            FormMenu form = new FormMenu();
+            OnEventTest  onEvent = new OnEventTest();
+            onEvent.SetLogic( new ButtonPizzaLogic( form ) );
+            form.QTextbox.Text = productQuantity;
+            int selectedItem = 0;
+            int expectationsListViewOrderCount = 0;
 
-            Assert.AreEqual( Name1, Name2 );
-            Assert.AreEqual( Sides1, Sides2 );
-            Assert.AreEqual( Price1, Price2 );
+            onEvent.SetLogic( new FormMenuAddOrderListViewTest( form, selectedItem ) );
+            var currentListViewOrderCount = form.ListViewOrder.Items.Count;
 
-            Assert.AreEqual( Name1, Name3 );
-            Assert.AreEqual( Sides1, Sides3 );
-            Assert.AreEqual( Price1, Price3 );
 
+            Assert.AreEqual( expectationsListViewOrderCount, form.ListViewOrder.Items.Count);
         }
     }
 }

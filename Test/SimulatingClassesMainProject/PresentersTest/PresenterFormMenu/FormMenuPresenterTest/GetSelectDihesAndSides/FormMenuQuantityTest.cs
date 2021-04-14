@@ -14,7 +14,7 @@ namespace Test
             int number = HelpFinding.ConvertTextToInt(form.QTextbox.Text);
             if (number < 1)
             {
-                MessageBox.Show( "Podana ilość produktów nie jest prawidłowa" );
+               // MessageBox.Show( "Podana ilość produktów nie jest prawidłowa" );
             }
             return number;
         }

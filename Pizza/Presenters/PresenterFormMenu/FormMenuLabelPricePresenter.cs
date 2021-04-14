@@ -7,11 +7,11 @@ namespace Pizza.Presenters.PresenterFormMenu
     {
         private readonly IPriceAll price;
         private readonly IFormMenuLabelPrice label;
-        //TODO zmienić na logike
-        public Form1LabelPricePresenter( FormMenu form1 )
+        
+        public Form1LabelPricePresenter( FormMenu form )
         {
-            price = new FormMenuAddOrderListView( form1 );
-            label = form1;
+            price = new FormMenuAddOrderListView( form );
+            label = form;
         }
 
         public void LogicSettings()

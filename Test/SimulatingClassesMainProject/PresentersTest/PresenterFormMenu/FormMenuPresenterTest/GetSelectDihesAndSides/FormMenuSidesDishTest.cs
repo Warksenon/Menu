@@ -6,14 +6,18 @@ namespace Test
 {
     public class FormMenuSidesDishTest : FormMenuQuantityTest
     {
-        public FormMenuSidesDishTest( FormMenu form ) : base( form ) { }
+        int[] simulationSelectionSides;
+        public FormMenuSidesDishTest( FormMenu form, int[] simulationSelectionSides ) : base( form ) 
+        {
+            this.simulationSelectionSides = simulationSelectionSides;
+        }
 
         public List<string> GetListCheckedSides()
         {
             List<string> list = new List<string>();
-            foreach (object item in form.CheckedListBoxSide.CheckedItems)
+            foreach (int i in simulationSelectionSides)
             {
-                string side = item.ToString();
+                string side = form.CheckedListBoxSide.Items [i].ToString();
                 list.Add( side );
             }
             return list;

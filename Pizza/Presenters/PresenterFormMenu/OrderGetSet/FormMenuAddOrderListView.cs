@@ -56,7 +56,7 @@ namespace Pizza.Presenters
             for (int i = 0; i < listSides.Count; i++)
             {
                 allSidesToGether.Append( listSides [i] );
-                if (i == listSides.Count)
+                if (i == listSides.Count-1)
                 {
                     allSidesToGether.Append( "." );
                 }
@@ -83,7 +83,7 @@ namespace Pizza.Presenters
 
             double priceDish = FindPrice(listDishes[0].Price);
             double priceAll = priceDish + priceSides;
-            return priceAll + " zł";
+            return priceAll + "zł";
         }
 
     }

@@ -15,7 +15,14 @@ namespace Test
         public FormMenuAddOrderListViewTest( FormMenu form1, int selectedItem ) : base( form1 )
         {
             lvDishes = new FormMenuListDishesTest( form1, selectedItem );
-            chblSides = new FormMenuSidesDishTest( form1 );
+            int [] simulationSelectionSides={ };
+            chblSides = new FormMenuSidesDishTest( form1, simulationSelectionSides );
+        }
+
+        public FormMenuAddOrderListViewTest( FormMenu form1, int selectedItem, int [] simulationSelectionSides ) : base( form1 )
+        {
+            lvDishes = new FormMenuListDishesTest( form1, selectedItem );
+            chblSides = new FormMenuSidesDishTest( form1 ,simulationSelectionSides );
         }
 
         public void LogicSettings()
@@ -56,7 +63,7 @@ namespace Test
             for (int i = 0; i < listSides.Count; i++)
             {
                 allSidesToGether.Append( listSides [i] );
-                if (i == listSides.Count)
+                if (i == listSides.Count-1)
                 {
                     allSidesToGether.Append( "." );
                 }
@@ -83,7 +90,7 @@ namespace Test
 
             double priceDish = FindPrice(listDishes[0].Price);
             double priceAll = priceDish + priceSides;
-            return priceAll + " zł";
+            return priceAll + "zł";
         }
 
     }

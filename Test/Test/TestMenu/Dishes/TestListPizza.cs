@@ -1,34 +1,29 @@
 ﻿using System.Collections.Generic;
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 using Pizza;
 using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
 
 namespace Test
 {
-    [TestClass]
+    [TestFixture]
     public class TestListPizza
     {
-
-        [TestMethod]
-        public void TestDishes()
-        {    //todo Przerobic na  TestCase
+        [TestCase( "Margheritta", "20zł", "0" )]
+        [TestCase( "Vegetariana", "22zł", "1" )]
+        [TestCase( "Tosca", "25zł", "2" )]
+        [TestCase( "Venecia", "25zł", "3" )]
+        public void TestGetListPizza( string expectationsName, string expectationsPrice, int index )
+        {   
             IForm1Dishes list = new ListPizza();
+
             List<Dish> listPizza = list.GetDishes();
+            var currentName = listPizza [index].Name;
+            var currentPrice = listPizza [index].Price;
 
-            Assert.AreEqual( "Margheritta", listPizza [0].Name );
-            Assert.AreEqual( "20zł", listPizza [0].Price );
-
-            Assert.AreEqual( "Vegetariana", listPizza [1].Name );
-            Assert.AreEqual( "22zł", listPizza [1].Price );
-
-            Assert.AreEqual( "Tosca", listPizza [2].Name );
-            Assert.AreEqual( "25zł", listPizza [2].Price );
-
-            Assert.AreEqual( "Venecia", listPizza [3].Name );
-            Assert.AreEqual( "25zł", listPizza [3].Price );
-
+            Assert.AreEqual( expectationsName, currentName );
+            Assert.AreEqual( expectationsPrice, currentPrice );
         }
     }
 }

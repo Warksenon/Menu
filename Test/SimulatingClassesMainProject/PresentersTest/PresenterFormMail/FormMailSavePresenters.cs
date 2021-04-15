@@ -2,7 +2,6 @@
 
 using Pizza;
 
-
 namespace Test
 {
     internal class FormMailSavePresenters : FormMailPresenter

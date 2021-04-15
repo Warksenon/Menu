@@ -11,10 +11,12 @@ namespace Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1
         protected int CheckNumberTextViewDishes()
         {
             int number = HelperConvert.ConvertTextToInt(form.QTextbox.Text);
+
             if (number < 1)
             {
                 MessageBox.Show( "Podana ilość produktów nie jest prawidłowa" );
             }
+
             return number;
         }
 

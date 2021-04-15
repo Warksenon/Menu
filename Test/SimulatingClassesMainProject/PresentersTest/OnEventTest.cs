@@ -4,7 +4,6 @@
     {
         public OnEventTest() { }
 
-
         public void SetLogic( ILogic logic )
         {
             logic.LogicSettings();

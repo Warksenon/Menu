@@ -13,7 +13,7 @@ namespace Test.Test
     public class TestSql
     {
         [TestCase( "0", "Margheritta - 20zł", "28zł", "Podwójny Ser -2zł,Salami -2zł,Szynka -2zł,Pieczarki -2zł." )]
-        [TestCase( "1", "Margheritta", "20zł","")]
+        [TestCase( "1", "Margheritta", "20zł", "" )]
         public void TestFirstAddOneOrderToSqlAndLoadTestListDishes( int index, string expectationsName, string expectationsPrice, string expectationsSides )
         {
             DeleteData();
@@ -35,13 +35,13 @@ namespace Test.Test
             Assert.AreEqual( expectationIdDish, currentIdDish );
         }
 
-        void DeleteData()
+        private void DeleteData()
         {
             IDataCleansing data=new SaveHistorySQLTest();
             data.DeleteData();
         }
 
-        Order CreateOrderFirst()
+        private Order CreateOrderFirst()
         {
             Order  order = new Order();
             Dish dishWithSides = new Dish()
@@ -64,6 +64,7 @@ namespace Test.Test
                 Date = "05.04.2021 00:10:54",
                 Comments = "one sauce"
             };
+
             order.AddDishToListDisch( dishWithSides );
             order.AddDishToListDisch( dishWithoutSides );
             order.PriceAll = priceAll;
@@ -71,7 +72,7 @@ namespace Test.Test
             return order;
         }
 
-        Order CreateOrderSecond()
+        private Order CreateOrderSecond()
         {
             Order  order = new Order();
             Dish dishWithSides = new Dish()
@@ -94,6 +95,7 @@ namespace Test.Test
                 Date = "05.03.2021 00:10:54",
                 Comments = "two sauce"
             };
+
             order.AddDishToListDisch( dishWithSides );
             order.AddDishToListDisch( dishWithoutSides );
             order.PriceAll = priceAll;
@@ -137,7 +139,7 @@ namespace Test.Test
             orderList.Add( orderSecond );
             SaveHistorySQLTest save = new SaveHistorySQLTest(orderList);
             save.SaveHistoryOrders();
-                   
+
             LoadOrder load = new LoadOrder();
             List<Order>  orderToLoad = load.LoadOrderList(new LoadHistorySQLTest());
             var currentnPricePriceAll = orderToLoad[index].PriceAll.Price;
@@ -151,12 +153,12 @@ namespace Test.Test
             Assert.AreEqual( expectationId, currentIdPriceAll );
         }
 
-        [TestCase( "1", "Margheritta - 20zł", "28zł", "Podwójny Ser -2zł,Salami -2zł,Szynka -2zł,Pieczarki -2zł.","0","0" )]
+        [TestCase( "1", "Margheritta - 20zł", "28zł", "Podwójny Ser -2zł,Salami -2zł,Szynka -2zł,Pieczarki -2zł.", "0", "0" )]
         [TestCase( "1", "Margheritta", "20zł", "", "0", "1" )]
         [TestCase( "2", "Venecia - 25zł", "27zł", "Salami -2zł.", "1", "0" )]
         [TestCase( "2", "Schabowy z frytkami/ryżem/ziemniakami", "30zł", "", "1", "1" )]
         public void TestSaveListOrderToSqlAndLoadTestDishes( int expectationId, string expectationsName, string expectationPrice, string expectationSides, int idexOrder, int indexDish )
-        {          
+        {
             Order  orderFirst =  CreateOrderFirst();
             Order  orderSecond = CreateOrderSecond();
             List<Order> orderList = new List<Order>();

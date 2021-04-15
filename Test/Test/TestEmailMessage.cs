@@ -65,7 +65,7 @@ namespace Test.Test
 
 
         [TestMethod]
-        public void TestCreateMessageWithOneDishAndSides ()
+        public void TestCreateMessageWithOneDishAndSides()
         {
             order = CreateorderWithSides();
             emailMessage = new EmailMessage( order );
@@ -98,6 +98,7 @@ namespace Test.Test
             Order order = new Order();
             order.ListDishes.Add( CreateDishwWithSides() );
             order.PriceAll = CreatePriceAllWithSides();
+
             return order;
         }
 

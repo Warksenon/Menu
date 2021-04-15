@@ -13,6 +13,7 @@ namespace Test
             bool flag = false;
             ILoadEmailData loadEmail = new LoadRegistry();
             EmailData registry = loadEmail.Load();
+
             using (MailMessage send = new MailMessage())
             {
                 using (SmtpClient client = new SmtpClient())
@@ -43,6 +44,7 @@ namespace Test
                     }
                 }
             }
+
             return flag;
         }
     }

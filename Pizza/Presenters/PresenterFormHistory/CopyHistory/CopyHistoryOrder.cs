@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+
 namespace Pizza.Presenters.PresenterFormHistory.CopyHistory
 {
     internal abstract class CopyHistoryOrder : ListViewHistory

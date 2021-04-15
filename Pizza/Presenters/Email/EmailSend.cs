@@ -43,6 +43,7 @@ namespace Pizza.Presenters.Email
                     }
                 }
             }
+
             return flag;
         }
     }

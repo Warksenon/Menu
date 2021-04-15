@@ -10,6 +10,7 @@ namespace Pizza
         {
             List<string> key = new List<string> { "schnitzelPrice", "fishPrice", "potatoPrice" };
             AddDishesToList( key );
+
             return listDisches;
         }
 

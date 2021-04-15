@@ -8,7 +8,6 @@ namespace Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1
     {
         public Form1LoadSidesPresenter( FormMenu form ) : base( form ) { }
 
-
         public void LoadSidesPizza()
         {
             LoadCheckListBoxSideDishe( new ListSidesPizza() );

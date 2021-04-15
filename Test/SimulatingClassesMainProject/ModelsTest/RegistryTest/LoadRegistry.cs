@@ -30,6 +30,7 @@ namespace Test
             {
                 RecordOfExceptions.Save( Convert.ToString( ex ), "LoadRegistry" );
             }
+
             return emailData;
         }
     }

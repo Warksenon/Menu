@@ -10,11 +10,11 @@ using Test.SimulatingClassesMainProject.ModelsTest;
 namespace Test.Test
 {
     [TestFixture]
-    public class UnitTest1
+    public class TestSaveAndLoadFilesTxt
     {
         [TestCase( "0", "Margheritta - 20zł", "28zł", "Podwójny Ser -2zł,Salami -2zł,Szynka -2zł,Pieczarki -2zł." )]
         [TestCase( "1", "Margheritta", "20zł", "" )]
-        public void TestFirstAddOneOrderToSqlAndLoadTestListDishes( int index, string expectationsName, string expectationsPrice, string expectationsSides )
+        public void TestFirstAddOneOrderToFilesTxtAndLoadTestListDishes( int index, string expectationsName, string expectationsPrice, string expectationsSides )
         {
             DeleteData();
             Order  orderToSave =  CreateOrderFirst();
@@ -22,7 +22,7 @@ namespace Test.Test
             save.AddOrder( new SaveFilesOrderTest( orderToSave ) );
 
             LoadOrder load = new LoadOrder();
-            List<Order>  orderToLoad = load.LoadOrderList(new LoadingFilesTxtTest());      
+            List<Order>  orderToLoad = load.LoadOrderList(new LoadingFilesTxtTest());
             var currentNameDish =  orderToLoad[0].ListDishes[index].Name;
             var currentPriceDish = orderToLoad[0].ListDishes[index].Price;
             var currentSidesDish = orderToLoad[0].ListDishes[index].Sides;
@@ -33,13 +33,13 @@ namespace Test.Test
             Assert.AreEqual( expectationsSides, currentSidesDish );
         }
 
-        void DeleteData()
+        private void DeleteData()
         {
             IDataCleansing data=new SaveFilesHistoryOrderTest();
             data.DeleteData();
         }
 
-        Order CreateOrderFirst()
+        private Order CreateOrderFirst()
         {
             Order  order = new Order();
             Dish dishWithSides = new Dish()
@@ -62,6 +62,7 @@ namespace Test.Test
                 Date = "05.04.2021 00:10:54",
                 Comments = "one sauce"
             };
+
             order.AddDishToListDisch( dishWithSides );
             order.AddDishToListDisch( dishWithoutSides );
             order.PriceAll = priceAll;
@@ -69,7 +70,7 @@ namespace Test.Test
             return order;
         }
 
-        Order CreateOrderSecond()
+        private Order CreateOrderSecond()
         {
             Order  order = new Order();
             Dish dishWithSides = new Dish()
@@ -92,6 +93,7 @@ namespace Test.Test
                 Date = "05.03.2021 00:10:54",
                 Comments = "two sauce"
             };
+
             order.AddDishToListDisch( dishWithSides );
             order.AddDishToListDisch( dishWithoutSides );
             order.PriceAll = priceAll;
@@ -100,8 +102,8 @@ namespace Test.Test
         }
 
         [TestCase( "48zł", "05.04.2021 00:10:54", "one sauce", "0" )]
-        [TestCase(  "57zł", "05.03.2021 00:10:54", "two sauce", "1" )]
-        public void TestAddTwoOrderToSqlAndLoadTestPrice(  string expectationsPrice, string expectationDate, string expectationComments, int index )
+        [TestCase( "57zł", "05.03.2021 00:10:54", "two sauce", "1" )]
+        public void TestAddTwoOrderToFilesTxtAndLoadTestPrice( string expectationsPrice, string expectationDate, string expectationComments, int index )
         {
             DeleteData();
             Order  orderToSave =  CreateOrderFirst();
@@ -121,9 +123,9 @@ namespace Test.Test
             Assert.AreEqual( expectationComments, currentCommentsPriceAll );
         }
 
-        [TestCase(  "48zł", "05.04.2021 00:10:54", "one sauce", "0" )]
-        [TestCase(  "57zł", "05.03.2021 00:10:54", "two sauce", "1" )]
-        public void TestSaveListOrderToSqlAndLoadTestPrice(  string expectationsPrice, string expectationDate, string expectationComments, int index )
+        [TestCase( "48zł", "05.04.2021 00:10:54", "one sauce", "0" )]
+        [TestCase( "57zł", "05.03.2021 00:10:54", "two sauce", "1" )]
+        public void TestSaveListOrderToFilesTxtAndLoadTestPrice( string expectationsPrice, string expectationDate, string expectationComments, int index )
         {
             Order  orderFirst =  CreateOrderFirst();
             Order  orderSecond = CreateOrderSecond();
@@ -148,7 +150,7 @@ namespace Test.Test
         [TestCase( "0", "Margheritta", "20zł", "", "0", "1" )]
         [TestCase( "0", "Venecia - 25zł", "27zł", "Salami -2zł.", "1", "0" )]
         [TestCase( "0", "Schabowy z frytkami/ryżem/ziemniakami", "30zł", "", "1", "1" )]
-        public void TestSaveListOrderToSqlAndLoadTestDishes( int expectationId, string expectationsName, string expectationPrice, string expectationSides, int idexOrder, int indexDish )
+        public void TestSaveListOrderToFilesTxtAndLoadTestDishes( int expectationId, string expectationsName, string expectationPrice, string expectationSides, int idexOrder, int indexDish )
         {
             Order  orderFirst =  CreateOrderFirst();
             Order  orderSecond = CreateOrderSecond();

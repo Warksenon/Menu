@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pizza.Presenters
 {
     public static class HelperConvert
     {
-        public static int ConvertTextToInt ( string textNumber )
+        public static int ConvertTextToInt( string textNumber )
         {
             int number;
             try

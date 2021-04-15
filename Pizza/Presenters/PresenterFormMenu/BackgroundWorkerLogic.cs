@@ -5,8 +5,6 @@ using Pizza.Models.SqlLite;
 using Pizza.Presenters.Email;
 using Pizza.View.Form1View;
 
-
-
 namespace Pizza.Presenters.PresenterFormMenu.OrderGetSet
 {
     internal class BackgroundWorkerLogic : ViewFormMenu, ILogic

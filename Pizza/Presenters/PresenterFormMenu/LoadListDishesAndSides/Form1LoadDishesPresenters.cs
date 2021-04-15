@@ -42,6 +42,5 @@ namespace Pizza
                 form.ListViewDishes.Items.Add( lvi );
             }
         }
-
     }
 }

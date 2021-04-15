@@ -39,6 +39,7 @@ namespace Pizza.Models.SqlLite
                 }
                 cn.Close();
             }
+
             return listorder;
         }
 
@@ -88,6 +89,7 @@ namespace Pizza.Models.SqlLite
                 }
                 cn.Close();
             }
+
             return order;
         }
 

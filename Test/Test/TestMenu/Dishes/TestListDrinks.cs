@@ -14,7 +14,7 @@ namespace Test
         [TestCase( "Herbata", "5zł", "1" )]
         [TestCase( "Cola", "5zł", "2" )]
         public void TestGetListDrinks( string expectationsName, string expectationsPrice, int index )
-        {  
+        {
             IForm1Dishes list = new ListDrinks();
 
             List<Dish> listDrinks = list.GetDishes();

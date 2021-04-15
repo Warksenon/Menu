@@ -18,6 +18,7 @@ namespace Test
         {
             bool flag = false;
             RegistryKey key = Microsoft.Win32.Registry.CurrentUser;
+
             try
             {
                 key.CreateSubKey( subKey );
@@ -37,12 +38,14 @@ namespace Test
                 RecordOfExceptions.Save( Convert.ToString( ex ), "SaveRegistry" );
             }
             key.Close();
+
             return flag;
         }
 
         private bool DataSender( RegistryKey key )
         {
             bool flag = false;
+
             try
             {
                 if (IsValidEmail( emailData.Sender ))
@@ -63,6 +66,7 @@ namespace Test
             {
                 RecordOfExceptions.Save( Convert.ToString( ex ), "DataSender" );
             }
+
             return flag;
         }
 

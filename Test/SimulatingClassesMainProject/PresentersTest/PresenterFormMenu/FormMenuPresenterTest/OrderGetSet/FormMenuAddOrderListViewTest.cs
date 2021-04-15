@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
+
 using Pizza;
-using Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1;
-using Pizza.Presenters.PresenterFormMenu.OrderGetSet;
 
 namespace Test
 {
@@ -22,7 +21,7 @@ namespace Test
         public FormMenuAddOrderListViewTest( FormMenu form1, int selectedItem, int [] simulationSelectionSides ) : base( form1 )
         {
             lvDishes = new FormMenuListDishesTest( form1, selectedItem );
-            chblSides = new FormMenuSidesDishTest( form1 ,simulationSelectionSides );
+            chblSides = new FormMenuSidesDishTest( form1, simulationSelectionSides );
         }
 
         public void LogicSettings()
@@ -59,11 +58,11 @@ namespace Test
 
         private string AddAllSides( List<string> listSides )
         {
-            StringBuilder allSidesToGether = new StringBuilder();          
+            StringBuilder allSidesToGether = new StringBuilder();
             for (int i = 0; i < listSides.Count; i++)
             {
                 allSidesToGether.Append( listSides [i] );
-                if (i == listSides.Count-1)
+                if (i == listSides.Count - 1)
                 {
                     allSidesToGether.Append( "." );
                 }

@@ -1,5 +1,5 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+
 using Pizza;
 
 namespace Test.Test.TestFormMenu.PresenterFormMenu
@@ -11,7 +11,7 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu
         [TestCase( "Vegetariana", "22zł", "", "1" )]
         [TestCase( "Tosca", "25zł", "", "2" )]
         [TestCase( "Venecia", "25zł", "", "3" )]
-        public void TestAddOrderToFormMenuListViewOrderAndCheckingDownloadOfEachPizza ( string expectationsName, string expectationsPrice, string expectationsSides, int indexListDishes  )
+        public void TestAddOrderToFormMenuListViewOrderAndCheckingDownloadOfEachPizza( string expectationsName, string expectationsPrice, string expectationsSides, int indexListDishes )
         {
             FormMenu form = new FormMenu();
             OnEventTest  onEvent = new OnEventTest();
@@ -32,14 +32,14 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu
             Assert.AreEqual( "92zł", currentPriceAll );
         }
 
-        void CreateAllOrderPizzaWithListViewDiehesWithoutSides ( OnEventTest onEvent, FormMenu form  )
+        private void CreateAllOrderPizzaWithListViewDiehesWithoutSides( OnEventTest onEvent, FormMenu form )
         {
             int [] simulationChoosingDish = {0,1,2,3};
-            foreach(int i in simulationChoosingDish)
+            foreach (int i in simulationChoosingDish)
             {
                 onEvent.SetLogic( new FormMenuAddOrderListViewTest( form, simulationChoosingDish [i] ) );
             }
-           
+
         }
     }
 }

@@ -14,7 +14,6 @@ namespace Pizza.Presenters
             this.numbersRepetitions = numbersRepetitions;
         }
 
-
         public List<Dish> GetListSelektedDishes()
         {
             List<Dish> list = new List<Dish>();
@@ -39,6 +38,5 @@ namespace Pizza.Presenters
         {
             return index;
         }
-
     }
 }

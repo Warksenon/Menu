@@ -13,7 +13,7 @@ namespace Test.Menu.Sides
         [TestCase( "Bar sałatkowy -5zł", "0" )]
         [TestCase( "Zestaw sosów -6zł", "1" )]
         public void TestGetListSidesMainDishes( string expectationsName, int index )
-        { 
+        {
             IForm1Sides list = new ListSidesMainDishes();
 
             List<string> listSides = list.GetSides();

@@ -9,7 +9,7 @@ namespace Test.Test.TestFormMenu.ViewSettingsTest
     [TestClass]
     public class TestMenuButtonView : FormMenuTest
     {
-        FormMenu ResetVariabelFromTest()
+        private FormMenu ResetVariabelFromTest()
         {
             form.PizzzaButton.BackColor = Color.Fuchsia;
             form.MainButton.BackColor = Color.Fuchsia;
@@ -17,6 +17,7 @@ namespace Test.Test.TestFormMenu.ViewSettingsTest
             form.DrinksButton.BackColor = Color.Fuchsia;
             form.QTextbox.Text = "";
             form.LabelMenu.Text = "";
+
             return form;
         }
 
@@ -58,7 +59,7 @@ namespace Test.Test.TestFormMenu.ViewSettingsTest
             var currentQuantityText =  form.QTextbox.Text;
             var currentLabelMenuText = form.LabelMenu.Text;
 
-            Assert.AreEqual( off ,currentColorBatonMenuPizza );
+            Assert.AreEqual( off, currentColorBatonMenuPizza );
             Assert.AreEqual( on, currentColorBatonMenuMainDishes );
             Assert.AreEqual( off, currentColorBatonMenuSoups );
             Assert.AreEqual( off, currentColorBatonMenuDrinks );
@@ -82,7 +83,7 @@ namespace Test.Test.TestFormMenu.ViewSettingsTest
             var currentLabelMenuText = form.LabelMenu.Text;
 
             Assert.AreEqual( off, currentColorBatonMenuPizza );
-            Assert.AreEqual(off, currentColorBatonMenuMainDishes );
+            Assert.AreEqual( off, currentColorBatonMenuMainDishes );
             Assert.AreEqual( on, currentColorBatonMenuSoups );
             Assert.AreEqual( off, currentColorBatonMenuDrinks );
             Assert.AreEqual( "1", currentQuantityText );

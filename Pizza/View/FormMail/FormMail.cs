@@ -35,6 +35,5 @@ namespace Pizza
         {
             this.Close();
         }
-
     }
 }

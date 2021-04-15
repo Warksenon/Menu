@@ -4,7 +4,6 @@ using System.Data;
 using System.Data.SQLite;
 
 using Pizza;
-using Pizza.SqlLite;
 
 namespace Test
 {
@@ -18,7 +17,6 @@ namespace Test
             SQLiteConnection cn = CreateSQLiteConnection();
             using (cn)
             {
-
                 cn.Open();
 
                 string sql = "INSERT INTO " + Name.PriceAll + "(" + Name.Id + ", " + Name.Price + ", " + Name.Date + ", " + Name.Comments + ") VALUES(@param1, @param2, @param3, @param4)";
@@ -34,7 +32,6 @@ namespace Test
                     cmd.Parameters.Add( param2 );
                     cmd.Parameters.Add( param3 );
                     cmd.Parameters.Add( param4 );
-
 
                     param1.Value = order.PriceAll.ID;
                     param2.Value = order.PriceAll.Price;
@@ -72,7 +69,6 @@ namespace Test
                     SQLiteParameter param2 = new SQLiteParameter("param2", DbType.String);
                     SQLiteParameter param3 = new SQLiteParameter("param3", DbType.String);
                     SQLiteParameter param4 = new SQLiteParameter("param4", DbType.String);
-
 
                     using (SQLiteCommand cmd = new SQLiteCommand( sql, cn ))
                     {

@@ -52,11 +52,11 @@ namespace Pizza.Presenters
 
         private string AddAllSides( List<string> listSides )
         {
-            StringBuilder allSidesToGether = new StringBuilder();          
+            StringBuilder allSidesToGether = new StringBuilder();
             for (int i = 0; i < listSides.Count; i++)
             {
                 allSidesToGether.Append( listSides [i] );
-                if (i == listSides.Count-1)
+                if (i == listSides.Count - 1)
                 {
                     allSidesToGether.Append( "." );
                 }

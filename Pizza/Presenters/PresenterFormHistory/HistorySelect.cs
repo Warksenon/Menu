@@ -15,6 +15,7 @@ namespace Pizza.Presenters.PresenterFormHistory
         private void LoadLVDishes()
         {
             form.ListViewDishes.Items.Clear();
+
             foreach (var dish in orderList [form.ListViewPrice.FocusedItem.Index].ListDishes)
             {
                 ListViewItem lvi = new ListViewItem(Convert.ToString(dish.Id));

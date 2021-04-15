@@ -18,7 +18,7 @@ namespace Test
         }
 
         public SaveFilesHistoryOrderTest() { }
-      
+
         private void SaveListOrder()
         {
             try
@@ -28,7 +28,6 @@ namespace Test
                     List = listOrder
                 };
                 var customer = jsonHelper;
-
                 var jsonToWrite = JsonConvert.SerializeObject(customer, Formatting.Indented);
 
                 using (var writer = new StreamWriter( _path ))
@@ -53,7 +52,7 @@ namespace Test
             {
                 using (var writer = new StreamWriter( _path ))
                 {
-                    writer.Write("");
+                    writer.Write( "" );
                 }
             }
             catch (Exception ex)

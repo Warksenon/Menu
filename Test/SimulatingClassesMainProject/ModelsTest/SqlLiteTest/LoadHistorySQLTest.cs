@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data.SQLite;
 
 using Pizza;
-using Pizza.SqlLite;
 
 namespace Test
 {
@@ -74,6 +73,7 @@ namespace Test
             using (cn)
             {
                 string qIdCeny = "SELECT * FROM " + Name.Dishes + " WHERE " + Name.IdPrice + " = " + num;
+
                 try
                 {
                     cn.Open();
@@ -89,6 +89,7 @@ namespace Test
                 }
                 cn.Close();
             }
+
             return order;
         }
 

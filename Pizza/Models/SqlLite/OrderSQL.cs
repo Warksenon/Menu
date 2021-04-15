@@ -16,7 +16,6 @@ namespace Pizza.Models.SqlLite
             SQLiteConnection cn = CreateSQLiteConnection();
             using (cn)
             {
-
                 cn.Open();
 
                 string sql = "INSERT INTO " + Name.PriceAll + "(" + Name.Id + ", " + Name.Price + ", " + Name.Date + ", " + Name.Comments + ") VALUES(@param1, @param2, @param3, @param4)";
@@ -32,7 +31,6 @@ namespace Pizza.Models.SqlLite
                     cmd.Parameters.Add( param2 );
                     cmd.Parameters.Add( param3 );
                     cmd.Parameters.Add( param4 );
-
 
                     param1.Value = order.PriceAll.ID;
                     param2.Value = order.PriceAll.Price;
@@ -71,7 +69,6 @@ namespace Pizza.Models.SqlLite
                     SQLiteParameter param3 = new SQLiteParameter("param3", DbType.String);
                     SQLiteParameter param4 = new SQLiteParameter("param4", DbType.String);
 
-
                     using (SQLiteCommand cmd = new SQLiteCommand( sql, cn ))
                     {
                         cmd.Parameters.Add( param1 );
@@ -102,6 +99,7 @@ namespace Pizza.Models.SqlLite
         {
             int id = 0;
             SQLiteConnection cn = CreateSQLiteConnection();
+
             using (cn)
             {
                 string findingMaxIdPrice = "SELECT  MAX(id) FROM " + Name.PriceAll;
@@ -111,6 +109,7 @@ namespace Pizza.Models.SqlLite
                     {
                         cn.Open();
                         SQLiteDataReader dr = cmd.ExecuteReader();
+
                         if (dr.HasRows)
                         {
                             while (dr.Read())

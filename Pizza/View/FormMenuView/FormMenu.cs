@@ -27,12 +27,12 @@ namespace Pizza
             backgroundWorker1.WorkerSupportsCancellation = true;
         }
 
-        private readonly IOnEvent eevent = new OnEvent();
+        private readonly IOnEvent onEvent = new OnEvent();
 
         private void Form1_Load_1( object sender, EventArgs e )
         {
-            eevent.SetLogic( new FormMenuLogic( this ) );
-            eevent.SetView( new FormMenuView( this ) );
+            onEvent.SetLogic( new FormMenuLogic( this ) );
+            onEvent.SetView( new FormMenuView( this ) );
         }
 
         public ListView ListViewDishes { get => listViewDish; set => listViewDish = value; }
@@ -53,45 +53,44 @@ namespace Pizza
         public Button ButtonRemoveAll { get => bRemoveAllListBox; set => bRemoveAllListBox = value; }
         public Button ButtonSubmitOrder { get => bOrder; set => bOrder = value; }
 
-
         private void ButtonPizza_Click( object sender, EventArgs e )
         {
-            eevent.SetLogic( new ButtonPizzaLogic( this ) );
-            eevent.SetView( new ButtonPizzaView( this ) );
+            onEvent.SetLogic( new ButtonPizzaLogic( this ) );
+            onEvent.SetView( new ButtonPizzaView( this ) );
         }
 
         private void ButtonMainDish_Click( object sender, EventArgs e )
         {
-            eevent.SetLogic( new ButtonMainDishesLogic( this ) );
-            eevent.SetView( new ButtonMainDishesView( this ) );
+            onEvent.SetLogic( new ButtonMainDishesLogic( this ) );
+            onEvent.SetView( new ButtonMainDishesView( this ) );
         }
 
         private void ButtonDrinks_Click( object sender, EventArgs e )
         {
-            eevent.SetView( new ButtonDrinksView( this ) );
-            eevent.SetLogic( new ButtonDriksLogic( this ) );
+            onEvent.SetView( new ButtonDrinksView( this ) );
+            onEvent.SetLogic( new ButtonDriksLogic( this ) );
         }
 
         private void ButtonSoup_Click( object sender, EventArgs e )
         {
-            eevent.SetView( new ButtonSoupsView( this ) );
-            eevent.SetLogic( new ButtonSoupsLogic( this ) );
+            onEvent.SetView( new ButtonSoupsView( this ) );
+            onEvent.SetLogic( new ButtonSoupsLogic( this ) );
         }
 
         private void ButtonOrder_Click( object sender, EventArgs e )
         {
-            eevent.SetLogic( new ButtonPlaceOrderLogic( this ) );
+            onEvent.SetLogic( new ButtonPlaceOrderLogic( this ) );
         }
 
         private void ButtonOk_Click( object sender, EventArgs e )
         {
-            eevent.SetView( new ButtonOkView( this ) );
-            eevent.SetLogic( new ButtonOkLogic( this ) );
+            onEvent.SetView( new ButtonOkView( this ) );
+            onEvent.SetLogic( new ButtonOkLogic( this ) );
         }
 
         private void ListViewDish_SelectedIndexChanged( object sender, EventArgs e )
         {
-            eevent.SetView( new ListViewDishes( this ) );
+            onEvent.SetView( new ListViewDishes( this ) );
         }
 
         private void listViewOrder_SelectedIndexChanged( object sender, EventArgs e )
@@ -99,20 +98,17 @@ namespace Pizza
             bRemoveListBox.Visible = true;
         }
 
-
         private void ButtonRemoveListBox_Click( object sender, EventArgs e )
         {
-            eevent.SetLogic( new RemoveOrderOneLogic( this ) );
-            eevent.SetView( new ButtonRemoveOne( this ) );
+            onEvent.SetLogic( new RemoveOrderOneLogic( this ) );
+            onEvent.SetView( new ButtonRemoveOne( this ) );
         }
 
         private void ButtonRemoveAllListBox_Click( object sender, EventArgs e )
         {
-            eevent.SetView( new ButtonRemoveAll( this ) );
-            eevent.SetLogic( new RemoveOrderAllLogic( this ) );
+            onEvent.SetView( new ButtonRemoveAll( this ) );
+            onEvent.SetLogic( new RemoveOrderAllLogic( this ) );
         }
-
-
 
         private void AddressEmailToolStripMenuItem_Click( object sender, EventArgs e )
         {

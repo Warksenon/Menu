@@ -20,6 +20,7 @@ namespace Pizza
             bill = WritePriceAll( priceAll );
             bill += WriteDischesAll();
             bill += Name.CommentsMessag + "\n" + priceAll.Comments;
+
             return bill;
         }
 
@@ -54,7 +55,7 @@ namespace Pizza
         private string WriteDischesAll()
         {
             StringBuilder dischesAll = new StringBuilder();
-            ;
+            
             foreach (var item in listDishes)
             {
                 dischesAll.Append( WriteDisch( item ) );
@@ -79,6 +80,7 @@ namespace Pizza
             {
                 string sidesDishes = disch.Sides;
                 StringBuilder newSidesDishes = new StringBuilder();
+
                 while (SideDishesIsEmpty( sidesDishes ))
                 {
                     newSidesDishes.Append( "# " );
@@ -86,12 +88,15 @@ namespace Pizza
                     sidesDishes = RemoveSideDishAndWhiteSigns( sidesDishes );
 
                 }
+
                 wirteDisch.Append( newSidesDishes );
             }
+
             string price = Name.PriceForDish + disch.Price + "\n";
             wirteDisch.Append( price );
             wirteDisch.AppendLine( OneHash() );
             wirteDisch.AppendLine( LinesHash() );
+
             return wirteDisch;
         }
 
@@ -127,6 +132,7 @@ namespace Pizza
         {
             int index = FindIndexCommaOrPeriod(sideDish);
             sideDish = sideDish.Remove( 0, index + 1 );
+
             return sideDish.Trim();
         }
 
@@ -137,14 +143,15 @@ namespace Pizza
             else
                 return true;
         }
+
         private bool SideDishesIsEmpty( string sideDishes )
         {
             if (sideDishes.Equals( "" ))
                 return false;
             else
                 return true;
-
         }
+
         private string TextPlusNewLines( string text )
         {
             return "# " + text + "\n";

@@ -42,6 +42,7 @@ namespace Test
                 Smtp = "smtp.wp.com",
                 Port = "537"
             };
+
             return email;
         }
 

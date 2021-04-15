@@ -1,15 +1,14 @@
 ﻿using System.Collections.Generic;
 
 using Pizza;
-using Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1;
 
 namespace Test
 {
     public class FormMenuListDishesTest : FormMenuQuantityTest
     {
-        readonly int  selectedItem;
+        private readonly int  selectedItem;
 
-        public FormMenuListDishesTest( FormMenu form, int selectedItem ) : base( form ) 
+        public FormMenuListDishesTest( FormMenu form, int selectedItem ) : base( form )
         {
             this.selectedItem = selectedItem;
         }
@@ -18,6 +17,7 @@ namespace Test
         {
             List<Dish> list = new List<Dish>();
             int numbersRepetitions = CheckNumberTextViewDishes();
+
             if (numbersRepetitions > 0)
             {
                 int x = CheckListDishesSelectedItem();

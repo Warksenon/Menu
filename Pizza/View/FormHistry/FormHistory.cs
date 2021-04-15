@@ -13,6 +13,7 @@ namespace Pizza
     public partial class FormHistory : Form, IListViewHistory, IButtonFormHistory
     {
         private readonly OnEvent onEvent = new OnEvent();
+
         public FormHistory()
         {
             InitializeComponent();
@@ -35,7 +36,6 @@ namespace Pizza
         {
             onEvent.SetLogic( new FileTextLoad( this ) );
             onEvent.SetView( new LoadTxtView( this ) );
-            ;
         }
 
         private void ButtonSqlList_Click( object sender, EventArgs e )
@@ -68,5 +68,4 @@ namespace Pizza
             onEvent.SetLogic( new HistorySelect( this ) );
         }
     }
-
 }

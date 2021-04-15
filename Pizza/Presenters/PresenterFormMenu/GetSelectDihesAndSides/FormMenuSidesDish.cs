@@ -9,11 +9,13 @@ namespace Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1
         public List<string> GetListCheckedSides()
         {
             List<string> list = new List<string>();
+
             foreach (object item in form.CheckedListBoxSide.CheckedItems)
             {
                 string side = item.ToString();
                 list.Add( side );
             }
+
             return list;
         }
 

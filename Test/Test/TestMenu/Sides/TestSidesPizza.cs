@@ -15,7 +15,7 @@ namespace Test.Menu.Sides
         [TestCase( "Szynka -2zł", "2" )]
         [TestCase( "Pieczarki -2zł", "3" )]
         public void TestGetListSidesPizza( string expectationsName, int index )
-        {   
+        {
             IForm1Sides list = new ListSidesPizza();
 
             List<string> listSides = list.GetSides();

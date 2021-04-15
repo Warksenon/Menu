@@ -136,7 +136,7 @@
     <Compile Include="Test\TestRegistry.cs" />
     <Compile Include="Test\TestEmailMessage.cs" />
     <Compile Include="Test\TestSql.cs" />
-    <Compile Include="Test\UnitTest1.cs" />
+    <Compile Include="Test\TestSaveAndLoadFilesTxt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

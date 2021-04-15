@@ -1,10 +1,7 @@
-﻿using System;
-
-namespace Pizza
+﻿namespace Pizza
 {
     public static class HelpFinding
     {
-
         public static bool CheckStringIsNotEmpty( string text )
         {
             if (string.IsNullOrEmpty( text ))

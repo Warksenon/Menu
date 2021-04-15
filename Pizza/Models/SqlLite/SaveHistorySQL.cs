@@ -31,9 +31,11 @@ namespace Pizza.Models.SqlLite
         private void RemoveAllTask()
         {
             SQLiteConnection cn = CreateSQLiteConnection();
+
             using (cn)
             {
                 string deletePriceAll = "DELETE FROM " + Name.PriceAll;
+
                 using (SQLiteCommand cmd = new SQLiteCommand( deletePriceAll, cn ))
                 {
                     cn.Open();
@@ -50,11 +52,11 @@ namespace Pizza.Models.SqlLite
                 cn.Close();
                 SQLiteConnection.ClearAllPools();
             }
+
             cn = CreateSQLiteConnection();
 
             using (cn)
             {
-
                 cn.Open();
                 string sql = "DELETE FROM " + Name.Dishes;
 

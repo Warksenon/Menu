@@ -8,6 +8,7 @@ namespace Pizza
         {
             List<string> key = new List<string> { "coffeePrice", "teaPrice", "colaPrice" };
             AddDishesToList( key );
+
             return listDisches;
         }
 

@@ -87,9 +87,5 @@
                     recipient = value;
             }
         }
-
-
-
-
     }
 }

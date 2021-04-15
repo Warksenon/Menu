@@ -1659,3 +1659,23 @@ LoadOrderListFromTxt
 System.NullReferenceException: Odwołanie do obiektu nie zostało ustawione na wystąpienie obiektu.
    w Test.LoadingFilesTxtTest.LoadOrderListFromTxt() w C:\Users\user\Desktop\projekty\ostatnie podskoki\Pizza Git\Test\SimulatingClassesMainProject\ModelsTest\FilesTXTtest\LoadingFilesTxtTest.cs:wiersz 25
 
+Data : 15.04.2021 18:31:10
+LoadOrderListFromTxt
+System.NullReferenceException: Odwołanie do obiektu nie zostało ustawione na wystąpienie obiektu.
+   w Test.LoadingFilesTxtTest.LoadOrderListFromTxt() w C:\Users\user\Desktop\projekty\ostatnie podskoki\Pizza Git\Test\SimulatingClassesMainProject\ModelsTest\FilesTXTtest\LoadingFilesTxtTest.cs:wiersz 25
+
+Data : 15.04.2021 18:31:10
+LoadOrderListFromTxt
+System.NullReferenceException: Odwołanie do obiektu nie zostało ustawione na wystąpienie obiektu.
+   w Test.LoadingFilesTxtTest.LoadOrderListFromTxt() w C:\Users\user\Desktop\projekty\ostatnie podskoki\Pizza Git\Test\SimulatingClassesMainProject\ModelsTest\FilesTXTtest\LoadingFilesTxtTest.cs:wiersz 25
+
+Data : 15.04.2021 18:31:10
+LoadOrderListFromTxt
+System.NullReferenceException: Odwołanie do obiektu nie zostało ustawione na wystąpienie obiektu.
+   w Test.LoadingFilesTxtTest.LoadOrderListFromTxt() w C:\Users\user\Desktop\projekty\ostatnie podskoki\Pizza Git\Test\SimulatingClassesMainProject\ModelsTest\FilesTXTtest\LoadingFilesTxtTest.cs:wiersz 25
+
+Data : 15.04.2021 18:31:10
+LoadOrderListFromTxt
+System.NullReferenceException: Odwołanie do obiektu nie zostało ustawione na wystąpienie obiektu.
+   w Test.LoadingFilesTxtTest.LoadOrderListFromTxt() w C:\Users\user\Desktop\projekty\ostatnie podskoki\Pizza Git\Test\SimulatingClassesMainProject\ModelsTest\FilesTXTtest\LoadingFilesTxtTest.cs:wiersz 25
+

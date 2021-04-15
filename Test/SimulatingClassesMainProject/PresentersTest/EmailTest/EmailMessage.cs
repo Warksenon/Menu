@@ -22,6 +22,7 @@ namespace Test
             bill = WritePriceAll( priceAll );
             bill += WriteDischesAll();
             bill += Name.CommentsMessag + "\n" + priceAll.Comments;
+
             return bill;
         }
 
@@ -81,6 +82,7 @@ namespace Test
             {
                 string sidesDishes = disch.Sides;
                 StringBuilder newSidesDishes = new StringBuilder();
+
                 while (SideDishesIsEmpty( sidesDishes ))
                 {
                     newSidesDishes.Append( "# " );
@@ -94,6 +96,7 @@ namespace Test
             wirteDisch.Append( price );
             wirteDisch.AppendLine( OneHash() );
             wirteDisch.AppendLine( LinesHash() );
+
             return wirteDisch;
         }
 

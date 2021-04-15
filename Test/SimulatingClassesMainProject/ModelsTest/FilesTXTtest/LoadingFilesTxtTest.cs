@@ -16,11 +16,11 @@ namespace Test
             try
             {
                 string jsonFromFile;
+
                 using (var reader = new StreamReader( _path ))
                 {
                     jsonFromFile = reader.ReadToEnd();
                 }
-
                 var order = JsonConvert.DeserializeObject<JsonHelperTest>(jsonFromFile);
                 listOrder = order.List;
             }

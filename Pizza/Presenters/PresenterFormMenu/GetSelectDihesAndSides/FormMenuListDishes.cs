@@ -10,9 +10,11 @@ namespace Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1
         {
             List<Dish> list = new List<Dish>();
             int numbersRepetitions = CheckNumberTextViewDishes();
+
             if (numbersRepetitions > 0)
             {
                 int x = CheckListDishesSelectedItem();
+
                 for (int i = 0; i < numbersRepetitions; i++)
                 {
                     Dish dish = new Dish

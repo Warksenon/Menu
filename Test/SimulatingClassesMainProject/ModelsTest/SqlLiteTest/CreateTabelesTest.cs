@@ -18,6 +18,7 @@ namespace Test
         private void CreateSQLiteDatabaseFile()
         {
             DirectoryInfo di = new DirectoryInfo(folderDatabase);
+
             if (!di.Exists)
             {
                 try
@@ -43,6 +44,7 @@ namespace Test
             using (cn)
             {
                 string sql = "CREATE TABLE '" + Name.PriceAll + "'('id' INTEGER PRIMARY KEY , '" + Name.Price + "' TEXT, '" + Name.Date + "' TEXT, '" + Name.Comments + "' TEXT);";
+
                 try
                 {
                     cn.Open();
@@ -65,6 +67,7 @@ namespace Test
             using (cn)
             {
                 string sql2 = "CREATE TABLE '" + Name.Dishes + "'('id' INTEGER PRIMARY KEY,'" + Name.IdPrice + "' int, '" + Name.Dish + "' TEXT ,'" + Name.Price + "' TEXT,'" + Name.SidesDishes + "' );";
+
                 try
                 {
                     cn.Open();

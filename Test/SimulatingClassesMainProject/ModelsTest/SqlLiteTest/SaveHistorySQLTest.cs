@@ -40,6 +40,7 @@ namespace Test
             using (cn)
             {
                 string deletePriceAll = "DELETE FROM " + Name.PriceAll;
+
                 using (SQLiteCommand cmd = new SQLiteCommand( deletePriceAll, cn ))
                 {
                     cn.Open();

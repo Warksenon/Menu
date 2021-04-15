@@ -29,6 +29,7 @@ namespace Pizza.Models.Registry
             {
                 RecordOfExceptions.Save( Convert.ToString( ex ), "LoadRegistry" );
             }
+
             return emailData;
         }
     }

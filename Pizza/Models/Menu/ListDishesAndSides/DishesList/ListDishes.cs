@@ -15,6 +15,7 @@ namespace Pizza
         protected void AddDishesToList( List<string> key )
         {
             listDisches = new List<Dish>();
+
             foreach (var k in key)
             {
                 disch = new Dish();

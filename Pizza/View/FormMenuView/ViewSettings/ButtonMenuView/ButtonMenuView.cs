@@ -4,7 +4,6 @@ namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
 {
     public abstract class ButtonMenuView : ViewFormMenu, IView
     {
-
         public ButtonMenuView( FormMenu form1 ) : base( form1 ) { }
 
         protected void ButtonSeting()
@@ -44,6 +43,5 @@ namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
         }
 
         public abstract void ViewSetting();
-
     }
 }

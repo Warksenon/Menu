@@ -6,15 +6,19 @@ using Newtonsoft.Json;
 
 using Pizza;
 
+using Test.SimulatingClassesMainProject.ModelsTest;
+
 namespace Test
 {
-    internal class SaveFilesHistoryOrderTest : FilesTest, ISaveHistory
+    internal class SaveFilesHistoryOrderTest : FilesTest, ISaveHistory, IDataCleansing
     {
         public SaveFilesHistoryOrderTest( List<Order> listOrder )
         {
             this.listOrder = listOrder;
         }
 
+        public SaveFilesHistoryOrderTest() { }
+      
         private void SaveListOrder()
         {
             try
@@ -41,6 +45,21 @@ namespace Test
         public void SaveHistoryOrders()
         {
             SaveListOrder();
+        }
+
+        public void DeleteData()
+        {
+            try
+            {
+                using (var writer = new StreamWriter( _path ))
+                {
+                    writer.Write("");
+                }
+            }
+            catch (Exception ex)
+            {
+                RecordOfExceptions.Save( Convert.ToString( ex ), "DeleteData" );
+            }
         }
     }
 }

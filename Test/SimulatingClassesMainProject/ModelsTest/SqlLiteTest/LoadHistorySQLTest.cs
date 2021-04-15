@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Data.SQLite;
 
+using Pizza;
 using Pizza.SqlLite;
 
-namespace Pizza.Models.SqlLite
+namespace Test
 {
-    internal class LoadHistorySQL : CreateConnection, ILoadHistoryOrders
+    internal class LoadHistorySQLTest : CreateConnectionTest, ILoadHistoryOrders
     {
         public List<Order> LoadHistory()
         {

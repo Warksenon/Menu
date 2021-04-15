@@ -1,6 +1,6 @@
 ﻿namespace Pizza.Presenters
 {
-    internal class SaveOrder
+    public class SaveOrder
     {
         public void AddOrder( IAddOrder save )
         {

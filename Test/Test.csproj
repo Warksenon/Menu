@@ -46,6 +46,9 @@
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\Pizza\packages\MSTest.TestFramework.2.2.3\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\Pizza\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=3.13.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\Pizza\packages\NUnit.3.13.1\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
@@ -60,9 +63,21 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\FilesTXTtest\FilesTest.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\FilesTXTtest\JsonHelperTest.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\FilesTXTtest\LoadingFilesTxtTest.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\FilesTXTtest\SaveFilesHistoryOrderTest.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\FilesTXTtest\SaveFilesOrderTest.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\IDataCleansing.cs" />
     <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\LoadRegistry.cs" />
     <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\Registry.cs" />
     <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\SaveRegistry.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\CreateConnectionTest.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\CreateTabelesTest.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\LoadHistorySQLTest.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\OrderSQLTest.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\SaveHistorySQLTest.cs" />
+    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\SaveOrderSQLTest.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\PresenterFormMail\FormMailLoad.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\PresenterFormMail\FormMailPresenter.cs" />
     <Compile Include="SimulatingClassesMainProject\PresentersTest\PresenterFormMail\FormMailSavePresenters.cs" />
@@ -120,6 +135,7 @@
     <Compile Include="Test\TestMenu\Dishes\TestListMainDishes.cs" />
     <Compile Include="Test\TestRegistry.cs" />
     <Compile Include="Test\TestEmailMessage.cs" />
+    <Compile Include="Test\TestSql.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

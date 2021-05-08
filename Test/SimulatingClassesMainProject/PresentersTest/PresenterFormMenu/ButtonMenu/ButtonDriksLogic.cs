@@ -8,7 +8,7 @@ namespace Test
 
         public override void LogicSettings()
         {
-            loadDishesToListView.LoadDrinks();
+            loadDishesToListView.AddDishesToListView( new ListDrinks() );
             loadSidesToCheckedListBox.ClearCheckedListBox();
         }
     }

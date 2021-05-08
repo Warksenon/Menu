@@ -11,27 +11,7 @@ namespace Pizza
     {
         public Form1LoadDishesPresenters( FormMenu form1 ) : base( form1 ) { }
 
-        public void LoadPizza()
-        {
-            AddDishesToListView( new ListPizza() );
-        }
-
-        public void LoadMainDish()
-        {
-            AddDishesToListView( new ListMainDishes() );
-        }
-
-        public void LoadSoups()
-        {
-            AddDishesToListView( new ListSoups() );
-        }
-
-        public void LoadDrinks()
-        {
-            AddDishesToListView( new ListDrinks() );
-        }
-
-        private void AddDishesToListView( IForm1Dishes loadList )
+        public void AddDishesToListView( IForm1Dishes loadList )
         {
             List<Dish> listDisch = loadList.GetDishes();
             form.ListViewDishes.Items.Clear();

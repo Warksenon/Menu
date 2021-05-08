@@ -9,7 +9,7 @@ namespace Pizza.Presenters.PresenterFormMenu.Logic
         public override void LogicSettings()
         {
             loadSidesToCheckedListBox.ClearCheckedListBox();
-            loadDishesToListView.LoadSoups();
+            loadDishesToListView.AddDishesToListView( new ListSoups() );
         }
     }
 }

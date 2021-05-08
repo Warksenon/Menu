@@ -9,7 +9,7 @@ namespace Test
         public override void LogicSettings()
         {
             loadSidesToCheckedListBox.LoadSidesMainDishes();
-            loadDishesToListView.LoadMainDish();
+            loadDishesToListView.AddDishesToListView( new ListMainDishes() );
         }
     }
 }

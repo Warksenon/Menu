@@ -122,6 +122,7 @@
     <Compile Include="Presenters\PresenterFormMail\FormMailLoad.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailPresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\BackgroundWorkerLogic.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\ButtonLoadMenu.cs" />
     <Compile Include="Presenters\PresenterFormMenu\ButtonOkLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\ButtonPlaceOrderLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\FormMenuLabelPricePresenter.cs" />
@@ -129,11 +130,7 @@
     <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\FormMenuListDishes.cs" />
     <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\FormMenuQuantity.cs" />
     <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\FormMenuSidesDish.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\ButtonDriksLogic.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\ButtonMainDishesLogic.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\ButtonPizzaLogic.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\ButtonSoupsLogic.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\MenuButton.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\LogicMenuButton.cs" />
     <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\FormMenuCreatingOrder.cs" />
     <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\FormMenuListViewOrder.cs" />
     <Compile Include="Presenters\PresenterFormMenu\Remove\RemoveOrderLogic.cs" />

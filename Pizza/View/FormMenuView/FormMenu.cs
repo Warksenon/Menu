@@ -5,7 +5,6 @@ using System.Windows.Forms;
 
 using Pizza.Presenters;
 using Pizza.Presenters.PresenterFormMenu;
-using Pizza.Presenters.PresenterFormMenu.Logic;
 using Pizza.Presenters.PresenterFormMenu.Remove;
 using Pizza.Presenters.PresenterFormMenu.VisableElements.Button;
 using Pizza.View.Form1;
@@ -55,26 +54,26 @@ namespace Pizza
 
         private void ButtonPizza_Click( object sender, EventArgs e )
         {
-            onEvent.SetLogic( new ButtonPizzaLogic( this ) );
+            onEvent.SetLogic( new LogicMenuButton( this, ButtonLoadMenu.Pizza ) );
             onEvent.SetView( new ButtonPizzaView( this ) );
         }
 
         private void ButtonMainDish_Click( object sender, EventArgs e )
         {
-            onEvent.SetLogic( new ButtonMainDishesLogic( this ) );
+            onEvent.SetLogic( new LogicMenuButton( this, ButtonLoadMenu.MainDishes ) );
             onEvent.SetView( new ButtonMainDishesView( this ) );
         }
 
         private void ButtonDrinks_Click( object sender, EventArgs e )
         {
             onEvent.SetView( new ButtonDrinksView( this ) );
-            onEvent.SetLogic( new ButtonDriksLogic( this ) );
+            onEvent.SetLogic( new LogicMenuButton( this, ButtonLoadMenu.Drinks ) );
         }
 
         private void ButtonSoup_Click( object sender, EventArgs e )
         {
             onEvent.SetView( new ButtonSoupsView( this ) );
-            onEvent.SetLogic( new ButtonSoupsLogic( this ) );
+            onEvent.SetLogic( new LogicMenuButton( this, ButtonLoadMenu.Soups ) );
         }
 
         private void ButtonOrder_Click( object sender, EventArgs e )

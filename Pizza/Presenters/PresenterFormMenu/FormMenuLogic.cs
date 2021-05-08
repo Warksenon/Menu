@@ -1,5 +1,4 @@
-﻿using Pizza.Presenters.PresenterFormMenu.Logic;
-using Pizza.SqlLite;
+﻿using Pizza.SqlLite;
 using Pizza.View.Form1View;
 
 namespace Pizza.Presenters.PresenterFormMenu
@@ -10,7 +9,7 @@ namespace Pizza.Presenters.PresenterFormMenu
 
         public void LogicSettings()
         {
-            eevent.SetLogic( new ButtonPizzaLogic( form ) );
+            eevent.SetLogic( new LogicMenuButton( form, ButtonLoadMenu.Pizza ) );
             eevent.SetLogic( new CreateSQLiteTables() );
         }
     }

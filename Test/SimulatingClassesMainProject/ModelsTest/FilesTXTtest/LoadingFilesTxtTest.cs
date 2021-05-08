@@ -12,12 +12,11 @@ namespace Test
     {
         private List<Order> LoadOrderListFromTxt()
         {
-
             try
             {
                 string jsonFromFile;
 
-                using (var reader = new StreamReader( _path ))
+                using (var reader = new StreamReader( fileName ))
                 {
                     jsonFromFile = reader.ReadToEnd();
                 }

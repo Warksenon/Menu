@@ -14,10 +14,14 @@ namespace Test
     {
         public SaveFilesHistoryOrderTest( List<Order> listOrder )
         {
+            CreateFolder();
             this.listOrder = listOrder;
         }
 
-        public SaveFilesHistoryOrderTest() { }
+        public SaveFilesHistoryOrderTest()
+        {
+            CreateFolder();
+        }
 
         private void SaveListOrder()
         {
@@ -30,7 +34,7 @@ namespace Test
                 var customer = jsonHelper;
                 var jsonToWrite = JsonConvert.SerializeObject(customer, Formatting.Indented);
 
-                using (var writer = new StreamWriter( _path ))
+                using (var writer = new StreamWriter( fileName ))
                 {
                     writer.Write( jsonToWrite );
                 }
@@ -50,7 +54,7 @@ namespace Test
         {
             try
             {
-                using (var writer = new StreamWriter( _path ))
+                using (var writer = new StreamWriter( fileName ))
                 {
                     writer.Write( "" );
                 }

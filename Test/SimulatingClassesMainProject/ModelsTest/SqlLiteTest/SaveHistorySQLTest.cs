@@ -36,6 +36,7 @@ namespace Test
 
         private void RemoveAllTask()
         {
+            CreateTabeles();
             SQLiteConnection cn = CreateSQLiteConnection();
             using (cn)
             {

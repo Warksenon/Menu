@@ -16,7 +16,7 @@ namespace Pizza
             try
             {
                 string jsonFromFile;
-                using (var reader = new StreamReader( _path ))
+                using (var reader = new StreamReader( fileName ))
                 {
                     jsonFromFile = reader.ReadToEnd();
                 }

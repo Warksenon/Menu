@@ -55,7 +55,7 @@ namespace Pizza
         private string WriteDischesAll()
         {
             StringBuilder dischesAll = new StringBuilder();
-            
+
             foreach (var item in listDishes)
             {
                 dischesAll.Append( WriteDisch( item ) );

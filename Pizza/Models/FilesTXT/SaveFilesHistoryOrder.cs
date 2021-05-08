@@ -12,6 +12,7 @@ namespace Pizza
     {
         public SaveFilesHistoryOrder( List<Order> listOrder )
         {
+            CreateFolder();
             this.listOrder = listOrder;
         }
 
@@ -27,7 +28,7 @@ namespace Pizza
 
                 var jsonToWrite = JsonConvert.SerializeObject(customer, Formatting.Indented);
 
-                using (var writer = new StreamWriter( _path ))
+                using (var writer = new StreamWriter( fileName ))
                 {
                     writer.Write( jsonToWrite );
                 }

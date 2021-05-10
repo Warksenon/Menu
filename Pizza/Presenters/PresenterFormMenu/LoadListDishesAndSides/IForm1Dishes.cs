@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1
+namespace Pizza
 {
     public interface IForm1Dishes
     {

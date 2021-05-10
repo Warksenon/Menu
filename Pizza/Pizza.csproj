@@ -92,7 +92,9 @@
     <Compile Include="Models\Menu\ListDishesAndSides\DishesList\ListMainDishes.cs" />
     <Compile Include="Models\Menu\ListDishesAndSides\DishesList\ListPizza.cs" />
     <Compile Include="Models\Menu\ListDishesAndSides\DishesList\ListSoups.cs" />
+    <Compile Include="Models\Menu\ListDishesAndSides\ListDishesFactory.cs" />
     <Compile Include="Models\Menu\ListDishesAndSides\ListName.cs" />
+    <Compile Include="Models\Menu\ListDishesAndSides\ListSidesFactory.cs" />
     <Compile Include="Models\Menu\ListDishesAndSides\SidesList\ListSides.cs" />
     <Compile Include="Models\Menu\ListDishesAndSides\SidesList\ListSidesMainDishes.cs" />
     <Compile Include="Models\Menu\ListDishesAndSides\SidesList\ListSidesPizza.cs" />

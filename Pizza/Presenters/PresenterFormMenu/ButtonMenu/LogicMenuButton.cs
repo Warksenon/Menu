@@ -15,32 +15,10 @@ namespace Pizza
             loadDishesToListView = new Form1LoadDishesPresenters( form1 );
         }
 
-        private void SetConversionStrategy(  )
-        {
-            switch (buttonMenu)
-            {
-                case ButtonLoadMenu.Pizza:
-                loadSidesToCheckedListBox.LoadCheckListBoxSideDishe( new ListSidesPizza() );
-                loadDishesToListView.AddDishesToListView( new ListPizza() );
-                break;
-                case ButtonLoadMenu.MainDishes:
-                loadSidesToCheckedListBox.LoadCheckListBoxSideDishe( new ListSidesMainDishes() );
-                loadDishesToListView.AddDishesToListView( new ListMainDishes() );
-                break;
-                case ButtonLoadMenu.Soups:
-                loadSidesToCheckedListBox.ClearCheckedListBox();
-                loadDishesToListView.AddDishesToListView( new ListSoups() );
-                break;
-                case ButtonLoadMenu.Drinks:
-                loadSidesToCheckedListBox.ClearCheckedListBox();
-                loadDishesToListView.AddDishesToListView( new ListDrinks() );
-                break;
-            }
-        }
-
         public void LogicSettings()
         {
-            SetConversionStrategy();
+            loadSidesToCheckedListBox.LoadCheckListBoxSideDishe( new ListSidesFactory( buttonMenu ) );
+            loadDishesToListView.AddDishesToListView( new ListDishesFactory( buttonMenu ) );
         }
     }
 }

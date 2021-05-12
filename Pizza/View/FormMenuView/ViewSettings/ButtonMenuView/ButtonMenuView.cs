@@ -2,12 +2,14 @@
 
 namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
 {
-    public class ButtonMenuView : ViewFormMenu, IView
+    public class ButtonMenuView : IView
     {
         ButtonLoadMenu _loadMenu;
-
-        public ButtonMenuView( FormMenu form1, ButtonLoadMenu loadMenu ) : base( form1 ) 
+        FormMenu _form;
+       
+        public ButtonMenuView( FormMenu form, ButtonLoadMenu loadMenu ) 
         {
+            _form = form;
             _loadMenu = loadMenu;
         }
 
@@ -35,26 +37,26 @@ namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
 
         private void PizzaButtonSettings()
         {
-            ChengeNameLabelMenuInfo( "Pizza" );            
-            form.PizzzaButton.BackColor = Color.LawnGreen;
+            ChengeNameLabelMenuInfo( "Pizza" );
+            _form.PizzzaButton.BackColor = Color.LawnGreen;
         }
 
         private void MainDishButtonSettings()
         {
             ChengeNameLabelMenuInfo( "Dania główne" );
-            form.MainButton.BackColor = Color.LawnGreen;
+            _form.MainButton.BackColor = Color.LawnGreen;
         }
 
         private void SoupsButtonSettings()
         {
             ChengeNameLabelMenuInfo( "Zupy" );
-            form.SoupButton.BackColor = Color.LawnGreen;
+            _form.SoupButton.BackColor = Color.LawnGreen;
         }
 
         private void DrinkseButtonSettings()
         {
             ChengeNameLabelMenuInfo( "Napoje" );
-            form.DrinksButton.BackColor = Color.LawnGreen;
+            _form.DrinksButton.BackColor = Color.LawnGreen;
         }
 
         private void ButtonSeting()
@@ -67,30 +69,30 @@ namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
 
         private void ClearColorButton()
         {
-            form.PizzzaButton.BackColor = SystemColors.Control;
-            form.MainButton.BackColor = SystemColors.Control;
-            form.SoupButton.BackColor = SystemColors.Control;
-            form.DrinksButton.BackColor = SystemColors.Control;
+            _form.PizzzaButton.BackColor = SystemColors.Control;
+            _form.MainButton.BackColor = SystemColors.Control;
+            _form.SoupButton.BackColor = SystemColors.Control;
+            _form.DrinksButton.BackColor = SystemColors.Control;
         }
 
         private void HidenButtonDishesOK()
         {
-            form.AddButton.Visible = false;
+            _form.AddButton.Visible = false;
         }
 
         private void HidingTextBoxDishesQuantity()
         {
-            form.QTextbox.Visible = false;
+            _form.QTextbox.Visible = false;
         }
 
         private void CleaningTextBoxDishesQuantity()
         {
-            form.QTextbox.Text = "1";
+            _form.QTextbox.Text = "1";
         }
 
         private void ChengeNameLabelMenuInfo( string infoMenu )
         {
-            form.LabelMenu.Text = infoMenu;
+            _form.LabelMenu.Text = infoMenu;
         }
 
         public void ViewSetting()

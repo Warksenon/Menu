@@ -3,7 +3,6 @@ using System.Windows.Forms;
 
 using Pizza.Presenters;
 using Pizza.Presenters.PresenterFormHistory;
-using Pizza.Presenters.PresenterFormHistory.Copy;
 using Pizza.Presenters.PresenterFormHistory.LoadHistory;
 using Pizza.View.FormHistry.ButtonFormHistory;
 using Pizza.View.FormHistry.ButtonFormMail;
@@ -47,14 +46,14 @@ namespace Pizza
         private void ButtonTxtToSql( object sender, EventArgs e )
         {
             onEvent.SetView( new CopyTxtView( this ) );
-            onEvent.SetLogic( new FileTextCopy( this ) );
+            onEvent.SetLogic( new RepositoriesCopy( this, Repositories.Txt ) );
             onEvent.SetView( new LoadTxtView( this ) );
         }
 
         private void ButtonSQLToTxt_Click( object sender, EventArgs e )
         {
             onEvent.SetView( new CopySqlView( this ) );
-            onEvent.SetLogic( new SqlCopy( this ) );
+            onEvent.SetLogic( new RepositoriesCopy( this, Repositories.Sql ) );
             onEvent.SetView( new LoadSqlView( this ) );
         }
 

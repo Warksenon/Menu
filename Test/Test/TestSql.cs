@@ -137,8 +137,8 @@ namespace Test.Test
             List<Order> orderList = new List<Order>();
             orderList.Add( orderFirst );
             orderList.Add( orderSecond );
-            SaveHistorySQLTest save = new SaveHistorySQLTest(orderList);
-            save.SaveHistoryOrders();
+            SaveHistorySQLTest save = new SaveHistorySQLTest();
+            save.SaveHistoryOrders( orderList );
 
             LoadOrder load = new LoadOrder();
             List<Order>  orderToLoad = load.LoadOrderList(new LoadHistorySQLTest());
@@ -164,8 +164,8 @@ namespace Test.Test
             List<Order> orderList = new List<Order>();
             orderList.Add( orderFirst );
             orderList.Add( orderSecond );
-            SaveHistorySQLTest save = new SaveHistorySQLTest(orderList);
-            save.SaveHistoryOrders();
+            SaveHistorySQLTest save = new SaveHistorySQLTest();
+            save.SaveHistoryOrders( orderList );
 
             LoadOrder load = new LoadOrder();
             List<Order>  orderToLoad = load.LoadOrderList(new LoadHistorySQLTest());

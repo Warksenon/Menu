@@ -1,7 +1,9 @@
-﻿namespace Pizza
+﻿using System.Collections.Generic;
+
+namespace Pizza
 {
     public interface ISaveHistory
     {
-        void SaveHistoryOrders();
+        void SaveHistoryOrders(List<Order> listOrders);
     }
 }

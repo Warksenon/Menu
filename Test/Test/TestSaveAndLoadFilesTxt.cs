@@ -129,11 +129,13 @@ namespace Test.Test
         {
             Order  orderFirst =  CreateOrderFirst();
             Order  orderSecond = CreateOrderSecond();
-            List<Order> orderList = new List<Order>();
-            orderList.Add( orderFirst );
-            orderList.Add( orderSecond );
-            SaveFilesHistoryOrderTest save = new SaveFilesHistoryOrderTest(orderList);
-            save.SaveHistoryOrders();
+            List<Order> orderList = new List<Order>
+            {
+                orderFirst,
+                orderSecond
+            };
+            SaveFilesHistoryOrderTest save = new SaveFilesHistoryOrderTest();
+            save.SaveHistoryOrders( orderList );
 
             LoadOrder load = new LoadOrder();
             List<Order>  orderToLoad = load.LoadOrderList(new LoadingFilesTxtTest());
@@ -157,8 +159,8 @@ namespace Test.Test
             List<Order> orderList = new List<Order>();
             orderList.Add( orderFirst );
             orderList.Add( orderSecond );
-            SaveFilesHistoryOrderTest save = new SaveFilesHistoryOrderTest(orderList);
-            save.SaveHistoryOrders();
+            SaveFilesHistoryOrderTest save = new SaveFilesHistoryOrderTest();
+            save.SaveHistoryOrders( orderList );
 
             LoadOrder load = new LoadOrder();
             List<Order>  orderToLoad = load.LoadOrderList(new LoadingFilesTxtTest());

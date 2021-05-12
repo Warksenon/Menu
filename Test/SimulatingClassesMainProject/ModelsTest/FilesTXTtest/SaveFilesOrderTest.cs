@@ -20,8 +20,8 @@ namespace Test
             {
                 LoadHistoryToListOrder();
                 listOrder.Add( order );
-                SaveFilesHistoryOrderTest saveList = new SaveFilesHistoryOrderTest(listOrder);
-                saveList.SaveHistoryOrders();
+                SaveFilesHistoryOrderTest saveList = new SaveFilesHistoryOrderTest();
+                saveList.SaveHistoryOrders( listOrder );
             }
             catch (Exception ex)
             {

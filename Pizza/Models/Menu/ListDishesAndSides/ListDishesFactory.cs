@@ -13,7 +13,7 @@ namespace Pizza
 
         private List<Dish> SetButttonMenu()
         {
-            var listDishes = new ListPizza().GetDishes();
+            var listDishes = new List<Dish>();
 
             switch (buttonMenu)
             {

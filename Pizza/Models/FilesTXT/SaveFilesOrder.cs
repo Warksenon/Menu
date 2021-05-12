@@ -19,8 +19,8 @@ namespace Pizza.Models.FilesTXT
             {
                 LoadHistoryToListOrder();
                 listOrder.Add( order );
-                SaveFilesHistoryOrder saveList = new SaveFilesHistoryOrder(listOrder);
-                saveList.SaveHistoryOrders();
+                SaveFilesHistoryOrder saveList = new SaveFilesHistoryOrder();
+                saveList.SaveHistoryOrders( listOrder );
             }
             catch (Exception ex)
             {

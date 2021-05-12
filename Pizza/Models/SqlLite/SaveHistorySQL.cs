@@ -6,16 +6,11 @@ namespace Pizza.Models.SqlLite
 {
     internal class SaveHistorySQL : OrderSQL, ISaveHistory
     {
-        private readonly List<Order> listOrder;
+        private List<Order> listOrder;
 
-        public SaveHistorySQL( List<Order> listOrder )
+        public SaveHistorySQL(  )
         {
-            this.listOrder = listOrder;
-        }
-
-        public void SaveHistoryOrders()
-        {
-            UpdateAllTabele();
+           
         }
 
         private void UpdateAllTabele()
@@ -76,6 +71,12 @@ namespace Pizza.Models.SqlLite
                 cn.Close();
                 SQLiteConnection.ClearAllPools();
             }
+        }
+
+        public void SaveHistoryOrders ( List<Order> listOrder )
+        {
+            this.listOrder = listOrder;
+            UpdateAllTabele();
         }
     }
 }

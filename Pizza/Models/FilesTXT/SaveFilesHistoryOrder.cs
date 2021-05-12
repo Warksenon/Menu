@@ -10,10 +10,9 @@ namespace Pizza
 {
     internal class SaveFilesHistoryOrder : Files, ISaveHistory
     {
-        public SaveFilesHistoryOrder( List<Order> listOrder )
+        public SaveFilesHistoryOrder(  )
         {
             CreateFolder();
-            this.listOrder = listOrder;
         }
 
         private void SaveListOrder()
@@ -39,8 +38,9 @@ namespace Pizza
             }
         }
 
-        public void SaveHistoryOrders()
+        public void SaveHistoryOrders( List<Order> listOrder )
         {
+            this.listOrder = listOrder;
             SaveListOrder();
         }
     }

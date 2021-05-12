@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Pizza.Presenters.PresenterFormHistory
 {
-    internal abstract class ListViewHistory : ILogic
+    public abstract class ListViewHistory : ILogic
     {
         protected FormHistory form;
         protected static List<Order> orderList = new List<Order>();

@@ -10,17 +10,13 @@ namespace Test
 {
     internal class SaveHistorySQLTest : OrderSQLTest, ISaveHistory, IDataCleansing
     {
-        private readonly List<Order> listOrder;
-
-        public SaveHistorySQLTest( List<Order> listOrder )
-        {
-            this.listOrder = listOrder;
-        }
+        private List<Order> listOrder;
 
         public SaveHistorySQLTest() { }
 
-        public void SaveHistoryOrders()
+        public void SaveHistoryOrders ( List<Order> listOrder )
         {
+            this.listOrder = listOrder;
             UpdateAllTabele();
         }
 

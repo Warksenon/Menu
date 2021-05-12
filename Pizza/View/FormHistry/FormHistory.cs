@@ -3,7 +3,6 @@ using System.Windows.Forms;
 
 using Pizza.Presenters;
 using Pizza.Presenters.PresenterFormHistory;
-using Pizza.Presenters.PresenterFormHistory.LoadHistory;
 using Pizza.View.FormHistry.ButtonFormHistory;
 using Pizza.View.FormHistry.ButtonFormMail;
 
@@ -27,19 +26,19 @@ namespace Pizza
 
         private void FormHistory_Load( object sender, EventArgs e )
         {
-            onEvent.SetLogic( new SqlLoad( this ) );
+            onEvent.SetLogic( new LoadHistoryPresenter( this,Repositories.Sql ) );
             onEvent.SetView( new LoadSqlView( this ) );
         }
 
         private void ButtonTextList_Click( object sender, EventArgs e )
         {
-            onEvent.SetLogic( new FileTextLoad( this ) );
+            onEvent.SetLogic( new LoadHistoryPresenter( this, Repositories.Txt ) );
             onEvent.SetView( new LoadTxtView( this ) );
         }
 
         private void ButtonSqlList_Click( object sender, EventArgs e )
         {
-            onEvent.SetLogic( new SqlLoad( this ) );
+            onEvent.SetLogic( new LoadHistoryPresenter( this, Repositories.Sql ) );
             onEvent.SetView( new LoadSqlView( this ) );
         }
 

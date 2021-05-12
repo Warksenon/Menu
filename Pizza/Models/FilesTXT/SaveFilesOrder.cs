@@ -1,7 +1,5 @@
 ﻿using System;
 
-using Pizza.Presenters;
-
 namespace Pizza.Models.FilesTXT
 {
     internal class SaveFilesOrder : Files
@@ -20,7 +18,7 @@ namespace Pizza.Models.FilesTXT
             {
                 LoadHistoryToListOrder();
                 listOrder.Add( order );
-                SaveFilesHistoryOrder saveList = new SaveFilesHistoryOrder();
+                var saveList = new SaveFilesHistoryOrder();
                 saveList.SaveHistoryOrders( listOrder );
             }
             catch (Exception ex)
@@ -31,7 +29,7 @@ namespace Pizza.Models.FilesTXT
 
         private void LoadHistoryToListOrder()
         {
-            LoadingFilesTxt load = new LoadingFilesTxt();
+            var load = new LoadingFilesTxt();
             listOrder = load.LoadHistory();
         }
 

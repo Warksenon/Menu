@@ -1,35 +1,42 @@
 ﻿using Pizza.Models.SqlLite;
 using Pizza.Presenters.PresenterFormHistory.CopyHistory;
-using Pizza.Presenters.PresenterFormHistory.LoadHistory;
 
 namespace Pizza
 {
     public class RepositoriesCopy  : ILogic
     {
-        Repositories repositories;
-        FormHistory form;
+        Repositories _repositories;
+        FormHistory _form;
 
         public RepositoriesCopy ( FormHistory form, Repositories repositories)
         {
-            this.repositories = repositories;
-            this.form = form;
+           _repositories = repositories;
+           _form = form;
         }
 
         private void Copy()
         {
-            switch (repositories)
+            switch (_repositories)
             {
                 case Repositories.Txt:
-                HistoryCopy< LoadingFilesTxt,SaveHistorySQL> copy = new HistoryCopy< LoadingFilesTxt,SaveHistorySQL>();
-                copy.CopyHistory( new LoadingFilesTxt(), new SaveHistorySQL() );
-                new FileTextLoad( form ).LogicSettings();
+                CopyHistoryTxtAndSetListView();
                 break;
                 case Repositories.Sql:
-                HistoryCopy< LoadHistorySQL,SaveFilesHistoryOrder> copy1 = new HistoryCopy< LoadHistorySQL,SaveFilesHistoryOrder>();
-                copy1.CopyHistory( new LoadHistorySQL(), new SaveFilesHistoryOrder() );
-                new SqlLoad( form ).LogicSettings();
+                CopyHistorySqlAndSetListView();
                 break;
             }  
+        }
+
+        void CopyHistoryTxtAndSetListView()
+        {
+            new HistoryCopy( new LoadingFilesTxt(), new SaveHistorySQL() );
+            new LoadHistoryPresenter( _form, Repositories.Txt );
+        }
+
+        void CopyHistorySqlAndSetListView()
+        {
+            new HistoryCopy( new LoadHistorySQL(), new SaveFilesHistoryOrder() );
+            new LoadHistoryPresenter( _form, Repositories.Sql );
         }
 
         public void LogicSettings ()

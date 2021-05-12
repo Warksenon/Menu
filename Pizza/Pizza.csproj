@@ -117,8 +117,7 @@
     <Compile Include="Presenters\PresenterFormHistory\CopyHistory\RepositoriesCopy.cs" />
     <Compile Include="Presenters\PresenterFormHistory\HistorySelect.cs" />
     <Compile Include="Presenters\PresenterFormHistory\ListViewHistory.cs" />
-    <Compile Include="Presenters\PresenterFormHistory\LoadHistory\FileTextLoad.cs" />
-    <Compile Include="Presenters\PresenterFormHistory\LoadHistory\SqlLoad.cs" />
+    <Compile Include="Presenters\PresenterFormHistory\LoadHistoryPresenter.cs" />
     <Compile Include="Presenters\PresenterFormHistory\Repositories.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailLoad.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailPresenter.cs" />

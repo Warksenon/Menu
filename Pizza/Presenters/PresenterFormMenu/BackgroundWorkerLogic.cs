@@ -45,10 +45,9 @@ namespace Pizza.Presenters.PresenterFormMenu.OrderGetSet
         }
 
         private void SaveOrder( Order order )
-        {
-            SaveOrder save = new SaveOrder();
-            save.AddOrder( new SaveOrderSQL( order ) );
-            save.AddOrder( new SaveFilesOrder( order ) );
+        {           
+            new SaveOrderSQL( order );
+            new SaveFilesOrder( order );
         }
     }
 }

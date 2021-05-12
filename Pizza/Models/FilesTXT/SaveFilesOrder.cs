@@ -4,13 +4,14 @@ using Pizza.Presenters;
 
 namespace Pizza.Models.FilesTXT
 {
-    internal class SaveFilesOrder : Files, IAddOrder
+    internal class SaveFilesOrder : Files
     {
         private readonly Order order;
 
         public SaveFilesOrder( Order order )
         {
             this.order = order;
+            Save();
         }
 
         private void Save()
@@ -34,9 +35,5 @@ namespace Pizza.Models.FilesTXT
             listOrder = load.LoadHistory();
         }
 
-        public void AddOrder()
-        {
-            Save();
-        }
     }
 }

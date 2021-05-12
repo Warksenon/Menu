@@ -18,7 +18,7 @@ namespace Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1
             }
         }
 
-        public void ClearCheckedListBox()
+        private void ClearCheckedListBox()
         {
             form.CheckedListBoxSide.Items.Clear();
         }

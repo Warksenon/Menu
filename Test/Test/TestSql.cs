@@ -18,8 +18,7 @@ namespace Test.Test
         {
             DeleteData();
             Order  orderToSave =  CreateOrderFirst();
-            SaveOrder save = new SaveOrder();
-            save.AddOrder( new SaveOrderSQLTest( orderToSave ) );
+             new SaveOrderSQLTest( orderToSave );
 
             LoadOrder load = new LoadOrder();
             List<Order>  orderToLoad = load.LoadOrderList(new LoadHistorySQLTest());
@@ -110,10 +109,9 @@ namespace Test.Test
         {
             DeleteData();
             Order  orderToSave =  CreateOrderFirst();
-            SaveOrder save = new SaveOrder();
-            save.AddOrder( new SaveOrderSQLTest( orderToSave ) );
+            new SaveOrderSQLTest( orderToSave );
             orderToSave = CreateOrderSecond();
-            save.AddOrder( new SaveOrderSQLTest( orderToSave ) );
+            new SaveOrderSQLTest( orderToSave );
 
             LoadOrder load = new LoadOrder();
             List<Order>  orderToLoad = load.LoadOrderList(new LoadHistorySQLTest());

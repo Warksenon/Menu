@@ -5,13 +5,14 @@ using Pizza.Presenters;
 
 namespace Test
 {
-    internal class SaveFilesOrderTest : FilesTest, IAddOrder
+    internal class SaveFilesOrderTest : FilesTest
     {
         private readonly Order order;
 
         public SaveFilesOrderTest( Order order )
         {
             this.order = order;
+            Save();
         }
 
         private void Save()
@@ -33,11 +34,6 @@ namespace Test
         {
             LoadingFilesTxtTest load = new LoadingFilesTxtTest();
             listOrder = load.LoadHistory();
-        }
-
-        public void AddOrder()
-        {
-            Save();
         }
     }
 }

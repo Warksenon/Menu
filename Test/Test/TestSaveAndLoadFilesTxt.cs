@@ -18,8 +18,7 @@ namespace Test.Test
         {
             DeleteData();
             Order  orderToSave =  CreateOrderFirst();
-            SaveOrder save = new SaveOrder();
-            save.AddOrder( new SaveFilesOrderTest( orderToSave ) );
+            new SaveFilesOrderTest( orderToSave );
 
             LoadOrder load = new LoadOrder();
             List<Order>  orderToLoad = load.LoadOrderList(new LoadingFilesTxtTest());
@@ -107,10 +106,9 @@ namespace Test.Test
         {
             DeleteData();
             Order  orderToSave =  CreateOrderFirst();
-            SaveOrder save = new SaveOrder();
-            save.AddOrder( new SaveFilesOrderTest( orderToSave ) );
+            var save = new SaveFilesOrderTest( orderToSave );
             orderToSave = CreateOrderSecond();
-            save.AddOrder( new SaveFilesOrderTest( orderToSave ) );
+            new SaveFilesOrderTest( orderToSave );
 
             LoadOrder load = new LoadOrder();
             List<Order>  orderToLoad = load.LoadOrderList(new LoadingFilesTxtTest());

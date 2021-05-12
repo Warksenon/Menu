@@ -3,17 +3,13 @@ using Pizza.Presenters;
 
 namespace Test
 {
-    internal class SaveOrderSQLTest : OrderSQLTest, IAddOrder
+    internal class SaveOrderSQLTest : OrderSQLTest 
     {
         private readonly Order order;
 
         public SaveOrderSQLTest( Order order )
         {
             this.order = order;
-        }
-
-        public void AddOrder()
-        {
             AddNewTaskOrder( order );
         }
     }

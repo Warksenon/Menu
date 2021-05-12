@@ -25,9 +25,9 @@ namespace Pizza.Presenters
 
         private void AddOrderToListView()
         {
-            List<Dish> listDishes = lvDishes.GetListSelektedDishes();
-            List<string> listSides = chblSides.GetListCheckedSides();
-            string allSidesToGether = AddAllSides(listSides);
+            var listDishes = lvDishes.GetListSelektedDishes();
+            var listSides = chblSides.GetListCheckedSides();
+            var allSidesToGether = AddAllSides(listSides);
 
             foreach (var dish in listDishes)
             {
@@ -71,8 +71,8 @@ namespace Pizza.Presenters
 
         private string AddPriceDisheAndSide( List<Dish> listDishes, List<string> listSides )
         {
-            double priceSides = 0;
-            double price;
+            var priceSides = 0.0;
+            var price = 0.0;
 
             foreach (var side in listSides)
             {
@@ -81,8 +81,8 @@ namespace Pizza.Presenters
                 priceSides += price;
             }
 
-            double priceDish = FindPrice(listDishes[0].Price);
-            double priceAll = priceDish + priceSides;
+            var priceDish = FindPrice(listDishes[0].Price);
+            var priceAll = priceDish + priceSides;
             return priceAll + "zł";
         }
 

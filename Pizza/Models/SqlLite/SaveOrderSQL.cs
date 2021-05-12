@@ -2,16 +2,9 @@
 
 namespace Pizza.Models.SqlLite
 {
-    internal class SaveOrderSQL : OrderSQL, IAddOrder
+    internal class SaveOrderSQL : OrderSQL
     {
-        private readonly Order order;
-
         public SaveOrderSQL( Order order )
-        {
-            this.order = order;
-        }
-
-        public void AddOrder()
         {
             AddNewTaskOrder( order );
         }

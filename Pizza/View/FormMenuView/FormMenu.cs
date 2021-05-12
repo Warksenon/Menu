@@ -5,7 +5,6 @@ using System.Windows.Forms;
 
 using Pizza.Presenters;
 using Pizza.Presenters.PresenterFormMenu;
-using Pizza.Presenters.PresenterFormMenu.Remove;
 using Pizza.Presenters.PresenterFormMenu.VisableElements.Button;
 using Pizza.View.Form1;
 using Pizza.View.FormMenuView.InterfaceFormMenu;
@@ -99,14 +98,14 @@ namespace Pizza
 
         private void ButtonRemoveListBox_Click( object sender, EventArgs e )
         {
-            onEvent.SetLogic( new RemoveOrderOneLogic( this ) );
+            onEvent.SetLogic( new RemovePresenter( this, RemoveFormMenu.One ) );
             onEvent.SetView( new ButtonRemoveOne( this ) );
         }
 
         private void ButtonRemoveAllListBox_Click( object sender, EventArgs e )
         {
             onEvent.SetView( new ButtonRemoveAll( this ) );
-            onEvent.SetLogic( new RemoveOrderAllLogic( this ) );
+            onEvent.SetLogic( new RemovePresenter( this, RemoveFormMenu.All ) );
         }
 
         private void AddressEmailToolStripMenuItem_Click( object sender, EventArgs e )

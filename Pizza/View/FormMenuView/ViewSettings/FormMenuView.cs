@@ -1,5 +1,5 @@
-﻿using Pizza.Presenters.PresenterFormMenu.VisableElements.Button;
-using Pizza.View.Form1View;
+﻿using Pizza.View.Form1View;
+using Pizza.View.Form1View.ViewSettings.ButtonMenu;
 
 namespace Pizza.View.FormMenuView.ViewSettings
 {
@@ -9,7 +9,7 @@ namespace Pizza.View.FormMenuView.ViewSettings
 
         public void ViewSetting()
         {
-            eevent.SetView( new ButtonPizzaView( form ) );
+            eevent.SetView( new ButtonMenuView( form, ButtonLoadMenu.Pizza )  );
             eevent.SetView( new ButtonRemoveAll( form ) );
         }
     }

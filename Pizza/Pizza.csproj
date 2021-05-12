@@ -175,10 +175,6 @@
     <Compile Include="View\FormMenuView\InterfaceFormMenu\ITextBoxComments.cs" />
     <Compile Include="View\FormMenuView\ViewFormMenu.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonMenuView\ButtonMenuView.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenuView\ButtonDrinksView.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenuView\ButtonMainDishesSetting.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenuView\ButtonPizzaView.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\ButtonMenuView\ButtonSoupsView.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonMenuView\IFormMenuButtonMenu.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonMenuView\ViewSettingButtonMenu.cs" />
     <Compile Include="View\FormMenuView\FormMenu.cs">

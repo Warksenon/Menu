@@ -2,11 +2,62 @@
 
 namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
 {
-    public abstract class ButtonMenuView : ViewFormMenu, IView
+    public class ButtonMenuView : ViewFormMenu, IView
     {
-        public ButtonMenuView( FormMenu form1 ) : base( form1 ) { }
+        ButtonLoadMenu _loadMenu;
 
-        protected void ButtonSeting()
+        public ButtonMenuView( FormMenu form1, ButtonLoadMenu loadMenu ) : base( form1 ) 
+        {
+            _loadMenu = loadMenu;
+        }
+
+        private void OnClickButtonMenu()
+        {
+            ButtonSeting();
+
+            switch (_loadMenu)
+            {
+                case ButtonLoadMenu.Pizza:
+                PizzaButtonSettings();
+                break;
+                case ButtonLoadMenu.MainDishes:
+                MainDishButtonSettings();
+                break;
+                case ButtonLoadMenu.Soups:
+                SoupsButtonSettings();
+                break;
+                case ButtonLoadMenu.Drinks:
+                DrinkseButtonSettings();
+                break;
+
+            }
+        }
+
+        private void PizzaButtonSettings()
+        {
+            ChengeNameLabelMenuInfo( "Pizza" );            
+            form.PizzzaButton.BackColor = Color.LawnGreen;
+        }
+
+        private void MainDishButtonSettings()
+        {
+            ChengeNameLabelMenuInfo( "Dania główne" );
+            form.MainButton.BackColor = Color.LawnGreen;
+        }
+
+        private void SoupsButtonSettings()
+        {
+            ChengeNameLabelMenuInfo( "Zupy" );
+            form.SoupButton.BackColor = Color.LawnGreen;
+        }
+
+        private void DrinkseButtonSettings()
+        {
+            ChengeNameLabelMenuInfo( "Napoje" );
+            form.DrinksButton.BackColor = Color.LawnGreen;
+        }
+
+        private void ButtonSeting()
         {
             ClearColorButton();
             HidenButtonDishesOK();
@@ -14,7 +65,7 @@ namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
             CleaningTextBoxDishesQuantity();
         }
 
-        protected void ClearColorButton()
+        private void ClearColorButton()
         {
             form.PizzzaButton.BackColor = SystemColors.Control;
             form.MainButton.BackColor = SystemColors.Control;
@@ -22,26 +73,29 @@ namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
             form.DrinksButton.BackColor = SystemColors.Control;
         }
 
-        protected void HidenButtonDishesOK()
+        private void HidenButtonDishesOK()
         {
             form.AddButton.Visible = false;
         }
 
-        protected void HidingTextBoxDishesQuantity()
+        private void HidingTextBoxDishesQuantity()
         {
             form.QTextbox.Visible = false;
         }
 
-        protected void CleaningTextBoxDishesQuantity()
+        private void CleaningTextBoxDishesQuantity()
         {
             form.QTextbox.Text = "1";
         }
 
-        protected void ChengeNameLabelMenuInfo( string infoMenu )
+        private void ChengeNameLabelMenuInfo( string infoMenu )
         {
             form.LabelMenu.Text = infoMenu;
         }
 
-        public abstract void ViewSetting();
+        public void ViewSetting()
+        {
+            OnClickButtonMenu();
+        }
     }
 }

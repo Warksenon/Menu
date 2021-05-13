@@ -14,9 +14,9 @@ namespace Test.Menu.Sides
         [TestCase( "Zestaw sosów -6zł", "1" )]
         public void TestGetListSidesMainDishes( string expectationsName, int index )
         {
-            IForm1Sides list = new ListSidesMainDishes();
+            Pizza.IList<string> list = new ListSidesMainDishes();
 
-            List<string> listSides = list.GetSides();
+            var listSides = list.GetList();
             var currentName = listSides [index];
 
             Assert.AreEqual( expectationsName, currentName );

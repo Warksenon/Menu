@@ -2,14 +2,14 @@
 {
     public class HistoryCopy 
     {
-        public HistoryCopy( ILoadHistoryOrders load, ISaveHistory save )
+        public HistoryCopy( IList<Order> load, ISaveHistory<Order> save )
         {
             CopyHistory( load, save );
         }
 
-        private void CopyHistory ( ILoadHistoryOrders load, ISaveHistory save )
+        private void CopyHistory ( IList<Order> load, ISaveHistory<Order> save )
         {
-            var copyListOrder = load.LoadHistory();
+            var copyListOrder = load.GetList();
             save.SaveHistoryOrders( copyListOrder );
         }
     }

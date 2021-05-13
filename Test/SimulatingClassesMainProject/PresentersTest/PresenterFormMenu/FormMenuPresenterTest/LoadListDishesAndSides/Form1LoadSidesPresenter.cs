@@ -20,10 +20,10 @@ namespace Test
             LoadCheckListBoxSideDishe( new ListSidesMainDishes() );
         }
 
-        private void LoadCheckListBoxSideDishe( IForm1Sides listSides )
+        private void LoadCheckListBoxSideDishe( Pizza.IList<string> listSides )
         {
             ClearCheckedListBox();
-            List<string> list = listSides.GetSides();
+            List<string> list = listSides.GetList();
             foreach (var side in list)
             {
                 form.CheckedListBoxSide.Items.Add( side );

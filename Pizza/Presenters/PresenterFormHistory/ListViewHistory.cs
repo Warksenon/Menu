@@ -6,7 +6,7 @@ namespace Pizza.Presenters.PresenterFormHistory
     {
         protected FormHistory _form;
         protected static List<Order> orderList = new List<Order>();
-        protected readonly LoadOrder load = new LoadOrder();
+       // protected readonly LoadOrder load = new LoadOrder();
 
         public ListViewHistory( FormHistory form )
         {

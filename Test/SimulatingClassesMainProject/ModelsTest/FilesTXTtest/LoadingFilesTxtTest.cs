@@ -8,7 +8,7 @@ using Pizza;
 
 namespace Test
 {
-    internal class LoadingFilesTxtTest : FilesTest, ILoadHistoryOrders
+    internal class LoadingFilesTxtTest : FilesTest, Pizza.IList<Order>
     {
         private List<Order> LoadOrderListFromTxt()
         {
@@ -31,7 +31,7 @@ namespace Test
             return listOrder;
         }
 
-        public List<Order> LoadHistory()
+        public List<Order> GetList()
         {
             return LoadOrderListFromTxt();
         }

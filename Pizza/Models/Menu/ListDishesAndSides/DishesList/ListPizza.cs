@@ -4,7 +4,7 @@ using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
 
 namespace Pizza
 {
-    public class ListPizza : ListDishes, IForm1Dishes
+    public class ListPizza : ListDishes
     {
         private List<Dish> LoadListPizza()
         {
@@ -14,7 +14,7 @@ namespace Pizza
             return listDisches;
         }
 
-        public override List<Dish> GetDishes()
+        public override List<Dish> GetList()
         {
             return LoadListPizza();
         }

@@ -9,6 +9,7 @@ namespace Pizza
     public class LoadHistoryPresenter : ListViewHistory
     {
         Repositories _repositories;
+        IList<Order> list;
 
         public LoadHistoryPresenter( FormHistory form, Repositories repositories ):base( form )
         {
@@ -18,14 +19,16 @@ namespace Pizza
         private void LoadHistoryFromSQL()
         {
             ClearAllList();
-            orderList = load.LoadOrderList( new LoadHistorySQL() );
+            list = new LoadHistorySQL();
+            orderList = list.GetList();
             LoadLVPriceAll();
         }
 
         private void LoadHistroyFromTxt()
         {
             ClearAllList();
-            orderList = load.LoadOrderList( new LoadingFilesTxt() );
+            list =  new LoadingFilesTxt();
+            orderList = list.GetList( );
             LoadLVPriceAll();
         }
 

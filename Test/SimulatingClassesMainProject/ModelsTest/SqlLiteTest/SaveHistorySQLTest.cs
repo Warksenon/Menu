@@ -8,7 +8,7 @@ using Test.SimulatingClassesMainProject.ModelsTest;
 
 namespace Test
 {
-    internal class SaveHistorySQLTest : OrderSQLTest, ISaveHistory, IDataCleansing
+    internal class SaveHistorySQLTest : OrderSQLTest, ISaveHistory<Order>, IDataCleansing
     {
         private List<Order> listOrder;
 

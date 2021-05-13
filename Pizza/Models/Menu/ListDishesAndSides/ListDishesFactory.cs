@@ -2,7 +2,7 @@
 
 namespace Pizza
 {
-    public class ListDishesFactory : IForm1Dishes
+    public class ListDishesFactory : IList<Dish>
     {
         private ButtonLoadMenu buttonMenu;
 
@@ -18,23 +18,23 @@ namespace Pizza
             switch (buttonMenu)
             {
                 case ButtonLoadMenu.Pizza:
-                listDishes = new ListPizza().GetDishes();
+                listDishes = new ListPizza().GetList();
                 break;
                 case ButtonLoadMenu.MainDishes:
-                listDishes = new ListMainDishes().GetDishes();
+                listDishes = new ListMainDishes().GetList();
                 break;
                 case ButtonLoadMenu.Soups:
-                listDishes = new ListSoups().GetDishes();
+                listDishes = new ListSoups().GetList();
                 break;
                 case ButtonLoadMenu.Drinks:
-                listDishes = new ListDrinks().GetDishes();
+                listDishes = new ListDrinks().GetList();
                 break;
             }
 
             return listDishes;
         }
 
-        public List<Dish> GetDishes()
+        public List<Dish> GetList()
         {
            return SetButttonMenu();
         }

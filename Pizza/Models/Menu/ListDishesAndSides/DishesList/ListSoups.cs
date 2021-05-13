@@ -12,7 +12,7 @@ namespace Pizza
             return listDisches;
         }
 
-        public override List<Dish> GetDishes()
+        public override List<Dish> GetList()
         {
             return LoadListSoups();
         }

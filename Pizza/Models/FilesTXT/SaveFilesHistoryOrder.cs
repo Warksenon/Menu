@@ -8,7 +8,7 @@ using Pizza.Models.FilesTXT;
 
 namespace Pizza
 {
-    internal class SaveFilesHistoryOrder : Files, ISaveHistory
+    internal class SaveFilesHistoryOrder : Files, ISaveHistory<Order>
     {
         public SaveFilesHistoryOrder(  )
         {

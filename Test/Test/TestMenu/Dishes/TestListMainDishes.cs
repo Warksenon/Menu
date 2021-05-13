@@ -15,9 +15,9 @@ namespace Test
         [TestCase( "Placek po węgiersku", "27zł", "2" )]
         public void TestGetListMainDishes( string expectationsName, string expectationsPrice, int index )
         {
-            IForm1Dishes list = new ListMainDishes();
+            Pizza.IList<Dish> list = new ListMainDishes();
 
-            List<Dish> listMainDishes = list.GetDishes();
+            List<Dish> listMainDishes = list.GetList();
             var currentName = listMainDishes [index].Name;
             var currentPrice = listMainDishes [index].Price;
 

@@ -6,16 +6,11 @@ using Pizza.SqlLite;
 
 namespace Pizza.Models.SqlLite
 {
-    internal class LoadHistorySQL : CreateConnection, ILoadHistoryOrders
+    internal class LoadHistorySQL : CreateConnection, IList<Order>
     {
-        public List<Order> LoadHistory()
-        {
-            return LoadListOrderFromSQL();
-        }
-
         private List<Order> LoadListOrderFromSQL()
         {
-            List<Order> listorder = new List<Order>();
+            var listorder = new List<Order>();
             SQLiteConnection cn = CreateSQLiteConnection();
             using (cn)
             {
@@ -119,6 +114,11 @@ namespace Pizza.Models.SqlLite
                 }
             }
             dr.Close();
+        }
+
+        List<Order> IList<Order>.GetList()
+        {
+            return LoadListOrderFromSQL();
         }
     }
 }

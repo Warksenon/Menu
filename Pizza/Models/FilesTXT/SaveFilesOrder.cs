@@ -30,7 +30,7 @@ namespace Pizza.Models.FilesTXT
         private void LoadHistoryToListOrder()
         {
             var load = new LoadingFilesTxt();
-            listOrder = load.LoadHistory();
+            listOrder = load.GetList();
         }
 
     }

@@ -2,8 +2,8 @@
 
 namespace Pizza
 {
-    public interface ISaveHistory
+    public interface ISaveHistory<T>
     {
-        void SaveHistoryOrders(List<Order> listOrders);
+        void SaveHistoryOrders(List<T> listOrders);
     }
 }

@@ -12,7 +12,7 @@ namespace Pizza
             return listSides;
         }
 
-        public override List<string> GetSides()
+        public override List<string> GetList()
         {
             return LoadSidePizza();
         }

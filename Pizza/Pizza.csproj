@@ -135,7 +135,7 @@
     <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\FormMenuListViewOrder.cs" />
     <Compile Include="Presenters\PresenterFormMenu\Remove\RemoveFormMenu.cs" />
     <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\Form1LoadSidesPresenter.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\IForm1Dishes.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\IList.cs" />
     <Compile Include="Presenters\PresenterFormMenu\Remove\RemovePresenter.cs" />
     <Compile Include="View\FormHistry\ButtonFormHistory\ButtonFormHistory.cs" />
     <Compile Include="View\FormHistry\ButtonFormHistory\CopySqlView.cs" />
@@ -166,7 +166,6 @@
     <Compile Include="Presenters\Email\EmailData.cs" />
     <Compile Include="Models\FilesTXT\SaveFilesHistoryOrder.cs" />
     <Compile Include="Models\FilesTXT\LoadingFilesTxt.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\LoadListDishesAndSides\IForm1Sides.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1ChecedListBoxSides.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1AddButton.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1QuantityTextBox.cs" />

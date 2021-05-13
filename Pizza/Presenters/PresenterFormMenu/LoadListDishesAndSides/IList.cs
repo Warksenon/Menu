@@ -2,8 +2,8 @@
 
 namespace Pizza
 {
-    public interface IForm1Dishes
+    public interface IList<T>
     {
-        List<Dish> GetDishes();
+        List<T> GetList();
     }
 }

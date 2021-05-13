@@ -4,7 +4,7 @@ using System.Data.SQLite;
 
 namespace Pizza.Models.SqlLite
 {
-    internal class SaveHistorySQL : OrderSQL, ISaveHistory
+    internal class SaveHistorySQL : OrderSQL, ISaveHistory<Order>
     {
         private List<Order> listOrder;
 

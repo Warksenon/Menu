@@ -6,13 +6,8 @@ using Pizza;
 
 namespace Test
 {
-    internal class LoadHistorySQLTest : CreateConnectionTest, ILoadHistoryOrders
+    internal class LoadHistorySQLTest : CreateConnectionTest, Pizza.IList<Order>
     {
-        public List<Order> LoadHistory()
-        {
-            return LoadListOrderFromSQL();
-        }
-
         private List<Order> LoadListOrderFromSQL()
         {
             List<Order> listorder = new List<Order>();
@@ -119,6 +114,11 @@ namespace Test
                 }
             }
             dr.Close();
+        }
+
+        public List<Order> GetList()
+        {
+            return LoadListOrderFromSQL();
         }
     }
 }

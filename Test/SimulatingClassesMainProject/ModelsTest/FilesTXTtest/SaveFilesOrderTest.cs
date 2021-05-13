@@ -33,7 +33,7 @@ namespace Test
         private void LoadHistoryToListOrder()
         {
             LoadingFilesTxtTest load = new LoadingFilesTxtTest();
-            listOrder = load.LoadHistory();
+            listOrder = load.GetList();
         }
     }
 }

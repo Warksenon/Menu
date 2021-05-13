@@ -10,7 +10,7 @@ using Test.SimulatingClassesMainProject.ModelsTest;
 
 namespace Test
 {
-    internal class SaveFilesHistoryOrderTest : FilesTest, ISaveHistory, IDataCleansing
+    internal class SaveFilesHistoryOrderTest : FilesTest, ISaveHistory<Order>, IDataCleansing
     {
         public SaveFilesHistoryOrderTest(  )
         {

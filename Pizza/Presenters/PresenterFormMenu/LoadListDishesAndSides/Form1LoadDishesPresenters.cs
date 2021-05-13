@@ -10,9 +10,9 @@ namespace Pizza
     {
         public Form1LoadDishesPresenters( FormMenu form1 ) : base( form1 ) { }
 
-        public void AddDishesToListView( IForm1Dishes loadList )
+        public void AddDishesToListView( IList<Dish> loadList )
         {
-            List<Dish> listDisch = loadList.GetDishes();
+            List<Dish> listDisch = loadList.GetList();
             form.ListViewDishes.Items.Clear();
             foreach (var disch in listDisch)
             {

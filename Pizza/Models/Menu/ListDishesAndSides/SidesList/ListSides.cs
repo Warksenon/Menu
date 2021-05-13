@@ -5,11 +5,11 @@ using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
 
 namespace Pizza
 {
-    public abstract class ListSides : ListName, IForm1Sides
+    public abstract class ListSides : ListName, IList<string>
     {
         protected List<string> listSides = new List<string>();
 
-        public abstract List<string> GetSides();
+        public abstract List<string> GetList();
 
         protected void AddTolist( List<string> listKey )
         {

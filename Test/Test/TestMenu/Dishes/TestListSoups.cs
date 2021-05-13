@@ -15,9 +15,9 @@ namespace Test
         [TestCase( "Rosół", "10zł", "1" )]
         public void TestGetListDrinks( string expectationsName, string expectationsPrice, int index )
         {
-            IForm1Dishes list = new ListSoups();
+            Pizza.IList<Dish> list = new ListSoups();
 
-            List<Dish> listSoup = list.GetDishes();
+            List<Dish> listSoup = list.GetList();
             var currentName = listSoup [index].Name;
             var currentPrice = listSoup [index].Price;
 

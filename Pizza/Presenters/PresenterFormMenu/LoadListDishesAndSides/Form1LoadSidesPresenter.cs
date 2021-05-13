@@ -8,10 +8,10 @@ namespace Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1
     {
         public Form1LoadSidesPresenter( FormMenu form ) : base( form ) { }
 
-        public void LoadCheckListBoxSideDishe( IForm1Sides listSides )
+        public void LoadCheckListBoxSideDishe( IList<string> listSides )
         {
             ClearCheckedListBox();
-            List<string> list = listSides.GetSides();
+            var list = listSides.GetList();
             foreach (var side in list)
             {
                 form.CheckedListBoxSide.Items.Add( side );

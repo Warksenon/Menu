@@ -8,7 +8,7 @@ using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
 
 namespace Pizza
 {
-    public class ListSidesFactory : IForm1Sides
+    public class ListSidesFactory : IList<string>
     {
         private ButtonLoadMenu buttonMenu;
 
@@ -19,15 +19,15 @@ namespace Pizza
 
         private List<string> SetButttonMenu()
         {
-            var listSides = new  ListSidesPizza().GetSides();
+            var listSides = new  ListSidesPizza().GetList();
 
             switch (buttonMenu)
             {
                 case ButtonLoadMenu.Pizza:
-                var listDishes = new  ListSidesPizza().GetSides();
+                var listDishes = new  ListSidesPizza().GetList();
                 break;
                 case ButtonLoadMenu.MainDishes:
-                listSides = new ListSidesMainDishes().GetSides();
+                listSides = new ListSidesMainDishes().GetList();
                 break;
                 default:
                 listSides = new List<string>();
@@ -37,7 +37,7 @@ namespace Pizza
             return listSides;
         }
 
-        public List<string> GetSides()
+        public List<string> GetList()
         {
             return SetButttonMenu();
         }

@@ -20,8 +20,8 @@ namespace Test.Test
             Order  orderToSave =  CreateOrderFirst();
             new SaveFilesOrderTest( orderToSave );
 
-            LoadOrder load = new LoadOrder();
-            List<Order>  orderToLoad = load.LoadOrderList(new LoadingFilesTxtTest());
+            Pizza.IList<Order> load = new LoadingFilesTxtTest();
+            var  orderToLoad = load.GetList();
             var currentNameDish =  orderToLoad[0].ListDishes[index].Name;
             var currentPriceDish = orderToLoad[0].ListDishes[index].Price;
             var currentSidesDish = orderToLoad[0].ListDishes[index].Sides;
@@ -110,8 +110,8 @@ namespace Test.Test
             orderToSave = CreateOrderSecond();
             new SaveFilesOrderTest( orderToSave );
 
-            LoadOrder load = new LoadOrder();
-            List<Order>  orderToLoad = load.LoadOrderList(new LoadingFilesTxtTest());
+            Pizza.IList<Order> load =  new LoadingFilesTxtTest();
+            var orderToLoad = load.GetList();
             var currentnPricePriceAll = orderToLoad[index].PriceAll.Price;
             var currentDatePriceAll =   orderToLoad[index].PriceAll.Date;
             var currentCommentsPriceAll = orderToLoad[index].PriceAll.Comments;
@@ -135,8 +135,8 @@ namespace Test.Test
             SaveFilesHistoryOrderTest save = new SaveFilesHistoryOrderTest();
             save.SaveHistoryOrders( orderList );
 
-            LoadOrder load = new LoadOrder();
-            List<Order>  orderToLoad = load.LoadOrderList(new LoadingFilesTxtTest());
+            Pizza.IList<Order> load =  new LoadingFilesTxtTest();
+            var orderToLoad = load.GetList();
             var currentnPricePriceAll = orderToLoad[index].PriceAll.Price;
             var currentDatePriceAll =   orderToLoad[index].PriceAll.Date;
             var currentCommentsPriceAll = orderToLoad[index].PriceAll.Comments;
@@ -160,8 +160,8 @@ namespace Test.Test
             SaveFilesHistoryOrderTest save = new SaveFilesHistoryOrderTest();
             save.SaveHistoryOrders( orderList );
 
-            LoadOrder load = new LoadOrder();
-            List<Order>  orderToLoad = load.LoadOrderList(new LoadingFilesTxtTest());
+            Pizza.IList<Order> load =  new LoadingFilesTxtTest();
+            var orderToLoad = load.GetList();
             var currentNameDish =  orderToLoad[idexOrder].ListDishes[indexDish].Name;
             var currentPriceDish = orderToLoad[idexOrder].ListDishes[indexDish].Price;
             var currentSidesDish = orderToLoad[idexOrder].ListDishes[indexDish].Sides;

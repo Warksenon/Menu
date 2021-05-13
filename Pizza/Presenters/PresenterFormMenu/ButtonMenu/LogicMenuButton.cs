@@ -4,9 +4,9 @@ namespace Pizza
 {
     public class LogicMenuButton : ILogic
     {
-        private Form1LoadSidesPresenter loadSidesToCheckedListBox;
-        private Form1LoadDishesPresenters loadDishesToListView;
-        private ButtonLoadMenu buttonMenu;
+        private readonly Form1LoadSidesPresenter loadSidesToCheckedListBox;
+        private readonly Form1LoadDishesPresenters loadDishesToListView;
+        private readonly ButtonLoadMenu buttonMenu;
 
         public LogicMenuButton( FormMenu form1, ButtonLoadMenu buttonMenu )
         {

@@ -24,8 +24,8 @@ namespace Pizza.Presenters
                 {
                     Dish dish = new Dish
                     {
-                        Name = form.ListViewDishes.Items[x].SubItems[0].Text,
-                        Price = form.ListViewDishes.Items[x].SubItems[1].Text
+                        Name = _form.ListViewDishes.Items[x].SubItems[0].Text,
+                        Price = _form.ListViewDishes.Items[x].SubItems[1].Text
                     };
                     list.Add( dish );
                 }

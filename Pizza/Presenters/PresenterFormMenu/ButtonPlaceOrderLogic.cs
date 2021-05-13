@@ -18,10 +18,10 @@ namespace Pizza.Presenters.PresenterFormMenu
         {
             if (ChceckListViewOrderIsNotEpmty())
             {
-                if (form.BackgroundWorker.IsBusy != true)
+                if (_form.BackgroundWorker.IsBusy != true)
                 {
-                    form.BackgroundWorker.RunWorkerAsync();
-                    eevent.SetLogic( new BackgroundWorkerLogic( form ) );
+                    _form.BackgroundWorker.RunWorkerAsync();
+                    eevent.SetLogic( new BackgroundWorkerLogic( _form ) );
                 }
                 else
                 {
@@ -36,7 +36,7 @@ namespace Pizza.Presenters.PresenterFormMenu
 
         private bool ChceckListViewOrderIsNotEpmty()
         {
-            if (form.ListViewOrder.Items.Count > 0)
+            if (_form.ListViewOrder.Items.Count > 0)
                 return true;
             else
                 return false;

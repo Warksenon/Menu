@@ -8,7 +8,7 @@ namespace Pizza
 {
     public class LoadHistoryPresenter : ListViewHistory
     {
-        Repositories _repositories;
+        readonly Repositories _repositories;
         IList<Order> list;
 
         public LoadHistoryPresenter( FormHistory form, Repositories repositories ):base( form )

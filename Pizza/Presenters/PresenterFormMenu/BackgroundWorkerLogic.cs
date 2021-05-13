@@ -16,7 +16,7 @@ namespace Pizza.Presenters.PresenterFormMenu.OrderGetSet
 
         private void GetOrderFromListView()
         {
-            FormMenuCreatingOrder creatingOrder = new FormMenuCreatingOrder(form);
+            FormMenuCreatingOrder creatingOrder = new FormMenuCreatingOrder(_form);
             order = creatingOrder.GetOrderFromListView();
         }
 

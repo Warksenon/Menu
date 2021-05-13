@@ -10,7 +10,7 @@ namespace Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1
         {
             List<string> list = new List<string>();
 
-            foreach (object item in form.CheckedListBoxSide.CheckedItems)
+            foreach (object item in _form.CheckedListBoxSide.CheckedItems)
             {
                 string side = item.ToString();
                 list.Add( side );

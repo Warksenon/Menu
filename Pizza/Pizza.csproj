@@ -112,7 +112,7 @@
     <Compile Include="Presenters\HelperConvert.cs" />
     <Compile Include="Presenters\OnEvent.cs" />
     <Compile Include="Presenters\IOnEvent.cs" />
-    <Compile Include="Presenters\ILogiccs.cs" />
+    <Compile Include="Presenters\ILogic.cs" />
     <Compile Include="Presenters\PresenterFormHistory\CopyHistory\HistoryCopy.cs" />
     <Compile Include="Presenters\PresenterFormHistory\CopyHistory\RepositoriesCopy.cs" />
     <Compile Include="Presenters\PresenterFormHistory\HistorySelect.cs" />
@@ -183,9 +183,7 @@
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormMenuView\ViewSettings\ButtonOkView.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\ButtonRemoveView\ButtonRemove.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\ButtonRemoveView\ButtonRemoveAll.cs" />
-    <Compile Include="View\FormMenuView\ViewSettings\ButtonRemoveView\ButtonRemoveOne.cs" />
+    <Compile Include="View\FormMenuView\ViewSettings\ButtonRemoveView.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\FormMenuView.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ListViewDishes.cs" />
     <Compile Include="View\FormHistry\FormHistory.cs">

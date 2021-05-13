@@ -5,8 +5,8 @@ namespace Pizza
 {
     public class RemovePresenter : ILogic
     {
-        FormMenu _form;
-        RemoveFormMenu _remove;
+        readonly FormMenu _form;
+        readonly RemoveFormMenu _remove;
 
         public RemovePresenter( FormMenu form,RemoveFormMenu remove )
         {

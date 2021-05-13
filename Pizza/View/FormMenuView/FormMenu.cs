@@ -91,7 +91,7 @@ namespace Pizza
             onEvent.SetView( new ListViewDishes( this ) );
         }
 
-        private void listViewOrder_SelectedIndexChanged( object sender, EventArgs e )
+        private void ListViewOrder_SelectedIndexChanged( object sender, EventArgs e )
         {
             bRemoveListBox.Visible = true;
         }
@@ -99,12 +99,12 @@ namespace Pizza
         private void ButtonRemoveListBox_Click( object sender, EventArgs e )
         {
             onEvent.SetLogic( new RemovePresenter( this, RemoveFormMenu.One ) );
-            onEvent.SetView( new ButtonRemoveOne( this ) );
+            onEvent.SetView( new ButtonRemoveView( this, RemoveFormMenu.One ) );
         }
 
         private void ButtonRemoveAllListBox_Click( object sender, EventArgs e )
         {
-            onEvent.SetView( new ButtonRemoveAll( this ) );
+            onEvent.SetView( new ButtonRemoveView( this, RemoveFormMenu.All ) );
             onEvent.SetLogic( new RemovePresenter( this, RemoveFormMenu.All ) );
         }
 
@@ -129,12 +129,12 @@ namespace Pizza
             }
         }
 
-        private void backgroundWorker1_DoWork( object sender, DoWorkEventArgs e )
+        private void BackgroundWorker1_DoWork( object sender, DoWorkEventArgs e )
         {
             ButtonSubmitOrder.BackColor = Color.Firebrick;
         }
 
-        private void backgroundWorker1_RunWorkerCompleted( object sender, RunWorkerCompletedEventArgs e )
+        private void BackgroundWorker1_RunWorkerCompleted( object sender, RunWorkerCompletedEventArgs e )
         {
             ButtonSubmitOrder.BackColor = Color.LawnGreen;
         }

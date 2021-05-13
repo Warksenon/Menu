@@ -15,6 +15,12 @@ namespace Pizza
             CreateFolder();
         }
 
+        public void SaveHistoryOrders ( List<Order> listOrder )
+        {
+            this.listOrder = listOrder;
+            SaveListOrder();
+        }
+
         private void SaveListOrder()
         {
             try
@@ -38,11 +44,6 @@ namespace Pizza
             }
         }
 
-        public void SaveHistoryOrders( List<Order> listOrder )
-        {
-            this.listOrder = listOrder;
-            SaveListOrder();
-        }
     }
 }
 

@@ -25,7 +25,7 @@ namespace Test.Test
             var currentNameDish =  orderToLoad[0].ListDishes[index].Name;
             var currentPriceDish = orderToLoad[0].ListDishes[index].Price;
             var currentSidesDish = orderToLoad[0].ListDishes[index].Sides;
-            var currentIdDish =  orderToLoad[0].ListDishes[index].Id;
+           
 
             Assert.AreEqual( expectationsName, currentNameDish );
             Assert.AreEqual( expectationsPrice, currentPriceDish );
@@ -106,7 +106,7 @@ namespace Test.Test
         {
             DeleteData();
             Order  orderToSave =  CreateOrderFirst();
-            var save = new SaveFilesOrderTest( orderToSave );
+            new SaveFilesOrderTest( orderToSave );
             orderToSave = CreateOrderSecond();
             new SaveFilesOrderTest( orderToSave );
 
@@ -154,9 +154,11 @@ namespace Test.Test
         {
             Order  orderFirst =  CreateOrderFirst();
             Order  orderSecond = CreateOrderSecond();
-            List<Order> orderList = new List<Order>();
-            orderList.Add( orderFirst );
-            orderList.Add( orderSecond );
+            List<Order> orderList = new List<Order>
+            {
+                orderFirst,
+                orderSecond
+            };
             SaveFilesHistoryOrderTest save = new SaveFilesHistoryOrderTest();
             save.SaveHistoryOrders( orderList );
 

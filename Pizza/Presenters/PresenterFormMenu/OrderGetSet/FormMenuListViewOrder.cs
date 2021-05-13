@@ -16,10 +16,10 @@ namespace Pizza.Presenters.PresenterFormMenu.OrderGetSet
             StringBuilder textPrice = new StringBuilder();
             try
             {
-                for (int i = 0; i < form.ListViewOrder.Items.Count; i++)
+                for (int i = 0; i < _form.ListViewOrder.Items.Count; i++)
                 {
                     textPrice.Clear();
-                    textPrice.Append( form.ListViewOrder.Items [i].SubItems [2].Text );
+                    textPrice.Append( _form.ListViewOrder.Items [i].SubItems [2].Text );
                     price = FindPrice( textPrice.ToString() );
                     priceAll += price;
                 }

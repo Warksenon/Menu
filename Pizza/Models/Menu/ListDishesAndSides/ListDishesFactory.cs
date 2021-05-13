@@ -4,7 +4,7 @@ namespace Pizza
 {
     public class ListDishesFactory : IList<Dish>
     {
-        private ButtonLoadMenu buttonMenu;
+        private readonly ButtonLoadMenu buttonMenu;
 
         public ListDishesFactory ( ButtonLoadMenu buttonMenu )
         {
@@ -13,25 +13,25 @@ namespace Pizza
 
         private List<Dish> SetButttonMenu()
         {
-            var listDishes = new List<Dish>();
+            var listDishes = new ListDishes();
 
             switch (buttonMenu)
             {
                 case ButtonLoadMenu.Pizza:
-                listDishes = new ListPizza().GetList();
+                listDishes = new ListPizza();
                 break;
                 case ButtonLoadMenu.MainDishes:
-                listDishes = new ListMainDishes().GetList();
+                listDishes = new ListMainDishes();
                 break;
                 case ButtonLoadMenu.Soups:
-                listDishes = new ListSoups().GetList();
+                listDishes = new ListSoups();
                 break;
                 case ButtonLoadMenu.Drinks:
-                listDishes = new ListDrinks().GetList();
-                break;
+                listDishes = new ListDrinks();
+                break; 
             }
 
-            return listDishes;
+            return listDishes.GetList();
         }
 
         public List<Dish> GetList()

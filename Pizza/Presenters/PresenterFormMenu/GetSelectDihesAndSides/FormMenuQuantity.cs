@@ -10,7 +10,7 @@ namespace Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1
 
         protected int CheckNumberTextViewDishes()
         {
-            int number = HelperConvert.ConvertTextToInt(form.QTextbox.Text);
+            int number = HelperConvert.ConvertTextToInt(_form.QTextbox.Text);
 
             if (number < 1)
             {

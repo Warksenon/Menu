@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 
@@ -46,7 +47,7 @@ namespace Pizza.Presenters
                     lvi.SubItems.Add( priceAll );
                 }
 
-                form.ListViewOrder.Items.Add( lvi );
+                _form.ListViewOrder.Items.Add( lvi );
             }
         }
 
@@ -76,13 +77,13 @@ namespace Pizza.Presenters
 
             foreach (var side in listSides)
             {
-                string textPrice = side;
-                price = FindPrice( textPrice );
+                price = FindPrice( side );
                 priceSides += price;
+
             }
 
-            var priceDish = FindPrice(listDishes[0].Price);
-            var priceAll = priceDish + priceSides;
+            price = FindPrice(listDishes[0].Price);
+            var priceAll =  price + priceSides;
             return priceAll + "zł";
         }
 

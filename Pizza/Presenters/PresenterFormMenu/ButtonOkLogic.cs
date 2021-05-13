@@ -8,8 +8,8 @@ namespace Pizza.Presenters.PresenterFormMenu
 
         public void LogicSettings()
         {
-            eevent.SetLogic( new FormMenuAddOrderListView( form ) );
-            eevent.SetLogic( new Form1LabelPricePresenter( form ) );
+            eevent.SetLogic( new FormMenuAddOrderListView( _form ) );
+            eevent.SetLogic( new Form1LabelPricePresenter( _form ) );
         }
     }
 }

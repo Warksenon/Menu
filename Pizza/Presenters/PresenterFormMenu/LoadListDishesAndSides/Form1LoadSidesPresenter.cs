@@ -14,13 +14,13 @@ namespace Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1
             var list = listSides.GetList();
             foreach (var side in list)
             {
-                form.CheckedListBoxSide.Items.Add( side );
+                _form.CheckedListBoxSide.Items.Add( side );
             }
         }
 
         private void ClearCheckedListBox()
         {
-            form.CheckedListBoxSide.Items.Clear();
+            _form.CheckedListBoxSide.Items.Clear();
         }
     }
 }

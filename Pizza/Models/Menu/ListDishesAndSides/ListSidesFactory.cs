@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
+﻿using System.Collections.Generic;
 
 namespace Pizza
 {
     public class ListSidesFactory : IList<string>
     {
-        private ButtonLoadMenu buttonMenu;
+        private readonly ButtonLoadMenu buttonMenu;
 
         public ListSidesFactory( ButtonLoadMenu buttonMenu )
         {
@@ -19,22 +13,19 @@ namespace Pizza
 
         private List<string> SetButttonMenu()
         {
-            var listSides = new  ListSidesPizza().GetList();
+            var listSides = new  ListSides();
 
             switch (buttonMenu)
             {
                 case ButtonLoadMenu.Pizza:
-                var listDishes = new  ListSidesPizza().GetList();
+                listSides = new ListSidesPizza();
                 break;
                 case ButtonLoadMenu.MainDishes:
-                listSides = new ListSidesMainDishes().GetList();
-                break;
-                default:
-                listSides = new List<string>();
+                listSides = new ListSidesMainDishes();
                 break;
             }
 
-            return listSides;
+            return listSides.GetList();
         }
 
         public List<string> GetList()

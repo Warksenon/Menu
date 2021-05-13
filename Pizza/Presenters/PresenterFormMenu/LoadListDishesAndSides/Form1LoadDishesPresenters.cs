@@ -13,12 +13,12 @@ namespace Pizza
         public void AddDishesToListView( IList<Dish> loadList )
         {
             List<Dish> listDisch = loadList.GetList();
-            form.ListViewDishes.Items.Clear();
+            _form.ListViewDishes.Items.Clear();
             foreach (var disch in listDisch)
             {
                 ListViewItem lvi = new ListViewItem(Convert.ToString(disch.Name));
                 lvi.SubItems.Add( disch.Price );
-                form.ListViewDishes.Items.Add( lvi );
+                _form.ListViewDishes.Items.Add( lvi );
             }
         }
     }

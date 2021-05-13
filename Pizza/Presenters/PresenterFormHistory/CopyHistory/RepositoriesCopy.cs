@@ -5,8 +5,8 @@ namespace Pizza
 {
     public class RepositoriesCopy  : ILogic
     {
-        Repositories _repositories;
-        FormHistory _form;
+        readonly Repositories _repositories;
+        readonly FormHistory _form;
 
         public RepositoriesCopy ( FormHistory form, Repositories repositories)
         {

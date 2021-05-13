@@ -19,8 +19,8 @@ namespace Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1
                 {
                     Dish dish = new Dish
                     {
-                        Name = form.ListViewDishes.Items[x].SubItems[0].Text,
-                        Price = form.ListViewDishes.Items[x].SubItems[1].Text
+                        Name = _form.ListViewDishes.Items[x].SubItems[0].Text,
+                        Price = _form.ListViewDishes.Items[x].SubItems[1].Text
                     };
                     list.Add( dish );
                 }
@@ -31,7 +31,7 @@ namespace Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1
 
         private int CheckListDishesSelectedItem()
         {
-            return form.ListViewDishes.FocusedItem.Index;
+            return _form.ListViewDishes.FocusedItem.Index;
         }
 
     }

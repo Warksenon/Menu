@@ -5,7 +5,7 @@ using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
 
 namespace Pizza
 {
-    public abstract class ListDishes : ListName, IList<Dish>
+    public class ListDishes : ListName, IList<Dish>
     {
         protected List<Dish> listDisches;
         protected Dish disch = new Dish();
@@ -26,7 +26,9 @@ namespace Pizza
             }
         }
 
-        public abstract List<Dish> GetList();
-
+        public virtual List<Dish> GetList ()
+        {
+            return new List<Dish>();
+        }
     }
 }

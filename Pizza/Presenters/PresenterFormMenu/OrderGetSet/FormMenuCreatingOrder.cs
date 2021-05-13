@@ -28,7 +28,7 @@ namespace Pizza
 
         private void GetComments()
         {
-            order.PriceAll.Comments = form.TextBoxComments.Text;
+            order.PriceAll.Comments = _form.TextBoxComments.Text;
         }
 
         private void GetDate()
@@ -39,15 +39,15 @@ namespace Pizza
         private void GetListDishesFromListViewOrder()
         {
             var list = new List<Dish>();
-            int counter = form.ListViewOrder.Items.Count;
+            int counter = _form.ListViewOrder.Items.Count;
 
             for (int i = 0; i < counter; i++)
             {
                 list.Add( new Dish()
                 {
-                    Name = form.ListViewOrder.Items [i].SubItems [0].Text,
-                    Sides = form.ListViewOrder.Items [i].SubItems [1].Text,
-                    Price = form.ListViewOrder.Items [i].SubItems [2].Text
+                    Name = _form.ListViewOrder.Items [i].SubItems [0].Text,
+                    Sides = _form.ListViewOrder.Items [i].SubItems [1].Text,
+                    Price = _form.ListViewOrder.Items [i].SubItems [2].Text
                 } );
             }
 

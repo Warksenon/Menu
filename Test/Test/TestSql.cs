@@ -132,9 +132,11 @@ namespace Test.Test
         {
             Order  orderFirst =  CreateOrderFirst();
             Order  orderSecond = CreateOrderSecond();
-            List<Order> orderList = new List<Order>();
-            orderList.Add( orderFirst );
-            orderList.Add( orderSecond );
+            List<Order> orderList = new List<Order>
+            {
+                orderFirst,
+                orderSecond
+            };
             SaveHistorySQLTest save = new SaveHistorySQLTest();
             save.SaveHistoryOrders( orderList );
 
@@ -159,9 +161,11 @@ namespace Test.Test
         {
             Order  orderFirst =  CreateOrderFirst();
             Order  orderSecond = CreateOrderSecond();
-            List<Order> orderList = new List<Order>();
-            orderList.Add( orderFirst );
-            orderList.Add( orderSecond );
+            List<Order> orderList = new List<Order>
+            {
+                orderFirst,
+                orderSecond
+            };
             SaveHistorySQLTest save = new SaveHistorySQLTest();
             save.SaveHistoryOrders( orderList );
 

@@ -14,7 +14,7 @@ namespace Test
 
         public SaveHistorySQLTest() { }
 
-        public void SaveHistoryOrders ( List<Order> listOrder )
+        public void SaveHistoryOrders( List<Order> listOrder )
         {
             this.listOrder = listOrder;
             UpdateAllTabele();

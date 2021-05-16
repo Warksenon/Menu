@@ -1,25 +1,23 @@
 ﻿using System.Drawing;
 
-using Pizza.View.Form1View;
-
 namespace Pizza
 {
-    public class ButtonRemoveView :  IView
+    public class ButtonRemoveView : IView
     {
-        readonly RemoveFormMenu _bRemove;
-        readonly FormMenu _form;
+        private readonly RemoveFormMenu _bRemove;
+        private readonly FormMenu _form;
         public ButtonRemoveView( FormMenu form, RemoveFormMenu bRemove )
         {
             _bRemove = bRemove;
             _form = form;
         }
 
-        public  void ViewSetting()
+        public void ViewSetting()
         {
             Remove();
         }
 
-        private void Remove ()
+        private void Remove()
         {
             switch (_bRemove)
             {
@@ -32,7 +30,7 @@ namespace Pizza
             }
         }
 
-        private void SetSettingsButton ()
+        private void SetSettingsButton()
         {
             if (CheckingListOrderIfEmpty())
             {
@@ -44,7 +42,7 @@ namespace Pizza
             }
         }
 
-        private bool CheckingListOrderIfEmpty ()
+        private bool CheckingListOrderIfEmpty()
         {
             if (_form.ListViewOrder.Items.Count < 1)
                 return true;

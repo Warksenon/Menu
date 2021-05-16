@@ -4,10 +4,10 @@ namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
 {
     public class ButtonMenuView : IView
     {
-        ButtonLoadMenu _loadMenu;
-        FormMenu _form;
-       
-        public ButtonMenuView( FormMenu form, ButtonLoadMenu loadMenu ) 
+        private readonly ButtonLoadMenu _loadMenu;
+        private readonly FormMenu _form;
+
+        public ButtonMenuView( FormMenu form, ButtonLoadMenu loadMenu )
         {
             _form = form;
             _loadMenu = loadMenu;

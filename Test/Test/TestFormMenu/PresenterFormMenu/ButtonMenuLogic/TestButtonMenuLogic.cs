@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
 
 using Pizza;
-using Pizza.Presenters;
 
 namespace Test.Test.TestFormMenu.PresenterFormMenu.ButtonMenuLogic
 {
@@ -9,7 +8,7 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu.ButtonMenuLogic
     public class TestButtonMenuLogic
     {
         private readonly FormMenu form = new FormMenu();
-        private readonly OnEvent eevent = new OnEvent();
+        private readonly OnEventTest onEvent = new OnEventTest();
 
         [TestCase( "Margheritta", "20zł", "0" )]
         [TestCase( "Vegetariana", "22zł", "1" )]
@@ -17,7 +16,9 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu.ButtonMenuLogic
         [TestCase( "Venecia", "25zł", "3" )]
         public void TestGetListPizzasFromListViewDishes( string expectationsName, string expectationsPrice, int index )
         {
-            eevent.SetLogic( new LogicMenuButton( form, ButtonLoadMenu.Pizza ) );
+      
+            onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.Pizza ) );
+           
             var  currentName  = form.ListViewDishes.Items [index].SubItems [0].Text;
             var  currentPrice = form.ListViewDishes.Items [index].SubItems [1].Text;
 
@@ -30,7 +31,7 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu.ButtonMenuLogic
         [TestCase( "Placek po węgiersku", "27zł", "2" )]
         public void TestGetListMainDishesFromListViewDishes( string expectationsName, string price, int index )
         {
-            eevent.SetLogic( new LogicMenuButton( form, ButtonLoadMenu.MainDishes ) );
+            onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.MainDishes ) );
             var  currentName  = form.ListViewDishes.Items [index].SubItems [0].Text;
             var  currentPrice = form.ListViewDishes.Items [index].SubItems [1].Text;
 
@@ -43,7 +44,7 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu.ButtonMenuLogic
         [TestCase( "Cola", "2" )]
         public void TestGetListDrinksFromListViewDishes( string expectationsName, int index )
         {
-            eevent.SetLogic( new LogicMenuButton( form, ButtonLoadMenu.Drinks ) );
+            onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.Drinks ) );
             var  currentName  = form.ListViewDishes.Items [index].SubItems [0].Text;
             var  currentPrice = form.ListViewDishes.Items [index].SubItems [1].Text;
 
@@ -55,7 +56,7 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu.ButtonMenuLogic
         [TestCase( "Rosół", "10zł", "1" )]
         public void TestGetListSoupsFromListViewDishes( string expectationsName, string expectationsPrice, int index )
         {
-            eevent.SetLogic( new LogicMenuButton( form, ButtonLoadMenu.Soups ) );
+            onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.Soups ) );
             var  currentName  = form.ListViewDishes.Items [index].SubItems [0].Text;
             var  currentPrice = form.ListViewDishes.Items [index].SubItems [1].Text;
 
@@ -67,7 +68,7 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu.ButtonMenuLogic
         [TestCase( "Zestaw sosów -6zł", "1" )]
         public void TestGetListSidesFromMainDishes( string expectationsName, int index )
         {
-            eevent.SetLogic( new LogicMenuButton( form, ButtonLoadMenu.MainDishes ) );
+            onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.MainDishes ) );
             var  currentName  = form.CheckedListBoxSide.Items [index].ToString();
 
             Assert.AreEqual( expectationsName, currentName );
@@ -79,7 +80,7 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu.ButtonMenuLogic
         [TestCase( "Pieczarki -2zł", "3" )]
         public void TestGetListSidesFromPizzas( string expectationsName, int index )
         {
-            eevent.SetLogic( new LogicMenuButton( form, ButtonLoadMenu.Pizza ) );
+            onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.Pizza ) );
             var  currentName  = form.CheckedListBoxSide.Items [index].ToString();
 
             Assert.AreEqual( expectationsName, currentName );

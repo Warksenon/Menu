@@ -6,7 +6,7 @@ using Pizza.SqlLite;
 
 namespace Pizza.Models.SqlLite
 {
-    internal class LoadHistorySQL : CreateConnection, IList<Order>
+    internal class LoadHistorySQL : CreateConnection, IListGet<Order>
     {
         private List<Order> LoadListOrderFromSQL()
         {
@@ -116,7 +116,7 @@ namespace Pizza.Models.SqlLite
             dr.Close();
         }
 
-        List<Order> IList<Order>.GetList()
+        List<Order> IListGet<Order>.GetList()
         {
             return LoadListOrderFromSQL();
         }

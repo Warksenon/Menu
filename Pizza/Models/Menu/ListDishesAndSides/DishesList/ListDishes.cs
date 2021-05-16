@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 
 using Pizza.Models.Menu.ListDishesAndSides;
-using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
 
 namespace Pizza
 {
-    public class ListDishes : ListName, IList<Dish>
+    public class ListDishes : ListName, IListGet<Dish>
     {
         protected List<Dish> listDisches;
         protected Dish disch = new Dish();
@@ -26,7 +25,7 @@ namespace Pizza
             }
         }
 
-        public virtual List<Dish> GetList ()
+        public virtual List<Dish> GetList()
         {
             return new List<Dish>();
         }

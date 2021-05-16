@@ -1,24 +1,27 @@
-﻿using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
+﻿using Pizza.Presenters.PresenterFormMenu;
+
 
 namespace Pizza
 {
     public class LogicMenuButton : ILogic
     {
-        private readonly Form1LoadSidesPresenter loadSidesToCheckedListBox;
-        private readonly Form1LoadDishesPresenters loadDishesToListView;
+        private readonly SidesCheckListBox loadSidesToCheckedListBox;
+        private readonly DishesListView loadDishesToListView;
         private readonly ButtonLoadMenu buttonMenu;
 
         public LogicMenuButton( FormMenu form1, ButtonLoadMenu buttonMenu )
         {
             this.buttonMenu = buttonMenu;
-            loadSidesToCheckedListBox = new Form1LoadSidesPresenter( form1 );
-            loadDishesToListView = new Form1LoadDishesPresenters( form1 );
+            loadSidesToCheckedListBox = new SidesCheckListBox( form1 );
+            loadDishesToListView = new DishesListView( form1 );
         }
 
         public void LogicSettings()
         {
-            loadSidesToCheckedListBox.LoadCheckListBoxSideDishe( new ListSidesFactory( buttonMenu ) );
-            loadDishesToListView.AddDishesToListView( new ListDishesFactory( buttonMenu ) );
+            var listSides = new ListSidesFactory( buttonMenu ).GetList();
+            var listDishes = new ListDishesFactory( buttonMenu ).GetList();           
+            loadSidesToCheckedListBox.SetList( listSides );
+            loadDishesToListView.SetList( listDishes );
         }
     }
 }

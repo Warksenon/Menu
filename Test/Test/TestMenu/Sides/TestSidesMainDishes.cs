@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
-
+﻿
 using NUnit.Framework;
 
 using Pizza;
-using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
 
 namespace Test.Menu.Sides
 {
@@ -14,7 +12,7 @@ namespace Test.Menu.Sides
         [TestCase( "Zestaw sosów -6zł", "1" )]
         public void TestGetListSidesMainDishes( string expectationsName, int index )
         {
-            Pizza.IList<string> list = new ListSidesMainDishes();
+            Pizza.IListGet<string> list = new ListSidesMainDishes();
 
             var listSides = list.GetList();
             var currentName = listSides [index];

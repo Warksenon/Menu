@@ -26,7 +26,7 @@ namespace Pizza
 
         private void FormHistory_Load( object sender, EventArgs e )
         {
-            onEvent.SetLogic( new LoadHistoryPresenter( this,Repositories.Sql ) );
+            onEvent.SetLogic( new LoadHistoryPresenter( this, Repositories.Sql ) );
             onEvent.SetView( new LoadSqlView( this ) );
         }
 

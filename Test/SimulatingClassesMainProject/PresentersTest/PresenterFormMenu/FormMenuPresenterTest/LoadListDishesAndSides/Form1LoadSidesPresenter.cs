@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 
 using Pizza;
-using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
 
 namespace Test
 {
@@ -20,7 +19,7 @@ namespace Test
             LoadCheckListBoxSideDishe( new ListSidesMainDishes() );
         }
 
-        private void LoadCheckListBoxSideDishe( Pizza.IList<string> listSides )
+        private void LoadCheckListBoxSideDishe( IListGet<string> listSides )
         {
             ClearCheckedListBox();
             List<string> list = listSides.GetList();

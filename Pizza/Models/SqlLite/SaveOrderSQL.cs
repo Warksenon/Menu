@@ -1,6 +1,4 @@
-﻿using Pizza.Presenters;
-
-namespace Pizza.Models.SqlLite
+﻿namespace Pizza.Models.SqlLite
 {
     internal class SaveOrderSQL : OrderSQL
     {

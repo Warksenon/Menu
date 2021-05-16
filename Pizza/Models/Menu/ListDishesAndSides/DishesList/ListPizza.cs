@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 
-using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
-
 namespace Pizza
 {
     public class ListPizza : ListDishes

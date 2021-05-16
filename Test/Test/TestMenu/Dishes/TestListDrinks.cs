@@ -3,7 +3,6 @@
 using NUnit.Framework;
 
 using Pizza;
-using Pizza.Presenters.PresenterFormMenu.LoadDishesAndSideDishForm1;
 
 namespace Test
 {
@@ -15,7 +14,7 @@ namespace Test
         [TestCase( "Cola", "5zł", "2" )]
         public void TestGetListDrinks( string expectationsName, string expectationsPrice, int index )
         {
-            Pizza.IList<Dish> list = new ListDrinks();
+            Pizza.IListGet<Dish> list = new ListDrinks();
 
             List<Dish> listDrinks = list.GetList();
             var currentName = listDrinks [index].Name;

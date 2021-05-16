@@ -5,16 +5,16 @@ namespace Pizza
 {
     public class RemovePresenter : ILogic
     {
-        readonly FormMenu _form;
-        readonly RemoveFormMenu _remove;
+        private readonly FormMenu _form;
+        private readonly RemoveFormMenu _remove;
 
-        public RemovePresenter( FormMenu form,RemoveFormMenu remove )
+        public RemovePresenter( FormMenu form, RemoveFormMenu remove )
         {
             _remove = remove;
             _form = form;
         }
 
-        void Remove ()
+        private void Remove()
         {
             OnEvent action = new OnEvent();
 
@@ -22,7 +22,7 @@ namespace Pizza
             {
                 case RemoveFormMenu.One:
                 _form.ListViewOrder.SelectedItems [0].Remove();
-                action.SetLogic( new Form1LabelPricePresenter( _form ) );              
+                action.SetLogic( new Form1LabelPricePresenter( _form ) );
                 break;
 
                 case RemoveFormMenu.All:

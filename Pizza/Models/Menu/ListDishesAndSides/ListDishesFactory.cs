@@ -2,11 +2,11 @@
 
 namespace Pizza
 {
-    public class ListDishesFactory : IList<Dish>
+    public class ListDishesFactory : IListGet<Dish>
     {
         private readonly ButtonLoadMenu buttonMenu;
 
-        public ListDishesFactory ( ButtonLoadMenu buttonMenu )
+        public ListDishesFactory( ButtonLoadMenu buttonMenu )
         {
             this.buttonMenu = buttonMenu;
         }
@@ -28,7 +28,7 @@ namespace Pizza
                 break;
                 case ButtonLoadMenu.Drinks:
                 listDishes = new ListDrinks();
-                break; 
+                break;
             }
 
             return listDishes.GetList();
@@ -36,7 +36,7 @@ namespace Pizza
 
         public List<Dish> GetList()
         {
-           return SetButttonMenu();
+            return SetButttonMenu();
         }
 
     }

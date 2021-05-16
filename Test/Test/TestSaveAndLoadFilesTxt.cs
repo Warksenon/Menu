@@ -3,7 +3,6 @@
 using NUnit.Framework;
 
 using Pizza;
-using Pizza.Presenters;
 
 using Test.SimulatingClassesMainProject.ModelsTest;
 
@@ -20,12 +19,12 @@ namespace Test.Test
             Order  orderToSave =  CreateOrderFirst();
             new SaveFilesOrderTest( orderToSave );
 
-            Pizza.IList<Order> load = new LoadingFilesTxtTest();
+            Pizza.IListGet<Order> load = new LoadingFilesTxtTest();
             var  orderToLoad = load.GetList();
             var currentNameDish =  orderToLoad[0].ListDishes[index].Name;
             var currentPriceDish = orderToLoad[0].ListDishes[index].Price;
             var currentSidesDish = orderToLoad[0].ListDishes[index].Sides;
-           
+
 
             Assert.AreEqual( expectationsName, currentNameDish );
             Assert.AreEqual( expectationsPrice, currentPriceDish );
@@ -110,7 +109,7 @@ namespace Test.Test
             orderToSave = CreateOrderSecond();
             new SaveFilesOrderTest( orderToSave );
 
-            Pizza.IList<Order> load =  new LoadingFilesTxtTest();
+            Pizza.IListGet<Order> load =  new LoadingFilesTxtTest();
             var orderToLoad = load.GetList();
             var currentnPricePriceAll = orderToLoad[index].PriceAll.Price;
             var currentDatePriceAll =   orderToLoad[index].PriceAll.Date;
@@ -135,7 +134,7 @@ namespace Test.Test
             SaveFilesHistoryOrderTest save = new SaveFilesHistoryOrderTest();
             save.SaveHistoryOrders( orderList );
 
-            Pizza.IList<Order> load =  new LoadingFilesTxtTest();
+            Pizza.IListGet<Order> load =  new LoadingFilesTxtTest();
             var orderToLoad = load.GetList();
             var currentnPricePriceAll = orderToLoad[index].PriceAll.Price;
             var currentDatePriceAll =   orderToLoad[index].PriceAll.Date;
@@ -162,7 +161,7 @@ namespace Test.Test
             SaveFilesHistoryOrderTest save = new SaveFilesHistoryOrderTest();
             save.SaveHistoryOrders( orderList );
 
-            Pizza.IList<Order> load =  new LoadingFilesTxtTest();
+            Pizza.IListGet<Order> load =  new LoadingFilesTxtTest();
             var orderToLoad = load.GetList();
             var currentNameDish =  orderToLoad[idexOrder].ListDishes[indexDish].Name;
             var currentPriceDish = orderToLoad[idexOrder].ListDishes[indexDish].Price;

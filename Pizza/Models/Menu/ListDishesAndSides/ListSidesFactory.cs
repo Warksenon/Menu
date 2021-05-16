@@ -2,7 +2,7 @@
 
 namespace Pizza
 {
-    public class ListSidesFactory : IList<string>
+    public class ListSidesFactory : IListGet<string>
     {
         private readonly ButtonLoadMenu buttonMenu;
 

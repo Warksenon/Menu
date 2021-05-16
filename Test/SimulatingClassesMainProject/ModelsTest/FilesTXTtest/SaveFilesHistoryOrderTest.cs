@@ -12,10 +12,10 @@ namespace Test
 {
     internal class SaveFilesHistoryOrderTest : FilesTest, ISaveHistory<Order>, IDataCleansing
     {
-        public SaveFilesHistoryOrderTest(  )
+        public SaveFilesHistoryOrderTest()
         {
             CreateFolder();
-            
+
         }
 
         private void SaveListOrder()

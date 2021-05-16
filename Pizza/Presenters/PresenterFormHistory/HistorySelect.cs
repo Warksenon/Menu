@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace Pizza.Presenters.PresenterFormHistory
 {
-    internal class HistorySelect: ListViewHistory
-    {       
-        public HistorySelect( FormHistory form ) : base( form ){}
+    internal class HistorySelect : ListViewHistory
+    {
+        public HistorySelect( FormHistory form ) : base( form ) { }
 
         private void LoadLVDishes()
         {

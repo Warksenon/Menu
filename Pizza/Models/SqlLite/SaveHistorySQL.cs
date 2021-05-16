@@ -8,9 +8,9 @@ namespace Pizza.Models.SqlLite
     {
         private List<Order> listOrder;
 
-        public SaveHistorySQL(  )
+        public SaveHistorySQL()
         {
-           
+
         }
 
         private void UpdateAllTabele()
@@ -73,7 +73,7 @@ namespace Pizza.Models.SqlLite
             }
         }
 
-        public void SaveHistoryOrders ( List<Order> listOrder )
+        public void SaveHistoryOrders( List<Order> listOrder )
         {
             this.listOrder = listOrder;
             UpdateAllTabele();

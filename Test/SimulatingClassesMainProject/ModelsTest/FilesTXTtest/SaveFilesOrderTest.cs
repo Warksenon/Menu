@@ -1,7 +1,6 @@
 ﻿using System;
 
 using Pizza;
-using Pizza.Presenters;
 
 namespace Test
 {

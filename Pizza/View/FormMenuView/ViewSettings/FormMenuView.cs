@@ -9,7 +9,7 @@ namespace Pizza.View.FormMenuView.ViewSettings
 
         public void ViewSetting()
         {
-            eevent.SetView( new ButtonMenuView( _form, ButtonLoadMenu.Pizza )  );
+            eevent.SetView( new ButtonMenuView( _form, ButtonLoadMenu.Pizza ) );
             eevent.SetView( new ButtonRemoveView( _form, RemoveFormMenu.All ) );
         }
     }

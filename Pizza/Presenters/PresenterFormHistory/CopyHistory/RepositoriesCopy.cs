@@ -3,15 +3,15 @@ using Pizza.Presenters.PresenterFormHistory.CopyHistory;
 
 namespace Pizza
 {
-    public class RepositoriesCopy  : ILogic
+    public class RepositoriesCopy : ILogic
     {
-        readonly Repositories _repositories;
-        readonly FormHistory _form;
+        private readonly Repositories _repositories;
+        private readonly FormHistory _form;
 
-        public RepositoriesCopy ( FormHistory form, Repositories repositories)
+        public RepositoriesCopy( FormHistory form, Repositories repositories )
         {
-           _repositories = repositories;
-           _form = form;
+            _repositories = repositories;
+            _form = form;
         }
 
         private void Copy()
@@ -24,22 +24,22 @@ namespace Pizza
                 case Repositories.Sql:
                 CopyHistorySqlAndSetListView();
                 break;
-            }  
+            }
         }
 
-        void CopyHistoryTxtAndSetListView()
+        private void CopyHistoryTxtAndSetListView()
         {
             new HistoryCopy( new LoadingFilesTxt(), new SaveHistorySQL() );
             new LoadHistoryPresenter( _form, Repositories.Txt );
         }
 
-        void CopyHistorySqlAndSetListView()
+        private void CopyHistorySqlAndSetListView()
         {
             new HistoryCopy( new LoadHistorySQL(), new SaveFilesHistoryOrder() );
             new LoadHistoryPresenter( _form, Repositories.Sql );
         }
 
-        public void LogicSettings ()
+        public void LogicSettings()
         {
             Copy();
         }

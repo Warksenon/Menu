@@ -8,7 +8,7 @@ using Pizza.Models.FilesTXT;
 
 namespace Pizza
 {
-    internal class LoadingFilesTxt : Files, IList<Order>
+    internal class LoadingFilesTxt : Files, IListGet<Order>
     {
         private List<Order> LoadOrderListFromTxt()
         {

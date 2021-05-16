@@ -6,7 +6,7 @@ using Pizza;
 
 namespace Test
 {
-    internal class LoadHistorySQLTest : CreateConnectionTest, Pizza.IList<Order>
+    internal class LoadHistorySQLTest : CreateConnectionTest, IListGet<Order>
     {
         private List<Order> LoadListOrderFromSQL()
         {

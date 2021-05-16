@@ -3,7 +3,6 @@
 using NUnit.Framework;
 
 using Pizza;
-using Pizza.Presenters;
 
 using Test.SimulatingClassesMainProject.ModelsTest;
 
@@ -18,9 +17,9 @@ namespace Test.Test
         {
             DeleteData();
             Order  orderToSave =  CreateOrderFirst();
-             new SaveOrderSQLTest( orderToSave );
+            new SaveOrderSQLTest( orderToSave );
 
-            Pizza.IList<Order> load =  new LoadHistorySQLTest();
+            Pizza.IListGet<Order> load =  new LoadHistorySQLTest();
             var orderToLoad = load.GetList();
             var expectationIdDish = 1;
             var currentNameDish =  orderToLoad[0].ListDishes[index].Name;
@@ -113,7 +112,7 @@ namespace Test.Test
             orderToSave = CreateOrderSecond();
             new SaveOrderSQLTest( orderToSave );
 
-            Pizza.IList<Order> load =  new LoadHistorySQLTest();
+            Pizza.IListGet<Order> load =  new LoadHistorySQLTest();
             var orderToLoad = load.GetList();
             var currentnPricePriceAll = orderToLoad[index].PriceAll.Price;
             var currentDatePriceAll =   orderToLoad[index].PriceAll.Date;
@@ -140,7 +139,7 @@ namespace Test.Test
             SaveHistorySQLTest save = new SaveHistorySQLTest();
             save.SaveHistoryOrders( orderList );
 
-            Pizza.IList<Order> load =  new LoadHistorySQLTest();
+            Pizza.IListGet<Order> load =  new LoadHistorySQLTest();
             var orderToLoad = load.GetList();
             var currentnPricePriceAll = orderToLoad[index].PriceAll.Price;
             var currentDatePriceAll =   orderToLoad[index].PriceAll.Date;
@@ -169,7 +168,7 @@ namespace Test.Test
             SaveHistorySQLTest save = new SaveHistorySQLTest();
             save.SaveHistoryOrders( orderList );
 
-            Pizza.IList<Order> load =  new LoadHistorySQLTest();
+            Pizza.IListGet<Order> load =  new LoadHistorySQLTest();
             var orderToLoad = load.GetList();
             var currentNameDish =  orderToLoad[idexOrder].ListDishes[indexDish].Name;
             var currentPriceDish = orderToLoad[idexOrder].ListDishes[indexDish].Price;

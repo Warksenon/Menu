@@ -10,7 +10,7 @@ namespace Pizza.Presenters.PresenterFormMenu
 
         public Form1LabelPricePresenter( FormMenu form )
         {
-            price = new FormMenuAddOrderListView( form );
+            price = new AddOrderListView( form );
             label = form;
         }
 

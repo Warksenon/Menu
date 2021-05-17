@@ -1,16 +1,15 @@
-﻿using Pizza.Presenters.PresenterFormMenu.OrderGetSet;
-using Pizza.View.Form1;
+﻿using Pizza.View.Form1;
 
 namespace Pizza.Presenters.PresenterFormMenu
 {
     internal class Form1LabelPricePresenter : ILogic
     {
-        private readonly IPriceAll price;
+        private readonly IPrice price;
         private readonly IFormMenuLabelPrice label;
 
         public Form1LabelPricePresenter( FormMenu form )
         {
-            price = new AddOrderListView( form );
+            price = new OrderListView( form );
             label = form;
         }
 

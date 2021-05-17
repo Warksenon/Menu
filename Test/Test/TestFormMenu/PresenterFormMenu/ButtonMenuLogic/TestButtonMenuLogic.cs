@@ -16,9 +16,9 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu.ButtonMenuLogic
         [TestCase( "Venecia", "25zł", "3" )]
         public void TestGetListPizzasFromListViewDishes( string expectationsName, string expectationsPrice, int index )
         {
-      
+
             onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.Pizza ) );
-           
+
             var  currentName  = form.ListViewDishes.Items [index].SubItems [0].Text;
             var  currentPrice = form.ListViewDishes.Items [index].SubItems [1].Text;
 

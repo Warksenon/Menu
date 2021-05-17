@@ -1,21 +1,64 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Pizza.View.Form1View;
 
 namespace Pizza.Presenters.PresenterFormMenu
 {
-    public class OrderListView : ViewFormMenu, IListSet<Dish>, IElementGet<Order>
+    public class OrderListView : ViewFormMenu, IListSet<Dish>, IElementGet<Order>, IPrice
     {
+        private readonly Order order = new Order();
+
         public OrderListView( FormMenu form ) : base( form ) { }
 
         public Order GetElement()
         {
-            throw new NotImplementedException();
+            return GetOrderFromListView();
+        }
+
+        private Order GetOrderFromListView()
+        {
+            GetListDishesFromListViewOrder();
+            AddPriceAllToOrder();
+            GetComments();
+            GetDate();
+            return order;
+        }
+
+        private void AddPriceAllToOrder()
+        {
+            double price = GetPricaAll();
+            order.PriceAll.Price = price + "zł";
+        }
+
+        private void GetComments()
+        {
+            order.PriceAll.Comments = _form.TextBoxComments.Text;
+        }
+
+        private void GetDate()
+        {
+            order.PriceAll.Date = DateTime.Now.ToString();
+        }
+
+        public void GetListDishesFromListViewOrder()
+        {
+            var list = new List<Dish>();
+            int counter = _form.ListViewOrder.Items.Count;
+
+            for (int i = 0; i < counter; i++)
+            {
+                list.Add( new Dish()
+                {
+                    Name = _form.ListViewOrder.Items [i].SubItems [0].Text,
+                    Sides = _form.ListViewOrder.Items [i].SubItems [1].Text,
+                    Price = _form.ListViewOrder.Items [i].SubItems [2].Text
+                } );
+            }
+
+            order.ListDishes = list;
         }
 
         public void SetList( List<Dish> elements )
@@ -35,5 +78,44 @@ namespace Pizza.Presenters.PresenterFormMenu
                 _form.ListViewOrder.Items.Add( lvi );
             }
         }
+
+        public double FindPriceAndConvertToDoubel( string dish )
+        {
+            double price = 0;
+            try
+            {
+                string textPrice = HelpFinding.FindPrice(dish);
+                textPrice = textPrice.Replace( "zł", "" );
+                price = Convert.ToDouble( textPrice );
+            }
+            catch (Exception e)
+            {
+                RecordOfExceptions.Save( Convert.ToString( e ), "Form1OrderPresenter - FindPrice" );
+            }
+            return price;
+        }
+
+        public double GetPricaAll()
+        {
+            double priceAll = 0;
+            double price;
+            StringBuilder textPrice = new StringBuilder();
+            try
+            {
+                for (int i = 0; i < _form.ListViewOrder.Items.Count; i++)
+                {
+                    textPrice.Clear();
+                    textPrice.Append( _form.ListViewOrder.Items [i].SubItems [2].Text );
+                    price = FindPriceAndConvertToDoubel( textPrice.ToString() );
+                    priceAll += price;
+                }
+            }
+            catch (Exception e)
+            {
+                RecordOfExceptions.Save( Convert.ToString( e ), "Form1OrderPresenter - GetPricaAll" );
+            }
+            return priceAll;
+        }
+
     }
 }

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Pizza.Presenters
+﻿namespace Pizza.Presenters
 {
-    interface IElementSet<T>
+    internal interface IElementSet<T>
     {
-        void SetElement(T elements );
+        void SetElement( T elements );
     }
 }

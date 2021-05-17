@@ -9,9 +9,9 @@ namespace Test
 {
     public class DishesListViewTest : ViewFormMenu, IElementGet<Dish>, IListSet<Dish>
     {
-        public int SelectionSimulation { get; set; }
+        public static int SelectionSimulation { get; set; }
 
-        public DishesListViewTest( FormMenu form) : base( form ) { }
+        public DishesListViewTest( FormMenu form ) : base( form ) { }
 
         public Dish GetElement()
         {

@@ -34,7 +34,7 @@ namespace Pizza.Presenters.PresenterFormMenu
         private void LoadCheckListBoxSideDishe( List<string> listSides )
         {
             ClearCheckedListBox();
-           
+
             foreach (var side in listSides)
             {
                 _form.CheckedListBoxSide.Items.Add( side );
@@ -46,6 +46,6 @@ namespace Pizza.Presenters.PresenterFormMenu
             _form.CheckedListBoxSide.Items.Clear();
         }
 
-       
+
     }
 }

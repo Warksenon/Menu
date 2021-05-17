@@ -1,5 +1,4 @@
 ﻿using Pizza;
-using Pizza.Presenters.PresenterFormMenu;
 
 
 namespace Test
@@ -13,14 +12,15 @@ namespace Test
         public LogicMenuButtonTest( FormMenu form1, ButtonLoadMenu buttonMenu )
         {
             this.buttonMenu = buttonMenu;
-            loadSidesToCheckedListBox = new SidesCheckListBoxTest( form1 );
+            int []simulationSelectionSides={};
+            loadSidesToCheckedListBox = new SidesCheckListBoxTest( form1, simulationSelectionSides );
             loadDishesToListView = new DishesListViewTest( form1 );
         }
 
         public void LogicSettings()
         {
             var listSides = new ListSidesFactory( buttonMenu ).GetList();
-            var listDishes = new ListDishesFactory( buttonMenu ).GetList();           
+            var listDishes = new ListDishesFactory( buttonMenu ).GetList();
             loadSidesToCheckedListBox.SetList( listSides );
             loadDishesToListView.SetList( listDishes );
         }

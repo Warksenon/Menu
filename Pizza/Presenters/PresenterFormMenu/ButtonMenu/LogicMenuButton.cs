@@ -19,7 +19,7 @@ namespace Pizza
         public void LogicSettings()
         {
             var listSides = new ListSidesFactory( buttonMenu ).GetList();
-            var listDishes = new ListDishesFactory( buttonMenu ).GetList();           
+            var listDishes = new ListDishesFactory( buttonMenu ).GetList();
             loadSidesToCheckedListBox.SetList( listSides );
             loadDishesToListView.SetList( listDishes );
         }

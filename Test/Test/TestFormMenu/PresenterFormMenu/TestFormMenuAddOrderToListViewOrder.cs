@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
 
 using Pizza;
-using Pizza.Presenters;
 using Pizza.Presenters.PresenterFormMenu;
 
 namespace Test.Test.TestFormMenu.PresenterFormMenu
@@ -17,13 +16,18 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu
         {
             FormMenu form = new FormMenu();
             OnEventTest  onEvent = new OnEventTest();
-            onEvent.SetLogic( new ButtonPizzaLogic( form ) );
+            onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.Pizza ) );
             form.QTextbox.Text = "1";
+            DishesListViewTest.SelectionSimulation = simulationChoosingDish;
+            int[] simulationSelectionSides = { };
+            new AddOrderListViewTest( form, simulationSelectionSides ).LogicSettings();
 
-            onEvent.SetLogic( new FormMenuAddOrderListViewTest( form, simulationChoosingDish ) );
-            var currentName = form.ListViewOrder.Items [0].SubItems [0].Text;
-            var currentSides = form.ListViewOrder.Items [0].SubItems [1].Text;
-            var currentPrice = form.ListViewOrder.Items [0].SubItems [2].Text;
+            var order = new OrderListView(form).GetElement();
+            var dish = order.ListDishes[0];
+
+            var currentName = dish.Name;
+            var currentSides = dish.Sides;
+            var currentPrice = dish.Price;
 
             Assert.AreEqual( expectationsName, currentName );
             Assert.AreEqual( expectationsPrice, currentPrice );
@@ -38,14 +42,17 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu
         {
             FormMenu form = new FormMenu();
             OnEventTest  onEvent = new OnEventTest();
-            onEvent.SetLogic( new ButtonPizzaLogic( form ) );
+            onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.Pizza ) );
             form.QTextbox.Text = "1";
-            int [] simulationSelectionSides={0,1,2,3};
+            DishesListViewTest.SelectionSimulation = simulationChoosingDish;
+            int[] tab = {0,1,2,3 };
+            new AddOrderListViewTest( form, tab ).LogicSettings();
+            var order = new OrderListView(form).GetElement();
+            var dish = order.ListDishes[0];
 
-            onEvent.SetLogic( new FormMenuAddOrderListViewTest( form, simulationChoosingDish, simulationSelectionSides ) );
-            var currentName = form.ListViewOrder.Items [0].SubItems [0].Text;
-            var currentSides = form.ListViewOrder.Items [0].SubItems [1].Text;
-            var currentPrice = form.ListViewOrder.Items [0].SubItems [2].Text;
+            var currentName = dish.Name;
+            var currentSides = dish.Sides;
+            var currentPrice = dish.Price;
 
             Assert.AreEqual( expectationsName, currentName );
             Assert.AreEqual( expectationsPrice, currentPrice );
@@ -72,15 +79,18 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu
         {
             FormMenu form = new FormMenu();
             OnEventTest  onEvent = new OnEventTest();
-            onEvent.SetLogic( new ButtonPizzaLogic( form ) );
+            onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.Pizza ) );
             form.QTextbox.Text = "1";
-            int simulationChoosingDish = 0;
-            int [] simulationSelectionSidesTab = SimulationSelectionSides(simulationSelectionSides);
+            DishesListViewTest.SelectionSimulation = 0;
+            int[] tab  = SimulationSelectionSides( simulationSelectionSides );
+            new AddOrderListViewTest( form, tab ).LogicSettings();
 
-            onEvent.SetLogic( new FormMenuAddOrderListViewTest( form, simulationChoosingDish, simulationSelectionSidesTab ) );
-            var currentName = form.ListViewOrder.Items [0].SubItems [0].Text;
-            var currentSides = form.ListViewOrder.Items [0].SubItems [1].Text;
-            var currentPrice = form.ListViewOrder.Items [0].SubItems [2].Text;
+            var order = new OrderListView(form).GetElement();
+            var dish = order.ListDishes[0];
+
+            var currentName = dish.Name;
+            var currentSides = dish.Sides;
+            var currentPrice = dish.Price;
 
             Assert.AreEqual( expectationsName, currentName );
             Assert.AreEqual( expectationsPrice, currentPrice );
@@ -155,15 +165,17 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu
         {
             FormMenu form = new FormMenu();
             OnEventTest  onEvent = new OnEventTest();
-            onEvent.SetLogic( new ButtonMainDishesLogic( form ) );
+            onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.MainDishes ) );
             form.QTextbox.Text = "1";
-            int simulationChoosingDish = 0;
-            int [] simulationSelectionSidesTab = SimulationSelectionSides(simulationSelectionSides);
+            DishesListViewTest.SelectionSimulation = 0;
+            new AddOrderListViewTest( form, SimulationSelectionSides( simulationSelectionSides ) ).LogicSettings();
 
-            onEvent.SetLogic( new FormMenuAddOrderListViewTest( form, simulationChoosingDish, simulationSelectionSidesTab ) );
-            var currentName = form.ListViewOrder.Items [0].SubItems [0].Text;
-            var currentSides = form.ListViewOrder.Items [0].SubItems [1].Text;
-            var currentPrice = form.ListViewOrder.Items [0].SubItems [2].Text;
+            var order = new OrderListView(form).GetElement();
+            var dish = order.ListDishes[0];
+
+            var currentName = dish.Name;
+            var currentSides = dish.Sides;
+            var currentPrice = dish.Price;
 
             Assert.AreEqual( expectationsName, currentName );
             Assert.AreEqual( expectationsPrice, currentPrice );
@@ -179,9 +191,12 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu
             OnEventTest  onEvent = new OnEventTest();
             onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.MainDishes ) );
             form.QTextbox.Text = "1";
-            var listViewDish= new DishesListViewTest( form );
-            listViewDish.SelectionSimulation = simulationChoosingDish;
-            var dish = listViewDish.GetElement();
+            DishesListViewTest.SelectionSimulation = simulationChoosingDish;
+            int []simulationSelectionSides={};
+            new AddOrderListViewTest( form, simulationSelectionSides ).LogicSettings();
+
+            var order = new OrderListView(form).GetElement();
+            var dish = order.ListDishes[0];
 
             var currentName = dish.Name;
             var currentSides = dish.Sides;
@@ -199,14 +214,18 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu
         {
             FormMenu form = new FormMenu();
             OnEventTest  onEvent = new OnEventTest();
-            onEvent.SetLogic( new ButtonMainDishesLogic( form ) );
+            onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.MainDishes ) );
             form.QTextbox.Text = "1";
-            int [] simulationSelectionSides={0,1};
+            DishesListViewTest.SelectionSimulation = simulationChoosingDish;
+            int [] simulationSelectionSides ={ 0,1 };
+            new AddOrderListViewTest( form, simulationSelectionSides ).LogicSettings();
 
-            onEvent.SetLogic( new FormMenuAddOrderListViewTest( form, simulationChoosingDish, simulationSelectionSides ) );
-            var currentName = form.ListViewOrder.Items [0].SubItems [0].Text;
-            var currentSides = form.ListViewOrder.Items [0].SubItems [1].Text;
-            var currentPrice = form.ListViewOrder.Items [0].SubItems [2].Text;
+            var order = new OrderListView(form).GetElement();
+            var dish = order.ListDishes[0];
+
+            var currentName = dish.Name;
+            var currentSides = dish.Sides;
+            var currentPrice = dish.Price;
 
             Assert.AreEqual( expectationsName, currentName );
             Assert.AreEqual( expectationsPrice, currentPrice );
@@ -221,9 +240,12 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu
             OnEventTest  onEvent = new OnEventTest();
             onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.Soups ) );
             form.QTextbox.Text = "1";
-            var listViewDish= new DishesListViewTest( form );
-            listViewDish.SelectionSimulation = simulationChoosingDish;
-            var dish = listViewDish.GetElement();
+            DishesListViewTest.SelectionSimulation = simulationChoosingDish;
+            int []simulationSelectionSides={};
+            new AddOrderListViewTest( form, simulationSelectionSides ).LogicSettings();
+
+            var order = new OrderListView(form).GetElement();
+            var dish = order.ListDishes[0];
 
             var currentName = dish.Name;
             var currentSides = dish.Sides;
@@ -239,22 +261,24 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu
         [TestCase( "Cola", "5zł", "", "2" )]
         public void TestAddOrderToFormMenuListViewOrderAndCheckingDownloadOfEachDrinks( string expectationsName, string expectationsPrice, string expectationsSides, int simulationChoosingDish )
         {
-            //FormMenu form = new FormMenu();
-            //OnEventTest  onEvent = new OnEventTest();
-            //onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.Drinks ) );
-            //form.QTextbox.Text = "1";
-            //var listViewDish= new DishesListViewTest( form );
-            //listViewDish.SelectionSimulation = simulationChoosingDish;
-            //onEvent.SetLogic( new AddOrderListViewTest(form) );
-            //var order =new  OrderListView(form).GetList();
+            FormMenu form = new FormMenu();
+            OnEventTest  onEvent = new OnEventTest();
+            onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.Drinks ) );
+            form.QTextbox.Text = "1";
+            DishesListViewTest.SelectionSimulation = simulationChoosingDish;
+            int []simulationSelectionSides={};
+            new AddOrderListViewTest( form, simulationSelectionSides ).LogicSettings();
 
-            //var currentName = order.List.Name;
-            //var currentSides = dish.Sides;
-            //var currentPrice = dish.Price;
+            var order = new OrderListView(form).GetElement();
+            var dish = order.ListDishes[0];
 
-            //Assert.AreEqual( expectationsName, currentName );
-            //Assert.AreEqual( expectationsPrice, currentPrice );
-            //Assert.AreEqual( expectationsSides, currentSides );
+            var currentName = dish.Name;
+            var currentSides = dish.Sides;
+            var currentPrice = dish.Price;
+
+            Assert.AreEqual( expectationsName, currentName );
+            Assert.AreEqual( expectationsPrice, currentPrice );
+            Assert.AreEqual( expectationsSides, currentSides );
         }
 
         [TestCase( "Margheritta", "20zł", "", "0" )]
@@ -264,14 +288,18 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu
         {
             FormMenu form = new FormMenu();
             OnEventTest  onEvent = new OnEventTest();
-            onEvent.SetLogic( new ButtonPizzaLogic( form ) );
-            form.QTextbox.Text = "3";
-            int selectedItem = 0;
+            onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.Pizza ) );
+            form.QTextbox.Text = "1";
+            DishesListViewTest.SelectionSimulation = 0;
+            int []simulationSelectionSides={};
+            new AddOrderListViewTest( form, simulationSelectionSides ).LogicSettings();
 
-            onEvent.SetLogic( new FormMenuAddOrderListViewTest( form, selectedItem ) );
-            var currentName = form.ListViewOrder.Items [index].SubItems [0].Text;
-            var currentSides = form.ListViewOrder.Items [index].SubItems [1].Text;
-            var currentPrice = form.ListViewOrder.Items [index].SubItems [2].Text;
+            var order = new OrderListView(form).GetElement();
+            var dish = order.ListDishes[0];
+
+            var currentName = dish.Name;
+            var currentSides = dish.Sides;
+            var currentPrice = dish.Price;
 
             Assert.AreEqual( expectationsName, currentName );
             Assert.AreEqual( expectationsPrice, currentPrice );
@@ -287,12 +315,13 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu
         {
             FormMenu form = new FormMenu();
             OnEventTest  onEvent = new OnEventTest();
-            onEvent.SetLogic( new ButtonPizzaLogic( form ) );
+            onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.MainDishes ) );
             form.QTextbox.Text = productQuantity;
-            int selectedItem = 0;
-            int expectationsListViewOrderCount = 0;
+            DishesListViewTest.SelectionSimulation = 0;
+            int []simulationSelectionSides={};
+            new AddOrderListViewTest( form, simulationSelectionSides ).LogicSettings();
 
-            onEvent.SetLogic( new FormMenuAddOrderListViewTest( form, selectedItem ) );
+            var expectationsListViewOrderCount = 0;
             var currentListViewOrderCount = form.ListViewOrder.Items.Count;
 
             Assert.AreEqual( expectationsListViewOrderCount, currentListViewOrderCount );

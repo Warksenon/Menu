@@ -2,15 +2,17 @@
 using System.Text;
 using System.Windows.Forms;
 
+using Pizza.Presenters;
 using Pizza.Presenters.PresenterFormMenu;
-using Pizza.Presenters.PresenterFormMenu.OrderGetSet;
+using Pizza.View.Form1View;
 
-namespace Pizza.Presenters
+namespace Pizza
 {
-    internal class AddOrderListView : FormMenuListViewOrder, ILogic
+    internal class AddOrderListView : ViewFormMenu, ILogic
     {
+
         public AddOrderListView( FormMenu form1 ) : base( form1 ) { }
-  
+
         public void LogicSettings()
         {
             AddOrderToListView();
@@ -32,7 +34,8 @@ namespace Pizza.Presenters
                 dish.Sides = "";
             }
             else
-            {             
+            {
+                dish.Name = dish.Name + " - " + dish.Price;
                 var allSidesToGether = AddAllSides(listSides);
                 dish.Sides = allSidesToGether;
                 var priceAll = AddPriceDisheAndSide(dish, listSides);
@@ -40,7 +43,7 @@ namespace Pizza.Presenters
             }
 
             return dish;
-        } 
+        }
 
         private List<Dish> GetListSelektedDishes( Dish dish )
         {
@@ -94,15 +97,16 @@ namespace Pizza.Presenters
         {
             var priceSides = 0.0;
             var price = 0.0;
+            IPrice iPrice = new OrderListView(_form);
 
             foreach (var side in listSides)
             {
-                price = FindPrice( side );
+                price = iPrice.FindPriceAndConvertToDoubel( side );
                 priceSides += price;
 
             }
 
-            price = FindPrice( dish.Price );
+            price = iPrice.FindPriceAndConvertToDoubel( dish.Price );
             var priceAll =  price + priceSides;
             return priceAll + "zł";
         }

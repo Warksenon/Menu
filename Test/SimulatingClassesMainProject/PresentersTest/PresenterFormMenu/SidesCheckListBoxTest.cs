@@ -7,9 +7,12 @@ namespace Test
 {
     public class SidesCheckListBoxTest : ViewFormMenu, IListSet<string>, IListGet<string>
     {
-        int [] SimulationSelectionSides { get; set; }
-        public SidesCheckListBoxTest( FormMenu form ) : base( form ) { } 
-  
+        private readonly int [] simulationSelectionSides;
+        public SidesCheckListBoxTest( FormMenu form, int [] simulationSelectionSides ) : base( form )
+        {
+            this.simulationSelectionSides = simulationSelectionSides;
+        }
+
         public List<string> GetList()
         {
             return GetListCheckedSides();
@@ -19,12 +22,18 @@ namespace Test
         {
             List<string> list = new List<string>();
 
-            foreach (object item in SimulationSelectionSides)
+            if (simulationSelectionSides == null)
             {
-                string side = item.ToString();
-                list.Add( side );
+                return list;
             }
-
+            else
+            {
+                foreach (int item in simulationSelectionSides)
+                {
+                    string side =_form.CheckedListBoxSide.Items [item].ToString();
+                    list.Add( side );
+                }
+            }
             return list;
         }
 
@@ -36,7 +45,7 @@ namespace Test
         private void LoadCheckListBoxSideDishe( List<string> listSides )
         {
             ClearCheckedListBox();
-           
+
             foreach (var side in listSides)
             {
                 _form.CheckedListBoxSide.Items.Add( side );
@@ -48,6 +57,6 @@ namespace Test
             _form.CheckedListBoxSide.Items.Clear();
         }
 
-       
+
     }
 }

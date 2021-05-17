@@ -1,20 +1,21 @@
 ﻿using System.Collections.Generic;
 using System.Text;
-using System.Windows.Forms;
 
 using Pizza;
 using Pizza.Presenters;
 using Pizza.Presenters.PresenterFormMenu;
-using Pizza.Presenters.PresenterFormMenu.GetDishesAndSideDishForm1;
-using Pizza.Presenters.PresenterFormMenu.OrderGetSet;
+using Pizza.View.Form1View;
 
 namespace Test
 {
-    internal class AddOrderListViewTest : FormMenuListViewOrder, ILogic
+    internal class AddOrderListViewTest : ViewFormMenu, ILogic
     {
+        private readonly int [] simulationSelectionSides;
+        public AddOrderListViewTest( FormMenu form1, int [] simulationSelectionSides ) : base( form1 )
+        {
+            this.simulationSelectionSides = simulationSelectionSides;
+        }
 
-        public AddOrderListViewTest( FormMenu form1 ) : base( form1 ) {}
-  
         public void LogicSettings()
         {
             AddOrderToListView();
@@ -30,13 +31,14 @@ namespace Test
         private Dish CreateDish()
         {
             var dish =  new DishesListViewTest(_form).GetElement();
-            var listSides = new SidesCheckListBoxTest(_form).GetList();
+            var listSides = new SidesCheckListBoxTest(_form,simulationSelectionSides).GetList();
             if (listSides.Count == 0)
             {
                 dish.Sides = "";
             }
             else
-            {             
+            {
+                dish.Name = dish.Name + " - " + dish.Price;
                 var allSidesToGether = AddAllSides(listSides);
                 dish.Sides = allSidesToGether;
                 var priceAll = AddPriceDisheAndSide(dish, listSides);
@@ -44,7 +46,7 @@ namespace Test
             }
 
             return dish;
-        } 
+        }
 
         private List<Dish> GetListSelektedDishes( Dish dish )
         {
@@ -69,7 +71,7 @@ namespace Test
 
             if (number < 1)
             {
-                MessageBox.Show( "Podana ilość produktów nie jest prawidłowa" );
+                //  MessageBox.Show( "Podana ilość produktów nie jest prawidłowa" );
             }
 
             return number;
@@ -98,15 +100,16 @@ namespace Test
         {
             var priceSides = 0.0;
             var price = 0.0;
+            IPrice iPrice = new OrderListView(_form);
 
             foreach (var side in listSides)
             {
-                price = FindPrice( side );
+                price = iPrice.FindPriceAndConvertToDoubel( side );
                 priceSides += price;
 
             }
 
-            price = FindPrice( dish.Price );
+            price = iPrice.FindPriceAndConvertToDoubel( dish.Price );
             var priceAll =  price + priceSides;
             return priceAll + "zł";
         }

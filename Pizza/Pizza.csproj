@@ -124,6 +124,7 @@
     <Compile Include="Presenters\PresenterFormHistory\Repositories.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailLoad.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailPresenter.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\AddOrderListViewcs.cs" />
     <Compile Include="Presenters\PresenterFormMenu\BackgroundWorkerLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\ButtonLoadMenu.cs" />
     <Compile Include="Presenters\PresenterFormMenu\ButtonOkLogic.cs" />
@@ -133,10 +134,7 @@
     <Compile Include="Presenters\PresenterFormMenu\FormMenuLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\OrderListView.cs" />
     <Compile Include="Presenters\PresenterFormMenu\SidesCheckListBox.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\GetSelectDihesAndSides\FormMenuQuantity.cs" />
     <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\LogicMenuButton.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\FormMenuCreatingOrder.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\FormMenuListViewOrder.cs" />
     <Compile Include="Presenters\PresenterFormMenu\Remove\RemoveFormMenu.cs" />
     <Compile Include="Presenters\IListGet.cs" />
     <Compile Include="Presenters\PresenterFormMenu\Remove\RemovePresenter.cs" />
@@ -147,7 +145,7 @@
     <Compile Include="View\FormHistry\ButtonFormHistory\LoadSqlView.cs" />
     <Compile Include="View\FormHistry\ButtonFormHistory\LoadTxtView.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1ListViewDishes.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\IPriceAll.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\IPrice.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IButtonRemove.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IButtonSend.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1LabelPrice.cs" />
@@ -157,7 +155,6 @@
     <Compile Include="Models\ILoadHistoryOrders.cs" />
     <Compile Include="Models\ISaveHistory.cs" />
     <Compile Include="Presenters\Email\EmailMessage.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\OrderGetSet\AddOrderListView.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailSavePresenters.cs" />
     <Compile Include="Models\OrderComposition\PriceAll.cs" />
     <Compile Include="Models\OrderComposition\Dish.cs" />

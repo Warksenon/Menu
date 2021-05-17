@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 
 using Pizza;
+using Pizza.Presenters.PresenterFormMenu;
 
 namespace Test.Test.TestFormMenu.PresenterFormMenu
 {
@@ -15,31 +16,25 @@ namespace Test.Test.TestFormMenu.PresenterFormMenu
         {
             FormMenu form = new FormMenu();
             OnEventTest  onEvent = new OnEventTest();
-            onEvent.SetLogic( new ButtonPizzaLogic( form ) );
+            onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.Pizza ) );
             form.QTextbox.Text = "1";
-            CreateAllOrderPizzaWithListViewDiehesWithoutSides( onEvent, form );
+            DishesListViewTest.SelectionSimulation = indexListDishes;
+            int []simulationSelectionSides={};
+            new AddOrderListViewTest( form, simulationSelectionSides ).LogicSettings();
 
-            FormMenuCreatingOrderTest   createOrder = new FormMenuCreatingOrderTest(form);
-            Order order = createOrder.GetOrderFromListView();
-            var currentName = order.ListDishes[indexListDishes].Name;
-            var currentSides = order.ListDishes[indexListDishes].Sides;
-            var currentPrice = order.ListDishes[indexListDishes].Price;
+            var order = new OrderListView(form).GetElement();
+            var dish = order.ListDishes[0];
+
+            var currentName = dish.Name;
+            var currentSides = dish.Sides;
+            var currentPrice = dish.Price;
             var currentPriceAll = order.PriceAll.Price;
 
             Assert.AreEqual( expectationsName, currentName );
             Assert.AreEqual( expectationsPrice, currentPrice );
             Assert.AreEqual( expectationsSides, currentSides );
-            Assert.AreEqual( "92zł", currentPriceAll );
+            Assert.AreEqual( currentPrice, currentPriceAll );
         }
 
-        private void CreateAllOrderPizzaWithListViewDiehesWithoutSides( OnEventTest onEvent, FormMenu form )
-        {
-            int [] simulationChoosingDish = {0,1,2,3};
-            foreach (int i in simulationChoosingDish)
-            {
-                onEvent.SetLogic( new FormMenuAddOrderListViewTest( form, simulationChoosingDish [i] ) );
-            }
-
-        }
     }
 }

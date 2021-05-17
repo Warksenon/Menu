@@ -5,8 +5,7 @@ namespace Pizza.Presenters.PresenterFormHistory
     public abstract class ListViewHistory : ILogic
     {
         protected FormHistory _form;
-        protected static List<Order> orderList = new List<Order>();
-        // protected readonly LoadOrder load = new LoadOrder();
+        protected static List<Order> orderList = new List<Order>();      
 
         public ListViewHistory( FormHistory form )
         {

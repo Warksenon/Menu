@@ -4,9 +4,9 @@ using Pizza.Models.Menu.ListDishesAndSides;
 
 namespace Pizza
 {
-    public class ListDishes : ListName, IListGet<Dish>
+    public class ListDishes : ListName, IListGet<Dish>, IListSet<string>
     {
-        protected List<Dish> listDisches;
+        protected List<Dish> listDisches = new List<Dish>();
         protected Dish disch = new Dish();
 
         protected void AddDishesToList( List<string> key )
@@ -27,7 +27,12 @@ namespace Pizza
 
         public virtual List<Dish> GetList()
         {
-            return new List<Dish>();
+            return listDisches;
+        }
+
+        public void SetList ( List<string> key )
+        {
+            AddDishesToList( key );
         }
     }
 }

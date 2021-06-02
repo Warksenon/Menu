@@ -13,19 +13,21 @@ namespace Pizza
 
         private List<string> SetButttonMenu()
         {
-            var listSides = new  ListSides();
+            //var listSides = new  ListSides();
 
-            switch (buttonMenu)
-            {
-                case ButtonLoadMenu.Pizza:
-                listSides = new ListSidesPizza();
-                break;
-                case ButtonLoadMenu.MainDishes:
-                listSides = new ListSidesMainDishes();
-                break;
-            }
+            //switch (buttonMenu)
+            //{
+            //    case ButtonLoadMenu.Pizza:
+            //    listSides = new ListSidesPizza();
+            //    break;
+            //    case ButtonLoadMenu.MainDishes:
+            //    listSides = new ListSidesMainDishes();
+            //    break;
+            //}
 
-            return listSides.GetList();
+            
+            return new List<string>();
+
         }
 
         public List<string> GetList()

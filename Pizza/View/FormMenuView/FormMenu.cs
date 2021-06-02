@@ -53,25 +53,25 @@ namespace Pizza
 
         private void ButtonPizza_Click( object sender, EventArgs e )
         {
-            onEvent.SetLogic( new LogicMenuButton( this, ButtonLoadMenu.Pizza ) );
+            MenuDishes.CreateMenuPizza( new DishesListView( this ), new SidesCheckListBox( this ) );
             onEvent.SetView( new ButtonMenuView( this, ButtonLoadMenu.Pizza ) );
         }
 
         private void ButtonMainDish_Click( object sender, EventArgs e )
         {
-            onEvent.SetLogic( new LogicMenuButton( this, ButtonLoadMenu.MainDishes ) );
+            MenuDishes.CreateMenuMainDishes( new DishesListView( this ), new SidesCheckListBox( this ) );
             onEvent.SetView( new ButtonMenuView( this, ButtonLoadMenu.MainDishes ) );
         }
 
         private void ButtonDrinks_Click( object sender, EventArgs e )
         {
-            onEvent.SetView( new ButtonMenuView( this, ButtonLoadMenu.Drinks ) );
+            MenuDishes.CreateMenuDrinks( new DishesListView( this ), new SidesCheckListBox( this ) );
             onEvent.SetLogic( new LogicMenuButton( this, ButtonLoadMenu.Drinks ) );
         }
 
         private void ButtonSoup_Click( object sender, EventArgs e )
         {
-            onEvent.SetView( new ButtonMenuView( this, ButtonLoadMenu.Soups ) );
+            MenuDishes.CreateMenuSoups( new DishesListView( this ), new SidesCheckListBox( this ) );
             onEvent.SetLogic( new LogicMenuButton( this, ButtonLoadMenu.Soups ) );
         }
 

@@ -2,59 +2,37 @@
 
 namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
 {
-    public class ButtonMenuView : IView
-    {
-        private readonly ButtonLoadMenu _loadMenu;
+    public class ButtonMenuView 
+    {      
         private readonly FormMenu _form;
 
-        public ButtonMenuView( FormMenu form, ButtonLoadMenu loadMenu )
+        public ButtonMenuView( FormMenu form )
         {
             _form = form;
-            _loadMenu = loadMenu;
-        }
-
-        private void OnClickButtonMenu()
-        {
             ButtonSeting();
-
-            switch (_loadMenu)
-            {
-                case ButtonLoadMenu.Pizza:
-                PizzaButtonSettings();
-                break;
-                case ButtonLoadMenu.MainDishes:
-                MainDishButtonSettings();
-                break;
-                case ButtonLoadMenu.Soups:
-                SoupsButtonSettings();
-                break;
-                case ButtonLoadMenu.Drinks:
-                DrinkseButtonSettings();
-                break;
-
-            }
         }
 
-        private void PizzaButtonSettings()
+        public void PizzaButtonSettings()
         {
             ChengeNameLabelMenuInfo( "Pizza" );
             _form.PizzzaButton.BackColor = Color.LawnGreen;
         }
 
-        private void MainDishButtonSettings()
+        public void MainDishButtonSettings()
         {
             ChengeNameLabelMenuInfo( "Dania główne" );
             _form.MainButton.BackColor = Color.LawnGreen;
         }
 
-        private void SoupsButtonSettings()
+        public void SoupsButtonSettings()
         {
             ChengeNameLabelMenuInfo( "Zupy" );
             _form.SoupButton.BackColor = Color.LawnGreen;
         }
 
-        private void DrinkseButtonSettings()
+        public void DrinkseButtonSettings()
         {
+            
             ChengeNameLabelMenuInfo( "Napoje" );
             _form.DrinksButton.BackColor = Color.LawnGreen;
         }
@@ -95,9 +73,5 @@ namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
             _form.LabelMenu.Text = infoMenu;
         }
 
-        public void ViewSetting()
-        {
-            OnClickButtonMenu();
-        }
     }
 }

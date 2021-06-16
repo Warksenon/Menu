@@ -25,8 +25,7 @@ namespace Pizza
 
             List<string> keyDishes = new List<string> { "schnitzelPrice", "fishPrice", "potatoPrice" };
             var listDishes= menu.CreateDishesList( keyDishes );
-            dishes.SetList( listDishes );
-      
+            dishes.SetList( listDishes );      
         }
 
         public static void CreateMenuSoups ( IListSet<Dish> dishes, IListSet<string> sides )
@@ -36,7 +35,6 @@ namespace Pizza
             List<string> keyDishes = new List<string> { "marghPrice", "vegetPrice", "toscaPrice", "venecPrice" };
             var listDishes= menu.CreateDishesList( keyDishes );
             dishes.SetList( listDishes );
-
         }
 
         public static void CreateMenuDrinks ( IListSet<Dish> dishes, IListSet<string> sides )
@@ -46,7 +44,6 @@ namespace Pizza
             List<string> keyDishes = new List<string> { "coffeePrice", "teaPrice", "colaPrice" };
             var listDishes= menu.CreateDishesList( keyDishes );
             dishes.SetList( listDishes );
-
         }
 
         private List<string> CreateSidesList ( List<string> listKey )

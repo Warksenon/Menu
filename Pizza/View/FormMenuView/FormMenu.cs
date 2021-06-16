@@ -54,13 +54,13 @@ namespace Pizza
         private void ButtonPizza_Click( object sender, EventArgs e )
         {
             MenuDishes.CreateMenuPizza( new DishesListView( this ), new SidesCheckListBox( this ) );
-            onEvent.SetView( new ButtonMenuView( this, ButtonLoadMenu.Pizza ) );
+            new ButtonMenuView( this ).PizzaButtonSettings();
         }
 
         private void ButtonMainDish_Click( object sender, EventArgs e )
         {
             MenuDishes.CreateMenuMainDishes( new DishesListView( this ), new SidesCheckListBox( this ) );
-            onEvent.SetView( new ButtonMenuView( this, ButtonLoadMenu.MainDishes ) );
+            new ButtonMenuView( this ).MainDishButtonSettings();
         }
 
         private void ButtonDrinks_Click( object sender, EventArgs e )

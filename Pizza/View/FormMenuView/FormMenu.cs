@@ -66,13 +66,13 @@ namespace Pizza
         private void ButtonDrinks_Click( object sender, EventArgs e )
         {
             MenuDishes.CreateMenuDrinks( new DishesListView( this ), new SidesCheckListBox( this ) );
-            onEvent.SetLogic( new LogicMenuButton( this, ButtonLoadMenu.Drinks ) );
+            new ButtonMenuView( this ).DrinkseButtonSettings();
         }
 
         private void ButtonSoup_Click( object sender, EventArgs e )
         {
             MenuDishes.CreateMenuSoups( new DishesListView( this ), new SidesCheckListBox( this ) );
-            onEvent.SetLogic( new LogicMenuButton( this, ButtonLoadMenu.Soups ) );
+            new ButtonMenuView( this ).SoupsButtonSettings();
         }
 
         private void ButtonOrder_Click( object sender, EventArgs e )

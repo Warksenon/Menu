@@ -6,10 +6,10 @@ namespace Pizza
 {
     public class ListDishes : ListName, IListGet<Dish>, IListSet<string>
     {
-        protected List<Dish> listDisches = new List<Dish>();
-        protected Dish disch = new Dish();
+        private List<Dish> listDisches = new List<Dish>();
+        private Dish disch = new Dish();
 
-        protected void AddDishesToList( List<string> key )
+        private void AddDishesToList( List<string> key )
         {
             listDisches = new List<Dish>();
 
@@ -25,7 +25,7 @@ namespace Pizza
             }
         }
 
-        public virtual List<Dish> GetList()
+        public List<Dish> GetList()
         {
             return listDisches;
         }

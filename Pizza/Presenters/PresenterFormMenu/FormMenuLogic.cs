@@ -9,7 +9,7 @@ namespace Pizza.Presenters.PresenterFormMenu
 
         public void LogicSettings()
         {
-            eevent.SetLogic( new LogicMenuButton( _form, ButtonLoadMenu.Pizza ) );
+            MenuDishes.CreateMenuPizza( new DishesListView( _form ), new SidesCheckListBox( _form ) );
             eevent.SetLogic( new CreateSQLiteTables() );
         }
     }

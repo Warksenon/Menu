@@ -87,18 +87,10 @@
     <Compile Include="Models\FilesTXT\Files.cs" />
     <Compile Include="Models\FilesTXT\JsonHelper.cs" />
     <Compile Include="Models\FilesTXT\SaveFilesOrder.cs" />
-    <Compile Include="Models\Menu1\ListDishesAndSides\DishesList\ListDishes.cs" />
-    <Compile Include="Models\Menu1\ListDishesAndSides\DishesList\ListDrinks.cs" />
-    <Compile Include="Models\Menu1\ListDishesAndSides\DishesList\ListMainDishes.cs" />
-    <Compile Include="Models\Menu1\ListDishesAndSides\DishesList\ListPizza.cs" />
-    <Compile Include="Models\Menu1\ListDishesAndSides\DishesList\ListSoups.cs" />
-    <Compile Include="Models\Menu1\ListDishesAndSides\ListDishesFactory.cs" />
+    <Compile Include="Models\Menu1\ListDishesAndSides\ListDishes.cs" />
     <Compile Include="Models\Menu1\ListDishesAndSides\ListName.cs" />
-    <Compile Include="Models\Menu1\ListDishesAndSides\ListSidesFactory.cs" />
     <Compile Include="Models\Menu1\ListDishesAndSides\MenuDishes.cs" />
-    <Compile Include="Models\Menu1\ListDishesAndSides\SidesList\ListSides.cs" />
-    <Compile Include="Models\Menu1\ListDishesAndSides\SidesList\ListSidesMainDishes.cs" />
-    <Compile Include="Models\Menu1\ListDishesAndSides\SidesList\ListSidesPizza.cs" />
+    <Compile Include="Models\Menu1\ListDishesAndSides\ListSides.cs" />
     <Compile Include="Models\OrderComposition\Verifier.cs" />
     <Compile Include="Models\Registry\LoadRegistry.cs" />
     <Compile Include="Models\Registry\Registry.cs" />
@@ -127,7 +119,6 @@
     <Compile Include="Presenters\PresenterFormMail\FormMailPresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\AddOrderListViewcs.cs" />
     <Compile Include="Presenters\PresenterFormMenu\BackgroundWorkerLogic.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\ButtonLoadMenu.cs" />
     <Compile Include="Presenters\PresenterFormMenu\ButtonOkLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\ButtonPlaceOrderLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\DishesListView.cs" />
@@ -135,7 +126,6 @@
     <Compile Include="Presenters\PresenterFormMenu\FormMenuLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\OrderListView.cs" />
     <Compile Include="Presenters\PresenterFormMenu\SidesCheckListBox.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\ButtonMenu\LogicMenuButton.cs" />
     <Compile Include="Presenters\PresenterFormMenu\Remove\RemoveFormMenu.cs" />
     <Compile Include="Presenters\IListGet.cs" />
     <Compile Include="Presenters\PresenterFormMenu\Remove\RemovePresenter.cs" />

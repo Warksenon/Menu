@@ -26,11 +26,15 @@ namespace Pizza
             backgroundWorker1.WorkerSupportsCancellation = true;
         }
 
-        private readonly IOnEvent onEvent = new OnEvent();
         private IPrice _price;
+        IListSet<Dish> _getDishes;
+        IListSet<string> _getSides;
+
 
         private void Form1_Load_1( object sender, EventArgs e )
         {
+            _getDishes = new DishesListView( this );
+            _getSides = new SidesCheckListBox( this );
             _price = new OrderListView( this );
             MenuDishes.CreateMenuPizza( new DishesListView( this ), new SidesCheckListBox( this ) );
             new CreateSQLiteTables().CreateSqliteTables();
@@ -58,36 +62,37 @@ namespace Pizza
 
         private void ButtonPizza_Click( object sender, EventArgs e )
         {
-            MenuDishes.CreateMenuPizza( new DishesListView( this ), new SidesCheckListBox( this ) );
+            MenuDishes.CreateMenuPizza( _getDishes, _getSides );
             new ButtonMenuView( this ).PizzaButtonSettings();
         }
 
         private void ButtonMainDish_Click( object sender, EventArgs e )
         {
-            MenuDishes.CreateMenuMainDishes( new DishesListView( this ), new SidesCheckListBox( this ) );
+            MenuDishes.CreateMenuMainDishes( _getDishes, _getSides );
             new ButtonMenuView( this ).MainDishButtonSettings();
         }
 
         private void ButtonDrinks_Click( object sender, EventArgs e )
         {
-            MenuDishes.CreateMenuDrinks( new DishesListView( this ), new SidesCheckListBox( this ) );
+            MenuDishes.CreateMenuDrinks( _getDishes, _getSides );
             new ButtonMenuView( this ).DrinkseButtonSettings();
         }
 
         private void ButtonSoup_Click( object sender, EventArgs e )
         {
-            MenuDishes.CreateMenuSoups( new DishesListView( this ), new SidesCheckListBox( this ) );
+            MenuDishes.CreateMenuSoups( _getDishes, _getSides );
             new ButtonMenuView( this ).SoupsButtonSettings();
         }
 
         private void ButtonOrder_Click( object sender, EventArgs e )
         {
-            onEvent.SetLogic( new ButtonPlaceOrderLogic( this ) );
+            var order = new OrderListView(this);
+            new ButtonPlaceOrderLogic( this, order ).LogicSettings();
         }
 
         private void ButtonOk_Click( object sender, EventArgs e )
         {
-           new ButtonOkView( this ).ViewSetting();
+            new ButtonOkView( this ).ViewSetting();
             new AddOrderListView( this ).LogicSettings();
             new Form1LabelPricePresenter( this, _price );
         }

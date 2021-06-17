@@ -4,9 +4,9 @@ using System.IO;
 
 namespace Pizza.SqlLite
 {
-    internal class CreateSQLiteTables : CreateConnection, ILogic
+    internal class CreateSQLiteTables : CreateConnection
     {
-        private void CreateSqliteTables()
+        public void CreateSqliteTables()
         {
             CreateSQLiteDatabaseFile();
             CreateSQLitePriceAll( CreateSQLiteConnection() );
@@ -81,11 +81,6 @@ namespace Pizza.SqlLite
                 }
                 cn.Close();
             }
-        }
-
-        public void LogicSettings()
-        {
-            CreateSqliteTables();
         }
     }
 }

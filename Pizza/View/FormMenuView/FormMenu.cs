@@ -5,6 +5,7 @@ using System.Windows.Forms;
 
 using Pizza.Presenters;
 using Pizza.Presenters.PresenterFormMenu;
+using Pizza.SqlLite;
 using Pizza.View.Form1;
 using Pizza.View.Form1View.ViewSettings.ButtonMenu;
 using Pizza.View.FormMenuView.InterfaceFormMenu;
@@ -26,11 +27,15 @@ namespace Pizza
         }
 
         private readonly IOnEvent onEvent = new OnEvent();
+        private IPrice _price;
 
         private void Form1_Load_1( object sender, EventArgs e )
         {
-            onEvent.SetLogic( new FormMenuLogic( this ) );
-            onEvent.SetView( new FormMenuView( this ) );
+            _price = new OrderListView( this );
+            MenuDishes.CreateMenuPizza( new DishesListView( this ), new SidesCheckListBox( this ) );
+            new CreateSQLiteTables().CreateSqliteTables();
+            new ButtonMenuView( this ).PizzaButtonSettings();
+            new ButtonRemoveView( this ).RemoveAll();
         }
 
         public ListView ListViewDishes { get => listViewDish; set => listViewDish = value; }
@@ -82,13 +87,14 @@ namespace Pizza
 
         private void ButtonOk_Click( object sender, EventArgs e )
         {
-            onEvent.SetView( new ButtonOkView( this ) );
-            onEvent.SetLogic( new ButtonOkLogic( this ) );
+           new ButtonOkView( this ).ViewSetting();
+            new AddOrderListView( this ).LogicSettings();
+            new Form1LabelPricePresenter( this, _price );
         }
 
         private void ListViewDish_SelectedIndexChanged( object sender, EventArgs e )
         {
-            onEvent.SetView( new ListViewDishes( this ) );
+           new ListViewDishes( this ).ViewSetting();
         }
 
         private void ListViewOrder_SelectedIndexChanged( object sender, EventArgs e )
@@ -98,14 +104,14 @@ namespace Pizza
 
         private void ButtonRemoveListBox_Click( object sender, EventArgs e )
         {
-            onEvent.SetLogic( new RemovePresenter( this, RemoveFormMenu.One ) );
-            onEvent.SetView( new ButtonRemoveView( this, RemoveFormMenu.One ) );
+            new RemovePresenter( this ).RemoveOne();
+            new ButtonRemoveView( this ).RemoveOne();
         }
 
         private void ButtonRemoveAllListBox_Click( object sender, EventArgs e )
         {
-            onEvent.SetView( new ButtonRemoveView( this, RemoveFormMenu.All ) );
-            onEvent.SetLogic( new RemovePresenter( this, RemoveFormMenu.All ) );
+            new ButtonRemoveView( this ).RemoveAll();
+            new RemovePresenter( this).RemoveAll();
         }
 
         private void AddressEmailToolStripMenuItem_Click( object sender, EventArgs e )

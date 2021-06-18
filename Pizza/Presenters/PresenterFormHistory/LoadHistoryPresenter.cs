@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 using Pizza.Models.SqlLite;
@@ -6,30 +7,20 @@ using Pizza.Presenters.PresenterFormHistory;
 
 namespace Pizza
 {
-    public class LoadHistoryPresenter : ListViewHistory
+    public class LoadHistoryPresenter 
     {
-        private readonly Repositories _repositories;
-        private IListGet<Order> list;
+        private readonly FormHistory _form;
+        private static List<Order> orderList = new List<Order>();
 
-        public LoadHistoryPresenter( FormHistory form, Repositories repositories ) : base( form )
+        public LoadHistoryPresenter( FormHistory form) 
         {
-            _repositories = repositories;
+            _form = form;
         }
 
-        private void LoadHistoryFromSQL()
+        public void LoadHistoryFrom ( IListGet<Order> list )
         {
-            ClearAllList();
-            list = new LoadHistorySQL();
-            orderList = list.GetList();
-            LoadLVPriceAll();
-        }
-
-        private void LoadHistroyFromTxt()
-        {
-            ClearAllList();
-            list = new LoadingFilesTxt();
-            orderList = list.GetList();
-            LoadLVPriceAll();
+            ClearAllList();          
+            LoadLVPriceAll( list );
         }
 
         private void ClearAllList()
@@ -39,8 +30,9 @@ namespace Pizza
             orderList.Clear();
         }
 
-        private void LoadLVPriceAll()
+        private void LoadLVPriceAll( IListGet<Order> list )
         {
+            orderList = list.GetList();
             foreach (var price in orderList)
             {
                 ListViewItem lvi = new ListViewItem(Convert.ToString(price.PriceAll.ID));
@@ -51,17 +43,5 @@ namespace Pizza
             }
         }
 
-        public override void LogicSettings()
-        {
-            switch (_repositories)
-            {
-                case Repositories.Txt:
-                LoadHistroyFromTxt();
-                break;
-                case Repositories.Sql:
-                LoadHistoryFromSQL();
-                break;
-            }
-        }
     }
 }

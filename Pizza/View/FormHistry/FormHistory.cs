@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using Pizza.Models.SqlLite;
 using Pizza.Presenters;
 using Pizza.Presenters.PresenterFormHistory;
+using Pizza.Presenters.PresenterFormHistory.CopyHistory;
 using Pizza.View.FormHistry.ButtonFormHistory;
 using Pizza.View.FormHistry.ButtonFormMail;
 
@@ -26,33 +27,35 @@ namespace Pizza
 
         private void FormHistory_Load( object sender, EventArgs e )
         {
-            onEvent.SetLogic( new LoadHistoryPresenter( this, Repositories.Sql ) );
-            onEvent.SetView( new LoadSqlView( this ) );
+           new LoadHistoryPresenter( this ).LoadHistoryFrom( new LoadHistorySQL() );
+           onEvent.SetView( new LoadSqlView( this ) );
         }
 
         private void ButtonTextList_Click( object sender, EventArgs e )
         {
-            onEvent.SetLogic( new LoadHistoryPresenter( this, Repositories.Txt ) );
+            new LoadHistoryPresenter( this ).LoadHistoryFrom( new LoadHistorySQL() ) ;
             onEvent.SetView( new LoadTxtView( this ) );
         }
 
         private void ButtonSqlList_Click( object sender, EventArgs e )
         {
-            onEvent.SetLogic( new LoadHistoryPresenter( this, Repositories.Sql ) );
+            new LoadHistoryPresenter( this).LoadHistoryFrom(new LoadHistorySQL());
             onEvent.SetView( new LoadSqlView( this ) );
         }
 
         private void ButtonTxtToSql( object sender, EventArgs e )
         {
             onEvent.SetView( new CopyTxtView( this ) );
-            onEvent.SetLogic( new RepositoriesCopy( this, Repositories.Txt ) );
+            new HistoryCopy( new LoadingFilesTxt(), new SaveHistorySQL() );
+            new LoadHistoryPresenter( this ).LoadHistoryFrom( new LoadingFilesTxt() );
             onEvent.SetView( new LoadTxtView( this ) );
         }
 
         private void ButtonSQLToTxt_Click( object sender, EventArgs e )
         {
             onEvent.SetView( new CopySqlView( this ) );
-            onEvent.SetLogic( new RepositoriesCopy( this, Repositories.Sql ) );
+            new HistoryCopy( new LoadHistorySQL(), new SaveFilesHistoryOrder() );
+            new LoadHistoryPresenter( this ).LoadHistoryFrom( new LoadHistorySQL() );
             onEvent.SetView( new LoadSqlView( this ) );
         }
 

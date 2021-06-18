@@ -2,25 +2,18 @@
 
 namespace Pizza.Presenters.PresenterFormMenu
 {
-    internal class Form1LabelPricePresenter : ILogic
+    internal class Form1LabelPricePresenter 
     {
-        private readonly IPrice _price;
         private readonly IFormMenuLabelPrice label;
 
-        public Form1LabelPricePresenter( FormMenu form, IPrice price )
+        public Form1LabelPricePresenter( FormMenu form  )
         {
-            _price = price;
             label = form;
         }
 
-        public void LogicSettings()
+        public void SetTextLabelPrice( IPrice price )
         {
-            SetTextLabelPrice();
-        }
-
-        private void SetTextLabelPrice()
-        {
-            label.LabelPrice.Text = "Cena: " + _price.GetPricaAll() + " zł";
+            label.LabelPrice.Text = "Cena: " + price.GetPricaAll() + " zł";
         }
     }
 }

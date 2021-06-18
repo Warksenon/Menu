@@ -3,13 +3,11 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-using Pizza.Presenters;
 using Pizza.Presenters.PresenterFormMenu;
 using Pizza.SqlLite;
 using Pizza.View.Form1;
 using Pizza.View.Form1View.ViewSettings.ButtonMenu;
 using Pizza.View.FormMenuView.InterfaceFormMenu;
-using Pizza.View.FormMenuView.ViewSettings;
 
 
 namespace Pizza
@@ -87,14 +85,14 @@ namespace Pizza
         private void ButtonOrder_Click( object sender, EventArgs e )
         {
             var order = new OrderListView(this);
-            new ButtonPlaceOrderLogic( this, order ).LogicSettings();
+            new ButtonPlaceOrderLogic( this).LogicSettings(order);
         }
 
         private void ButtonOk_Click( object sender, EventArgs e )
         {
             new ButtonOkView( this ).ViewSetting();
             new AddOrderListView( this ).LogicSettings();
-            new Form1LabelPricePresenter( this, _price );
+            new Form1LabelPricePresenter( this  ).SetTextLabelPrice( _price );
         }
 
         private void ListViewDish_SelectedIndexChanged( object sender, EventArgs e )

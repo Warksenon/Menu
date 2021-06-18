@@ -11,13 +11,11 @@ namespace Pizza.Presenters.PresenterFormMenu
     {
         private readonly IElementGet<Order> _creatingOrder;
 
-        public ButtonPlaceOrderLogic( FormMenu form, IElementGet<Order> creatingOrder ) : base( form ) 
+        public ButtonPlaceOrderLogic( FormMenu form ) : base( form ) { }
+
+        public void LogicSettings( IElementGet<Order> creatingOrder )
         {
             IElementGet<Order> _creatingOrder = creatingOrder;
-        }
-
-        public void LogicSettings()
-        {
             RunPlaceOrder();
         }
 

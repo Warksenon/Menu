@@ -9,24 +9,22 @@ namespace Pizza.Presenters.PresenterFormMenu
 {
     internal class ButtonPlaceOrderLogic : ViewFormMenu
     {
-        private readonly IElementGet<Order> _creatingOrder;
-
         public ButtonPlaceOrderLogic( FormMenu form ) : base( form ) { }
 
         public void LogicSettings( IElementGet<Order> creatingOrder )
         {
-            IElementGet<Order> _creatingOrder = creatingOrder;
-            RunPlaceOrder();
+            var order = creatingOrder.GetElement();
+            RunPlaceOrder( order );
         }
 
-        private void RunPlaceOrder()
+        private void RunPlaceOrder(Order order)
         {
             if (ChceckListViewOrderIsNotEpmty())
             {
                 if (_form.BackgroundWorker.IsBusy != true)
                 {
                     _form.BackgroundWorker.RunWorkerAsync();
-                    SendOrderAndSave();
+                    SendOrderAndSave( order );
                 }
                 else
                 {
@@ -47,17 +45,17 @@ namespace Pizza.Presenters.PresenterFormMenu
                 return false;
         }
 
-        private void SendOrderAndSave ()
+        private void SendOrderAndSave (Order order )
         {
-            var order = _creatingOrder.GetElement();
-            var emailMessage = new EmailMessage(order);
+            var _order = order;
+            var emailMessage = new EmailMessage(_order);
             var message = emailMessage.WriteBill();
             EmailSend emailSend = new EmailSend();
             bool checkSendEmail = emailSend.SendEmail(message);
 
             if (checkSendEmail)
             {
-                SaveOrder( order );
+                SaveOrder( _order );
                 MessageBox.Show( "Zamówienie zostało złożone" );
             }
             else

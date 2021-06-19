@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
+
 using Pizza.Models.SqlLite;
 using Pizza.Presenters;
 using Pizza.Presenters.PresenterFormHistory;
 using Pizza.Presenters.PresenterFormHistory.CopyHistory;
-using Pizza.View.FormHistry.ButtonFormHistory;
 using Pizza.View.FormHistry.ButtonFormMail;
 
 namespace Pizza
@@ -12,6 +13,7 @@ namespace Pizza
     public partial class FormHistory : Form, IListViewHistory, IButtonFormHistory
     {
         private readonly OnEvent onEvent = new OnEvent();
+        HistoryPriceListView _priceLV;
 
         public FormHistory()
         {
@@ -27,36 +29,37 @@ namespace Pizza
 
         private void FormHistory_Load( object sender, EventArgs e )
         {
-           new LoadHistoryPresenter( this ).LoadHistoryFrom( new LoadHistorySQL() );
-           onEvent.SetView( new LoadSqlView( this ) );
+            _priceLV = new HistoryPriceListView( this );
+            _priceLV.SetList( new LoadHistorySQL() );
+            AllButtonSetSystemColorsControl( bSql.Name );
         }
 
         private void ButtonTextList_Click( object sender, EventArgs e )
         {
-            new LoadHistoryPresenter( this ).LoadHistoryFrom( new LoadHistorySQL() ) ;
-            onEvent.SetView( new LoadTxtView( this ) );
+            _priceLV.SetList( new LoadingFilesTxt() );
+            AllButtonSetSystemColorsControl( bText.Name );
         }
 
         private void ButtonSqlList_Click( object sender, EventArgs e )
         {
-            new LoadHistoryPresenter( this).LoadHistoryFrom(new LoadHistorySQL());
-            onEvent.SetView( new LoadSqlView( this ) );
+            _priceLV.SetList( new LoadHistorySQL() );
+            AllButtonSetSystemColorsControl( bSql.Name );
         }
 
         private void ButtonTxtToSql( object sender, EventArgs e )
         {
-            onEvent.SetView( new CopyTxtView( this ) );
+            AllButtonSetSystemColorsControl( bTxtToSQL.Name );
             new HistoryCopy( new LoadingFilesTxt(), new SaveHistorySQL() );
-            new LoadHistoryPresenter( this ).LoadHistoryFrom( new LoadingFilesTxt() );
-            onEvent.SetView( new LoadTxtView( this ) );
+            _priceLV.SetList( new LoadingFilesTxt() );
+            AllButtonSetSystemColorsControl( bText.Name );
         }
 
         private void ButtonSQLToTxt_Click( object sender, EventArgs e )
         {
-            onEvent.SetView( new CopySqlView( this ) );
+            AllButtonSetSystemColorsControl( buttonSQLToTxt.Name );
             new HistoryCopy( new LoadHistorySQL(), new SaveFilesHistoryOrder() );
-            new LoadHistoryPresenter( this ).LoadHistoryFrom( new LoadHistorySQL() );
-            onEvent.SetView( new LoadSqlView( this ) );
+            _priceLV.SetList( new LoadingFilesTxt() );
+            AllButtonSetSystemColorsControl( bSql.Name );
         }
 
         private void ButtonClose_Click( object sender, EventArgs e )
@@ -66,7 +69,31 @@ namespace Pizza
 
         private void LVprice_SelectedIndexChanged( object sender, EventArgs e )
         {
-            onEvent.SetLogic( new HistorySelect( this ) );
+            new HistoryDishesListView( this ).SetList( _priceLV );
+        }
+
+        private void AllButtonSetSystemColorsControl (string nameButton)
+        {
+            bText.BackColor = SystemColors.Control;
+            bSql.BackColor = SystemColors.Control;
+            bTxtToSQL.BackColor = SystemColors.Control;
+            buttonSQLToTxt.BackColor = SystemColors.Control;
+
+            switch (nameButton)
+            {
+                case "bText":
+                bText.BackColor = Color.LawnGreen;
+                break;
+                case "bSql":
+                bSql.BackColor = Color.LawnGreen;
+                break;
+                case "bTxtToSQL":
+                bTxtToSQL.BackColor = Color.LawnGreen;
+                break;
+                case "buttonSQLToTxt":
+                buttonSQLToTxt.BackColor = Color.LawnGreen;
+                break;
+            }
         }
     }
 }

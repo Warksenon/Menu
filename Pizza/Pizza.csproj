@@ -110,9 +110,8 @@
     <Compile Include="Presenters\IOnEvent.cs" />
     <Compile Include="Presenters\ILogic.cs" />
     <Compile Include="Presenters\PresenterFormHistory\CopyHistory\HistoryCopy.cs" />
-    <Compile Include="Presenters\PresenterFormHistory\HistorySelect.cs" />
-    <Compile Include="Presenters\PresenterFormHistory\ListViewHistory.cs" />
-    <Compile Include="Presenters\PresenterFormHistory\LoadHistoryPresenter.cs" />
+    <Compile Include="Presenters\PresenterFormHistory\ListViewHistory\HistoryDishesListView.cs" />
+    <Compile Include="Presenters\PresenterFormHistory\ListViewHistory\HistoryPriceListView.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailLoad.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailPresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\AddOrderListViewcs.cs" />

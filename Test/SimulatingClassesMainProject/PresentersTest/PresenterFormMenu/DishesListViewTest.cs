@@ -7,7 +7,7 @@ using Pizza.View.Form1View;
 
 namespace Test
 {
-    public class DishesListViewTest : ViewFormMenu, IElementGet<Dish>, IListSet<Dish>
+    public class DishesListViewTest : ViewFormMenu, IListGet<Dish>, IListSet<Dish>
     {
         public static int SelectionSimulation { get; set; }
 

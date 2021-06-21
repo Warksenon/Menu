@@ -25,16 +25,16 @@ namespace Pizza
         }
 
         private IPrice _price;
-        IListSet<Dish> _getDishes;
-        IListSet<string> _getSides;
+        IListSet<Dish> _setDishes;
+        IListSet<string> _setSides;
         ButtonMenuView _buttonMnuView;
         MenuDishes<ListDishes,ListSides> _menu;
 
 
         private void Form1_Load_1( object sender, EventArgs e )
         {
-            _getDishes = new DishesListView( this );
-            _getSides = new SidesCheckListBox( this );
+            _setDishes = new DishesListView( this );
+            _setSides = new SidesCheckListBox( this );
             _price = new OrderListView( this );
             _buttonMnuView = new ButtonMenuView( this );
             _menu = new MenuDishes<ListDishes, ListSides>( new ListDishes(), new ListSides() );
@@ -64,25 +64,25 @@ namespace Pizza
 
         private void ButtonPizza_Click( object sender, EventArgs e )
         {
-            _menu.CreateMenuPizza( _getDishes, _getSides );
+            _menu.CreateMenuPizza( _setDishes, _setSides );
             _buttonMnuView.PizzaButtonSettings();
         }
 
         private void ButtonMainDish_Click( object sender, EventArgs e )
         {
-            _menu.CreateMenuMainDishes( _getDishes, _getSides );
+            _menu.CreateMenuMainDishes( _setDishes, _setSides );
             _buttonMnuView.MainDishButtonSettings();
         }
 
         private void ButtonDrinks_Click( object sender, EventArgs e )
         {
-            _menu.CreateMenuDrinks( _getDishes, _getSides );
+            _menu.CreateMenuDrinks( _setDishes, _setSides );
             _buttonMnuView.DrinkseButtonSettings();
         }
 
         private void ButtonSoup_Click( object sender, EventArgs e )
         {
-            _menu.CreateMenuSoups( _getDishes, _getSides );
+            _menu.CreateMenuSoups( _setDishes, _setSides );
             _buttonMnuView.SoupsButtonSettings();
         }
 
@@ -95,7 +95,10 @@ namespace Pizza
         private void ButtonOk_Click( object sender, EventArgs e )
         {
             new ButtonOkView( this ).ViewSetting();
-            new AddOrderListView( this ).LogicSettings();
+            var listOrder = new OrderListView(this);
+            var dish = new DishesListView( this );
+            var sides = new SidesCheckListBox(this);
+            new AddOrder( this, listOrder ).SetOrder( dish, sides );
             new Form1LabelPricePresenter( this  ).SetTextLabelPrice( _price );
         }
 

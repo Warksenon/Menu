@@ -8,27 +8,32 @@ using Pizza.View.Form1View;
 
 namespace Pizza
 {
-    internal class AddOrderListView : ViewFormMenu, ILogic
+    internal class AddOrder : ViewFormMenu
     {
+      
+        IListSet<Dish> _listDishes;
 
-        public AddOrderListView( FormMenu form1 ) : base( form1 ) { }
-
-        public void LogicSettings()
+        public AddOrder (FormMenu form1, IListSet<Dish> listDishes) : base( form1 ) 
         {
-            AddOrderToListView();
+            _listDishes = listDishes;
         }
 
-        private void AddOrderToListView()
+        IElementGet<Dish> _dish;
+        IListGet<string> _sides;
+
+        public void SetOrder ( IElementGet<Dish> getDish, IListGet<string> getSides)
         {
+            _dish = getDish;
+            _sides = getSides;
             var dish = CreateDish();
             var listDish =GetListSelektedDishes(dish);
-            new OrderListView( _form ).SetList( listDish );
+            _listDishes.SetList( listDish );
         }
 
         private Dish CreateDish()
         {
-            var dish =  new DishesListView(_form).GetElement();
-            var listSides = new SidesCheckListBox(_form).GetList();
+            var dish =  _dish.GetElement();
+            var listSides = _sides.GetList();
             if (listSides.Count == 0)
             {
                 dish.Sides = "";
@@ -52,7 +57,7 @@ namespace Pizza
 
             if (numbersRepetitions > 0)
             {
-                while (numbersRepetitions == 1)
+                while (numbersRepetitions >= 1)
                 {
                     list.Add( dish );
                     numbersRepetitions -= 1;

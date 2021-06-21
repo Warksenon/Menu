@@ -8,31 +8,33 @@ namespace Pizza.View.Form1View.ViewSettings.ButtonMenu
 
         public ButtonMenuView( FormMenu form )
         {
-            _form = form;
-            ButtonSeting();
+            _form = form;            
         }
 
         public void PizzaButtonSettings()
         {
+            ButtonSeting();
             ChengeNameLabelMenuInfo( "Pizza" );
             _form.PizzzaButton.BackColor = Color.LawnGreen;
         }
 
         public void MainDishButtonSettings()
         {
+            ButtonSeting();
             ChengeNameLabelMenuInfo( "Dania główne" );
             _form.MainButton.BackColor = Color.LawnGreen;
         }
 
         public void SoupsButtonSettings()
         {
+            ButtonSeting();
             ChengeNameLabelMenuInfo( "Zupy" );
             _form.SoupButton.BackColor = Color.LawnGreen;
         }
 
         public void DrinkseButtonSettings()
         {
-            
+            ButtonSeting();
             ChengeNameLabelMenuInfo( "Napoje" );
             _form.DrinksButton.BackColor = Color.LawnGreen;
         }

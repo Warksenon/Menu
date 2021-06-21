@@ -10,6 +10,7 @@ namespace Pizza
 
         public void SetList ( List<string> listKey )
         {
+            listSides.Clear();
             foreach (var k in listKey)
             {
                 string side = Name.GetNameConfig(k);

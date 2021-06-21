@@ -31,9 +31,7 @@ namespace Pizza
             _priceLV = new HistoryPriceListView( this );
             _priceLV.SetList( new LoadHistorySQL() );
             _button = new ButtonFormHistory( this );
-            _button.AllButtonColorsControl( bTxtToSQL.Name );
-            AllButtonColorsControl( bSql.Name );
-          
+            _button.AllButtonColorsControl( bSql.Name );
         }
 
         private void ButtonTextList_Click( object sender, EventArgs e )
@@ -45,7 +43,6 @@ namespace Pizza
         private void ButtonSqlList_Click( object sender, EventArgs e )
         {
             _priceLV.SetList( new LoadHistorySQL() );
-            AllButtonColorsControl( bSql.Name );
             _button.AllButtonColorsControl( bSql.Name );
         }
 
@@ -54,7 +51,6 @@ namespace Pizza
             _button.AllButtonColorsControl( bTxtToSQL.Name );
             new HistoryCopy( new LoadingFilesTxt(), new SaveHistorySQL() );
             _priceLV.SetList( new LoadingFilesTxt() );
-            AllButtonColorsControl( bText.Name );
             _button.AllButtonColorsControl( bText.Name );
         }
 

@@ -27,6 +27,8 @@ namespace Pizza
         private IPrice _price;
         IListSet<Dish> _getDishes;
         IListSet<string> _getSides;
+        ButtonMenuView _buttonMnuView;
+        MenuDishes<ListDishes,ListSides> _menu;
 
 
         private void Form1_Load_1( object sender, EventArgs e )
@@ -34,7 +36,9 @@ namespace Pizza
             _getDishes = new DishesListView( this );
             _getSides = new SidesCheckListBox( this );
             _price = new OrderListView( this );
-            MenuDishes.CreateMenuPizza( new DishesListView( this ), new SidesCheckListBox( this ) );
+            _buttonMnuView = new ButtonMenuView( this );
+            _menu = new MenuDishes<ListDishes, ListSides>( new ListDishes(), new ListSides() );
+            _menu.CreateMenuPizza( new DishesListView( this ), new SidesCheckListBox( this ) );
             new CreateSQLiteTables().CreateSqliteTables();
             new ButtonMenuView( this ).PizzaButtonSettings();
             new ButtonRemoveView( this ).RemoveAll();
@@ -60,26 +64,26 @@ namespace Pizza
 
         private void ButtonPizza_Click( object sender, EventArgs e )
         {
-            MenuDishes.CreateMenuPizza( _getDishes, _getSides );
-            new ButtonMenuView( this ).PizzaButtonSettings();
+            _menu.CreateMenuPizza( _getDishes, _getSides );
+            _buttonMnuView.PizzaButtonSettings();
         }
 
         private void ButtonMainDish_Click( object sender, EventArgs e )
         {
-            MenuDishes.CreateMenuMainDishes( _getDishes, _getSides );
-            new ButtonMenuView( this ).MainDishButtonSettings();
+            _menu.CreateMenuMainDishes( _getDishes, _getSides );
+            _buttonMnuView.MainDishButtonSettings();
         }
 
         private void ButtonDrinks_Click( object sender, EventArgs e )
         {
-            MenuDishes.CreateMenuDrinks( _getDishes, _getSides );
-            new ButtonMenuView( this ).DrinkseButtonSettings();
+            _menu.CreateMenuDrinks( _getDishes, _getSides );
+            _buttonMnuView.DrinkseButtonSettings();
         }
 
         private void ButtonSoup_Click( object sender, EventArgs e )
         {
-            MenuDishes.CreateMenuSoups( _getDishes, _getSides );
-            new ButtonMenuView( this ).SoupsButtonSettings();
+            _menu.CreateMenuSoups( _getDishes, _getSides );
+            _buttonMnuView.SoupsButtonSettings();
         }
 
         private void ButtonOrder_Click( object sender, EventArgs e )

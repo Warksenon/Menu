@@ -124,7 +124,7 @@
     <Compile Include="Presenters\IListGet.cs" />
     <Compile Include="Presenters\PresenterFormMenu\Remove\RemovePresenter.cs" />
     <Compile Include="View\FormHistry\ButtonFormHistory\ButtonFormHistory.cs" />
-    <Compile Include="View\FormHistry\ButtonFormHistory\IButtonFormHistory.cs" />
+    <Compile Include="View\FormHistry\IButtonFormHistory.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1ListViewDishes.cs" />
     <Compile Include="Presenters\PresenterFormMenu\IPrice.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IButtonRemove.cs" />

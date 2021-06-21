@@ -2,23 +2,39 @@
 
 namespace Pizza.View.FormHistry.ButtonFormHistory
 {
-    internal abstract class ButtonFormHistory : IView
+    public class ButtonFormHistory
     {
-        protected FormHistory form;
+        private FormHistory  _form;
 
         public ButtonFormHistory( FormHistory form )
         {
-            this.form = form;
+            _form = form;
         }
 
-        public abstract void ViewSetting();
-
-        protected void AllButtonSetSystemColorsControl()
+        public void AllButtonColorsControl ( string nameButton )
         {
-            form.ButtonLoadSql.BackColor = SystemColors.Control;
-            form.ButtonLoadTxt.BackColor = SystemColors.Control;
-            form.ButtonCopySql.BackColor = SystemColors.Control;
-            form.ButtonCopyTxt.BackColor = SystemColors.Control;
+
+            _form.ButtonLoadTxt.BackColor = SystemColors.Control;
+            _form.ButtonLoadSql.BackColor = SystemColors.Control;
+            _form.ButtonCopyTxt.BackColor = SystemColors.Control;
+            _form.ButtonCopySql.BackColor = SystemColors.Control;
+           
+            switch (nameButton)
+            {
+                case "bText":
+                _form.ButtonLoadTxt.BackColor = Color.LawnGreen;
+                break;
+                case "bSql":
+                _form.ButtonLoadSql.BackColor = Color.LawnGreen;
+                break;
+                case "bTxtToSQL":
+                _form.ButtonCopyTxt.BackColor = Color.LawnGreen;
+                break;
+                case "buttonSQLToTxt":
+                _form.ButtonCopySql.BackColor = Color.LawnGreen;
+                break;
+            }
+
         }
     }
 }

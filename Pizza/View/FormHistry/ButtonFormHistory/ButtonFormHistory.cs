@@ -4,7 +4,7 @@ namespace Pizza.View.FormHistry.ButtonFormHistory
 {
     public class ButtonFormHistory
     {
-        private FormHistory  _form;
+        private readonly FormHistory  _form;
 
         public ButtonFormHistory( FormHistory form )
         {

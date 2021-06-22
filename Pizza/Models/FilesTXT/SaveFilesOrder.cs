@@ -1,16 +1,11 @@
 ﻿using System;
+using Pizza.Presenters;
 
 namespace Pizza.Models.FilesTXT
 {
-    internal class SaveFilesOrder : Files
+    internal class SaveFilesOrder : Files, IElementSet<Order>
     {
-        private readonly Order order;
-
-        public SaveFilesOrder( Order order )
-        {
-            this.order = order;
-            Save();
-        }
+        private Order order;
 
         private void Save()
         {
@@ -31,6 +26,12 @@ namespace Pizza.Models.FilesTXT
         {
             var load = new LoadingFilesTxt();
             listOrder = load.GetList();
+        }
+
+        public void SetElement ( Order elements )
+        {
+            order = elements;
+            Save();
         }
 
     }

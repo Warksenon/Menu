@@ -4,14 +4,14 @@ namespace Pizza
 {
     public class MenuDishes<D,S> where D : IListGet<Dish>, IListSet<string> where S: IListGet<string>, IListSet<string>
     {
-        S _sides;
-        D _dishes;
+        private readonly S _sides;
+        private readonly D _dishes;
+
         public MenuDishes ( D dishes, S sides )
         {
             _dishes = dishes;
             _sides = sides;
         }
-
 
         public void CreateMenuPizza ( IListSet<Dish> dishes, IListSet<string> sides )
         {     

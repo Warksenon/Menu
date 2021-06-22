@@ -2,7 +2,8 @@
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-
+using Pizza.Models.FilesTXT;
+using Pizza.Models.SqlLite;
 using Pizza.Presenters.PresenterFormMenu;
 using Pizza.SqlLite;
 using Pizza.View.Form1;
@@ -89,7 +90,10 @@ namespace Pizza
         private void ButtonOrder_Click( object sender, EventArgs e )
         {
             var order = new OrderListView(this);
-            new ButtonPlaceOrderLogic( this).LogicSettings(order);
+            var sendOrder = new ButtonPlaceOrderLogic( this);
+            sendOrder.SetOrder( order );
+            sendOrder.SaveOrder( new SaveOrderSQL() );
+            sendOrder.SaveOrder( new SaveFilesOrder() );
         }
 
         private void ButtonOk_Click( object sender, EventArgs e )

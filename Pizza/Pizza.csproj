@@ -106,6 +106,7 @@
     <Compile Include="Presenters\IElementGet.cs" />
     <Compile Include="Presenters\IListSet.cs" />
     <Compile Include="Presenters\IElementSet.cs" />
+    <Compile Include="Presenters\ISendOrder.cs" />
     <Compile Include="Presenters\OnEvent.cs" />
     <Compile Include="Presenters\IOnEvent.cs" />
     <Compile Include="Presenters\ILogic.cs" />

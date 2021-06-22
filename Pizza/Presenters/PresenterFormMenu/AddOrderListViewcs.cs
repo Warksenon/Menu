@@ -11,11 +11,18 @@ namespace Pizza
     internal class AddOrder : ViewFormMenu
     {
       
-        IListSet<Dish> _listDishes;
+        private readonly IListSet<Dish> _listDishes;
+        IPrice _iPrice;
 
         public AddOrder (FormMenu form1, IListSet<Dish> listDishes) : base( form1 ) 
         {
             _listDishes = listDishes;
+            _iPrice = new OrderListView( _form );
+        }
+
+        public void SetPrice ( IPrice iPrice )
+        {
+            _iPrice = iPrice;
         }
 
         IElementGet<Dish> _dish;
@@ -98,20 +105,20 @@ namespace Pizza
             return allSidesToGether.ToString();
         }
 
+       
         private string AddPriceDisheAndSide( Dish dish, List<string> listSides )
         {
             var priceSides = 0.0;
-            var price = 0.0;
-            IPrice iPrice = new OrderListView(_form);
+            var price =0.0;
 
             foreach (var side in listSides)
             {
-                price = iPrice.FindPriceAndConvertToDoubel( side );
+                price = _iPrice.FindPriceAndConvertToDoubel( side );
                 priceSides += price;
 
             }
 
-            price = iPrice.FindPriceAndConvertToDoubel( dish.Price );
+            price = _iPrice.FindPriceAndConvertToDoubel( dish.Price );
             var priceAll =  price + priceSides;
             return priceAll + "zł";
         }

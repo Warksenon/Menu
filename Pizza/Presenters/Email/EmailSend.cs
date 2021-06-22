@@ -6,13 +6,29 @@ using Pizza.Models.Registry;
 
 namespace Pizza.Presenters.Email
 {
-    public class EmailSend
+    public class EmailSend : ISendOrder 
     {
-        public bool SendEmail( string message )
+        readonly string _message;
+
+        public EmailSend ( IElementGet<Order> setOrder )
+        {
+            var order = setOrder.GetElement();
+            var emailMessage = new EmailMessage(order);
+            _message = emailMessage.WriteBill();
+        }
+
+        public bool SendMessag ()
+        {
+           return SendEmail( _message );
+        }
+
+        ILoadEmailData _loadEmail = new LoadRegistry();
+
+        private bool SendEmail ( string message )
         {
             bool flag = false;
-            ILoadEmailData loadEmail = new LoadRegistry();
-            EmailData registry = loadEmail.Load();
+           
+            EmailData registry = _loadEmail.Load();
             using (MailMessage send = new MailMessage())
             {
                 using (SmtpClient client = new SmtpClient())
@@ -45,6 +61,11 @@ namespace Pizza.Presenters.Email
             }
 
             return flag;
+        }
+
+        public void SetSettingsEmial ( ILoadEmailData loadEmail )
+        {
+            _loadEmail = loadEmail;
         }
     }
 }

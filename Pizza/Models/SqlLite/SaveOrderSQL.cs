@@ -1,8 +1,10 @@
-﻿namespace Pizza.Models.SqlLite
+﻿using Pizza.Presenters;
+
+namespace Pizza.Models.SqlLite
 {
-    internal class SaveOrderSQL : OrderSQL
+    internal class SaveOrderSQL : OrderSQL , IElementSet<Order>
     {
-        public SaveOrderSQL( Order order )
+        public void SetElement ( Order order )
         {
             AddNewTaskOrder( order );
         }

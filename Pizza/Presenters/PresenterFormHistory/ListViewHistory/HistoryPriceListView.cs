@@ -7,7 +7,7 @@ namespace Pizza.Presenters.PresenterFormHistory
     public class HistoryPriceListView : IListGet<Dish>
     {
         List<Order> listOrder = new List<Order>();
-        FormHistory _form;
+        readonly FormHistory _form;
 
         public HistoryPriceListView (FormHistory form)
         {

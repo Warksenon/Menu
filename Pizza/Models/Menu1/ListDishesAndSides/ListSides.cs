@@ -6,7 +6,7 @@ namespace Pizza
 {
     public class ListSides : ListName, IListGet<string>, IListSet<string>
     {
-        private List<string> listSides = new List<string>();
+        private readonly List<string>  listSides = new List<string>();
 
         public void SetList ( List<string> listKey )
         {

@@ -1,7 +1,5 @@
 ﻿using System.Windows.Forms;
 
-using Pizza.Models.FilesTXT;
-using Pizza.Models.SqlLite;
 using Pizza.Presenters.Email;
 using Pizza.View.Form1View;
 
@@ -9,22 +7,24 @@ namespace Pizza.Presenters.PresenterFormMenu
 {
     internal class ButtonPlaceOrderLogic : ViewFormMenu
     {
+        private  IElementGet<Order>  _order;
+
         public ButtonPlaceOrderLogic( FormMenu form ) : base( form ) { }
 
-        public void LogicSettings( IElementGet<Order> creatingOrder )
+        public void SetOrder( IElementGet<Order> creatingOrder )
         {
-            var order = creatingOrder.GetElement();
-            RunPlaceOrder( order );
+            _order = creatingOrder;
+            RunPlaceOrder();
         }
 
-        private void RunPlaceOrder(Order order)
+        private void RunPlaceOrder()
         {
             if (ChceckListViewOrderIsNotEpmty())
             {
                 if (_form.BackgroundWorker.IsBusy != true)
                 {
                     _form.BackgroundWorker.RunWorkerAsync();
-                    SendOrderAndSave( order );
+                    SendOrder();
                 }
                 else
                 {
@@ -45,17 +45,14 @@ namespace Pizza.Presenters.PresenterFormMenu
                 return false;
         }
 
-        private void SendOrderAndSave (Order order )
+        bool _checkSend;
+        private void SendOrder ( )
         {
-            var _order = order;
-            var emailMessage = new EmailMessage(_order);
-            var message = emailMessage.WriteBill();
-            EmailSend emailSend = new EmailSend();
-            bool checkSendEmail = emailSend.SendEmail(message);
+            EmailSend emailSend = new EmailSend(_order);
+            _checkSend = emailSend.SendMessag();
 
-            if (checkSendEmail)
+            if (_checkSend)
             {
-                SaveOrder( _order );
                 MessageBox.Show( "Zamówienie zostało złożone" );
             }
             else
@@ -64,10 +61,15 @@ namespace Pizza.Presenters.PresenterFormMenu
             }
         }
 
-        private void SaveOrder ( Order order )
+        private IElementSet<Order> _saveOrder;
+        public void SaveOrder ( IElementSet<Order> saveOrder)
         {
-            new SaveOrderSQL( order );
-            new SaveFilesOrder( order );
+            if (_checkSend)
+            {
+                _saveOrder = saveOrder;
+                var order = _order.GetElement();
+                _saveOrder.SetElement( order );
+            } 
         }
 
     }

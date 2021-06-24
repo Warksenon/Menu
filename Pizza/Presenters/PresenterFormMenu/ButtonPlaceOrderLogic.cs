@@ -1,15 +1,18 @@
 ﻿using System.Windows.Forms;
 
 using Pizza.Presenters.Email;
-using Pizza.View.Form1View;
 
 namespace Pizza.Presenters.PresenterFormMenu
 {
-    internal class ButtonPlaceOrderLogic : ViewFormMenu
+    internal class ButtonPlaceOrderLogic
     {
         private  IElementGet<Order>  _order;
+        private readonly FormMenu _form;
 
-        public ButtonPlaceOrderLogic( FormMenu form ) : base( form ) { }
+        public ButtonPlaceOrderLogic( FormMenu form ) 
+        {
+            _form = form;
+        }
 
         public void SetOrder( IElementGet<Order> creatingOrder )
         {

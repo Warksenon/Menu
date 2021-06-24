@@ -1,26 +1,21 @@
-﻿using Pizza.Models.Registry;
-using Pizza.Presenters.Email;
-
-namespace Pizza.Presenters.PresenterFormMail
+﻿namespace Pizza.Presenters.PresenterFormMail
 {
-    public class FormMailLoad : FormMailPresenter
+    public class FormMailLoad 
     {
-        public FormMailLoad( FormMail mail ) : base( mail ) { }
-
-        public override void LogicSettings()
+        private readonly FormMail _form;
+        public FormMailLoad( FormMail form  )
         {
-            SetTextForTextBox();
+            _form = form;
         }
 
-        private void SetTextForTextBox()
+        public void SetTextForTextBox( IElementGet<EmailData> loadEmailData )
         {
-            ILoadEmailData loadEmailData = new LoadRegistry();
-            EmailData emailData = loadEmailData.Load();
-            mail.TextBoxSender.Text = emailData.Sender;
-            mail.TextBoxPassword.Text = emailData.Password;
-            mail.TextBoxPort.Text = emailData.Port;
-            mail.TextBoxSmtp.Text = emailData.Smtp;
-            mail.TextBoxRecipient.Text = emailData.Recipient;
+            EmailData emailData = loadEmailData.GetElement();
+            _form.TextBoxSender.Text = emailData.Sender;
+            _form.TextBoxPassword.Text = emailData.Password;
+            _form.TextBoxPort.Text = emailData.Port;
+            _form.TextBoxSmtp.Text = emailData.Smtp;
+            _form.TextBoxRecipient.Text = emailData.Recipient;
         }
     }
 }

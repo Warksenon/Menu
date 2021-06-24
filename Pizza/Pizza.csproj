@@ -92,6 +92,7 @@
     <Compile Include="Models\Menu1\ListDishesAndSides\MenuDishes.cs" />
     <Compile Include="Models\Menu1\ListDishesAndSides\ListSides.cs" />
     <Compile Include="Models\OrderComposition\Verifier.cs" />
+    <Compile Include="Models\Registry\ISaveEmailData.cs" />
     <Compile Include="Models\Registry\LoadRegistry.cs" />
     <Compile Include="Models\Registry\Registry.cs" />
     <Compile Include="Models\Registry\SaveRegistry.cs" />
@@ -100,21 +101,15 @@
     <Compile Include="Models\SqlLite\OrderSQL.cs" />
     <Compile Include="Models\SqlLite\SaveHistorySQL.cs" />
     <Compile Include="Presenters\Email\EmailSend.cs" />
-    <Compile Include="Presenters\Email\ILoadEmailData.cs" />
-    <Compile Include="Presenters\Email\ISaveEmailData.cs" />
     <Compile Include="Presenters\HelperConvert.cs" />
     <Compile Include="Presenters\IElementGet.cs" />
     <Compile Include="Presenters\IListSet.cs" />
     <Compile Include="Presenters\IElementSet.cs" />
     <Compile Include="Presenters\ISendOrder.cs" />
-    <Compile Include="Presenters\OnEvent.cs" />
-    <Compile Include="Presenters\IOnEvent.cs" />
-    <Compile Include="Presenters\ILogic.cs" />
     <Compile Include="Presenters\PresenterFormHistory\CopyHistory\HistoryCopy.cs" />
     <Compile Include="Presenters\PresenterFormHistory\ListViewHistory\HistoryDishesListView.cs" />
     <Compile Include="Presenters\PresenterFormHistory\ListViewHistory\HistoryPriceListView.cs" />
     <Compile Include="Presenters\PresenterFormMail\FormMailLoad.cs" />
-    <Compile Include="Presenters\PresenterFormMail\FormMailPresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\AddOrderListViewcs.cs" />
     <Compile Include="Presenters\PresenterFormMenu\ButtonPlaceOrderLogic.cs" />
     <Compile Include="Presenters\PresenterFormMenu\DishesListView.cs" />
@@ -152,7 +147,6 @@
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IFrom1InfoLabel.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IFormMenuBackgroundWorker.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\ITextBoxComments.cs" />
-    <Compile Include="View\FormMenuView\ViewFormMenu.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonMenuView\ButtonMenuView.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonMenuView\IFormMenuButtonMenu.cs" />
     <Compile Include="View\FormMenuView\ViewSettings\ButtonMenuView\ViewSettingButtonMenu.cs" />
@@ -183,7 +177,6 @@
     <Compile Include="Presenters\RecordOfExceptions.cs" />
     <Compile Include="Models\SqlLite\CreateConnection.cs" />
     <Compile Include="Models\SqlLite\CreateTabeles.cs" />
-    <Compile Include="View\IView.cs" />
     <EmbeddedResource Include="View\FormMenuView\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>

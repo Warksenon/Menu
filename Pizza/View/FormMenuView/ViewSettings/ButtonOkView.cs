@@ -4,7 +4,7 @@ using Pizza.Presenters;
 
 namespace Pizza
 {
-    public class ButtonOkView : IView
+    public class ButtonOkView 
     {
         private readonly FormMenu _form;
 

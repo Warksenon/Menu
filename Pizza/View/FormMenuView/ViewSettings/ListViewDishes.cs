@@ -1,10 +1,13 @@
-﻿using Pizza.View.Form1View;
-
-namespace Pizza
+﻿namespace Pizza
 {
-    public class ListViewDishes : ViewFormMenu, IView
+    public class ListViewDishes 
     {
-        public ListViewDishes( FormMenu form ) : base( form ) { }
+        private readonly FormMenu _form;
+
+        public ListViewDishes( FormMenu form )  
+        {
+            _form = form;
+        }
 
         public void ViewSetting()
         {

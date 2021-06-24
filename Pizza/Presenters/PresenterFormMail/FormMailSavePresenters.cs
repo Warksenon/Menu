@@ -1,45 +1,35 @@
 ﻿using System.Windows.Forms;
 
 using Pizza.Models.Registry;
-using Pizza.Presenters.Email;
-using Pizza.Presenters.PresenterFormMail;
 
 namespace Pizza.Presenters
 {
-    internal class FormMailSavePresenters : FormMailPresenter
+    internal class FormMailSavePresenters 
     {
-        public FormMailSavePresenters( FormMail mail ) : base( mail ) { }
-
-        public override void LogicSettings()
+        private readonly FormMail _form;
+        public FormMailSavePresenters( FormMail form )  
         {
-            bool saveSuccess = SaveDataEmial();
-            if (saveSuccess)
-                mail.Close();
+            _form = form;
         }
 
-        public bool SaveDataEmial()
+        public void SaveDataEmial( ISaveEmailData saveEmail )
         {
             EmailData emailData = new EmailData
             {
-                Sender = mail.TextBoxSender.Text,
-                Password = mail.TextBoxPassword.Text,
-                Port = mail.TextBoxPort.Text,
-                Smtp = mail.TextBoxSmtp.Text,
-                Recipient = mail.TextBoxRecipient.Text
+                Sender = _form.TextBoxSender.Text,
+                Password = _form.TextBoxPassword.Text,
+                Port = _form.TextBoxPort.Text,
+                Smtp = _form.TextBoxSmtp.Text,
+                Recipient = _form.TextBoxRecipient.Text
             };
 
-            ISaveEmailData saveEmail = new SaveRegistry();
             bool saveIsOk = saveEmail.Save(emailData);
 
-            if (saveIsOk)
-            {
-                return true;
-            }
-            else
+            if (!saveIsOk)
             {
                 MessageBox.Show( "Nieprawidłowe dane. Upewni się że wprowadzone dane: andresów e-mail, hasło, smtp, port są prawidłowe ", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error );
-                return false;
             }
+        
         }
     }
 }

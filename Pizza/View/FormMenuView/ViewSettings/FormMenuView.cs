@@ -1,11 +1,15 @@
-﻿using Pizza.View.Form1View;
-using Pizza.View.Form1View.ViewSettings.ButtonMenu;
+﻿using Pizza.View.Form1View.ViewSettings.ButtonMenu;
 
 namespace Pizza.View.FormMenuView.ViewSettings
 {
-    internal class FormMenuView : ViewFormMenu, IView
+    internal class FormMenuView 
     {
-        public FormMenuView( FormMenu form ) : base( form ) { }
+        private readonly FormMenu _form; 
+
+        public FormMenuView( FormMenu form )
+        {
+              _form= form;
+        }
 
         public void ViewSetting()
         {

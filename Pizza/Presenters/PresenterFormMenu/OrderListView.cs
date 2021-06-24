@@ -7,11 +7,15 @@ using Pizza.View.Form1View;
 
 namespace Pizza.Presenters.PresenterFormMenu
 {
-    public class OrderListView : ViewFormMenu, IListSet<Dish>, IElementGet<Order>, IPrice
+    public class OrderListView : IListSet<Dish>, IElementGet<Order>, IPrice
     {
         private readonly Order order = new Order();
+        private readonly FormMenu _form;
 
-        public OrderListView( FormMenu form ) : base( form ) { }
+        public OrderListView( FormMenu form ) 
+        {
+            _form = form;
+        }
 
         public Order GetElement()
         {

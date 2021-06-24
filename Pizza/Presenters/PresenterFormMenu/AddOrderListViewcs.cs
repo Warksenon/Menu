@@ -4,18 +4,19 @@ using System.Windows.Forms;
 
 using Pizza.Presenters;
 using Pizza.Presenters.PresenterFormMenu;
-using Pizza.View.Form1View;
 
 namespace Pizza
 {
-    internal class AddOrder : ViewFormMenu
+    internal class AddOrder 
     {
-      
+        private readonly FormMenu _form;
         private readonly IListSet<Dish> _listDishes;
         IPrice _iPrice;
 
-        public AddOrder (FormMenu form1, IListSet<Dish> listDishes) : base( form1 ) 
+        public AddOrder (FormMenu form, IListSet<Dish> listDishes)
         {
+
+            _form = form;
             _listDishes = listDishes;
             _iPrice = new OrderListView( _form );
         }

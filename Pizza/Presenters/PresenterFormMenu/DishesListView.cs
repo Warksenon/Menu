@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-using Pizza.View.Form1View;
-
 namespace Pizza.Presenters.PresenterFormMenu
 {
-    public class DishesListView : ViewFormMenu, IElementGet<Dish>, IListSet<Dish>
+    public class DishesListView : IElementGet<Dish>, IListSet<Dish>
     {
-        public DishesListView( FormMenu form ) : base( form ) { }
+        private readonly FormMenu _form;
+        public DishesListView( FormMenu form ) 
+        {
+            _form = form;
+        }
 
         public Dish GetElement()
         {

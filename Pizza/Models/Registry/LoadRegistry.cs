@@ -2,13 +2,11 @@
 
 using Microsoft.Win32;
 
-using Pizza.Presenters.Email;
-
 namespace Pizza.Models.Registry
 {
-    internal class LoadRegistry : Registry, ILoadEmailData
+    internal class LoadRegistry : Registry, IElementGet<EmailData> 
     {
-        public EmailData Load()
+        public EmailData GetElement ()
         {
             return ReadingRegistry();
         }

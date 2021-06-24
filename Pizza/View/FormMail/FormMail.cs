@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using Pizza.Models.Registry;
 using Pizza.Presenters;
 using Pizza.Presenters.PresenterFormMail;
 
@@ -8,8 +8,6 @@ namespace Pizza
 {
     public partial class FormMail : Form, IFormMail
     {
-        private readonly IOnEvent eevent = new OnEvent();
-
         public TextBox TextBoxSender { get => tSender; set => tSender = value; }
         public TextBox TextBoxRecipient { get => tRecipient; set => tRecipient = value; }
         public TextBox TextBoxPassword { get => tPassword; set => tPassword = value; }
@@ -23,12 +21,12 @@ namespace Pizza
 
         private void FormMail_Load( object sender, EventArgs e )
         {
-            eevent.SetLogic( new FormMailLoad( this ) );
+            new FormMailLoad( this ).SetTextForTextBox( new LoadRegistry() );
         }
 
         private void ButtonSave_Click( object sender, EventArgs e )
         {
-            eevent.SetLogic( new FormMailSavePresenters( this ) );
+            new FormMailSavePresenters( this ).SaveDataEmial(new SaveRegistry());
         }
 
         private void ButtonClose_Click( object sender, EventArgs e )

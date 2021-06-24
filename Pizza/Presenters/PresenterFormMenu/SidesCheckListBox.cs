@@ -4,9 +4,14 @@ using Pizza.View.Form1View;
 
 namespace Pizza.Presenters.PresenterFormMenu
 {
-    public class SidesCheckListBox : ViewFormMenu, IListSet<string>, IListGet<string>
+    public class SidesCheckListBox : IListSet<string>, IListGet<string>
     {
-        public SidesCheckListBox( FormMenu form ) : base( form ) { }
+        private readonly FormMenu _form;
+
+        public SidesCheckListBox( FormMenu form ) 
+        {
+            _form = form;
+        }
 
         public List<string> GetList()
         {

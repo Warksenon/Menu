@@ -116,9 +116,8 @@
     <Compile Include="Presenters\PresenterFormMenu\FormMenuLabelPricePresenter.cs" />
     <Compile Include="Presenters\PresenterFormMenu\OrderListView.cs" />
     <Compile Include="Presenters\PresenterFormMenu\SidesCheckListBox.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\Remove\RemoveFormMenu.cs" />
     <Compile Include="Presenters\IListGet.cs" />
-    <Compile Include="Presenters\PresenterFormMenu\Remove\RemovePresenter.cs" />
+    <Compile Include="Presenters\PresenterFormMenu\RemovePresenter.cs" />
     <Compile Include="View\FormHistry\ButtonFormHistory\ButtonFormHistory.cs" />
     <Compile Include="View\FormHistry\IButtonFormHistory.cs" />
     <Compile Include="View\FormMenuView\InterfaceFormMenu\IForm1ListViewDishes.cs" />

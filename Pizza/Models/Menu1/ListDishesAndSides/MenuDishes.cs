@@ -39,7 +39,7 @@ namespace Pizza
         {
             sides.SetList( new List<string>() );
 
-            var keyDishes = new List<string> { "marghPrice", "vegetPrice", "toscaPrice", "venecPrice" };
+            var keyDishes = new List<string> { "tomatoPrice", "chickenSoupPrice" };
             var listDishes= CreateDishesList( keyDishes );
             dishes.SetList( listDishes );
         }
@@ -49,7 +49,7 @@ namespace Pizza
             sides.SetList( new List<string>() );
 
             var keyDishes = new List<string> { "coffeePrice", "teaPrice", "colaPrice" };
-            var listDishes= CreateDishesList( keyDishes );
+            var listDishes = CreateDishesList( keyDishes );
             dishes.SetList( listDishes );
         }
 

@@ -9,19 +9,17 @@ namespace Test
     [TestFixture]
     public class TestMenuDishes
     {
-
         static FakeListDishes  fakeLD = new FakeListDishes();
         static FakeListSides  fakeLS = new FakeListSides();
         MenuDishes<FakeListDishes,FakeListSides> menu = new MenuDishes<FakeListDishes,FakeListSides>( fakeLD, fakeLS);
-        DishesListView dishesList = new DishesListView ();
-        SidesCheckListBox sidesList =new  SidesCheckListBox ();
+        FakeDishesList dishesList = new FakeDishesList ();
+        FakeSidesList sidesList =new  FakeSidesList ();
 
         [TestCase( "marghPrice", "1", "0" )]
         [TestCase( "vegetPrice", "2", "1" )]
         [TestCase( "toscaPrice", "3", "2" )]
         [TestCase( "venecPrice", "4", "3" )]
-
-        public void CreateMenuPizza_CheckData_ReturnListDish( string expectationsName, string expectationsPrice, int index )
+        public void CreateMenuPizza_CheckDataPizzaDish_ReturnListDishPizza( string expectationsName, string expectationsPrice, int index )
         {
             menu.CreateMenuPizza( dishesList, sidesList );
             var list = dishesList.GetList();
@@ -33,65 +31,129 @@ namespace Test
             Assert.AreEqual( expectationsPrice, currentPrice );
         }
 
-        //[TestCase( "Schabowy z frytkami/ryżem/ziemniakami", "30zł", "0" )]
-        //[TestCase( "Ryba z frytkami", "28zł", "1" )]
-        //[TestCase( "Placek po węgiersku", "27zł", "2" )]
-        //public void TestGetListMainDishesFromListViewDishes( string expectationsName, string price, int index )
-        //{
-        //    onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.MainDishes ) );
-        //    var  currentName  = form.ListViewDishes.Items [index].SubItems [0].Text;
-        //    var  currentPrice = form.ListViewDishes.Items [index].SubItems [1].Text;
+        [TestCase( "doubelCheesePrice",  "0" )]
+        [TestCase( "salamiPrice",  "1" )]
+        [TestCase( "hamPrice", "2" )]
+        [TestCase( "mushroomsPrice", "3" )]
+        public void CreateMenuPizza_CheckDataPizzaSides_ReturnListSidesPizza ( string expectationsName, int index )
+        {
+            menu.CreateMenuPizza( dishesList, sidesList );
+            var list = sidesList.GetList();
 
-        //    Assert.AreEqual( expectationsName, currentName );
-        //    Assert.AreEqual( price, currentPrice );
-        //}
+            var  currentName  = list [index];
+           
+            Assert.AreEqual( expectationsName, currentName );  
+        }
 
-        //[TestCase( "Kawa", "0" )]
-        //[TestCase( "Herbata", "1" )]
-        //[TestCase( "Cola", "2" )]
-        //public void TestGetListDrinksFromListViewDishes( string expectationsName, int index )
-        //{
-        //    onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.Drinks ) );
-        //    var  currentName  = form.ListViewDishes.Items [index].SubItems [0].Text;
-        //    var  currentPrice = form.ListViewDishes.Items [index].SubItems [1].Text;
+        [TestCase( "schnitzelPrice", "1", "0" )]
+        [TestCase( "fishPrice", "2", "1" )]
+        [TestCase( "potatoPrice", "3", "2" )]
+        public void CreateMenuMainDishes_CheckDataMainDishes_ReturnListDishMainDishes ( string expectationsName, string expectationsPrice, int index )
+        {
+            menu.CreateMenuMainDishes( dishesList, sidesList );
+            var list = dishesList.GetList();
 
-        //    Assert.AreEqual( expectationsName, currentName );
-        //    Assert.AreEqual( "5zł", currentPrice );
-        //}
+            var  currentName  = list [index].Name;
+            var  currentPrice = list [index].Price;
 
-        //[TestCase( "Pomidorowa", "12zł", "0" )]
-        //[TestCase( "Rosół", "10zł", "1" )]
-        //public void TestGetListSoupsFromListViewDishes( string expectationsName, string expectationsPrice, int index )
-        //{
-        //    onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.Soups ) );
-        //    var  currentName  = form.ListViewDishes.Items [index].SubItems [0].Text;
-        //    var  currentPrice = form.ListViewDishes.Items [index].SubItems [1].Text;
+            Assert.AreEqual( expectationsName, currentName );
+            Assert.AreEqual( expectationsPrice, currentPrice );
+        }
 
-        //    Assert.AreEqual( expectationsName, currentName );
-        //    Assert.AreEqual( expectationsPrice, currentPrice );
-        //}
+        [TestCase( "barPrice", "0" )]
+        [TestCase( "setOfSaucesPrice", "1" )]
+        public void CreateMenuMainDishes_CheckDataMainDishesSides_ReturnListSidesMainDishes ( string expectationsName, int index )
+        {
+            menu.CreateMenuMainDishes( dishesList, sidesList );
+            var list = sidesList.GetList();
 
-        //[TestCase( "Bar sałatkowy -5zł", "0" )]
-        //[TestCase( "Zestaw sosów -6zł", "1" )]
-        //public void TestGetListSidesFromMainDishes( string expectationsName, int index )
-        //{
-        //    onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.MainDishes ) );
-        //    var  currentName  = form.CheckedListBoxSide.Items [index].ToString();
+            var  currentName  = list [index];
 
-        //    Assert.AreEqual( expectationsName, currentName );
-        //}
+            Assert.AreEqual( expectationsName, currentName );
+        }
 
-        //[TestCase( "Podwójny Ser -2zł", "0" )]
-        //[TestCase( "Salami -2zł", "1" )]
-        //[TestCase( "Szynka -2zł", "2" )]
-        //[TestCase( "Pieczarki -2zł", "3" )]
-        //public void TestGetListSidesFromPizzas( string expectationsName, int index )
-        //{
-        //    onEvent.SetLogic( new LogicMenuButtonTest( form, ButtonLoadMenu.Pizza ) );
-        //    var  currentName  = form.CheckedListBoxSide.Items [index].ToString();
+        [TestCase( "coffeePrice", "1", "0" )]
+        [TestCase( "teaPrice", "2", "1" )]
+        [TestCase( "colaPrice", "3", "2" )]
+        public void CreateMenuDrinks_CheckDataDrinksDish_ReturnListDishDrinks ( string expectationsName, string expectationsPrice, int index )
+        {
+            menu.CreateMenuDrinks( dishesList, sidesList );
+            var list = dishesList.GetList();
 
-        //    Assert.AreEqual( expectationsName, currentName );
-        //}
+            var  currentName  = list [index].Name;
+            var  currentPrice = list [index].Price;
+
+            Assert.AreEqual( expectationsName, currentName );
+            Assert.AreEqual( expectationsPrice, currentPrice );
+        }
+
+        [TestCase( "tomatoPrice", "1", "0" )]
+        [TestCase( "chickenSoupPrice", "2", "1" )]
+         public void CreateMenuSoup_CheckDataSaupsDish_ReturnListDishSaups ( string expectationsName, string expectationsPrice, int index )
+        {
+            menu.CreateMenuSoups( dishesList, sidesList );
+            var list = dishesList.GetList();
+
+            var  currentName  = list [index].Name;
+            var  currentPrice = list [index].Price;
+
+            Assert.AreEqual( expectationsName, currentName );
+            Assert.AreEqual( expectationsPrice, currentPrice );
+        }
+
+    
+        public void CreateMenuPizza_HandingOverObjectNull_ReturnListNull ()
+        {
+            FakeListDishes  nullLD=null;
+            FakeListSides  nullLS=null;
+            MenuDishes<FakeListDishes,FakeListSides> menu = new MenuDishes<FakeListDishes,FakeListSides>( nullLD, nullLS);
+            menu.CreateMenuPizza( dishesList, sidesList );
+            var listDishes = dishesList.GetList();
+            var listSides = sidesList.GetList();
+
+            Assert.IsNull( listDishes );
+            Assert.IsNull( listSides );
+        }
+
+        public void CreateMenuMainDishes_HandingOverObjectNull_ReturnListNull ()
+        {
+            FakeListDishes  nullLD=null;
+            FakeListSides  nullLS=null;
+            MenuDishes<FakeListDishes,FakeListSides> menu = new MenuDishes<FakeListDishes,FakeListSides>( nullLD, nullLS);
+            menu.CreateMenuMainDishes( dishesList, sidesList );
+            var listDishes = dishesList.GetList();
+            var listSides = sidesList.GetList();
+
+            Assert.IsNull( listDishes );
+            Assert.IsNull( listSides );
+        }
+
+        public void CreateMenuDrinks_HandingOverObjectNull_ReturnListNull ()
+        {
+            FakeListDishes  nullLD=null;
+            FakeListSides  nullLS=null;
+            MenuDishes<FakeListDishes,FakeListSides> menu = new MenuDishes<FakeListDishes,FakeListSides>( nullLD, nullLS);
+            menu.CreateMenuDrinks( dishesList, sidesList );
+            var listDishes = dishesList.GetList();
+            var listSides = sidesList.GetList();
+
+            Assert.IsNull( listDishes );
+            Assert.IsNull( listSides );
+        }
+
+        public void CreateMenuSoups_HandingOverObjectNull_ReturnListNull ()
+        {
+            FakeListDishes  nullLD=null;
+            FakeListSides  nullLS=null;
+            MenuDishes<FakeListDishes,FakeListSides> menu = new MenuDishes<FakeListDishes,FakeListSides>( nullLD, nullLS);
+            menu.CreateMenuSoups( dishesList, sidesList );
+            var listDishes = dishesList.GetList();
+            var listSides = sidesList.GetList();
+
+            Assert.IsNull( listDishes );
+            Assert.IsNull( listSides );
+        }
+
     }
 
     public class FakeListDishes :  IListGet<Dish>, IListSet<string>
@@ -144,10 +206,10 @@ namespace Test
         }
     }
 
-    internal class DishesListView : IElementGet<Dish>, IListSet<Dish>
+    internal class FakeDishesList : IElementGet<Dish>, IListSet<Dish>
     {
         private List<Dish> _listDisch = new List<Dish>();       
-        public DishesListView () { }
+        public FakeDishesList () { }
        
         public List<Dish> GetList() 
         {
@@ -165,10 +227,10 @@ namespace Test
         }
     }
 
-    internal class SidesCheckListBox : IListSet<string>, IListGet<string>
+    internal class FakeSidesList : IListSet<string>, IListGet<string>
     {
         List<string> sides = new List<string>();
-        public SidesCheckListBox () { }
+        public FakeSidesList () { }
 
         public List<string> GetList ()
         {
@@ -180,9 +242,4 @@ namespace Test
             sides = elements;
         }
     }
-}
-
-namespace Pizza
-{
-
 }

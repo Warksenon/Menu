@@ -108,10 +108,10 @@
     <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewSettings\ListViewDishes.cs" />
     <Compile Include="SimulatingClassesMainProject\ViewTest\IView.cs" />
     <Compile Include="SimulatingClassesMainProject\ViewTest\TestVisibleElements.cs" />
-    <Compile Include="Test\TestFormMenu\FormMenuTest.cs" />
-    <Compile Include="Test\TestFormMenu\PresenterFormMenu\TestMenuDishes.cs" />
+    <Compile Include="Test\TestFormMenu\TestMenuDishes.cs" />
     <Compile Include="Test\TestFormMenu\PresenterFormMenu\TestFormMenuAddOrderToListViewOrder.cs" />
     <Compile Include="Test\TestFormMenu\PresenterFormMenu\TestFormMenuCreatingOrder.cs" />
+    <Compile Include="Test\TestFormMenu\TestAddOrderListView.cs" />
     <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonRemoveView.cs" />
     <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonOk.cs" />
     <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestMenuButtonView.cs" />

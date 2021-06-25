@@ -87,10 +87,10 @@
     <Compile Include="Models\FilesTXT\Files.cs" />
     <Compile Include="Models\FilesTXT\JsonHelper.cs" />
     <Compile Include="Models\FilesTXT\SaveFilesOrder.cs" />
-    <Compile Include="Models\Menu1\ListDishesAndSides\ListDishes.cs" />
-    <Compile Include="Models\Menu1\ListDishesAndSides\ListName.cs" />
-    <Compile Include="Models\Menu1\ListDishesAndSides\MenuDishes.cs" />
-    <Compile Include="Models\Menu1\ListDishesAndSides\ListSides.cs" />
+    <Compile Include="Models\Menu\ListDishesAndSides\ListDishes.cs" />
+    <Compile Include="Models\Menu\ListDishesAndSides\ListName.cs" />
+    <Compile Include="Models\Menu\ListDishesAndSides\MenuDishes.cs" />
+    <Compile Include="Models\Menu\ListDishesAndSides\ListSides.cs" />
     <Compile Include="Models\OrderComposition\Verifier.cs" />
     <Compile Include="Models\Registry\ISaveEmailData.cs" />
     <Compile Include="Models\Registry\LoadRegistry.cs" />

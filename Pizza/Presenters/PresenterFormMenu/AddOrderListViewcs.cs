@@ -106,7 +106,6 @@ namespace Pizza
             return allSidesToGether.ToString();
         }
 
-       
         private string AddPriceDisheAndSide( Dish dish, List<string> listSides )
         {
             var priceSides = 0.0;

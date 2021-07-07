@@ -7,11 +7,12 @@ using Pizza.Presenters.PresenterFormMenu;
 
 namespace Pizza
 {
-    internal class AddOrder 
+    public class AddOrder 
     {
         private readonly FormMenu _form;
         private readonly IListSet<Dish> _listDishes;
         IPrice _iPrice;
+        IDialogService _dialogService;
 
         public AddOrder (FormMenu form, IListSet<Dish> listDishes)
         {
@@ -19,11 +20,17 @@ namespace Pizza
             _form = form;
             _listDishes = listDishes;
             _iPrice = new OrderListView( _form );
+            _dialogService = new DialogBox();
         }
 
         public void SetPrice ( IPrice iPrice )
         {
             _iPrice = iPrice;
+        }
+
+        public void SetDialog ( IDialogService dialogService )
+        {
+            _dialogService = dialogService;
         }
 
         IElementGet<Dish> _dish;
@@ -34,7 +41,7 @@ namespace Pizza
             _dish = getDish;
             _sides = getSides;
             var dish = CreateDish();
-            var listDish =GetListSelektedDishes(dish);
+            var listDish = GetListSelektedDishes(dish);
             _listDishes.SetList( listDish );
         }
 
@@ -81,7 +88,7 @@ namespace Pizza
 
             if (number < 1)
             {
-                MessageBox.Show( "Podana ilość produktów nie jest prawidłowa" );
+                _dialogService.ShowMessage( "Podana ilość produktów nie jest prawidłowa" );
             }
 
             return number;
@@ -115,7 +122,6 @@ namespace Pizza
             {
                 price = _iPrice.FindPriceAndConvertToDoubel( side );
                 priceSides += price;
-
             }
 
             price = _iPrice.FindPriceAndConvertToDoubel( dish.Price );

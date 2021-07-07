@@ -102,10 +102,12 @@
     <Compile Include="Models\SqlLite\SaveHistorySQL.cs" />
     <Compile Include="Presenters\Email\EmailSend.cs" />
     <Compile Include="Presenters\HelperConvert.cs" />
+    <Compile Include="Presenters\IDialogService.cs" />
     <Compile Include="Presenters\IElementGet.cs" />
     <Compile Include="Presenters\IListSet.cs" />
     <Compile Include="Presenters\IElementSet.cs" />
     <Compile Include="Presenters\ISendOrder.cs" />
+    <Compile Include="Presenters\DialogBox.cs" />
     <Compile Include="Presenters\PresenterFormHistory\CopyHistory\HistoryCopy.cs" />
     <Compile Include="Presenters\PresenterFormHistory\ListViewHistory\HistoryDishesListView.cs" />
     <Compile Include="Presenters\PresenterFormHistory\ListViewHistory\HistoryPriceListView.cs" />

@@ -31,12 +31,12 @@ namespace Pizza.Presenters.PresenterFormMenu
                 }
                 else
                 {
-                    MessageBox.Show( "Przetwarzanie danych proszę czekać" );
+                    DialogBox.Show( "Przetwarzanie danych proszę czekać" );
                 }
             }
             else
             {
-                MessageBox.Show( "Proszę wybrać produkt" );
+                DialogBox.Show( "Proszę wybrać produkt" );
             }
         }
 
@@ -56,11 +56,11 @@ namespace Pizza.Presenters.PresenterFormMenu
 
             if (_checkSend)
             {
-                MessageBox.Show( "Zamówienie zostało złożone" );
+                DialogBox.Show( "Zamówienie zostało złożone" );
             }
             else
             {
-                MessageBox.Show( "Wysłanie wiadomości nie powiodło się. Problem z adres e-mail lub z połaczeniem internetowym" );
+                DialogBox.Show( "Wysłanie wiadomości nie powiodło się. Problem z adres e-mail lub z połaczeniem internetowym" );
             }
         }
 

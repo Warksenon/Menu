@@ -94,6 +94,66 @@ namespace Test.Test.TestFormMenu
             Assert.AreEqual( expectationsNumber, currentLenght );
         }
 
+        [TestCase( "" )]
+        [TestCase( "a" )]
+        [TestCase( "A" )]
+        [TestCase( "4d" )]
+        [TestCase( "c5" )]
+        [TestCase( "ccv" )]
+        [TestCase( "    " )]
+        [TestCase( "---" )]
+        [TestCase( "+++" )]
+        [TestCase( ".." )]
+        [TestCase( ",," )]
+        [TestCase( "000" )]
+        [TestCase( "0" )]
+        public void SetDialog_EnteringWrongQuantityOrders_RetrunMessageError ( string number )
+        {
+            var form = CreateFormMenu(number);
+            var listDishes = new FakeListDishes();
+            var addOrder = new AddOrder(form,listDishes);
+            var dialog = new FakeDialogBox();
+            addOrder.SetDialog( dialog );
+            var getDish = new FakeCreateDishes();
+            var getSides = new FakeCreateEmptySides();
+            addOrder.SetOrder( getDish, getSides );
+
+            var  currentMessage = dialog.Message;
+            var expectationsMessage = "Podana ilość produktów nie jest prawidłowa";
+
+            Assert.AreEqual( expectationsMessage, currentMessage );
+        }
+
+        [TestCase( "1" )]
+        [TestCase( "2" )]
+        [TestCase( "3" )]
+        [TestCase( "4" )]
+        [TestCase( "5" )]
+        [TestCase( "6" )]
+        [TestCase( "7" )]
+        [TestCase( "8" )]
+        [TestCase( "9" )]
+        [TestCase( "10" )]
+        [TestCase( "20" )]
+        [TestCase( "120" )]
+        [TestCase( "1323" )]
+        public void SetDialog_EnteringGoodQuantityOrders_RetrunEmptyMessageError ( string number )
+        {
+            var form = CreateFormMenu(number);
+            var listDishes = new FakeListDishes();
+            var addOrder = new AddOrder(form,listDishes);
+            var dialog = new FakeDialogBox();
+            addOrder.SetDialog( dialog );
+            var getDish = new FakeCreateDishes();
+            var getSides = new FakeCreateEmptySides();
+            addOrder.SetOrder( getDish, getSides );
+
+            var  currentMessage = dialog.Message;
+            var expectationsMessage = "";
+
+            Assert.AreEqual( expectationsMessage, currentMessage );
+        }
+
     }
 
     internal class FakeListDishes : IListSet<Dish>
@@ -147,9 +207,15 @@ namespace Test.Test.TestFormMenu
         }
     }
 
-    internal class DialogBox : IDialogService
+    internal class FakeDialogBox : IDialogService
     {
         public string Message { get; private set; }
+
+        public FakeDialogBox ()
+        {
+            Message = "";
+        }
+       
         public void ShowMessage ( string message )
         {
             Message = message;

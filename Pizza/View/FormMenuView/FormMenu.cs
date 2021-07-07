@@ -90,7 +90,7 @@ namespace Pizza
         private void ButtonOrder_Click( object sender, EventArgs e )
         {
             var order = new OrderListView(this);
-            var sendOrder = new ButtonPlaceOrderLogic( this);
+            var sendOrder = new ButtonPlaceOrderLogic( this, new DialogBox());
             sendOrder.SetOrder( order );
             sendOrder.SaveOrder( new SaveOrderSQL() );
             sendOrder.SaveOrder( new SaveFilesOrder() );

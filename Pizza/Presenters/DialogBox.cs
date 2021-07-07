@@ -1,8 +1,8 @@
 ﻿using System.Windows.Forms;
 
-namespace Pizza.Presenters
+namespace Pizza
 {
-    class DialogBox : IDialogService
+    public class DialogBox : IDialogService
     {
         public void ShowMessage ( string message )
         {

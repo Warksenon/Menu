@@ -8,10 +8,12 @@ namespace Pizza.Presenters.PresenterFormMenu
     {
         private  IElementGet<Order>  _order;
         private readonly FormMenu _form;
+        IDialogService _dialogService;
 
-        public ButtonPlaceOrderLogic( FormMenu form ) 
+        public ButtonPlaceOrderLogic( FormMenu form, IDialogService dialogService ) 
         {
             _form = form;
+            _dialogService = dialogService;
         }
 
         public void SetOrder( IElementGet<Order> creatingOrder )
@@ -31,12 +33,12 @@ namespace Pizza.Presenters.PresenterFormMenu
                 }
                 else
                 {
-                    DialogBox.Show( "Przetwarzanie danych proszę czekać" );
+                    _dialogService.ShowMessage( "Przetwarzanie danych proszę czekać" );
                 }
             }
             else
             {
-                DialogBox.Show( "Proszę wybrać produkt" );
+                _dialogService.ShowMessage( "Proszę wybrać produkt" );
             }
         }
 
@@ -56,11 +58,11 @@ namespace Pizza.Presenters.PresenterFormMenu
 
             if (_checkSend)
             {
-                DialogBox.Show( "Zamówienie zostało złożone" );
+                _dialogService.ShowMessage( "Zamówienie zostało złożone" );
             }
             else
             {
-                DialogBox.Show( "Wysłanie wiadomości nie powiodło się. Problem z adres e-mail lub z połaczeniem internetowym" );
+                _dialogService.ShowMessage( "Wysłanie wiadomości nie powiodło się. Problem z adres e-mail lub z połaczeniem internetowym" );
             }
         }
 

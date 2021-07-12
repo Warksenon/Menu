@@ -9,6 +9,7 @@ namespace Pizza.Presenters.PresenterFormMenu
         private  IElementGet<Order>  _order;
         private readonly FormMenu _form;
         IDialogService _dialogService;
+        ISendOrder _send; 
 
         public ButtonPlaceOrderLogic( FormMenu form, IDialogService dialogService ) 
         {
@@ -16,9 +17,22 @@ namespace Pizza.Presenters.PresenterFormMenu
             _dialogService = dialogService;
         }
 
-        public void SetOrder( IElementGet<Order> creatingOrder )
+       
+        public void SaveOrder ( IElementSet<Order> element )
+        {
+            if (_checkSend)
+            {
+                var saveOrder = element;
+                var order = _order.GetElement();
+                saveOrder.SetElement( order );
+            }
+        }
+
+
+        public void SetOrder( IElementGet<Order> creatingOrder, ISendOrder send )
         {
             _order = creatingOrder;
+            _send = send;
             RunPlaceOrder();
         }
 
@@ -53,8 +67,7 @@ namespace Pizza.Presenters.PresenterFormMenu
         bool _checkSend;
         private void SendOrder ( )
         {
-            EmailSend emailSend = new EmailSend(_order);
-            _checkSend = emailSend.SendMessag();
+            _checkSend = _send.SendMessag( _order );
 
             if (_checkSend)
             {
@@ -64,17 +77,6 @@ namespace Pizza.Presenters.PresenterFormMenu
             {
                 _dialogService.ShowMessage( "Wysłanie wiadomości nie powiodło się. Problem z adres e-mail lub z połaczeniem internetowym" );
             }
-        }
-
-        private IElementSet<Order> _saveOrder;
-        public void SaveOrder ( IElementSet<Order> saveOrder)
-        {
-            if (_checkSend)
-            {
-                _saveOrder = saveOrder;
-                var order = _order.GetElement();
-                _saveOrder.SetElement( order );
-            } 
         }
 
     }

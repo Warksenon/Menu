@@ -2,6 +2,6 @@
 {
     interface ISendOrder
     {
-        bool SendMessag ();
+        bool SendMessag ( IElementGet<Order> element);
     }
 }

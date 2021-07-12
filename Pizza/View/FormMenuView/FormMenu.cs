@@ -3,7 +3,9 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using Pizza.Models.FilesTXT;
+using Pizza.Models.Registry;
 using Pizza.Models.SqlLite;
+using Pizza.Presenters.Email;
 using Pizza.Presenters.PresenterFormMenu;
 using Pizza.SqlLite;
 using Pizza.View.Form1;
@@ -91,7 +93,9 @@ namespace Pizza
         {
             var order = new OrderListView(this);
             var sendOrder = new ButtonPlaceOrderLogic( this, new DialogBox());
-            sendOrder.SetOrder( order );
+            var loadDataEmail = new LoadRegistry();
+            var email = new EmailSend(loadDataEmail);
+            sendOrder.SetOrder( order,email);
             sendOrder.SaveOrder( new SaveOrderSQL() );
             sendOrder.SaveOrder( new SaveFilesOrder() );
         }

@@ -7,19 +7,18 @@ namespace Pizza.Presenters.Email
 {
     public class EmailSend : ISendOrder 
     {
-        readonly string _message;
         IElementGet<EmailData> _loadEmail;
-        public EmailSend ( IElementGet<Order> setOrder )
+        public EmailSend ( IElementGet<EmailData> loadEmail )
         {
-            var order = setOrder.GetElement();
-            var emailMessage = new EmailMessage(order);
-            _message = emailMessage.WriteBill();
-            _loadEmail = new LoadRegistry();
+            _loadEmail = loadEmail;
         }
 
-        public bool SendMessag ()
+        public bool SendMessag ( IElementGet<Order> element )
         {
-           return SendEmail( _message );
+            var order = element.GetElement();
+            var emailMessage = new EmailMessage(order);
+            var message = emailMessage.WriteBill();
+            return SendEmail( message );
         }
 
         private bool SendEmail ( string message )
@@ -61,9 +60,5 @@ namespace Pizza.Presenters.Email
             return flag;
         }
 
-        public void SetSettingsEmial ( IElementGet<EmailData> loadEmail )
-        {
-            _loadEmail = loadEmail;
-        }
     }
 }

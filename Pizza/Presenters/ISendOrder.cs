@@ -1,6 +1,6 @@
 ﻿namespace Pizza.Presenters
 {
-    interface ISendOrder
+    public interface ISendOrder
     {
         bool SendMessag ( IElementGet<Order> element);
     }

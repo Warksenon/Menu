@@ -1,15 +1,12 @@
-﻿using System.Windows.Forms;
-
-using Pizza.Presenters.Email;
-
-namespace Pizza.Presenters.PresenterFormMenu
+﻿namespace Pizza.Presenters.PresenterFormMenu
 {
-    internal class ButtonPlaceOrderLogic
+    public class ButtonPlaceOrderLogic
     {
         private  IElementGet<Order>  _order;
         private readonly FormMenu _form;
         IDialogService _dialogService;
-        ISendOrder _send; 
+        ISendOrder _send;
+        bool _checkSend;
 
         public ButtonPlaceOrderLogic( FormMenu form, IDialogService dialogService ) 
         {
@@ -38,7 +35,12 @@ namespace Pizza.Presenters.PresenterFormMenu
 
         private void RunPlaceOrder()
         {
-            if (ChceckListViewOrderIsNotEpmty())
+            var order = _order.GetElement();
+            if(  order.ListDishes.Count < 1)
+            {
+                _dialogService.ShowMessage( "Proszę wybrać produkt" );
+            }
+            else
             {
                 if (_form.BackgroundWorker.IsBusy != true)
                 {
@@ -49,22 +51,10 @@ namespace Pizza.Presenters.PresenterFormMenu
                 {
                     _dialogService.ShowMessage( "Przetwarzanie danych proszę czekać" );
                 }
-            }
-            else
-            {
-                _dialogService.ShowMessage( "Proszę wybrać produkt" );
+               
             }
         }
 
-        private bool ChceckListViewOrderIsNotEpmty ()
-        {
-            if (_form.ListViewOrder.Items.Count > 0)
-                return true;
-            else
-                return false;
-        }
-
-        bool _checkSend;
         private void SendOrder ( )
         {
             _checkSend = _send.SendMessag( _order );

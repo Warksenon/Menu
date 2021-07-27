@@ -14,12 +14,12 @@ namespace Pizza.Presenters.PresenterFormMenu
 
         public Dish GetElement()
         {
-            return GetListSelektedDishes();
+            return GetSelektedDish();
         }
 
-        private Dish GetListSelektedDishes()
+        private Dish GetSelektedDish()
         {
-            int x = CheckListDishesSelectedItem();
+            int x = ChecktDishSelectedItem();
 
             Dish dish = new Dish
             {
@@ -30,7 +30,7 @@ namespace Pizza.Presenters.PresenterFormMenu
             return dish;
         }
 
-        private int CheckListDishesSelectedItem()
+        private int ChecktDishSelectedItem()
         {
             return _form.ListViewDishes.FocusedItem.Index;
         }

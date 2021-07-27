@@ -11,14 +11,14 @@ namespace Test.Test.TestFormMenu
 
         FormMenu CreateFormMenu ()
         {
-            var form =  new FormMenu();
+            var form = FormTest.CreateFormMenu();
             form.QTextbox.Text = "1";
             return form;
         }
 
         FormMenu CreateFormMenu (string number)
         {
-            var form =  new FormMenu();
+            var form = FormTest.CreateFormMenu();
             form.QTextbox.Text = number;
             return form;
         }

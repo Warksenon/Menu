@@ -13,8 +13,7 @@
             _form = form;
             _dialogService = dialogService;
         }
-
-       
+      
         public void SaveOrder ( IElementSet<Order> element )
         {
             if (_checkSend)
@@ -24,7 +23,6 @@
                 saveOrder.SetElement( order );
             }
         }
-
 
         public void SetOrder( IElementGet<Order> creatingOrder, ISendOrder send )
         {
@@ -68,6 +66,5 @@
                 _dialogService.ShowMessage( "Wysłanie wiadomości nie powiodło się. Problem z adres e-mail lub z połaczeniem internetowym" );
             }
         }
-
     }
 }

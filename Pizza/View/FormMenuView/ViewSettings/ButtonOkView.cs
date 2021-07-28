@@ -4,16 +4,16 @@ using Pizza.Presenters;
 
 namespace Pizza
 {
-    public class ButtonOkView 
+    public class ButtonOkView
     {
         private readonly FormMenu _form;
 
-        public ButtonOkView( FormMenu form )
+        public ButtonOkView ( FormMenu form )
         {
             _form = form;
         }
 
-        public void ViewSetting()
+        public void ViewSetting ()
         {
             string text = _form.QTextbox.Text;
             int number = HelperConvert.ConvertTextToInt(text);

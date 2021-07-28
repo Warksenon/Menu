@@ -1,20 +1,19 @@
 ﻿using System.Collections.Generic;
 using System.Text;
-using System.Windows.Forms;
 
 using Pizza.Presenters;
 using Pizza.Presenters.PresenterFormMenu;
 
 namespace Pizza
 {
-    public class AddOrder 
+    public class AddOrder
     {
         private readonly FormMenu _form;
         private readonly IListSet<Dish> _listDishes;
         IPrice _iPrice;
         IDialogService _dialogService;
 
-        public AddOrder (FormMenu form, IListSet<Dish> listDishes)
+        public AddOrder ( FormMenu form, IListSet<Dish> listDishes )
         {
 
             _form = form;
@@ -36,7 +35,7 @@ namespace Pizza
         IElementGet<Dish> _dish;
         IListGet<string> _sides;
 
-        public void SetOrder ( IElementGet<Dish> getDish, IListGet<string> getSides)
+        public void SetOrder ( IElementGet<Dish> getDish, IListGet<string> getSides )
         {
             _dish = getDish;
             _sides = getSides;
@@ -45,7 +44,7 @@ namespace Pizza
             _listDishes.SetList( listDish );
         }
 
-        private Dish CreateDish()
+        private Dish CreateDish ()
         {
             var dish =  _dish.GetElement();
             var listSides = _sides.GetList();
@@ -65,7 +64,7 @@ namespace Pizza
             return dish;
         }
 
-        private List<Dish> GetListSelektedDishes( Dish dish )
+        private List<Dish> GetListSelektedDishes ( Dish dish )
         {
             var list = new List<Dish>();
             int numbersRepetitions = CheckNumberTextViewDishes();
@@ -82,7 +81,7 @@ namespace Pizza
             return list;
         }
 
-        private int CheckNumberTextViewDishes()
+        private int CheckNumberTextViewDishes ()
         {
             int number = HelperConvert.ConvertTextToInt(_form.QTextbox.Text);
 
@@ -94,7 +93,7 @@ namespace Pizza
             return number;
         }
 
-        private string AddAllSides( List<string> listSides )
+        private string AddAllSides ( List<string> listSides )
         {
             StringBuilder allSidesToGether = new StringBuilder();
             for (int i = 0; i < listSides.Count; i++)
@@ -113,7 +112,7 @@ namespace Pizza
             return allSidesToGether.ToString();
         }
 
-        private string AddPriceDisheAndSide( Dish dish, List<string> listSides )
+        private string AddPriceDisheAndSide ( Dish dish, List<string> listSides )
         {
             var priceSides = 0.0;
             var price =0.0;

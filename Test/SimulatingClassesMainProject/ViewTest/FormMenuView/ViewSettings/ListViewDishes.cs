@@ -4,20 +4,20 @@ namespace Test
 {
     public class ListViewDishes : ViewFormMenuTest, IView
     {
-        public ListViewDishes( FormMenu form ) : base( form ) { }
+        public ListViewDishes ( FormMenu form ) : base( form ) { }
 
-        public void ViewSetting()
+        public void ViewSetting ()
         {
             SetVisibleButtonDishesOK();
             SetVisibleTextViewDishesQuantity();
         }
 
-        private void SetVisibleButtonDishesOK()
+        private void SetVisibleButtonDishesOK ()
         {
             form.AddButton.Visible = true;
         }
 
-        private void SetVisibleTextViewDishesQuantity()
+        private void SetVisibleTextViewDishesQuantity ()
         {
             form.QTextbox.Visible = true;
         }

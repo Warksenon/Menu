@@ -5,17 +5,17 @@ namespace Test
     public class ButtonRemoveOne : ButtonRemove
     {
         private readonly bool checkingListOrderIfEmpty;
-        public ButtonRemoveOne( FormMenu form, bool checkingListOrderIfEmpty ) : base( form )
+        public ButtonRemoveOne ( FormMenu form, bool checkingListOrderIfEmpty ) : base( form )
         {
             this.checkingListOrderIfEmpty = checkingListOrderIfEmpty;
         }
 
-        public override void ViewSetting()
+        public override void ViewSetting ()
         {
             SetSettingsButton();
         }
 
-        private void SetSettingsButton()
+        private void SetSettingsButton ()
         {
             if (checkingListOrderIfEmpty)
             {

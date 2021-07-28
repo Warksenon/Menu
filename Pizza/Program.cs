@@ -9,7 +9,7 @@ namespace Pizza
         /// Główny punkt wejścia dla aplikacji.
         /// </summary>
         [STAThread]
-        private static void Main()
+        private static void Main ()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault( false );

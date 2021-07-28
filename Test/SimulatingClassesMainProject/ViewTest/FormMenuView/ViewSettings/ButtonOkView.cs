@@ -9,12 +9,12 @@ namespace Test
     {
         private readonly FormMenu form;
 
-        public ButtonOkView( FormMenu form )
+        public ButtonOkView ( FormMenu form )
         {
             this.form = form;
         }
 
-        public void ViewSetting()
+        public void ViewSetting ()
         {
             string text = form.QTextbox.Text;
             int number = HelperConvert.ConvertTextToInt(text);

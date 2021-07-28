@@ -7,7 +7,7 @@ namespace Pizza.Models.FilesTXT
     {
         private Order order;
 
-        private void Save()
+        private void Save ()
         {
             try
             {
@@ -22,7 +22,7 @@ namespace Pizza.Models.FilesTXT
             }
         }
 
-        private void LoadHistoryToListOrder()
+        private void LoadHistoryToListOrder ()
         {
             var load = new LoadingFilesTxt();
             listOrder = load.GetList();

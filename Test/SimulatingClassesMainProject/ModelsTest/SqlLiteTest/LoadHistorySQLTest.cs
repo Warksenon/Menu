@@ -8,7 +8,7 @@ namespace Test
 {
     internal class LoadHistorySQLTest : CreateConnectionTest, IListGet<Order>
     {
-        private List<Order> LoadListOrderFromSQL()
+        private List<Order> LoadListOrderFromSQL ()
         {
             List<Order> listorder = new List<Order>();
             SQLiteConnection cn = CreateSQLiteConnection();
@@ -37,7 +37,7 @@ namespace Test
             return listorder;
         }
 
-        private void AddOrdersToListOrders( SQLiteDataReader dr, List<Order> listorder )
+        private void AddOrdersToListOrders ( SQLiteDataReader dr, List<Order> listorder )
         {
             while (dr.Read())
             {
@@ -62,7 +62,7 @@ namespace Test
             }
         }
 
-        private Order LoadDishes( string num, Order order )
+        private Order LoadDishes ( string num, Order order )
         {
             SQLiteConnection cn = CreateSQLiteConnection();
             using (cn)
@@ -88,7 +88,7 @@ namespace Test
             return order;
         }
 
-        private void AddDihes( Order order, SQLiteCommand cmd )
+        private void AddDihes ( Order order, SQLiteCommand cmd )
         {
             SQLiteDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
@@ -116,7 +116,7 @@ namespace Test
             dr.Close();
         }
 
-        public List<Order> GetList()
+        public List<Order> GetList ()
         {
             return LoadListOrderFromSQL();
         }

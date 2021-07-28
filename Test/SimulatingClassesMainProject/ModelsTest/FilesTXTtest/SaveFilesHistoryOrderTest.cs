@@ -12,13 +12,13 @@ namespace Test
 {
     internal class SaveFilesHistoryOrderTest : FilesTest, ISaveHistory<Order>, IDataCleansing
     {
-        public SaveFilesHistoryOrderTest()
+        public SaveFilesHistoryOrderTest ()
         {
             CreateFolder();
 
         }
 
-        private void SaveListOrder()
+        private void SaveListOrder ()
         {
             try
             {
@@ -40,13 +40,13 @@ namespace Test
             }
         }
 
-        public void SaveHistoryOrders( List<Order> listOrder )
+        public void SaveHistoryOrders ( List<Order> listOrder )
         {
             this.listOrder = listOrder;
             SaveListOrder();
         }
 
-        public void DeleteData()
+        public void DeleteData ()
         {
             try
             {

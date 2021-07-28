@@ -8,13 +8,13 @@ namespace Test
     {
         private readonly Order order;
 
-        public SaveFilesOrderTest( Order order )
+        public SaveFilesOrderTest ( Order order )
         {
             this.order = order;
             Save();
         }
 
-        private void Save()
+        private void Save ()
         {
             try
             {
@@ -29,7 +29,7 @@ namespace Test
             }
         }
 
-        private void LoadHistoryToListOrder()
+        private void LoadHistoryToListOrder ()
         {
             LoadingFilesTxtTest load = new LoadingFilesTxtTest();
             listOrder = load.GetList();

@@ -9,9 +9,9 @@ namespace Pizza
         private string sides;
         private readonly int id;
 
-        public Dish() { }
+        public Dish () { }
 
-        public Dish( int id )
+        public Dish ( int id )
         {
             this.id = id;
         }

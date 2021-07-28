@@ -9,7 +9,7 @@ namespace Test
 {
     internal abstract class OrderSQLTest : CreateConnectionTest
     {
-        protected void AddNewTaskOrder( Order order )
+        protected void AddNewTaskOrder ( Order order )
         {
             CreateTabeles();
             PriceAll priceAll = order.PriceAll;
@@ -53,7 +53,7 @@ namespace Test
 
         }
 
-        private void AddNewTaskDish( Order order )
+        private void AddNewTaskDish ( Order order )
         {
             SQLiteConnection cn = CreateSQLiteConnection();
             using (cn)
@@ -96,7 +96,7 @@ namespace Test
             }
         }
 
-        private int FindingMaxIdCena()
+        private int FindingMaxIdCena ()
         {
             int id = 0;
             SQLiteConnection cn = CreateSQLiteConnection();

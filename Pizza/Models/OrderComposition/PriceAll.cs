@@ -9,7 +9,7 @@ namespace Pizza
         private string price;
         private int id;
 
-        public PriceAll() { }
+        public PriceAll () { }
 
         public int ID
         {

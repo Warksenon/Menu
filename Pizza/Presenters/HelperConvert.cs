@@ -4,7 +4,7 @@ namespace Pizza.Presenters
 {
     public static class HelperConvert
     {
-        public static int ConvertTextToInt( string textNumber )
+        public static int ConvertTextToInt ( string textNumber )
         {
             int number;
             try

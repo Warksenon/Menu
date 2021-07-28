@@ -4,6 +4,6 @@ namespace Pizza
 {
     public interface IListGet<T>
     {
-        List<T> GetList();
+        List<T> GetList ();
     }
 }

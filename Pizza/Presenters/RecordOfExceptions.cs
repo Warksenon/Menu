@@ -5,7 +5,7 @@ namespace Pizza
 {
     public class RecordOfExceptions
     {
-        public static void Save( string e, string name )
+        public static void Save ( string e, string name )
         {
             string dateWithTime = DateTime.Now.ToString();
             string olnyDate = DateTime.Now.ToString("yyyy-MM-dd");
@@ -25,7 +25,7 @@ namespace Pizza
                     streamW.Flush();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }

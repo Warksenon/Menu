@@ -2,6 +2,6 @@
 {
     public interface IElementSet<T>
     {
-        void SetElement( T elements );
+        void SetElement ( T elements );
     }
 }

@@ -1,9 +1,4 @@
-﻿
-using NUnit.Framework;
-
-using Pizza;
-
-namespace Test.Menu.Sides
+﻿namespace Test.Menu.Sides
 {
     //[TestFixture]
     //public class TestSidesMainDishes

@@ -1,13 +1,10 @@
-﻿using System.Drawing;
-
+﻿
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-using Pizza;
 
 namespace Test.Test.TestFormMenu.ViewSettingsTest
 {
     [TestClass]
-    public class TestMenuButtonView 
+    public class TestMenuButtonView
     {
         //private FormMenu ResetVariabelFromTest()
         //{

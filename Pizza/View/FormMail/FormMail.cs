@@ -14,22 +14,22 @@ namespace Pizza
         public TextBox TextBoxSmtp { get => tSmtp; set => tSmtp = value; }
         public TextBox TextBoxPort { get => tPort; set => tPort = value; }
 
-        public FormMail()
+        public FormMail ()
         {
             InitializeComponent();
         }
 
-        private void FormMail_Load( object sender, EventArgs e )
+        private void FormMail_Load ( object sender, EventArgs e )
         {
             new FormMailLoad( this ).SetTextForTextBox( new LoadRegistry() );
         }
 
-        private void ButtonSave_Click( object sender, EventArgs e )
+        private void ButtonSave_Click ( object sender, EventArgs e )
         {
-            new FormMailSavePresenters( this ).SaveDataEmial(new SaveRegistry());
+            new FormMailSavePresenters( this ).SaveDataEmial( new SaveRegistry() );
         }
 
-        private void ButtonClose_Click( object sender, EventArgs e )
+        private void ButtonClose_Click ( object sender, EventArgs e )
         {
             this.Close();
         }

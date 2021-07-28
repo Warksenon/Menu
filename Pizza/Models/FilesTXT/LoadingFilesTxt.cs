@@ -10,7 +10,7 @@ namespace Pizza
 {
     internal class LoadingFilesTxt : Files, IListGet<Order>
     {
-        private List<Order> LoadOrderListFromTxt()
+        private List<Order> LoadOrderListFromTxt ()
         {
 
             try
@@ -32,7 +32,7 @@ namespace Pizza
             return listOrder;
         }
 
-        public List<Order> GetList()
+        public List<Order> GetList ()
         {
             return LoadOrderListFromTxt();
         }

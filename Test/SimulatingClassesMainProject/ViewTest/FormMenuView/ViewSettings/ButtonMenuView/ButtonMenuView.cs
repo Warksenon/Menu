@@ -7,9 +7,9 @@ namespace Test
     public abstract class ButtonMenuView : ViewFormMenuTest, IView
     {
 
-        public ButtonMenuView( FormMenu form1 ) : base( form1 ) { }
+        public ButtonMenuView ( FormMenu form1 ) : base( form1 ) { }
 
-        protected void ButtonSeting()
+        protected void ButtonSeting ()
         {
             ClearColorButton();
             HidenButtonDishesOK();
@@ -17,7 +17,7 @@ namespace Test
             CleaningTextBoxDishesQuantity();
         }
 
-        protected void ClearColorButton()
+        protected void ClearColorButton ()
         {
             form.PizzzaButton.BackColor = SystemColors.Control;
             form.MainButton.BackColor = SystemColors.Control;
@@ -25,27 +25,27 @@ namespace Test
             form.DrinksButton.BackColor = SystemColors.Control;
         }
 
-        protected void HidenButtonDishesOK()
+        protected void HidenButtonDishesOK ()
         {
             form.AddButton.Visible = false;
         }
 
-        protected void HidingTextBoxDishesQuantity()
+        protected void HidingTextBoxDishesQuantity ()
         {
             form.QTextbox.Visible = false;
         }
 
-        protected void CleaningTextBoxDishesQuantity()
+        protected void CleaningTextBoxDishesQuantity ()
         {
             form.QTextbox.Text = "1";
         }
 
-        protected void ChengeNameLabelMenuInfo( string infoMenu )
+        protected void ChengeNameLabelMenuInfo ( string infoMenu )
         {
             form.LabelMenu.Text = infoMenu;
         }
 
-        public abstract void ViewSetting();
+        public abstract void ViewSetting ();
 
     }
 }

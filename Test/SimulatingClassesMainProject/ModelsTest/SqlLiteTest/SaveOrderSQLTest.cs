@@ -4,7 +4,7 @@ namespace Test
 {
     internal class SaveOrderSQLTest : OrderSQLTest
     {
-        public SaveOrderSQLTest( Order order )
+        public SaveOrderSQLTest ( Order order )
         {
             AddNewTaskOrder( order );
         }

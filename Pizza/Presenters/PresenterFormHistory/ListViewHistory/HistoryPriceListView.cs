@@ -9,7 +9,7 @@ namespace Pizza.Presenters.PresenterFormHistory
         List<Order> listOrder = new List<Order>();
         readonly FormHistory _form;
 
-        public HistoryPriceListView (FormHistory form)
+        public HistoryPriceListView ( FormHistory form )
         {
             _form = form;
         }

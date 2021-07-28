@@ -2,8 +2,8 @@
 {
     public interface IPrice
     {
-        double GetPricaAll();
+        double GetPricaAll ();
 
-        double FindPriceAndConvertToDoubel( string dish );
+        double FindPriceAndConvertToDoubel ( string dish );
     }
 }

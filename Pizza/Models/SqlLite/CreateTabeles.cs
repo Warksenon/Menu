@@ -6,14 +6,14 @@ namespace Pizza.SqlLite
 {
     internal class CreateSQLiteTables : CreateConnection
     {
-        public void CreateSqliteTables()
+        public void CreateSqliteTables ()
         {
             CreateSQLiteDatabaseFile();
             CreateSQLitePriceAll( CreateSQLiteConnection() );
             CreateSQLiteDishes( CreateSQLiteConnection() );
         }
 
-        private void CreateSQLiteDatabaseFile()
+        private void CreateSQLiteDatabaseFile ()
         {
             DirectoryInfo di = new DirectoryInfo(folderDatabase);
 
@@ -37,7 +37,7 @@ namespace Pizza.SqlLite
             }
         }
 
-        private void CreateSQLitePriceAll( SQLiteConnection cn )
+        private void CreateSQLitePriceAll ( SQLiteConnection cn )
         {
             using (cn)
             {
@@ -60,7 +60,7 @@ namespace Pizza.SqlLite
             }
         }
 
-        private void CreateSQLiteDishes( SQLiteConnection cn )
+        private void CreateSQLiteDishes ( SQLiteConnection cn )
         {
             using (cn)
             {

@@ -10,7 +10,7 @@ namespace Test
         protected const string path = @"c:\SQLTest2\Konsola\sqlite";
         protected const string fileName = path+@"\Historia zamówień.txt";
 
-        protected void CreateFolder()
+        protected void CreateFolder ()
         {
             if (!System.IO.File.Exists( path ))
             {

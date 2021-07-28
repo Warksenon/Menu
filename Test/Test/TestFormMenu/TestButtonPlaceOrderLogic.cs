@@ -14,7 +14,7 @@ namespace Test.Test.TestFormMenu
             return new FormMenu();
         }
 
-        [TestCase ("false", "Wysłanie wiadomości nie powiodło się. Problem z adres e-mail lub z połaczeniem internetowym" )]
+        [TestCase( "false", "Wysłanie wiadomości nie powiodło się. Problem z adres e-mail lub z połaczeniem internetowym" )]
         [TestCase( "true", "Zamówienie zostało złożone" )]
         public void SendOrder_CheckDialogForFlagSendMessage_ReturnDialog ( bool flag, string expectationsDialog )
         {
@@ -38,9 +38,9 @@ namespace Test.Test.TestFormMenu
             var dialog = new FakeDialog();
             ButtonPlaceOrderLogic button = new ButtonPlaceOrderLogic(form,dialog);
             var order = new FakeCreateOrderEmpty();
-            var sendMessage = new FakeSenderMessage();            
+            var sendMessage = new FakeSenderMessage();
             button.SetOrder( order, sendMessage );
-           
+
             var currentDialog = dialog.Message;
 
             Assert.AreEqual( "Proszę wybrać produkt", currentDialog );
@@ -55,16 +55,16 @@ namespace Test.Test.TestFormMenu
             var order = new FakeCreateOrder();
             var sendMessage = new FakeSenderMessage();
             button.SetOrder( order, sendMessage );
-            button.SetOrder( order, sendMessage );         
+            button.SetOrder( order, sendMessage );
 
             var currentDialog = dialog.Message;
 
             Assert.AreEqual( "Przetwarzanie danych proszę czekać", currentDialog );
         }
 
-       
+
         [TestCase( "true", "Margheritta", "22zł" )]
-        public void SaveOrder_SimulationSaveDataOrder_RetunrOneOrder ( bool flag, string expectedName, string expectedPrice)
+        public void SaveOrder_SimulationSaveDataOrder_RetunrOneOrder ( bool flag, string expectedName, string expectedPrice )
         {
             var form = CreateForm();
             var dialog = new FakeDialog();
@@ -86,7 +86,7 @@ namespace Test.Test.TestFormMenu
         }
 
         [TestCase()]
-        public void SaveOrder_SimulationNotSendMessage_RetunrListLenghtZero()
+        public void SaveOrder_SimulationNotSendMessage_RetunrListLenghtZero ()
         {
             var form = CreateForm();
             var dialog = new FakeDialog();
@@ -99,8 +99,8 @@ namespace Test.Test.TestFormMenu
             button.SaveOrder( saveData );
 
             var currentListSize = saveData.Order.ListDishes.Count;
-                             
-            Assert.AreEqual(0 , currentListSize );
+
+            Assert.AreEqual( 0, currentListSize );
         }
     }
 
@@ -116,7 +116,7 @@ namespace Test.Test.TestFormMenu
 
     internal class FakeSenderMessage : ISendOrder
     {
-        public  bool Flag { get; set; }
+        public bool Flag { get; set; }
 
         public bool SendMessag ( IElementGet<Order> element )
         {
@@ -134,7 +134,7 @@ namespace Test.Test.TestFormMenu
         {
             Order = order;
         }
-        
+
 
         public void SetElement ( Order elements )
         {
@@ -162,7 +162,7 @@ namespace Test.Test.TestFormMenu
             var order = new Order();
             order.ListDishes.Add( dish );
             return order;
-           
+
         }
     }
 }

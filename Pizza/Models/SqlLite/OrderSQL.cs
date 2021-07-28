@@ -9,7 +9,7 @@ namespace Pizza.Models.SqlLite
 {
     internal abstract class OrderSQL : CreateConnection
     {
-        protected void AddNewTaskOrder( Order order )
+        protected void AddNewTaskOrder ( Order order )
         {
             PriceAll priceAll = order.PriceAll;
             priceAll.ID = FindingMaxIdCena();
@@ -52,7 +52,7 @@ namespace Pizza.Models.SqlLite
 
         }
 
-        private void AddNewTaskDish( Order order )
+        private void AddNewTaskDish ( Order order )
         {
             SQLiteConnection cn = CreateSQLiteConnection();
             using (cn)
@@ -95,7 +95,7 @@ namespace Pizza.Models.SqlLite
             }
         }
 
-        private int FindingMaxIdCena()
+        private int FindingMaxIdCena ()
         {
             int id = 0;
             SQLiteConnection cn = CreateSQLiteConnection();

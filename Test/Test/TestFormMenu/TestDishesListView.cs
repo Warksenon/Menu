@@ -12,7 +12,7 @@ namespace Test.Test.TestFormMenu
     {
         [TestCase( "0", "dish1", "11zl" )]
         [TestCase( "1", "dish2", "22zl" )]
-        public void SetList_SimulationSetListDishes_ReturnDish (int index, string expectedName, string expectedPrice)
+        public void SetList_SimulationSetListDishes_ReturnDish ( int index, string expectedName, string expectedPrice )
         {
             var form = FormTest.CreateFormMenu();
             DishesListView lvDishes = new DishesListView(form);
@@ -63,19 +63,19 @@ namespace Test.Test.TestFormMenu
 
     internal class FakeDishesList
     {
-       static public List<Dish> GetDishes ()
+        static public List<Dish> GetDishes ()
         {
             var dish1 = new Dish
-                        {
-                            Name = "dish1",
-                            Price = "11zl"
-                        };
+            {
+                Name = "dish1",
+                Price = "11zl"
+            };
 
             var dish2 = new Dish
-                        {
-                            Name = "dish2",
-                            Price = "22zl"
-                        };
+            {
+                Name = "dish2",
+                Price = "22zl"
+            };
 
             var list = new List<Dish>();
             list.Add( dish1 );

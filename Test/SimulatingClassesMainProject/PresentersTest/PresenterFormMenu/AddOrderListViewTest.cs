@@ -1,12 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Text;
-
-using Pizza;
-using Pizza.Presenters;
-using Pizza.Presenters.PresenterFormMenu;
-using Pizza.View.Form1View;
-
-namespace Test
+﻿namespace Test
 {
     //internal class AddOrderListViewTest : ViewFormMenu, ILogic
     //{

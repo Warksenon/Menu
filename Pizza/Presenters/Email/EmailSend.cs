@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Net;
 using System.Net.Mail;
-using Pizza.Models.Registry;
 
 namespace Pizza.Presenters.Email
 {
-    public class EmailSend : ISendOrder 
+    public class EmailSend : ISendOrder
     {
         IElementGet<EmailData> _loadEmail;
         public EmailSend ( IElementGet<EmailData> loadEmail )
@@ -24,7 +23,7 @@ namespace Pizza.Presenters.Email
         private bool SendEmail ( string message )
         {
             bool flag = false;
-           
+
             EmailData registry = _loadEmail.GetElement();
             using (MailMessage send = new MailMessage())
             {

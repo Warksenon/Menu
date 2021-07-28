@@ -1,7 +1,4 @@
-﻿using Pizza;
-
-
-namespace Test
+﻿namespace Test
 {
     //public class LogicMenuButtonTest : ILogic
     //{

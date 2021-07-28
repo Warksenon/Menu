@@ -10,7 +10,7 @@ namespace Test
 {
     internal class LoadingFilesTxtTest : FilesTest, IListGet<Order>
     {
-        private List<Order> LoadOrderListFromTxt()
+        private List<Order> LoadOrderListFromTxt ()
         {
             try
             {
@@ -31,7 +31,7 @@ namespace Test
             return listOrder;
         }
 
-        public List<Order> GetList()
+        public List<Order> GetList ()
         {
             return LoadOrderListFromTxt();
         }

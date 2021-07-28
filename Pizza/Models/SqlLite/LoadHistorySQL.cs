@@ -8,7 +8,7 @@ namespace Pizza.Models.SqlLite
 {
     internal class LoadHistorySQL : CreateConnection, IListGet<Order>
     {
-        private List<Order> LoadListOrderFromSQL()
+        private List<Order> LoadListOrderFromSQL ()
         {
             var listorder = new List<Order>();
             SQLiteConnection cn = CreateSQLiteConnection();
@@ -38,7 +38,7 @@ namespace Pizza.Models.SqlLite
             return listorder;
         }
 
-        private void AddOrdersToListOrders( SQLiteDataReader dr, List<Order> listorder )
+        private void AddOrdersToListOrders ( SQLiteDataReader dr, List<Order> listorder )
         {
             while (dr.Read())
             {
@@ -64,7 +64,7 @@ namespace Pizza.Models.SqlLite
             }
         }
 
-        private Order LoadDishes( string num, Order order )
+        private Order LoadDishes ( string num, Order order )
         {
             SQLiteConnection cn = CreateSQLiteConnection();
             using (cn)
@@ -89,7 +89,7 @@ namespace Pizza.Models.SqlLite
             return order;
         }
 
-        private void AddDihes( Order order, SQLiteCommand cmd )
+        private void AddDihes ( Order order, SQLiteCommand cmd )
         {
             SQLiteDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
@@ -117,7 +117,7 @@ namespace Pizza.Models.SqlLite
             dr.Close();
         }
 
-        List<Order> IListGet<Order>.GetList()
+        List<Order> IListGet<Order>.GetList ()
         {
             return LoadListOrderFromSQL();
         }

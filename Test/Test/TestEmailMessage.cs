@@ -11,7 +11,7 @@ namespace Test.Test
         private EmailMessage emailMessage;
 
         [TestMethod]
-        public void TestCreateMessageWithOneDishWithoutSides()
+        public void TestCreateMessageWithOneDishWithoutSides ()
         {
             order = CreateOrderWthoutSides();
             emailMessage = new EmailMessage( order );
@@ -35,7 +35,7 @@ namespace Test.Test
             Assert.AreEqual( expectationsMessage, result );
         }
 
-        private Order CreateOrderWthoutSides()
+        private Order CreateOrderWthoutSides ()
         {
             Order order = new Order();
             order.ListDishes.Add( CreateDishwWthoutSides() );
@@ -43,7 +43,7 @@ namespace Test.Test
             return order;
         }
 
-        private Dish CreateDishwWthoutSides()
+        private Dish CreateDishwWthoutSides ()
         {
             return new Dish
             {
@@ -53,7 +53,7 @@ namespace Test.Test
             };
         }
 
-        private PriceAll CreatePriceAllWthoutSides()
+        private PriceAll CreatePriceAllWthoutSides ()
         {
             return new PriceAll
             {
@@ -65,7 +65,7 @@ namespace Test.Test
 
 
         [TestMethod]
-        public void TestCreateMessageWithOneDishAndSides()
+        public void TestCreateMessageWithOneDishAndSides ()
         {
             order = CreateorderWithSides();
             emailMessage = new EmailMessage( order );
@@ -93,7 +93,7 @@ namespace Test.Test
             Assert.AreEqual( expectationsMessage, result );
         }
 
-        private Order CreateorderWithSides()
+        private Order CreateorderWithSides ()
         {
             Order order = new Order();
             order.ListDishes.Add( CreateDishwWithSides() );
@@ -102,7 +102,7 @@ namespace Test.Test
             return order;
         }
 
-        private Dish CreateDishwWithSides()
+        private Dish CreateDishwWithSides ()
         {
             return new Dish
             {
@@ -112,7 +112,7 @@ namespace Test.Test
             };
         }
 
-        private PriceAll CreatePriceAllWithSides()
+        private PriceAll CreatePriceAllWithSides ()
         {
             return new PriceAll
             {

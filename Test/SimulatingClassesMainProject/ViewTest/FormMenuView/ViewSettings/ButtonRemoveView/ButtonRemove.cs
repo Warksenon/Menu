@@ -6,11 +6,11 @@ namespace Test
 {
     public abstract class ButtonRemove : ViewFormMenuTest, IView
     {
-        protected ButtonRemove( FormMenu form ) : base( form ) { }
+        protected ButtonRemove ( FormMenu form ) : base( form ) { }
 
-        public abstract void ViewSetting();
+        public abstract void ViewSetting ();
 
-        protected void RemoveAll()
+        protected void RemoveAll ()
         {
             form.ButtonSubmitOrder.BackColor = SystemColors.Control;
             form.ButtonRemoveAll.Visible = false;

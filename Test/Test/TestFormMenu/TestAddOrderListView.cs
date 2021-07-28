@@ -16,7 +16,7 @@ namespace Test.Test.TestFormMenu
             return form;
         }
 
-        FormMenu CreateFormMenu (string number)
+        FormMenu CreateFormMenu ( string number )
         {
             var form = FormTest.CreateFormMenu();
             form.QTextbox.Text = number;
@@ -37,7 +37,7 @@ namespace Test.Test.TestFormMenu
             var dish = listDishes.DishesList;
 
             var  currentPrice  = dish[0].Price;
-            var  currentDishName = dish[0].Name; 
+            var  currentDishName = dish[0].Name;
 
             Assert.AreEqual( "4zł", currentPrice );
             Assert.AreEqual( "Margheritta - 22zł", currentDishName );
@@ -76,7 +76,7 @@ namespace Test.Test.TestFormMenu
         [TestCase( "20" )]
         [TestCase( "120" )]
         [TestCase( "1323" )]
-        public void SetOrder_ChangeOrderQuantity_RetrunCountListIsIdenticalQuantity ( string number)
+        public void SetOrder_ChangeOrderQuantity_RetrunCountListIsIdenticalQuantity ( string number )
         {
             var form = CreateFormMenu(number);
             var listDishes = new FakeListDishes();
@@ -86,7 +86,7 @@ namespace Test.Test.TestFormMenu
             var getDish = new FakeCreateDishes();
             var getSides = new FakeCreateEmptySides();
             addOrder.SetOrder( getDish, getSides );
-            
+
 
             var  currentLenght = listDishes.DishesList.Count;
             var expectationsNumber = Convert.ToInt32(number);
@@ -170,12 +170,12 @@ namespace Test.Test.TestFormMenu
     {
         public double FindPriceAndConvertToDoubel ( string dish )
         {
-           return 1;
+            return 1;
         }
 
         public double GetPricaAll ()
         {
-           return 1;
+            return 1;
         }
     }
 
@@ -183,11 +183,11 @@ namespace Test.Test.TestFormMenu
     {
         public Dish GetElement ()
         {
-          return  new Dish 
-          {
-            Name = "Margheritta",
-            Price = "22zł"
-          };
+            return new Dish
+            {
+                Name = "Margheritta",
+                Price = "22zł"
+            };
         }
     }
 
@@ -195,7 +195,7 @@ namespace Test.Test.TestFormMenu
     {
         public List<string> GetList ()
         {
-            return new List<string> {"pieczarki", "salami", "szynka" };
+            return new List<string> { "pieczarki", "salami", "szynka" };
         }
     }
 
@@ -215,7 +215,7 @@ namespace Test.Test.TestFormMenu
         {
             Message = "";
         }
-       
+
         public void ShowMessage ( string message )
         {
             Message = message;

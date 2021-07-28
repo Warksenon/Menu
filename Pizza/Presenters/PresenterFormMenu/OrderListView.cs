@@ -10,17 +10,17 @@ namespace Pizza.Presenters.PresenterFormMenu
         private readonly Order order = new Order();
         private readonly FormMenu _form;
 
-        public OrderListView( FormMenu form ) 
+        public OrderListView ( FormMenu form )
         {
             _form = form;
         }
 
-        public Order GetElement()
+        public Order GetElement ()
         {
             return GetOrderFromListView();
         }
 
-        private Order GetOrderFromListView()
+        private Order GetOrderFromListView ()
         {
             GetListDishesFromListViewOrder();
             AddPriceAllToOrder();
@@ -29,23 +29,23 @@ namespace Pizza.Presenters.PresenterFormMenu
             return order;
         }
 
-        private void AddPriceAllToOrder()
+        private void AddPriceAllToOrder ()
         {
             double price = GetPricaAll();
             order.PriceAll.Price = price + "zł";
         }
 
-        private void GetComments()
+        private void GetComments ()
         {
             order.PriceAll.Comments = _form.TextBoxComments.Text;
         }
 
-        private void GetDate()
+        private void GetDate ()
         {
             order.PriceAll.Date = DateTime.Now.ToString();
         }
 
-        private void GetListDishesFromListViewOrder()
+        private void GetListDishesFromListViewOrder ()
         {
             var list = new List<Dish>();
             int counter = _form.ListViewOrder.Items.Count;
@@ -63,12 +63,12 @@ namespace Pizza.Presenters.PresenterFormMenu
             order.ListDishes = list;
         }
 
-        public void SetList( List<Dish> elements )
+        public void SetList ( List<Dish> elements )
         {
             AddOrderToListView( elements );
         }
 
-        private void AddOrderToListView( List<Dish> listDishes )
+        private void AddOrderToListView ( List<Dish> listDishes )
         {
             foreach (var element in listDishes)
             {
@@ -81,7 +81,7 @@ namespace Pizza.Presenters.PresenterFormMenu
             }
         }
 
-        public double FindPriceAndConvertToDoubel( string dish )
+        public double FindPriceAndConvertToDoubel ( string dish )
         {
             double price = 0;
             try
@@ -97,7 +97,7 @@ namespace Pizza.Presenters.PresenterFormMenu
             return price;
         }
 
-        public double GetPricaAll()
+        public double GetPricaAll ()
         {
             double priceAll = 0;
             double price;

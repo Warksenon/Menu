@@ -6,15 +6,15 @@ namespace Test
 {
     public class ButtonSoupsView : ButtonMenuView
     {
-        public ButtonSoupsView( FormMenu form ) : base( form ) { }
+        public ButtonSoupsView ( FormMenu form ) : base( form ) { }
 
-        public override void ViewSetting()
+        public override void ViewSetting ()
         {
             ClearColorButton();
             SoupsButtonSettings();
         }
 
-        private void SoupsButtonSettings()
+        private void SoupsButtonSettings ()
         {
             ButtonSeting();
             ChengeNameLabelMenuInfo( "Zupy" );

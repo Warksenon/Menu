@@ -8,13 +8,13 @@ namespace Pizza
         private readonly List<Dish> listDishes;
         private readonly PriceAll priceAll;
 
-        public EmailMessage( Order order )
+        public EmailMessage ( Order order )
         {
             this.listDishes = order.ListDishes;
             this.priceAll = order.PriceAll;
         }
 
-        public string WriteBill()
+        public string WriteBill ()
         {
             string bill;
             bill = WritePriceAll( priceAll );
@@ -24,7 +24,7 @@ namespace Pizza
             return bill;
         }
 
-        private string WritePriceAll( PriceAll priceAll )
+        private string WritePriceAll ( PriceAll priceAll )
         {
             StringBuilder price = new StringBuilder();
             price.AppendLine( LinesHash() );
@@ -36,23 +36,23 @@ namespace Pizza
 
             return price.ToString();
         }
-        private string LinesHash()
+        private string LinesHash ()
         {
             return Name.HashSigns51;
         }
 
-        private string Data( PriceAll priceAll )
+        private string Data ( PriceAll priceAll )
         {
             string data = string.Format("# {0,33}{1,16}", priceAll.Date, " ") + "\n";
             return data;
         }
 
-        private string NamePrice()
+        private string NamePrice ()
         {
             return "#" + string.Format( "{0,27}{1,-22}", Name.NPrice + ": ", priceAll.Price ) + "\n";
         }
 
-        private string WriteDischesAll()
+        private string WriteDischesAll ()
         {
             StringBuilder dischesAll = new StringBuilder();
 
@@ -64,12 +64,12 @@ namespace Pizza
             return dischesAll.ToString();
         }
 
-        private string OneHash()
+        private string OneHash ()
         {
             return "#";
         }
 
-        private StringBuilder WriteDisch( Dish disch )
+        private StringBuilder WriteDisch ( Dish disch )
         {
             StringBuilder wirteDisch = new StringBuilder();
             wirteDisch.AppendLine( LinesHash() );
@@ -100,13 +100,13 @@ namespace Pizza
             return wirteDisch;
         }
 
-        private string FindingCommaOrPeriodAndCuttingCharacters( string sideDishes )
+        private string FindingCommaOrPeriodAndCuttingCharacters ( string sideDishes )
         {
             int index = FindIndexCommaOrPeriod(sideDishes);
             return ReturningCutWord( index, sideDishes );
         }
 
-        private string ReturningCutWord( int index, string sideDishes )
+        private string ReturningCutWord ( int index, string sideDishes )
         {
             if (index == -1)
             {
@@ -118,7 +118,7 @@ namespace Pizza
             }
         }
 
-        private int FindIndexCommaOrPeriod( string sideDishes )
+        private int FindIndexCommaOrPeriod ( string sideDishes )
         {
             int index = sideDishes.IndexOf(",");
             if (index == -1)
@@ -128,7 +128,7 @@ namespace Pizza
             return index;
         }
 
-        private string RemoveSideDishAndWhiteSigns( string sideDish )
+        private string RemoveSideDishAndWhiteSigns ( string sideDish )
         {
             int index = FindIndexCommaOrPeriod(sideDish);
             sideDish = sideDish.Remove( 0, index + 1 );
@@ -136,7 +136,7 @@ namespace Pizza
             return sideDish.Trim();
         }
 
-        private bool CheckingAddOns( Dish disch )
+        private bool CheckingAddOns ( Dish disch )
         {
             if (disch.Sides.Equals( "" ))
                 return false;
@@ -144,7 +144,7 @@ namespace Pizza
                 return true;
         }
 
-        private bool SideDishesIsEmpty( string sideDishes )
+        private bool SideDishesIsEmpty ( string sideDishes )
         {
             if (sideDishes.Equals( "" ))
                 return false;
@@ -152,7 +152,7 @@ namespace Pizza
                 return true;
         }
 
-        private string TextPlusNewLines( string text )
+        private string TextPlusNewLines ( string text )
         {
             return "# " + text + "\n";
         }

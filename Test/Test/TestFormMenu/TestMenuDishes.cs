@@ -19,7 +19,7 @@ namespace Test
         [TestCase( "vegetPrice", "2", "1" )]
         [TestCase( "toscaPrice", "3", "2" )]
         [TestCase( "venecPrice", "4", "3" )]
-        public void CreateMenuPizza_CheckDataPizzaDish_ReturnListDishPizza( string expectationsName, string expectationsPrice, int index )
+        public void CreateMenuPizza_CheckDataPizzaDish_ReturnListDishPizza ( string expectationsName, string expectationsPrice, int index )
         {
             menu.CreateMenuPizza( dishesList, sidesList );
             var list = dishesList.GetList();
@@ -31,8 +31,8 @@ namespace Test
             Assert.AreEqual( expectationsPrice, currentPrice );
         }
 
-        [TestCase( "doubelCheesePrice",  "0" )]
-        [TestCase( "salamiPrice",  "1" )]
+        [TestCase( "doubelCheesePrice", "0" )]
+        [TestCase( "salamiPrice", "1" )]
         [TestCase( "hamPrice", "2" )]
         [TestCase( "mushroomsPrice", "3" )]
         public void CreateMenuPizza_CheckDataPizzaSides_ReturnListSidesPizza ( string expectationsName, int index )
@@ -41,8 +41,8 @@ namespace Test
             var list = sidesList.GetList();
 
             var  currentName  = list [index];
-           
-            Assert.AreEqual( expectationsName, currentName );  
+
+            Assert.AreEqual( expectationsName, currentName );
         }
 
         [TestCase( "schnitzelPrice", "1", "0" )]
@@ -89,7 +89,7 @@ namespace Test
 
         [TestCase( "tomatoPrice", "1", "0" )]
         [TestCase( "chickenSoupPrice", "2", "1" )]
-         public void CreateMenuSoup_CheckDataSaupsDish_ReturnListDishSaups ( string expectationsName, string expectationsPrice, int index )
+        public void CreateMenuSoup_CheckDataSaupsDish_ReturnListDishSaups ( string expectationsName, string expectationsPrice, int index )
         {
             menu.CreateMenuSoups( dishesList, sidesList );
             var list = dishesList.GetList();
@@ -101,7 +101,7 @@ namespace Test
             Assert.AreEqual( expectationsPrice, currentPrice );
         }
 
-    
+
         public void CreateMenuPizza_HandingOverObjectNull_ReturnListNull ()
         {
             FakeListDishes  nullLD=null;
@@ -156,7 +156,7 @@ namespace Test
 
     }
 
-    public class FakeListDishes :  IListGet<Dish>, IListSet<string>
+    public class FakeListDishes : IListGet<Dish>, IListSet<string>
     {
         private List<Dish> listDisches = new List<Dish>();
         private Dish disch = new Dish();
@@ -186,7 +186,7 @@ namespace Test
         }
     }
 
-    public class FakeListSides:  IListGet<string>, IListSet<string>
+    public class FakeListSides : IListGet<string>, IListSet<string>
     {
         private readonly List<string>  listSides = new List<string>();
 
@@ -208,17 +208,17 @@ namespace Test
 
     internal class FakeDishesList : IElementGet<Dish>, IListSet<Dish>
     {
-        private List<Dish> _listDisch = new List<Dish>();       
+        private List<Dish> _listDisch = new List<Dish>();
         public FakeDishesList () { }
-       
-        public List<Dish> GetList() 
+
+        public List<Dish> GetList ()
         {
-                return _listDisch;  
+            return _listDisch;
         }
 
         public Dish GetElement ()
         {
-            return _listDisch[0];
+            return _listDisch [0];
         }
 
         public void SetList ( List<Dish> listDisch )

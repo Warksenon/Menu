@@ -6,7 +6,7 @@ namespace Pizza.View.FormHistry.ButtonFormHistory
     {
         private readonly FormHistory  _form;
 
-        public ButtonFormHistory( FormHistory form )
+        public ButtonFormHistory ( FormHistory form )
         {
             _form = form;
         }
@@ -18,7 +18,7 @@ namespace Pizza.View.FormHistry.ButtonFormHistory
             _form.ButtonLoadSql.BackColor = SystemColors.Control;
             _form.ButtonCopyTxt.BackColor = SystemColors.Control;
             _form.ButtonCopySql.BackColor = SystemColors.Control;
-           
+
             switch (nameButton)
             {
                 case "bText":

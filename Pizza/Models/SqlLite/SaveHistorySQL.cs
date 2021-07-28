@@ -8,12 +8,12 @@ namespace Pizza.Models.SqlLite
     {
         private List<Order> listOrder;
 
-        public SaveHistorySQL()
+        public SaveHistorySQL ()
         {
 
         }
 
-        private void UpdateAllTabele()
+        private void UpdateAllTabele ()
         {
             RemoveAllTask();
 
@@ -23,7 +23,7 @@ namespace Pizza.Models.SqlLite
             }
         }
 
-        private void RemoveAllTask()
+        private void RemoveAllTask ()
         {
             SQLiteConnection cn = CreateSQLiteConnection();
 
@@ -73,7 +73,7 @@ namespace Pizza.Models.SqlLite
             }
         }
 
-        public void SaveHistoryOrders( List<Order> listOrder )
+        public void SaveHistoryOrders ( List<Order> listOrder )
         {
             this.listOrder = listOrder;
             UpdateAllTabele();

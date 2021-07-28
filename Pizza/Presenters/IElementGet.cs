@@ -2,6 +2,6 @@
 {
     public interface IElementGet<T>
     {
-        T GetElement();
+        T GetElement ();
     }
 }

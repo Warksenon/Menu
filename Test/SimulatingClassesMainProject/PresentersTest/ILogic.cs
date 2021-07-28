@@ -2,6 +2,6 @@
 {
     public interface ILogic
     {
-        void LogicSettings();
+        void LogicSettings ();
     }
 }

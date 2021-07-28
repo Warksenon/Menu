@@ -1,9 +1,4 @@
-﻿using NUnit.Framework;
-
-using Pizza;
-using Pizza.Presenters.PresenterFormMenu;
-
-namespace Test.Test.TestFormMenu.PresenterFormMenu
+﻿namespace Test.Test.TestFormMenu.PresenterFormMenu
 {
     //[TestFixture]
     //public class TestFormMenuAddOrderToListViewOrder

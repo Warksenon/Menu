@@ -10,18 +10,18 @@ namespace Pizza
 {
     internal class SaveFilesHistoryOrder : Files, ISaveHistory<Order>
     {
-        public SaveFilesHistoryOrder()
+        public SaveFilesHistoryOrder ()
         {
             CreateFolder();
         }
 
-        public void SaveHistoryOrders( List<Order> listOrder )
+        public void SaveHistoryOrders ( List<Order> listOrder )
         {
             this.listOrder = listOrder;
             SaveListOrder();
         }
 
-        private void SaveListOrder()
+        private void SaveListOrder ()
         {
             try
             {

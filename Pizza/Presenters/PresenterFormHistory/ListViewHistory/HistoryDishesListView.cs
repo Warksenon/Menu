@@ -5,15 +5,15 @@ namespace Pizza.Presenters.PresenterFormHistory
 {
     public class HistoryDishesListView
     {
-      
+
         private readonly FormHistory _form;
 
-        public HistoryDishesListView ( FormHistory form)
+        public HistoryDishesListView ( FormHistory form )
         {
             _form = form;
         }
 
-        public void SetList ( IListGet<Dish> list)
+        public void SetList ( IListGet<Dish> list )
         {
             _form.ListViewDishes.Items.Clear();
             var listDish = list.GetList();

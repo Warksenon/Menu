@@ -8,14 +8,14 @@ namespace Test
 {
     internal class CreateSQLiteTablesTest : CreateConnectionTest, ILogic
     {
-        private void CreateSqliteTables()
+        private void CreateSqliteTables ()
         {
             CreateSQLiteDatabaseFile();
             CreateSQLitePriceAll( CreateSQLiteConnection() );
             CreateSQLiteDishes( CreateSQLiteConnection() );
         }
 
-        private void CreateSQLiteDatabaseFile()
+        private void CreateSQLiteDatabaseFile ()
         {
             DirectoryInfo di = new DirectoryInfo(folderDatabase);
 
@@ -39,7 +39,7 @@ namespace Test
             }
         }
 
-        private void CreateSQLitePriceAll( SQLiteConnection cn )
+        private void CreateSQLitePriceAll ( SQLiteConnection cn )
         {
             using (cn)
             {
@@ -62,7 +62,7 @@ namespace Test
             }
         }
 
-        private void CreateSQLiteDishes( SQLiteConnection cn )
+        private void CreateSQLiteDishes ( SQLiteConnection cn )
         {
             using (cn)
             {
@@ -85,7 +85,7 @@ namespace Test
             }
         }
 
-        public void LogicSettings()
+        public void LogicSettings ()
         {
             CreateSqliteTables();
         }

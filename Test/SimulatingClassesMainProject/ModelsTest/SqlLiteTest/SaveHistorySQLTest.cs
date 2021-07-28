@@ -12,15 +12,15 @@ namespace Test
     {
         private List<Order> listOrder;
 
-        public SaveHistorySQLTest() { }
+        public SaveHistorySQLTest () { }
 
-        public void SaveHistoryOrders( List<Order> listOrder )
+        public void SaveHistoryOrders ( List<Order> listOrder )
         {
             this.listOrder = listOrder;
             UpdateAllTabele();
         }
 
-        private void UpdateAllTabele()
+        private void UpdateAllTabele ()
         {
             RemoveAllTask();
 
@@ -30,7 +30,7 @@ namespace Test
             }
         }
 
-        private void RemoveAllTask()
+        private void RemoveAllTask ()
         {
             CreateTabeles();
             SQLiteConnection cn = CreateSQLiteConnection();
@@ -80,7 +80,7 @@ namespace Test
             }
         }
 
-        public void DeleteData()
+        public void DeleteData ()
         {
             RemoveAllTask();
         }

@@ -2,6 +2,6 @@
 {
     public interface ILoadEmailData
     {
-        EmailData Load();
+        EmailData Load ();
     }
 }

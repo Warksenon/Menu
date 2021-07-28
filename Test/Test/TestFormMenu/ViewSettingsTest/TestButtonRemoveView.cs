@@ -3,7 +3,7 @@
 namespace Test.Test.Form1.ViewSettings
 {
     [TestClass]
-    public class TestButtonRemoveView 
+    public class TestButtonRemoveView
     {
         //[TestMethod]
         //public void TestViewOnClickButtonRemoveOneWithEmptyListViewOrder()

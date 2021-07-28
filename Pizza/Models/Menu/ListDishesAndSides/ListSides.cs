@@ -21,7 +21,7 @@ namespace Pizza
         public List<string> GetList ()
         {
             var list = listSides;
-            return list; 
+            return list;
         }
 
     }

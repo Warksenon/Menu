@@ -1,13 +1,10 @@
-﻿using Pizza.Presenters;
-using Pizza.Presenters.PresenterFormMenu;
-
-namespace Pizza
+﻿namespace Pizza
 {
-    public class RemovePresenter 
+    public class RemovePresenter
     {
         private readonly FormMenu _form;
 
-        public RemovePresenter( FormMenu form)
+        public RemovePresenter ( FormMenu form )
         {
             _form = form;
         }

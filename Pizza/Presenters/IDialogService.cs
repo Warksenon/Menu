@@ -2,6 +2,6 @@
 {
     public interface IDialogService
     {
-        void ShowMessage (string message);
+        void ShowMessage ( string message );
     }
 }

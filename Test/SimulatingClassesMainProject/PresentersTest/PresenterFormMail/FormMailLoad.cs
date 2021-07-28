@@ -4,14 +4,14 @@ namespace Test
 {
     public class FormMailLoad : FormMailPresenter
     {
-        public FormMailLoad( FormMail mail ) : base( mail ) { }
+        public FormMailLoad ( FormMail mail ) : base( mail ) { }
 
-        public override void LogicSettings()
+        public override void LogicSettings ()
         {
             SetTextForTextBox();
         }
 
-        private void SetTextForTextBox()
+        private void SetTextForTextBox ()
         {
             ILoadEmailData loadEmailData = new LoadRegistry();
             EmailData emailData = loadEmailData.Load();

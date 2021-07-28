@@ -1,9 +1,4 @@
-﻿using System.Collections.Generic;
-
-using Pizza;
-using Pizza.View.Form1View;
-
-namespace Test
+﻿namespace Test
 {
     //public class SidesCheckListBoxTest : ViewFormMenu, IListSet<string>, IListGet<string>
     //{

@@ -13,7 +13,7 @@ namespace Test
         private readonly ILoadEmailData load = new LoadRegistry();
 
         [TestMethod]
-        public void TestSaveRegisrtyAndLoad()
+        public void TestSaveRegisrtyAndLoad ()
         {
             EmailData emailSave = CreateEmailData();
             save.Save( emailSave );
@@ -32,7 +32,7 @@ namespace Test
             Assert.AreEqual( "537", currentPort );
         }
 
-        private EmailData CreateEmailData()
+        private EmailData CreateEmailData ()
         {
             EmailData email = new EmailData
             {
@@ -47,7 +47,7 @@ namespace Test
         }
 
         [TestMethod]
-        public void TestSetTextBoxWithFormMailAndLoadRegistry()
+        public void TestSetTextBoxWithFormMailAndLoadRegistry ()
         {
             EmailData emailSave = CreateEmailData();
             save.Save( emailSave );
@@ -67,7 +67,7 @@ namespace Test
         }
 
         [TestMethod]
-        public void TestGetTextBoxWithFormMailAndSaveRegistry()
+        public void TestGetTextBoxWithFormMailAndSaveRegistry ()
         {
             form.TextBoxSender.Text = "aaorders39@gmail.com";
             form.TextBoxRecipient.Text = "aaoooorders39@gmail.com";

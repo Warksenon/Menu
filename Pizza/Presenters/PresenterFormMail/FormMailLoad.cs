@@ -1,14 +1,14 @@
 ﻿namespace Pizza.Presenters.PresenterFormMail
 {
-    public class FormMailLoad 
+    public class FormMailLoad
     {
         private readonly FormMail _form;
-        public FormMailLoad( FormMail form  )
+        public FormMailLoad ( FormMail form )
         {
             _form = form;
         }
 
-        public void SetTextForTextBox( IElementGet<EmailData> loadEmailData )
+        public void SetTextForTextBox ( IElementGet<EmailData> loadEmailData )
         {
             EmailData emailData = loadEmailData.GetElement();
             _form.TextBoxSender.Text = emailData.Sender;

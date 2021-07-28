@@ -2,18 +2,18 @@
 
 namespace Pizza.View.FormMenuView.ViewSettings
 {
-    internal class FormMenuView 
+    internal class FormMenuView
     {
-        private readonly FormMenu _form; 
+        private readonly FormMenu _form;
 
-        public FormMenuView( FormMenu form )
+        public FormMenuView ( FormMenu form )
         {
-              _form= form;
+            _form = form;
         }
 
-        public void ViewSetting()
+        public void ViewSetting ()
         {
-            new ButtonMenuView( _form).PizzaButtonSettings();
+            new ButtonMenuView( _form ).PizzaButtonSettings();
             new ButtonRemoveView( _form ).RemoveAll();
         }
     }

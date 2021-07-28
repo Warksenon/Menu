@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-
-using Pizza;
-using Pizza.View.Form1View;
-
-namespace Test
+﻿namespace Test
 {
     //public class DishesListViewTest : ViewFormMenu, IListGet<Dish>, IListSet<Dish>
     //{

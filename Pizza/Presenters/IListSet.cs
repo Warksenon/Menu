@@ -4,6 +4,6 @@ namespace Pizza
 {
     public interface IListSet<T>
     {
-        void SetList( List<T> elements );
+        void SetList ( List<T> elements );
     }
 }

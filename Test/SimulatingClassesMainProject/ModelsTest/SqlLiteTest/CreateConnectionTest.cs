@@ -8,13 +8,13 @@ namespace Test
         protected const string databaseFile = "SqlLitePizza.sqlite";
         protected const string strConnection = @"Data Source=" + folderDatabase + databaseFile + ";Version=3;";
 
-        protected void CreateTabeles()
+        protected void CreateTabeles ()
         {
             ILogic logic = new CreateSQLiteTablesTest();
             logic.LogicSettings();
         }
 
-        protected SQLiteConnection CreateSQLiteConnection()
+        protected SQLiteConnection CreateSQLiteConnection ()
         {
             SQLiteConnection cn = new SQLiteConnection(strConnection);
             return cn;

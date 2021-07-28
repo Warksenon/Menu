@@ -8,13 +8,13 @@ namespace Test
 {
     internal class SaveRegistry : Registry, ISaveEmailData
     {
-        public bool Save( EmailData emailData )
+        public bool Save ( EmailData emailData )
         {
             this.emailData = emailData;
             return SaveEmailData();
         }
 
-        public bool SaveEmailData()
+        public bool SaveEmailData ()
         {
             bool flag = false;
             RegistryKey key = Microsoft.Win32.Registry.CurrentUser;
@@ -42,7 +42,7 @@ namespace Test
             return flag;
         }
 
-        private bool DataSender( RegistryKey key )
+        private bool DataSender ( RegistryKey key )
         {
             bool flag = false;
 
@@ -70,7 +70,7 @@ namespace Test
             return flag;
         }
 
-        private bool IsValidEmail( string email )
+        private bool IsValidEmail ( string email )
         {
             try
             {

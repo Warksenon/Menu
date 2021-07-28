@@ -2,7 +2,7 @@
 
 namespace Pizza
 {
-    public class MenuDishes<D,S> where D : IListGet<Dish>, IListSet<string> where S: IListGet<string>, IListSet<string>
+    public class MenuDishes<D, S> where D : IListGet<Dish>, IListSet<string> where S : IListGet<string>, IListSet<string>
     {
         private readonly S _sides;
         private readonly D _dishes;
@@ -14,14 +14,14 @@ namespace Pizza
         }
 
         public void CreateMenuPizza ( IListSet<Dish> dishes, IListSet<string> sides )
-        {     
+        {
             var keySides = new List<string> { "doubelCheesePrice", "salamiPrice", "hamPrice", "mushroomsPrice" };
             var listSides= CreateSidesList( keySides );
             sides.SetList( listSides );
 
             var keyDishes = new List<string> { "marghPrice", "vegetPrice", "toscaPrice", "venecPrice" };
             var listDishes = CreateDishesList( keyDishes );
-            dishes.SetList( listDishes );           
+            dishes.SetList( listDishes );
         }
 
         public void CreateMenuMainDishes ( IListSet<Dish> dishes, IListSet<string> sides )
@@ -32,7 +32,7 @@ namespace Pizza
 
             var keyDishes = new List<string> { "schnitzelPrice", "fishPrice", "potatoPrice" };
             var listDishes = CreateDishesList( keyDishes );
-            dishes.SetList( listDishes );      
+            dishes.SetList( listDishes );
         }
 
         public void CreateMenuSoups ( IListSet<Dish> dishes, IListSet<string> sides )
@@ -60,7 +60,7 @@ namespace Pizza
             return sides.GetList();
         }
 
-        private List<Dish>  CreateDishesList ( List<string> listKey )
+        private List<Dish> CreateDishesList ( List<string> listKey )
         {
             var dishes = _dishes;
             dishes.SetList( listKey );

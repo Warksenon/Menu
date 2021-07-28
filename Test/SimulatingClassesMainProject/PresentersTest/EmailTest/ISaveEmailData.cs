@@ -2,6 +2,6 @@
 {
     public interface ISaveEmailData
     {
-        bool Save( EmailData emailData );
+        bool Save ( EmailData emailData );
     }
 }

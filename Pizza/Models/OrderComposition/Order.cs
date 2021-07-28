@@ -7,7 +7,7 @@ namespace Pizza
         private List<Dish> listDisch;
         private PriceAll priceAll;
 
-        public Order()
+        public Order ()
         {
             listDisch = new List<Dish>();
             priceAll = new PriceAll();
@@ -25,7 +25,7 @@ namespace Pizza
             set { listDisch = value; }
         }
 
-        public void AddDishToListDisch( Dish d )
+        public void AddDishToListDisch ( Dish d )
         {
             listDisch.Add( d );
         }

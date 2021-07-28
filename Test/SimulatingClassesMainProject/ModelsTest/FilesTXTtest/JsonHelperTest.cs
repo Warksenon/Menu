@@ -8,7 +8,7 @@ namespace Test
     {
         private List<Order> list;
 
-        public JsonHelperTest()
+        public JsonHelperTest ()
         {
             list = new List<Order>();
         }
@@ -25,7 +25,7 @@ namespace Test
             }
         }
 
-        public void AddOrder( Order order )
+        public void AddOrder ( Order order )
         {
             List.Add( order );
         }

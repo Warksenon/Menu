@@ -8,12 +8,12 @@
         ISendOrder _send;
         bool _checkSend;
 
-        public ButtonPlaceOrderLogic( FormMenu form, IDialogService dialogService ) 
+        public ButtonPlaceOrderLogic ( FormMenu form, IDialogService dialogService )
         {
             _form = form;
             _dialogService = dialogService;
         }
-      
+
         public void SaveOrder ( IElementSet<Order> element )
         {
             if (_checkSend)
@@ -24,17 +24,17 @@
             }
         }
 
-        public void SetOrder( IElementGet<Order> creatingOrder, ISendOrder send )
+        public void SetOrder ( IElementGet<Order> creatingOrder, ISendOrder send )
         {
             _order = creatingOrder;
             _send = send;
             RunPlaceOrder();
         }
 
-        private void RunPlaceOrder()
+        private void RunPlaceOrder ()
         {
             var order = _order.GetElement();
-            if(  order.ListDishes.Count < 1)
+            if (order.ListDishes.Count < 1)
             {
                 _dialogService.ShowMessage( "Proszę wybrać produkt" );
             }
@@ -49,11 +49,11 @@
                 {
                     _dialogService.ShowMessage( "Przetwarzanie danych proszę czekać" );
                 }
-               
+
             }
         }
 
-        private void SendOrder ( )
+        private void SendOrder ()
         {
             _checkSend = _send.SendMessag( _order );
 

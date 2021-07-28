@@ -8,7 +8,7 @@ namespace Test
 {
     public class EmailSend
     {
-        public bool SendEmail( string message )
+        public bool SendEmail ( string message )
         {
             bool flag = false;
             ILoadEmailData loadEmail = new LoadRegistry();

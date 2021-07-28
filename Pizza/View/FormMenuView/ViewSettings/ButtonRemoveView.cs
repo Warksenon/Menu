@@ -2,16 +2,16 @@
 
 namespace Pizza
 {
-    public class ButtonRemoveView 
+    public class ButtonRemoveView
     {
         private readonly FormMenu _form;
-        public ButtonRemoveView( FormMenu form )
+        public ButtonRemoveView ( FormMenu form )
         {
             _form = form;
         }
 
 
-        public void RemoveOne()
+        public void RemoveOne ()
         {
             if (CheckingListOrderIfEmpty())
             {
@@ -30,7 +30,7 @@ namespace Pizza
             _form.ButtonRemoveOne.Visible = false;
         }
 
-        private bool CheckingListOrderIfEmpty()
+        private bool CheckingListOrderIfEmpty ()
         {
             if (_form.ListViewOrder.Items.Count < 1)
                 return true;
@@ -38,6 +38,6 @@ namespace Pizza
                 return false;
         }
 
-    
+
     }
 }

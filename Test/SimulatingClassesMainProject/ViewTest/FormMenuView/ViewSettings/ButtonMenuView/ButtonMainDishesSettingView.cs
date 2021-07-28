@@ -6,15 +6,15 @@ namespace Test
 {
     public class ButtonMainDishesView : ButtonMenuView
     {
-        public ButtonMainDishesView( FormMenu form1 ) : base( form1 ) { }
+        public ButtonMainDishesView ( FormMenu form1 ) : base( form1 ) { }
 
-        public override void ViewSetting()
+        public override void ViewSetting ()
         {
             ClearColorButton();
             MainDishButtonSettings();
         }
 
-        private void MainDishButtonSettings()
+        private void MainDishButtonSettings ()
         {
             ChengeNameLabelMenuInfo( "Dania główne" );
             ButtonSeting();

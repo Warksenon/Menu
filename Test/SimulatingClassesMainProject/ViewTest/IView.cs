@@ -2,6 +2,6 @@
 {
     public interface IView
     {
-        void ViewSetting();
+        void ViewSetting ();
     }
 }

@@ -9,7 +9,7 @@ namespace Pizza
         private List<Dish> listDisches = new List<Dish>();
         private Dish disch = new Dish();
 
-        private void AddDishesToList( List<string> key )
+        private void AddDishesToList ( List<string> key )
         {
             listDisches = new List<Dish>();
 
@@ -25,7 +25,7 @@ namespace Pizza
             }
         }
 
-        public List<Dish> GetList()
+        public List<Dish> GetList ()
         {
             return listDisches;
         }

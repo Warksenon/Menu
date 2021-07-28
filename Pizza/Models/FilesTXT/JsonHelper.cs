@@ -6,7 +6,7 @@ namespace Pizza.Models.FilesTXT
     {
         private List<Order> list;
 
-        public JsonHelper()
+        public JsonHelper ()
         {
             list = new List<Order>();
         }
@@ -23,7 +23,7 @@ namespace Pizza.Models.FilesTXT
             }
         }
 
-        public void AddOrder( Order order )
+        public void AddOrder ( Order order )
         {
             List.Add( order );
         }

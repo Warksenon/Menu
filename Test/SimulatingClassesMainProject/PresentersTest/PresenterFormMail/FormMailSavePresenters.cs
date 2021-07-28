@@ -6,16 +6,16 @@ namespace Test
 {
     internal class FormMailSavePresenters : FormMailPresenter
     {
-        public FormMailSavePresenters( FormMail mail ) : base( mail ) { }
+        public FormMailSavePresenters ( FormMail mail ) : base( mail ) { }
 
-        public override void LogicSettings()
+        public override void LogicSettings ()
         {
             bool saveSuccess = SaveDataEmial();
             if (saveSuccess)
                 mail.Close();
         }
 
-        public bool SaveDataEmial()
+        public bool SaveDataEmial ()
         {
             EmailData emailData = new EmailData
             {

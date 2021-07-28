@@ -4,7 +4,7 @@ namespace Pizza
 {
     public static class Name
     {
-        public static string GetNameConfig( string key )
+        public static string GetNameConfig ( string key )
         {
             string name = ConfigurationManager.AppSettings[key];
 

@@ -1,24 +1,22 @@
 ﻿using System.Collections.Generic;
 
-using Pizza.View.Form1View;
-
 namespace Pizza.Presenters.PresenterFormMenu
 {
     public class SidesCheckListBox : IListSet<string>, IListGet<string>
     {
         private readonly FormMenu _form;
 
-        public SidesCheckListBox( FormMenu form ) 
+        public SidesCheckListBox ( FormMenu form )
         {
             _form = form;
         }
 
-        public List<string> GetList()
+        public List<string> GetList ()
         {
             return GetListCheckedSides();
         }
 
-        private List<string> GetListCheckedSides()
+        private List<string> GetListCheckedSides ()
         {
             List<string> list = new List<string>();
 
@@ -31,12 +29,12 @@ namespace Pizza.Presenters.PresenterFormMenu
             return list;
         }
 
-        public void SetList( List<string> elements )
+        public void SetList ( List<string> elements )
         {
             LoadCheckListBoxSideDishe( elements );
         }
 
-        private void LoadCheckListBoxSideDishe( List<string> listSides )
+        private void LoadCheckListBoxSideDishe ( List<string> listSides )
         {
             ClearCheckedListBox();
 
@@ -46,7 +44,7 @@ namespace Pizza.Presenters.PresenterFormMenu
             }
         }
 
-        private void ClearCheckedListBox()
+        private void ClearCheckedListBox ()
         {
             _form.CheckedListBoxSide.Items.Clear();
         }

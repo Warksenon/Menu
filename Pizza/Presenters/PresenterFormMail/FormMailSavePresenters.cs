@@ -4,15 +4,15 @@ using Pizza.Models.Registry;
 
 namespace Pizza.Presenters
 {
-    internal class FormMailSavePresenters 
+    internal class FormMailSavePresenters
     {
         private readonly FormMail _form;
-        public FormMailSavePresenters( FormMail form )  
+        public FormMailSavePresenters ( FormMail form )
         {
             _form = form;
         }
 
-        public void SaveDataEmial( ISaveEmailData saveEmail )
+        public void SaveDataEmial ( ISaveEmailData saveEmail )
         {
             EmailData emailData = new EmailData
             {
@@ -29,7 +29,7 @@ namespace Pizza.Presenters
             {
                 MessageBox.Show( "Nieprawidłowe dane. Upewni się że wprowadzone dane: andresów e-mail, hasło, smtp, port są prawidłowe ", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error );
             }
-        
+
         }
     }
 }

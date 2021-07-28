@@ -12,11 +12,11 @@ namespace Test.Test.TestFormMenu
     {
         [TestCase( "0", "dish1", "11zl" )]
         [TestCase( "1", "dish2", "22zl" )]
-        public void SetList_SimulationSetListDiehes_ReturnDish (int index, string expectedName, string expectedPrice)
+        public void SetList_SimulationSetListDishes_ReturnDish (int index, string expectedName, string expectedPrice)
         {
             var form = FormTest.CreateFormMenu();
             DishesListView lvDishes = new DishesListView(form);
-            var list =  FekaDishesList.GetDishes();
+            var list =  FakeDishesList.GetDishes();
             lvDishes.SetList( list );
 
             var currentName = form.ListViewDishes.Items[index].SubItems[0].Text;
@@ -25,9 +25,43 @@ namespace Test.Test.TestFormMenu
             Assert.AreEqual( expectedName, currentName );
             Assert.AreEqual( expectedPrice, currentPrice );
         }
+
+        [TestCase( "0", "dish1", "11zl" )]
+        [TestCase( "1", "dish2", "22zl" )]
+        public void GetElement_SimulationSelectDish_ReturnDish ( int index, string expectedName, string expectedPrice )
+        {
+            var form = FormTest.CreateFormMenu();
+            DishesListView lvDishes = new DishesListView(form);
+            var list =  FakeDishesList.GetDishes();
+            lvDishes.SetList( list );
+            lvDishes.SetIndexSelecteItem( index );
+            var dish = lvDishes.GetElement();
+
+            var currentName = dish.Name;
+            var currentPrice =  dish.Price;
+
+            Assert.AreEqual( expectedName, currentName );
+            Assert.AreEqual( expectedPrice, currentPrice );
+        }
+
+        [TestCase( "0" )]
+        [TestCase( "1" )]
+        public void GetElement_SimulationGetElemntFromEmptyList_ReturnEmptyDish ( int index )
+        {
+            var form = FormTest.CreateFormMenu();
+            DishesListView lvDishes = new DishesListView(form);
+            lvDishes.SetIndexSelecteItem( index );
+            var dish = lvDishes.GetElement();
+
+            var currentName = dish.Name;
+            var currentPrice =  dish.Price;
+
+            Assert.IsEmpty( currentName );
+            Assert.IsEmpty( currentPrice );
+        }
     }
 
-    internal class FekaDishesList
+    internal class FakeDishesList
     {
        static public List<Dish> GetDishes ()
         {

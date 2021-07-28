@@ -25,7 +25,7 @@ namespace Pizza.SqlLite
                 }
                 catch (Exception ex)
                 {
-                    RecordOfExceptions.Save( Convert.ToString( ex ), "CreateSQLiteDatabaseFile" );
+                    RecordOfExceptions.Save( Convert.ToString( ex ), ex.StackTrace );
                 }
             }
 
@@ -54,7 +54,7 @@ namespace Pizza.SqlLite
                 }
                 catch (Exception ex)
                 {
-                    RecordOfExceptions.Save( Convert.ToString( ex ), "CreateSQLitePriceAll" );
+                    RecordOfExceptions.Save( Convert.ToString( ex ), ex.StackTrace );
                 }
                 cn.Close();
             }
@@ -77,7 +77,7 @@ namespace Pizza.SqlLite
                 }
                 catch (Exception ex)
                 {
-                    RecordOfExceptions.Save( Convert.ToString( ex ), "CreateSQLiteDishes" );
+                    RecordOfExceptions.Save( Convert.ToString( ex ), ex.StackTrace );
                 }
                 cn.Close();
             }

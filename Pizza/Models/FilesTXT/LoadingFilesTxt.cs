@@ -24,9 +24,9 @@ namespace Pizza
                 var order = JsonConvert.DeserializeObject<JsonHelper>(jsonFromFile);
                 listOrder = order.List;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                RecordOfExceptions.Save( e.ToString(), "LoadOrderListFromTxt" );
+                RecordOfExceptions.Save( Convert.ToString( ex ), ex.StackTrace );
             }
 
             return listOrder;

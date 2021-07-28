@@ -18,7 +18,7 @@ namespace Pizza.Models.FilesTXT
             }
             catch (Exception ex)
             {
-                RecordOfExceptions.Save( Convert.ToString( ex ), "Save" );
+                RecordOfExceptions.Save( Convert.ToString( ex ), ex.StackTrace );
             }
         }
 

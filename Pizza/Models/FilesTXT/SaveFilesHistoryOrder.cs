@@ -40,7 +40,7 @@ namespace Pizza
             }
             catch (Exception ex)
             {
-                RecordOfExceptions.Save( Convert.ToString( ex ), "SaveListOrder" );
+                RecordOfExceptions.Save( Convert.ToString( ex ), ex.StackTrace );
             }
         }
 

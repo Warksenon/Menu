@@ -1,8 +1,9 @@
-﻿using Pizza.View.Form1;
+﻿using System;
+using Pizza.View.Form1;
 
 namespace Pizza.Presenters.PresenterFormMenu
 {
-    internal class Form1LabelPricePresenter 
+    public  class Form1LabelPricePresenter 
     {
         private readonly IFormMenuLabelPrice label;
 
@@ -13,7 +14,7 @@ namespace Pizza.Presenters.PresenterFormMenu
 
         public void SetTextLabelPrice( IPrice price )
         {
-            label.LabelPrice.Text = "Cena: " + price.GetPricaAll() + " zł";
+            label.LabelPrice.Text = "Cena: " + price.GetPricaAll().ToString("0.00") + " zł";
         }
     }
 }

@@ -85,9 +85,9 @@ namespace Pizza.Models.SqlLite
                         {
                             cmd.ExecuteNonQuery();
                         }
-                        catch (Exception e)
+                        catch (Exception ex)
                         {
-                            RecordOfExceptions.Save( Convert.ToString( e ), "InsertAndQuestionSQL - AddNewTaskDish" );
+                            RecordOfExceptions.Save( Convert.ToString( ex ), ex.StackTrace );
                         }
                     }
                 }

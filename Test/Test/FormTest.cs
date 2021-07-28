@@ -1,6 +1,6 @@
 ﻿using Pizza;
 
-namespace Test.Test.TestFormMenu
+namespace Test
 {
     public class FormTest
     {

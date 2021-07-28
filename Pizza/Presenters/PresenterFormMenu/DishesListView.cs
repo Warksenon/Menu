@@ -7,6 +7,7 @@ namespace Pizza.Presenters.PresenterFormMenu
     public class DishesListView : IElementGet<Dish>, IListSet<Dish>
     {
         private readonly FormMenu _form;
+      
         public DishesListView( FormMenu form ) 
         {
             _form = form;
@@ -17,23 +18,40 @@ namespace Pizza.Presenters.PresenterFormMenu
             return GetSelektedDish();
         }
 
+        private int indexSelect;
         private Dish GetSelektedDish()
         {
-            int x = ChecktDishSelectedItem();
-
-            Dish dish = new Dish
+            ChecktDishSelectedItem();
+            Dish dish = new Dish();
+            try
             {
-                Name = _form.ListViewDishes.Items[x].SubItems[0].Text,
-                Price = _form.ListViewDishes.Items[x].SubItems[1].Text
-            };
-
+                dish.Name = _form.ListViewDishes.Items [indexSelect].SubItems [0].Text;
+                dish.Price = _form.ListViewDishes.Items [indexSelect].SubItems [1].Text;
+            }
+            catch (Exception ex)
+            {
+                RecordOfExceptions.Save( Convert.ToString( ex ), ex.StackTrace );
+            }
+           
             return dish;
         }
 
-        private int ChecktDishSelectedItem()
+        private void ChecktDishSelectedItem()
         {
-            return _form.ListViewDishes.FocusedItem.Index;
+            try
+            {
+                indexSelect = _form.ListViewDishes.FocusedItem.Index;
+            }
+            catch (Exception ex)
+            {
+                RecordOfExceptions.Save( Convert.ToString( ex ), ex.StackTrace );
+            }
         }
+
+        public void  SetIndexSelecteItem (int index )
+        {
+            indexSelect = index;
+        } 
 
         public void SetList( List<Dish> listDisch )
         {

@@ -28,9 +28,9 @@ namespace Pizza.Models.SqlLite
                         }
                     }
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    Console.WriteLine( "Błąd przy pobieraniu listy zamowień\n" + e );
+                    RecordOfExceptions.Save( Convert.ToString( ex ), ex.StackTrace );
                 }
                 cn.Close();
             }
@@ -56,9 +56,10 @@ namespace Pizza.Models.SqlLite
                     order = LoadDishes( Convert.ToString( price.ID ), order );
                     listorder.Add( order );
                 }
-                catch
+                catch (Exception ex)
                 {
                     dr.Close();
+                    RecordOfExceptions.Save( Convert.ToString( ex ), ex.StackTrace );
                 }
             }
         }
@@ -78,9 +79,9 @@ namespace Pizza.Models.SqlLite
                         cmd.Cancel();
                     }
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    Console.WriteLine( e );
+                    RecordOfExceptions.Save( Convert.ToString( ex ), ex.StackTrace );
                 }
                 cn.Close();
             }

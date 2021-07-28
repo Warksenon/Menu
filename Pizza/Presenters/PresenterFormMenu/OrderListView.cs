@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 
-using Pizza.View.Form1View;
-
 namespace Pizza.Presenters.PresenterFormMenu
 {
     public class OrderListView : IListSet<Dish>, IElementGet<Order>, IPrice
@@ -47,7 +45,7 @@ namespace Pizza.Presenters.PresenterFormMenu
             order.PriceAll.Date = DateTime.Now.ToString();
         }
 
-        public void GetListDishesFromListViewOrder()
+        private void GetListDishesFromListViewOrder()
         {
             var list = new List<Dish>();
             int counter = _form.ListViewOrder.Items.Count;

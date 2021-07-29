@@ -117,6 +117,8 @@
     <Compile Include="Test\TestFormMenu\TestDishesListView.cs" />
     <Compile Include="Test\TestFormMenu\TestForm1LabelPricePresenter.cs" />
     <Compile Include="Test\TestFormMenu\TestOrderListView.cs" />
+    <Compile Include="Test\TestFormMenu\TestRemovePresenter.cs" />
+    <Compile Include="Test\TestFormMenu\TestSidesCheckListBox.cs" />
     <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonRemoveView.cs" />
     <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonOk.cs" />
     <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestMenuButtonView.cs" />

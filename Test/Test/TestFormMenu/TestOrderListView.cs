@@ -64,7 +64,7 @@ namespace Test.Test.TestFormMenu
         public void GetPricaAll_CheckPriceCalculations_ReturnPrice ()
         {
             var form =  new FormMenu();
-            var list = CreateListDish.CreateListWithFourDishes();
+            var list = FakeCreateListDish.CreateListWithFourDishes();
             var lvOrder = new OrderListView(form);
             lvOrder.SetList( list );
 
@@ -80,7 +80,7 @@ namespace Test.Test.TestFormMenu
         public void GetElement_CheckGetOrderFromListView_ReturnOrder ( int index )
         {
             var form =  new FormMenu();
-            var list = CreateListDish.CreateListWithFourDishes();
+            var list = FakeCreateListDish.CreateListWithFourDishes();
             var lvOrder = new OrderListView(form);
             lvOrder.SetList( list );
             var order = lvOrder.GetElement();
@@ -96,7 +96,7 @@ namespace Test.Test.TestFormMenu
         }
     }
 
-    internal class CreateListDish
+    internal class FakeCreateListDish
     {
         public static List<Dish> CreateListWithFourDishes ()
         {

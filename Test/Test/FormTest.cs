@@ -8,5 +8,10 @@ namespace Test
         {
             return new FormMenu();
         }
+
+        public static FormMail CreateFormMail()
+        {
+            return new FormMail();
+        }
     }
 }

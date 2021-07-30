@@ -63,55 +63,9 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SimulatingClassesMainProject\ModelsTest\FilesTXTtest\FilesTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\ModelsTest\FilesTXTtest\JsonHelperTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\ModelsTest\FilesTXTtest\LoadingFilesTxtTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\ModelsTest\FilesTXTtest\SaveFilesHistoryOrderTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\ModelsTest\FilesTXTtest\SaveFilesOrderTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\ModelsTest\IDataCleansing.cs" />
-    <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\LoadRegistry.cs" />
-    <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\Registry.cs" />
-    <Compile Include="SimulatingClassesMainProject\ModelsTest\RegistryTest\SaveRegistry.cs" />
-    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\CreateConnectionTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\CreateTabelesTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\LoadHistorySQLTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\OrderSQLTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\SaveHistorySQLTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\ModelsTest\SqlLiteTest\SaveOrderSQLTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\PresenterFormMail\FormMailLoad.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\PresenterFormMail\FormMailPresenter.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\PresenterFormMail\FormMailSavePresenters.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\AddOrderListViewTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\DishesListViewTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\OnEventTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\EmailData.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\EmailMessage.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\EmailSend.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\ILoadEmailData.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\EmailTest\ISaveEmailData.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\IOnEventTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\ILogic.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\LogicMenuButtonTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\PresentersTest\PresenterFormMenu\SidesCheckListBoxTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewFormMenuTest.cs" />
-    <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewSettings\ButtonMenuView\ButtonDrinksView.cs" />
-    <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewSettings\ButtonMenuView\ButtonMainDishesSettingView.cs" />
-    <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewSettings\ButtonMenuView\ButtonMenuView.cs" />
-    <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewSettings\ButtonMenuView\ButtonPizzaView.cs" />
-    <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewSettings\ButtonMenuView\ButtonSoupsView.cs" />
-    <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewSettings\ButtonMenuView\ViewSettingButtonMenu.cs" />
-    <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewSettings\ButtonOkView.cs" />
-    <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewSettings\ButtonRemoveView\ButtonRemove.cs" />
-    <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewSettings\ButtonRemoveView\ButtonRemoveAll.cs" />
-    <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewSettings\ButtonRemoveView\ButtonRemoveOne.cs" />
-    <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewSettings\FormMenuView.cs" />
-    <Compile Include="SimulatingClassesMainProject\ViewTest\FormMenuView\ViewSettings\ListViewDishes.cs" />
-    <Compile Include="SimulatingClassesMainProject\ViewTest\IView.cs" />
-    <Compile Include="SimulatingClassesMainProject\ViewTest\TestVisibleElements.cs" />
     <Compile Include="Test\FormTest.cs" />
+    <Compile Include="Test\TestFormMail\TestFormMailLoad.cs" />
     <Compile Include="Test\TestFormMenu\TestMenuDishes.cs" />
-    <Compile Include="Test\TestFormMenu\PresenterFormMenu\TestFormMenuAddOrderToListViewOrder.cs" />
-    <Compile Include="Test\TestFormMenu\PresenterFormMenu\TestFormMenuCreatingOrder.cs" />
     <Compile Include="Test\TestFormMenu\TestAddOrderListView.cs" />
     <Compile Include="Test\TestFormMenu\TestButtonPlaceOrderLogic.cs" />
     <Compile Include="Test\TestFormMenu\TestDishesListView.cs" />
@@ -119,9 +73,6 @@
     <Compile Include="Test\TestFormMenu\TestOrderListView.cs" />
     <Compile Include="Test\TestFormMenu\TestRemovePresenter.cs" />
     <Compile Include="Test\TestFormMenu\TestSidesCheckListBox.cs" />
-    <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonRemoveView.cs" />
-    <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestButtonOk.cs" />
-    <Compile Include="Test\TestFormMenu\ViewSettingsTest\TestMenuButtonView.cs" />
     <Compile Include="Test\TestMenu\Dishes\TestListDrinks.cs" />
     <Compile Include="Test\TestMenu\Dishes\TestListSoups.cs" />
     <Compile Include="Test\TestMenu\Sides\TestSidesMainDishes.cs" />
@@ -146,7 +97,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test\TestFormMenu\PresenterFormMenu\ButtonMenuLogic\" />
+    <Folder Include="Test\TestFormHistory\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

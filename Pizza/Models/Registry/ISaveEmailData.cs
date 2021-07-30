@@ -1,6 +1,6 @@
 ﻿namespace Pizza.Models.Registry
 {
-    internal interface ISaveEmailData
+    public interface ISaveEmailData
     {
         bool Save ( EmailData emailData );
     }

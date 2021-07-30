@@ -63,8 +63,11 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Test\FakeDialog.cs" />
+    <Compile Include="Test\FakeEmailData.cs" />
     <Compile Include="Test\FormTest.cs" />
     <Compile Include="Test\TestFormMail\TestFormMailLoad.cs" />
+    <Compile Include="Test\TestFormMail\TestFormMailSavePresenter.cs" />
     <Compile Include="Test\TestFormMenu\TestMenuDishes.cs" />
     <Compile Include="Test\TestFormMenu\TestAddOrderListView.cs" />
     <Compile Include="Test\TestFormMenu\TestButtonPlaceOrderLogic.cs" />

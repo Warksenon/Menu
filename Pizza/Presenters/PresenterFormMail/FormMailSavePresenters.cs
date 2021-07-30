@@ -1,10 +1,8 @@
-﻿using System.Windows.Forms;
-
-using Pizza.Models.Registry;
+﻿using Pizza.Models.Registry;
 
 namespace Pizza.Presenters
 {
-    internal class FormMailSavePresenters
+    public class FormMailSavePresenters
     {
         private readonly FormMail _form;
         public FormMailSavePresenters ( FormMail form )
@@ -12,7 +10,7 @@ namespace Pizza.Presenters
             _form = form;
         }
 
-        public void SaveDataEmial ( ISaveEmailData saveEmail )
+        public void SaveDataEmial ( ISaveEmailData saveEmail, IDialogService dialog )
         {
             EmailData emailData = new EmailData
             {
@@ -27,7 +25,7 @@ namespace Pizza.Presenters
 
             if (!saveIsOk)
             {
-                MessageBox.Show( "Nieprawidłowe dane. Upewni się że wprowadzone dane: andresów e-mail, hasło, smtp, port są prawidłowe ", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error );
+                dialog.ShowMessage( "Nieprawidłowe dane. Upewni się że wprowadzone dane: andresów e-mail, hasło, smtp, port są prawidłowe.");
             }
 
         }

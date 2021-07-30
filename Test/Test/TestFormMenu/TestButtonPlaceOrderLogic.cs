@@ -104,16 +104,6 @@ namespace Test.Test.TestFormMenu
         }
     }
 
-    internal class FakeDialog : IDialogService
-    {
-        public string Message { get; private set; }
-
-        public void ShowMessage ( string message )
-        {
-            Message = message;
-        }
-    }
-
     internal class FakeSenderMessage : ISendOrder
     {
         public bool Flag { get; set; }

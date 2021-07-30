@@ -26,7 +26,7 @@ namespace Pizza
 
         private void ButtonSave_Click ( object sender, EventArgs e )
         {
-            new FormMailSavePresenters( this ).SaveDataEmial( new SaveRegistry() );
+            new FormMailSavePresenters( this ).SaveDataEmial( new SaveRegistry() , new DialogBox());
         }
 
         private void ButtonClose_Click ( object sender, EventArgs e )

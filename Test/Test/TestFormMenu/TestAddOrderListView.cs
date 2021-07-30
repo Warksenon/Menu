@@ -112,7 +112,7 @@ namespace Test.Test.TestFormMenu
             var form = CreateFormMenu(number);
             var listDishes = new FakeListDishes();
             var addOrder = new AddOrder(form,listDishes);
-            var dialog = new FakeDialogBox();
+            var dialog = new FakeDialog();
             addOrder.SetDialog( dialog );
             var getDish = new FakeCreateDishes();
             var getSides = new FakeCreateEmptySides();
@@ -142,7 +142,7 @@ namespace Test.Test.TestFormMenu
             var form = CreateFormMenu(number);
             var listDishes = new FakeListDishes();
             var addOrder = new AddOrder(form,listDishes);
-            var dialog = new FakeDialogBox();
+            var dialog = new FakeDialog();
             addOrder.SetDialog( dialog );
             var getDish = new FakeCreateDishes();
             var getSides = new FakeCreateEmptySides();
@@ -207,18 +207,4 @@ namespace Test.Test.TestFormMenu
         }
     }
 
-    internal class FakeDialogBox : IDialogService
-    {
-        public string Message { get; private set; }
-
-        public FakeDialogBox ()
-        {
-            Message = "";
-        }
-
-        public void ShowMessage ( string message )
-        {
-            Message = message;
-        }
-    }
 }

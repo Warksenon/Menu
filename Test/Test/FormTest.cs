@@ -9,9 +9,15 @@ namespace Test
             return new FormMenu();
         }
 
-        public static FormMail CreateFormMail()
+        public static FormMail CreateFormMail ()
         {
             return new FormMail();
+        }
+
+
+        public static FormHistory CreateFormHistory ()
+        {
+            return new FormHistory();
         }
     }
 }

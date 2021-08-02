@@ -48,7 +48,9 @@ namespace Pizza
         private void ButtonTxtToSql ( object sender, EventArgs e )
         {
             _button.AllButtonColorsControl( bTxtToSQL.Name );
-            new HistoryCopy( new LoadingFilesTxt(), new SaveHistorySQL() );
+            var load = new LoadingFilesTxt();
+            var save =  new SaveHistorySQL();
+            HistoryCopy.CopyHistory( load, save );
             _priceLV.SetList( new LoadingFilesTxt() );
             _button.AllButtonColorsControl( bText.Name );
         }
@@ -56,7 +58,9 @@ namespace Pizza
         private void ButtonSQLToTxt_Click ( object sender, EventArgs e )
         {
             _button.AllButtonColorsControl( buttonSQLToTxt.Name );
-            new HistoryCopy( new LoadHistorySQL(), new SaveFilesHistoryOrder() );
+            var load = new LoadHistorySQL();
+            var save =  new SaveFilesHistoryOrder();
+            HistoryCopy.CopyHistory( load, save );
             _priceLV.SetList( new LoadingFilesTxt() );
             _button.AllButtonColorsControl( bSql.Name );
         }

@@ -64,9 +64,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Test\FakeDialog.cs" />
+    <Compile Include="Test\FakeDishes.cs" />
     <Compile Include="Test\FakeEmailData.cs" />
     <Compile Include="Test\FormTest.cs" />
     <Compile Include="Test\TestFormHistory\TestHistoryCopy.cs" />
+    <Compile Include="Test\TestFormHistory\TestHistoryDishesListView.cs" />
     <Compile Include="Test\TestFormMail\TestFormMailLoad.cs" />
     <Compile Include="Test\TestFormMail\TestFormMailSavePresenter.cs" />
     <Compile Include="Test\TestFormMenu\TestMenuDishes.cs" />

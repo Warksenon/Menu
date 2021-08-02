@@ -1,6 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+
 using NUnit.Framework;
+
 using Pizza;
 using Pizza.Presenters.PresenterFormHistory.CopyHistory;
 

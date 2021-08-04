@@ -25,7 +25,7 @@ namespace Pizza
                     streamW.Flush();
                 }
             }
-            catch 
+            catch
             {
 
             }

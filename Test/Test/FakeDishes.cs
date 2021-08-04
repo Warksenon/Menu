@@ -52,8 +52,7 @@ namespace Test.Test
             return dish;
         }
 
-
-        public static Dish CrateFifth()
+        public static Dish CrateFifth ()
         {
             var dish = new Dish(5)
             {

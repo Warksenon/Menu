@@ -12,11 +12,11 @@ namespace Test.Test.TestFormHistory
     {
         [TestCase( "0", "nameFerst", "sideFerst", "priceFerst" )]
         [TestCase( "1", "nameSecond", "sideSecond", "priceSecond" )]
-        public void CopyHistory_TestCopyData_ReturnListStringNameSidesPrice (int index, string expecteName, string expecteSides, string expectePrice )
+        public void CopyHistory_TestCopyData_ReturnListStringNameSidesPrice ( int index, string expecteName, string expecteSides, string expectePrice )
         {
             var load = new  FakeListOrder();
             var save = new  FakeSaveList();
-            HistoryCopy.CopyHistory(load,save);
+            HistoryCopy.CopyHistory( load, save );
 
             var currentName  = save.name[index];
             var currentSides = save.sides[index];
@@ -25,33 +25,6 @@ namespace Test.Test.TestFormHistory
             Assert.AreEqual( expecteName, currentName );
             Assert.AreEqual( expecteSides, currentSides );
             Assert.AreEqual( expectePrice, currentPrice );
-        }
-    }
-
-    internal class FakeListOrder : IListGet<Order>
-    {
-        public List<Order> GetList ()
-        {
-            var list = new List<Order>();
-            var dish = new Dish
-            {
-                Name="nameFerst",
-                Sides="sideFerst",
-                Price = "priceFerst"
-            };
-
-            var dish2 = new Dish
-            {
-                Name="nameSecond",
-                Sides="sideSecond",
-                Price = "priceSecond"
-            };
-            var order = new Order();
-            order.ListDishes.Add( dish );
-            order.ListDishes.Add( dish2 );
-            list.Add( order );
-
-            return list;
         }
     }
 
@@ -65,7 +38,7 @@ namespace Test.Test.TestFormHistory
         {
             foreach (var order in listOrders)
             {
-                   foreach(var dish in order.ListDishes)
+                foreach (var dish in order.ListDishes)
                 {
                     name.Add( dish.Name );
                     sides.Add( dish.Sides );

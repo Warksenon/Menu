@@ -63,12 +63,14 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Test\FakeListOrder.cs" />
     <Compile Include="Test\FakeDialog.cs" />
     <Compile Include="Test\FakeDishes.cs" />
     <Compile Include="Test\FakeEmailData.cs" />
     <Compile Include="Test\FormTest.cs" />
     <Compile Include="Test\TestFormHistory\TestHistoryCopy.cs" />
     <Compile Include="Test\TestFormHistory\TestHistoryDishesListView.cs" />
+    <Compile Include="Test\TestFormHistory\TestHistoryPriceListView.cs" />
     <Compile Include="Test\TestFormMail\TestFormMailLoad.cs" />
     <Compile Include="Test\TestFormMail\TestFormMailSavePresenter.cs" />
     <Compile Include="Test\TestFormMenu\TestMenuDishes.cs" />
@@ -79,18 +81,8 @@
     <Compile Include="Test\TestFormMenu\TestOrderListView.cs" />
     <Compile Include="Test\TestFormMenu\TestRemovePresenter.cs" />
     <Compile Include="Test\TestFormMenu\TestSidesCheckListBox.cs" />
-    <Compile Include="Test\TestMenu\Dishes\TestListDrinks.cs" />
-    <Compile Include="Test\TestMenu\Dishes\TestListSoups.cs" />
-    <Compile Include="Test\TestMenu\Sides\TestSidesMainDishes.cs" />
-    <Compile Include="Test\TestMenu\Sides\TestSidesPizza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test\TestName.cs" />
-    <Compile Include="Test\TestMenu\Dishes\TestListPizza.cs" />
-    <Compile Include="Test\TestMenu\Dishes\TestListMainDishes.cs" />
-    <Compile Include="Test\TestRegistry.cs" />
     <Compile Include="Test\TestEmailMessage.cs" />
-    <Compile Include="Test\TestSql.cs" />
-    <Compile Include="Test\TestSaveAndLoadFilesTxt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -10,7 +10,6 @@ namespace Pizza
             _form = form;
         }
 
-
         public void RemoveOne ()
         {
             if (CheckingListOrderIfEmpty())
@@ -37,7 +36,6 @@ namespace Pizza
             else
                 return false;
         }
-
 
     }
 }

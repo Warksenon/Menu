@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Pizza
 {
-    internal class EmailMessage
+    public class EmailMessage
     {
         private readonly List<Dish> listDishes;
         private readonly PriceAll priceAll;

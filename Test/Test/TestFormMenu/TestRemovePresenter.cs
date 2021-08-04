@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pizza;
 using Pizza.Presenters.PresenterFormMenu;
@@ -26,25 +25,6 @@ namespace Test.Test.TestFormMenu
             Assert.AreEqual( 3, countBeforeRemove );
         }
 
-        [TestMethod]
-        public void RemoveOne_CheckClearListView_CoutIsZero ()
-        {
-            var form = FormTest.CreateFormMenu();
-            var lvOrder = new OrderListView(form);
-            var listDishes =  FakeCreateLis.CreateListWithThreeDishes();
-            lvOrder.SetList( listDishes );
-            var remove = new RemovePresenter(form);
-            var countBeforeRemove = form.ListViewOrder.Items.Count;
-            form.ListViewOrder.Focus();
-            //var item = form.ListViewOrder.];
-            //item.Selected = true;
-            remove.RemoveOne();
-
-            var currentCount = form.ListViewOrder.Items.Count;
-
-            Assert.AreEqual( 0, currentCount );
-            Assert.AreEqual( 3, countBeforeRemove );
-        }
     }
 
     internal class FakeCreateLis

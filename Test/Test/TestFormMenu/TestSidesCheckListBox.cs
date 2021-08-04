@@ -13,7 +13,7 @@ namespace Test.Test.TestFormMenu
         [TestCase( "1", "salami" )]
         [TestCase( "2", "szynka" )]
         [TestCase( "3", "podwójny ser" )]
-        public void SetList_CheckSetList_StringName (int index, string expecteName )
+        public void SetList_CheckSetList_StringName ( int index, string expecteName )
         {
             var form = FormTest.CreateFormMenu();
             var sidesChLBox = new  SidesCheckListBox(form);
@@ -40,12 +40,12 @@ namespace Test.Test.TestFormMenu
             var currentSides = sidesChLBox.GetList();
             var currentCount = currentSides.Count;
 
-            Assert.AreEqual( expecteName, currentSides[0] );
+            Assert.AreEqual( expecteName, currentSides [0] );
             Assert.AreEqual( 1, currentCount );
         }
 
-        [TestCase( )]
-        public void GetList_CheckGetListSelectAllSides_ReturnAllSides (  )
+        [TestCase()]
+        public void GetList_CheckGetListSelectAllSides_ReturnAllSides ()
         {
             var form = FormTest.CreateFormMenu();
             var sidesChLBox = new  SidesCheckListBox(form);
@@ -77,7 +77,7 @@ namespace Test.Test.TestFormMenu
             var sidesChLBox = new  SidesCheckListBox(form);
             var listSides = FakeCreateFourSides.GetList();
             sidesChLBox.SetList( listSides );
-            var list = sidesChLBox.GetList(); 
+            var list = sidesChLBox.GetList();
 
             var currentCount = list.Count;
 

@@ -25,7 +25,7 @@ namespace Pizza.Presenters
 
             if (!saveIsOk)
             {
-                dialog.ShowMessage( "Nieprawidłowe dane. Upewni się że wprowadzone dane: andresów e-mail, hasło, smtp, port są prawidłowe.");
+                dialog.ShowMessage( "Nieprawidłowe dane. Upewni się że wprowadzone dane: andresów e-mail, hasło, smtp, port są prawidłowe." );
             }
 
         }

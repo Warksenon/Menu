@@ -10,12 +10,12 @@ namespace Test.Test.TestFormHistory
     [TestFixture]
     public class TestHistoryDishesListView
     {
-        [TestCase( "0","1", "nameFerst", "sideFerst", "priceFerst" )]
-        [TestCase( "1","2", "nameSecond", "sideSecond", "priceSecond" )]
+        [TestCase( "0", "1", "nameFerst", "sideFerst", "priceFerst" )]
+        [TestCase( "1", "2", "nameSecond", "sideSecond", "priceSecond" )]
         [TestCase( "2", "3", "nameThird", "sideThird", "priceThird" )]
-        [TestCase( "3", "4" , "nameFourth", "sideFourth", "priceFourth" )]
+        [TestCase( "3", "4", "nameFourth", "sideFourth", "priceFourth" )]
         [TestCase( "4", "5", "nameFifth", "sideFifth", "priceFifth" )]
-        public void SetList_SetListOrder_ReturnLoadOrderWithListView ( int index,string expecteId, string expecteName, string expecteSides, string expectePrice )
+        public void SetList_SetListOrder_ReturnLoadOrderWithListView ( int index, string expecteId, string expecteName, string expecteSides, string expectePrice )
         {
             var form = FormTest.CreateFormHistory();
             var list = new  FakeListDishes();
@@ -26,7 +26,7 @@ namespace Test.Test.TestFormHistory
             var currentName  = form.ListViewDishes.Items[index].SubItems[1].Text;
             var currentPrice =  form.ListViewDishes.Items[index].SubItems[2].Text;
             var currentSides =  form.ListViewDishes.Items[index].SubItems[3].Text;
-           
+
 
             Assert.AreEqual( expecteId, currentId );
             Assert.AreEqual( expecteName, currentName );
